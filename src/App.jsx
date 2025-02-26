@@ -1,5 +1,12 @@
-const App = () => {
-  return <div className="flex flex-col">app</div>;
-};
+import React from 'react'
+import LearningStyle from './Components/LearningStyle';
 
-export default App;
+const App = () => {
+  return (
+    <>
+    <LearningStyle/>
+    </>
+  )
+}
+
+export default App
