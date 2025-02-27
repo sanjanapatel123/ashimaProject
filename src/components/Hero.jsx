@@ -1,21 +1,53 @@
+import { IoIosVideocam } from "react-icons/io";
+import { FaLaptop } from "react-icons/fa";
+import { FaVideo } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
+
 function Hero() {
   return (
-    <section className="bg-gray-100 py-16 px-8">
-      <div className="max-w-3xl mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          AI Skills to Uplift Your Career
+    <main className="pt-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center py-20">
+        <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+          <span className="block">AI SKILLS</span>
+          <span className="block text-black-600">to uplift your career</span>
         </h1>
-        <p className="text-gray-700 text-lg md:text-xl mb-6">
-          Master the future of Technology. A complete platform to provide you
-          options to learn from live, hybrid, and video courses. No more
-          looking at separate places for the latest innovations. Our courses
-          are AI-focused in all fields. Are you ready to take the next step?
+        <p className="mt-5 text-lg text-gray-500 max-w-2xl mx-auto">
+          Master the future of Technology with Live, Hybrid, and Video
+          courses—all in one place.
         </p>
-        <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
-          Explore Courses
-        </button>
+        {/* Features */}
+        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6">
+          <div className="text-center">
+            <div className="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center">
+              <FaVideo />
+            </div>
+            <h3 className="mt-2 font-semibold">Live</h3>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center">
+              <FaLaptop />
+            </div>
+            <h3 className="mt-2 font-semibold">Hybrid</h3>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center">
+              {/* <i className="fas fa-play text-2xl text-blue-600" /> */}
+              <IoIosVideocam className="text-2xl text-black-600" />
+            </div>
+            <h3 className="mt-2 font-semibold">Video</h3>
+          </div>
+        </div>
+        {/* CTA Button */}
+        <div className="mt-10">
+          <a
+            href="#"
+            className="px-8 py-3 text-white bg-green-900 hover:bg-green-700 rounded-lg text-lg shadow-md"
+          >
+            Explore Courses
+          </a>
+        </div>
       </div>
-    </section>
+    </main>
   );
 }
 

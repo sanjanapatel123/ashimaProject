@@ -4,19 +4,27 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between bg-white py-4 px-8 shadow">
+    <nav className="flex items-center justify-between bg-white py-4 px-8 shadow relative">
       {/* Logo / Brand */}
-      <div className="text-2xl font-bold text-gray-800">AiSkills</div>
+      <div className="text-2xl font-bold text-gray-800 pr-4">AiSkills</div>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex space-x-6 text-gray-600">
-        <li className="hover:text-gray-900 cursor-pointer">Courses</li>
-        <li className="hover:text-gray-900 cursor-pointer">Business</li>
-        <li className="hover:text-gray-900 cursor-pointer">Digital Products</li>
-        <li className="hover:text-gray-900 cursor-pointer">Newsletter</li>
-        <li className="hover:text-gray-900 cursor-pointer">Instructor</li>
-        <li className="hover:text-gray-900 cursor-pointer">Login</li>
-      </ul>
+      <div className="hidden md:flex w-full justify-between items-center">
+        {/* Left Menu Items */}
+        <ul className="flex space-x-6 text-gray-600">
+          <li className="hover:text-gray-900 cursor-pointer">Courses</li>
+          <li className="hover:text-gray-900 cursor-pointer">Business</li>
+          <li className="hover:text-gray-900 cursor-pointer">
+            Digital Products
+          </li>
+          <li className="hover:text-gray-900 cursor-pointer">Newsletter</li>
+        </ul>
+        {/* Right Menu Items */}
+        <ul className="flex space-x-6 text-gray-600">
+          <li className="hover:text-gray-900 cursor-pointer">Instructor</li>
+          <li className="hover:text-gray-900 cursor-pointer">Login</li>
+        </ul>
+      </div>
 
       {/* Mobile Menu Button */}
       <div className="md:hidden">
@@ -25,7 +33,6 @@ function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
         >
-          {/* Simple Hamburger Icon */}
           <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
             {isOpen ? (
               <path
