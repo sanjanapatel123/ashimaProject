@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 function Hero() {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <main className="bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-10 sm:py-16 md:py-20">
@@ -18,7 +22,6 @@ function Hero() {
           Master the future of Technology
         </p>
 
-        {/* Features - Responsive Flex */}
         <p className="text-sm sm:text-base leading-relaxed">
           A complete platform to provide you option to learn from Live, Hybrid,
           and Video courses. No more to look at separate places to learn.
@@ -32,21 +35,30 @@ function Hero() {
           Get the Skills to take your career forward!
         </p>
 
-        {/* Live Hybrid Video Section */}
         <div className="flex flex-row justify-center gap-5 mt-4 font-bold">
           <h4 className="text-lg sm:text-xl">Live</h4>
           <h4 className="text-lg sm:text-xl">Hybrid</h4>
           <h4 className="text-lg sm:text-xl">Video</h4>
         </div>
 
-        {/* CTA Button */}
-        <div className="mt-8">
-          <a
-            href="#"
-            className="px-8 py-3 sm:px-8 sm:py-3 text-white bg-green-600 hover:bg-green-900 rounded-full text-base sm:text-lg shadow-md"
+        {/* CTA Button with Smooth Arrow */}
+        <div className="flex justify-center">
+          <button
+            className="flex items-center justify-center gap-2 px-6 py-3 rounded-full border  text-white hover:bg-green-800 bg-green-600 transition duration-300 ease-in-out mt-6"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
-            Explore Courses
-          </a>
+            <span className="font-medium">Explore Courses</span>
+            <span
+              className={`transform transition-transform duration-300 ${
+                isHovered
+                  ? "translate-x-0 opacity-100"
+                  : "translate-x-2 opacity-0"
+              }`}
+            >
+              →
+            </span>
+          </button>
         </div>
       </div>
     </main>
