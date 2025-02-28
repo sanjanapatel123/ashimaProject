@@ -1,5 +1,5 @@
 import Hero from "./components/Hero";
-import LearningJourney from "./components/LearningJourney";
+import LearningJourney from "./components/LearningStyle";
 import LearningStyle from "./components/LearningStyle";
 import Trending from "./components/Trending";
 import FeaturedIn from "./components/FeaturedIn";
