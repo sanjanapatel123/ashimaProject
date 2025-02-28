@@ -1,16 +1,16 @@
 import Company from "./Components/Company";
 import Hero from "./components/Hero";
-import LearningJourney from "./Components/LearningJourney";
-import LearningStyle from "./Components/LearningStyle";
-import New from "./Components/New"
-import Trending from "./Components/Trending";
-import FeaturedIn from "./Components/FeaturedIn";
-import StartLearning from "./Components/StartLearning"
-import Card from "./Components/Card";
-import Ride from "./Components/Ride.JSX";
-import DigitalProducts from "./Components/DigitalProducts";
-import Letmake from "./Components/Letmake";
-import CategoryButtons from "./Components/CategoryButtons";
+import LearningJourney from "./components/LearningJourney";
+import LearningStyle from "./components/LearningStyle";
+import New from "./components/New"
+import Trending from "./components/Trending";
+import FeaturedIn from "./components/FeaturedIn";
+import StartLearning from "./components/StartLearning"
+import Card from "./components/Card";
+import Ride from "./components/Ride.JSX";
+import DigitalProducts from "./components/DigitalProducts";
+import Letmake from "./components/Letmake";
+import CategoryButtons from "./components/CategoryButtons";
 
 
 function App() {
