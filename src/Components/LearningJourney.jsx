@@ -28,14 +28,14 @@ const LearningJourney = () => {
             Get Started!
           </button>
         </div>
-        <div className="relative test-black text-lg font-bold flex items-center justify-center ">
+        {/* <div className="relative test-black text-lg font-bold flex items-center justify-center ">
           <p>
             Note: I liked your style <br />
             that you have shown <br />
             in the demo before the start of
             <br /> the project. Use that here.
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -43,19 +43,14 @@ const LearningJourney = () => {
 
 export default LearningJourney;
 
-
-
-
-
 // import React from 'react'
 // import img from "../assets/image copy 3.png";
 
 // const LearningJourney = () => {
 //   return (
-  
+
 // <div class="bg-gray-50">
-    
-  
+
 //         <div class="relative bg-gray-900 overflow-hidden">
 //             <div class="inset-0 fixed">
 //                 <img src={img} class=" object-cover opacity-50 fixed" alt="Hero Background"/>
@@ -70,17 +65,10 @@ export default LearningJourney;
 //                 </div>
 //             </div>
 //         </div>
-       
-     
+
 //     </div>
-    
 
 //   )
 // }
 
 // export default LearningJourney
-
-
-
-
-
