@@ -8,7 +8,7 @@ function Hero() {
           </span>
           <span
             className="block text-2xl sm:text-3xl md:text-4xl"
-            style={{ wordSpacing: "0.2rem" }}
+            style={{ wordSpacing: "0.3rem" }}
           >
             to uplift your career
           </span>
