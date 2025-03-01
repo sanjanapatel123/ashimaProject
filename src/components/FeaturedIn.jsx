@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../assets/image copy 3.png"; // Import your image for the background
+import img from "../assets/learning2.jpg"; // Import your image for the background
 
 const FeaturedIn = () => {
   return (
