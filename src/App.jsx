@@ -24,7 +24,7 @@ function App() {
       <LearningJourney />
       <LearningStyle />
       <Ride />
-      <CategoryButtons />
+      <CategoryButtons /> 
       <FeaturedIn />
       <StartLearning />
       <DigitalProducts />
