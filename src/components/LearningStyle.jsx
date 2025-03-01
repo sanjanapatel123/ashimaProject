@@ -2,9 +2,9 @@ import React from "react";
 
 const LearningStyle = () => {
   return (
-    <div className="flex lg:flex-row flex-col items-center justify-around min-h-screen bg-gray-100 p-10">
+    <div className="flex lg:flex-row flex-col items-center justify-around mt-10 bg-gray-100">
       {/* Left Section */}
-      <div className="lg:w-1/2 w-full lg:ml-20 space-y-16 text-center lg:text-left">
+      <div className="lg:w-1/2 w-full lg:ml-40 space-y-12 text-center lg:text-left">
         <p className="text-xl font-medium text-black">
           Use any image or style<br></br>here
         </p>
@@ -32,7 +32,7 @@ const LearningStyle = () => {
 
       {/* Right Section */}
       <div className="lg:w-1/2 w-full text-center lg:text-left space-y-6">
-        <h1 className="text-5xl font-extrabold uppercase leading-snug">
+        <h1 className="text-5xl font-extrabold uppercase">
           Build a<br />
           Bright
           <br /> Future <br /> With Your
@@ -44,8 +44,13 @@ const LearningStyle = () => {
           courses. Choose the path that best suits your schedule and learning
           style.
         </p>
-        <div className="flex justify-center lg:justify-start">
-          <button className="mt-6 px-8 py-4 text-white text-xl font-bold rounded-lg bg-[#091c08] hover:bg-green-800">
+        {/* <div className="flex justify-center lg:justify-start">
+          <button className="mt-6 px-8 py-4 text-white text-xl font-bold rounded-lg bg-green-600 hover:bg-green-800">
+            Sign Up
+          </button>
+        </div> */}
+        <div className="flex ml-44">
+          <button className=" px-8 py-4 text-white text-xl font-bold rounded-lg bg-green-600 hover:bg-green-800">
             Sign Up
           </button>
         </div>
