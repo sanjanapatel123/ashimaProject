@@ -1,62 +1,62 @@
-import React from "react";
+import { FaCertificate } from "react-icons/fa";
 
-const LearningStyle = () => {
+function LearningSection() {
   return (
-    <div className="flex lg:flex-row flex-col items-center justify-around mt-10 bg-gray-100">
-      {/* Left Section */}
-      <div className="lg:w-1/2 w-full lg:ml-40 space-y-12 text-center lg:text-left">
-        <p className="text-xl font-medium text-black">
-          Use any image or style<br></br>here
-        </p>
-        <div className="flex justify-center lg:justify-start space-x-10 font-bold">
-          {["LIVE", "HYBRID", "VIDEO"].map((item, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <div className="w-8 h-8 bg-orange-500 rounded-full mb-2"></div>
-              <p className="text-2xl font-bold">{item}</p>
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-col items-center lg:items-start space-y-4">
-          <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-black text-white flex items-center justify-center rounded-full text-lg font-bold">
-              🎓
-            </div>
-            <p className="text-lg font-semibold">Certificate Symbol</p>
+    <section className="bg-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+        {/* Left Section - Image, Live/Hybrid/Video Dots & Certificate Section */}
+        <div className="flex flex-col items-center space-y-6 md:items-start w-full md:w-1/2">
+          {/* Placeholder for Image */}
+          <div className="w-full h-56 bg-gray-300 flex items-center justify-center">
+            <span className="text-gray-600">Use any image or style here</span>
           </div>
-          <p className="text-black text-lg max-w-md font-bold">
-            Earn Certificates and <br /> share your success with <br /> the
-            world.
+
+          {/* Live | Hybrid | Video with Dots */}
+          <div className="flex items-center gap-8">
+            {["LIVE", "HYBRID", "VIDEO"].map((label, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <span className="w-6 h-6 rounded-full bg-red-500 block"></span>
+                <span className="mt-2 font-bold text-sm">{label}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Certificate Section */}
+          <div className="flex items-center space-x-3">
+            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-black text-white">
+              <FaCertificate size={24} />
+            </div>
+            <div className="text-center md:text-left">
+              <p className="font-semibold">Earn Certificates and</p>
+              <p className="font-semibold">share your success with world</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Section - Bold Text & Paragraph */}
+        <div className="text-left w-full md:w-1/2">
+          <h2 className="text-4xl font-bold leading-tight space-y-1">
+            <div>BUILD A</div>
+            <div>BRIGHT</div>
+            <div>FUTURE</div>
+            <div>WITH YOUR</div>
+            <div>UNIQUE</div>
+            <div>LEARNING</div>
+            <div>STYLE</div>
+          </h2>
+          <p className="mt-6 text-gray-700 leading-relaxed">
+            Learn from industry experts through live, hybrid or self-paced video courses. 
+            Choose the path that best suits your schedule and learning style.
           </p>
-        </div>
-      </div>
 
-      {/* Right Section */}
-      <div className="lg:w-1/2 w-full text-center lg:text-left space-y-6">
-        <h1 className="text-5xl font-extrabold uppercase">
-          Build a<br />
-          Bright
-          <br /> Future <br /> With Your
-          <br /> Unique <br /> Learning
-          <br /> Style
-        </h1>
-        <p className="text-black text-2xl max-w-lg">
-          Learn from industry experts through live, hybrid, or self-paced video
-          courses. Choose the path that best suits your schedule and learning
-          style.
-        </p>
-        {/* <div className="flex justify-center lg:justify-start">
-          <button className="mt-6 px-8 py-4 text-white text-xl font-bold rounded-lg bg-green-600 hover:bg-green-800">
-            Sign Up
-          </button>
-        </div> */}
-        <div className="flex ml-44">
-          <button className=" px-8 py-4 text-white text-xl font-bold rounded-lg bg-green-600 hover:bg-green-800">
+          {/* Sign Up Button */}
+          <button className="mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition">
             Sign Up
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
-};
+}
 
-export default LearningStyle;
+export default LearningSection;
