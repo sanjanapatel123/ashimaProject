@@ -5,7 +5,8 @@ function Hero() {
 
   return (
     <main className="bg-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-10 sm:py-16 md:py-20">
+      {/* Added pt for small devices to avoid overlap with fixed navbar */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 sm:pt-24 md:pt-28 lg:pt-24 pb-10 sm:py-16 md:py-20">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
           <span className="block text-5xl sm:text-6xl md:text-7xl">
             AI SKILLS
