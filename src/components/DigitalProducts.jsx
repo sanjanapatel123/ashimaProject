@@ -46,7 +46,8 @@ const DigitalProducts = () => {
         </div>
 
         {/* Right Side - Text Section */}
-        <div className="lg:col-span-5 flex flex-col justify-center px-4 lg:px-0">
+
+        <div className="lg:col-span-5 flex flex-col justify-center items-center text-center px-4 lg:px-0 mt-40">
           <h2 className="text-5xl font-bold text-gray-900 mb-4">
             DIGITAL PRODUCTS
           </h2>

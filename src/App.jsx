@@ -12,6 +12,7 @@ import CategoryButtons from "./components/CategoryButtons";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import CompaniesSection from "./components/CompaniesSection";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <StartLearning />
       <DigitalProducts />
       <Letmake />
+      <Footer/>
     </>
   );
 }
