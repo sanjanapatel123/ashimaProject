@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className=" text-black bg-white p-3 sm:p-2 md:p-2 shadow-md fixed w-full top-0 z-50">
+    <nav className=" text-black bg-[#fffaf1] p-6 sm:p-2 md:p-2 fixed w-full top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-2xl font-bold">AiSkills</h1>
 
