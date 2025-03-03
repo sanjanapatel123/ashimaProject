@@ -1,10 +1,11 @@
 import { useState } from "react";
+import img from "../assets/Design1.jpg";
 
 function Hero() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <main className="bg-gray-100">
+    <main className="bg-gray-100 " style={{ backgroundImage: `url(${img})` }}>
       {/* Added pt for small devices to avoid overlap with fixed navbar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 sm:pt-24 md:pt-28 lg:pt-24 pb-10 sm:py-16 md:py-20">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
@@ -45,7 +46,7 @@ function Hero() {
         {/* CTA Button with Smooth Arrow */}
         <div className="flex justify-center">
           <button
-            className="flex items-center justify-center gap-2 px-6 py-3 rounded-full border  text-white hover:bg-green-800 bg-green-600 transition duration-300 ease-in-out mt-6"
+            className="flex items-center justify-center gap-2 px-6 py-3 rounded-full border  text-white hover:bg-green-600 bg-[#002726] transition duration-300 ease-in-out mt-6"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
