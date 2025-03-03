@@ -1,19 +1,27 @@
 import { useState } from "react";
-import img from "../assets/Design1.jpg";
+import img from "../assets/image.png";
 
 function Hero() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <main className="bg-gray-100 " style={{ backgroundImage: `url(${img})` }}>
+    <main
+      className="bg-gray-100 text-white"
+      style={{
+        backgroundImage: `url(${img})`,
+        // backgroundSize: "cover",
+        // backgroundPosition: "center",
+        // backgroundAttachment: "fixed",
+      }}
+    >
       {/* Added pt for small devices to avoid overlap with fixed navbar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 sm:pt-24 md:pt-28 lg:pt-24 pb-10 sm:py-16 md:py-20">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
-          <span className="block text-5xl sm:text-6xl md:text-7xl">
+          <span className="block text-5xl sm:text-6xl md:text-7xl text-white">
             AI SKILLS
           </span>
           <span
-            className="block text-2xl sm:text-3xl md:text-4xl"
+            className="block text-2xl sm:text-3xl md:text-4xl text-white"
             style={{ wordSpacing: "0.3rem" }}
           >
             to uplift your career

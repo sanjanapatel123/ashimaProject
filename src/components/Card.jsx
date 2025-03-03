@@ -61,22 +61,8 @@ const Card = () => {
   };
 
   return (
-    <div className=" relative lg:max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div className="bg-[#fffaf1] relative lg:max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
       {/* Left Arrow - Thoda Door */}
-      <button
-        className="absolute left-[-40px] top-1/2 -translate-y-1/2 p-3 rounded-full border border-gray-700 hover:border-black text-gray-700 hover:text-black transition z-10 bg-white shadow-md"
-        onClick={scrollLeft}
-      >
-        <IoIosArrowBack size={18} />
-      </button>
-
-      {/* Right Arrow - Thoda Door */}
-      <button
-        className="absolute right-[-40px] top-1/2 -translate-y-1/2 p-3 rounded-full border border-gray-700 hover:border-black text-gray-700 hover:text-black transition z-10 bg-white shadow-md"
-        onClick={scrollRight}
-      >
-        <IoIosArrowForward size={18} />
-      </button>
 
       {/* Card Container - Large Enough to Show 4 Cards */}
       <div
