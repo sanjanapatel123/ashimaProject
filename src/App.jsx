@@ -13,6 +13,9 @@ import Navbar from "./components/Navbar";
 import "./App.css";
 import CompaniesSection from "./components/CompaniesSection";
 import Footer from "./components/Footer";
+import FAQSection from "./components/FAQSection";
+import ReviewCards from "./components/ReviewCards";
+import ModernGallery from "./components/ModernGallery";
 
 function App() {
   return (
@@ -30,6 +33,10 @@ function App() {
       <StartLearning />
       <DigitalProducts />
       <Letmake />
+      <FAQSection/>
+      <ReviewCards/>
+      <ModernGallery/>
+     
       <Footer/>
     </>
   );
