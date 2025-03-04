@@ -13,8 +13,8 @@ const Letmake = () => {
           </p>
         </div>
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          {/* Row of Cards - Flex Layout to show exactly 5 Cards */}
-          <div className="flex justify-between items-stretch gap-4">
+          {/* Responsive Grid Layout to show 5 cards on desktop, 2-3 on tablet, 1 on mobile */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {[
               {
                 title: "Industry-Relevant Skills",
@@ -44,7 +44,7 @@ const Letmake = () => {
             ].map((card, index) => (
               <div
                 key={index}
-                className="w-[19%] h-[350px] bg-gray-800 rounded-lg overflow-hidden relative flex-shrink-0 group"
+                className="w-full h-[350px] bg-gray-800 rounded-lg overflow-hidden relative flex-shrink-0 group"
               >
                 <div className="p-4 text-white relative z-10">
                   <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
@@ -57,9 +57,7 @@ const Letmake = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <h4 className="font-semibold text-whi mb-2">
-                    Explore More
-                  </h4>
+                  <h4 className="font-semibold text-whi mb-2">Explore More</h4>
                   <p className="text-sm text-gray-600">
                     Discover interactive cohort-based learning with hands-on
                     projects.
@@ -75,4 +73,3 @@ const Letmake = () => {
 };
 
 export default Letmake;
-

@@ -196,7 +196,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <div className="w-full bg-black text-white py-12">
+    <div className="w-full bg-[#002726] text-white py-12">
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-4xl font-extrabold text-center mb-10">
           Frequently Asked Questions

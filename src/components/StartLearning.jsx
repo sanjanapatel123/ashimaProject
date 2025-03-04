@@ -1,9 +1,14 @@
-import React from "react";
-// import img from "../assets/image.png"; // Your image import
+
+import React, { useState } from "react";
+import { FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const StartLearning = () => {
+  const [signupHovered, setSignupHovered] = useState(false);
+  const [getStartedHovered, setGetStartedHovered] = useState(false);
+
   return (
-    <div className="bg-gray-100 py-16">
+    <div className="bg-[#fffaf1] py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main heading */}
         <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4">
@@ -13,36 +18,74 @@ const StartLearning = () => {
           Join the unique vibrant community
         </p>
 
-        {/* Call to action buttons */}
-        <div className="space-x-4 mb-8">
-          <button className="bg-green-900 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-700">
-            Sign Up
-          </button>
+        {/* Call to action button with motion */}
+        <div className="flex justify-center">
+          <motion.button
+            className="flex items-center justify-center gap-2 px-6 py-3 rounded-full border text-white hover:bg-green-800 bg-[#004726] transition duration-300 ease-in-out"
+            onMouseEnter={() => setSignupHovered(true)}
+            onMouseLeave={() => setSignupHovered(false)}
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="font-medium text-lg">Signup</span>
+            <motion.span
+              initial={{ x: 10, opacity: 0 }}
+              animate={{
+                x: signupHovered ? 0 : 10,
+                opacity: signupHovered ? 1 : 0,
+              }}
+              transition={{ duration: 0.3 }}
+            >
+              <FaArrowRight />
+            </motion.span>
+          </motion.button>
         </div>
 
-        {/* App Store and Google Play download buttons */}
+        {/* App Store and Google Play download section */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mt-12">
           {/* Card with description */}
-          <div className="bg-gray-900 rounded-lg p-6 sm:p-8 text-center w-full max-w-md">
+          <div className="bg-[#002726] rounded-lg p-6 sm:p-8 text-center w-full max-w-md">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
               Start your journey
             </h2>
             <p className="text-white mb-6 sm:mb-8">
               Join the unique vibrant community
             </p>
-            <button className="bg-green-500 text-white px-6 py-3 sm:px-8 sm:py-3 rounded-lg">
-              Get Started
-            </button>
+
+            {/* Get Started button with its own motion and hover */}
+            <div className="mt-6 flex justify-center">
+              <motion.button
+                className="flex items-center justify-center gap-2 px-5 py-2 rounded-full border bg-white text-black hover:bg-gray-100 font-semibold transition duration-300 mb-5"
+                onMouseEnter={() => setGetStartedHovered(true)}
+                onMouseLeave={() => setGetStartedHovered(false)}
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span>Get Started!</span>
+                <motion.span
+                  initial={{ x: 10, opacity: 0 }}
+                  animate={{
+                    x: getStartedHovered ? 0 : 10,
+                    opacity: getStartedHovered ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <FaArrowRight />
+                </motion.span>
+              </motion.button>
+            </div>
           </div>
 
-          {/* Icons for Google Play and App Store */}
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-8 items-center">
-            {/* Google Play Button - Full Color */}
+          {/* App Store and Google Play icons */}
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-8 items-center">
+            {/* Google Play Button */}
             <button className="flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
-                className="h-24 w-24 sm:h-16 sm:w-16"
+                className="h-16 w-16 sm:h-20 sm:w-20"
               >
                 <path
                   fill="#4285F4"
@@ -63,15 +106,15 @@ const StartLearning = () => {
               </svg>
             </button>
 
-            {/* App Store Button - Apple Blue */}
+            {/* Apple App Store Button */}
             <button className="flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
-                className="h-24 w-24 sm:h-16 sm:w-16"
+                className="h-16 w-16 sm:h-20 sm:w-20"
               >
                 <path
-                  fill="#007AFF" // Apple's App Store Blue
+                  fill="#007AFF"
                   d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM127 384.5c-5.5 9.6-17.8 12.8-27.3 7.3-9.6-5.5-12.8-17.8-7.3-27.3l14.3-24.7c16.1-4.9 29.3-1.1 39.6 11.4L127 384.5zm138.9-53.9H84c-11 0-20-9-20-20s9-20 20-20h51l65.4-113.2-20.5-35.4c-5.5-9.6-2.2-21.8 7.3-27.3 9.6-5.5 21.8-2.2 27.3 7.3l8.9 15.4 8.9-15.4c5.5-9.6 17.8-12.8 27.3-7.3 9.6 5.5 12.8 17.8 7.3 27.3l-85.8 148.6h62.1c20.2 0 31.5 23.7 22.7 40zm98.1 0h-29l19.6 33.9c5.5 9.6 2.2 21.8-7.3 27.3-9.6-5.5-21.8-2.2-27.3-7.3-32.9-56.9-57.5-99.7-74-128.1-16.7-29-4.8-58 7.1-67.8 13.1 22.7 32.7 56.7 58.9 102h52c11 0 20 9 20 20 0 11.1-9 20-20 20z"
                 />
               </svg>

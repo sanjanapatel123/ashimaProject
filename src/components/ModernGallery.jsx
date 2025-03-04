@@ -74,21 +74,23 @@ const ModernMasonryGallery = () => {
     <div className="bg-[#f8f8f8] font-[Inter] text-[#5C5E5F] mb-10">
       <div className="scroll-indicator fixed top-0 left-0 h-[3px] bg-[#00A89D] z-50 transition-all"></div>
 
-      {/* Width increased from max-w-[1100px] to max-w-[1300px] */}
       <div className="max-w-[1300px] mx-auto mt-8 px-6">
         <h1 className="text-5xl font-extrabold text-black mb-20 text-center translate-y-8 animate-fadeUp">
-          Inspiring Gallery
+          Dive into Our Community <br />
+          <span className="text-gray-500 text-2xl">
+            Learn Online, Connect Offline
+          </span>
         </h1>
 
-        {/* Same 3 Column Layout */}
-        <div className="grid grid-cols-3 gap-6">
+        {/* Responsive Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="flex flex-col gap-6">
             {[galleryItems[0], galleryItems[2]].map((item, index) => (
               <GalleryCard key={index} item={item} index={index + 1} />
             ))}
           </div>
 
-          <div className="h-[580px]">
+          <div className="h-auto md:h-[580px]">
             <GalleryCard item={galleryItems[1]} index={3} tall />
           </div>
 
@@ -100,7 +102,6 @@ const ModernMasonryGallery = () => {
         </div>
       </div>
 
-      {/* Keyframe Animation for scroll fade-up */}
       <style>{`
         @keyframes fadeUp {
           to {
@@ -117,12 +118,11 @@ const ModernMasonryGallery = () => {
   );
 };
 
-// Card Component with Bottom to Top Overlay and Slide-up Text Animation
 const GalleryCard = ({ item, index, tall }) => (
   <div
     data-delay={index}
     className={`gallery-item group relative rounded-xl overflow-hidden opacity-0 translate-y-8 animate-fadeUp ${
-      tall ? "h-full" : "h-[280px]"
+      tall ? "h-full md:h-full" : "h-[280px]"
     }`}
   >
     <img
