@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion"; // Importing framer-motion
 import market1 from "../assets/Market1.jpg";
 import market2 from "../assets/Market2.jpg";
 import market3 from "../assets/Market3.jpg";
@@ -7,77 +8,173 @@ import design1 from "../assets/Design1.jpg";
 import design2 from "../assets/Design2.jpg";
 import design3 from "../assets/Design3.jpg";
 import design4 from "../assets/Design4.jpg";
+import { FaArrowRight } from "react-icons/fa";
 
 const CategoryButtons = () => {
+  const [isHovered, setIsHovered] = useState(false);
   const categories = [
-    "Marketing",
-    "Tech",
-    "Growth",
-    "Data",
-    "Design",
+    "Marketing & Sales",
+    "AI & ML",
+    "Data Science & Engineering",
+    "Design & Development",
     "Product",
-    "Business",
+    "Business & Leadership",
     "Gen AI",
+    "Gaming & Network",
+    "Cybersecurity & Testing",
+    "Founder Connect",
   ];
 
-  const categoryImages = {
-    Marketing: market1,
-    Tech: market2,
-    Growth: market3,
-    Data: market4,
-    Design: design1,
-    Product: design2,
-    Business: design3,
-    "Gen AI": design4,
+  const categoryDetails = {
+    "Marketing & Sales": {
+      image: market1,
+      text:
+        "Learn the latest strategies in Marketing & Sales, focusing on customer engagement and business growth.",
+    },
+    "AI & ML": {
+      image: market2,
+      text:
+        "Dive into the world of Artificial Intelligence and Machine Learning, learning how these technologies are shaping the future.",
+    },
+    "Data Science & Engineering": {
+      image: market3,
+      text:
+        "Master data analysis, engineering, and interpretation to solve complex problems using data-driven approaches.",
+    },
+    "Design & Development": {
+      image: market4,
+      text:
+        "Understand design and development from UI/UX to web and app development.",
+    },
+    Product: {
+      image: design1,
+      text:
+        "Learn about product management, development, and strategies to launch successful products.",
+    },
+    "Business & Leadership": {
+      image: design2,
+      text:
+        "Enhance your leadership skills and business acumen to excel in today's competitive market.",
+    },
+    "Gen AI": {
+      image: design3,
+      text:
+        "Explore the revolutionary impact of Generative AI and how it's transforming industries.",
+    },
+    "Gaming & Network": {
+      image: design4,
+      text:
+        "Get hands-on experience in gaming and network technologies, focusing on design, coding, and game mechanics.",
+    },
+    "Cybersecurity & Testing": {
+      image: design1,
+      text:
+        "Learn the essential skills for securing systems and conducting vulnerability tests in the digital world.",
+    },
+    "Founder Connect": {
+      image: design2,
+      text:
+        "Connect with fellow founders, share insights, and learn from the experiences of others in the entrepreneurial world.",
+    },
   };
 
   const [activeCategory, setActiveCategory] = useState(categories[0]);
 
   return (
-    <div className="px-4 sm:px-6 lg:px-8 py-12">
+    <div className="px-4 sm:px-6 lg:px-8 py-8">
       {/* Heading */}
-      <h1 className="text-4xl md:text-5xl font-bold text-center mb-8">
+      <motion.h1
+        className="text-4xl md:text-5xl font-bold text-center mb-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
         RIDE THE AI WAVE WITH US
-      </h1>
+      </motion.h1>
 
       {/* Top Section - Buttons */}
-      <div className="flex justify-between items-start">
-        {/* Left Side - Buttons */}
-        <div className="flex flex-wrap gap-2">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                activeCategory === category
-                  ? "bg-green-900 text-white"
-                  : "bg-white text-gray-700 border border-gray-400"
-              } hover:bg-beige-200 hover:text-black`}
-              onClick={() => setActiveCategory(category)}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+      <div className="flex justify-start items-center gap-4 overflow-x-auto scrolling-touch scrollbar-hidden">
+        {categories.map((category) => (
+          <button
+            key={category}
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+              activeCategory === category
+                ? "bg-[#002726] text-white"
+                : "hover:bg-[#fffaf1] text-gray-700 border border-black"
+            } hover:bg-beige-200`}
+            onClick={() => setActiveCategory(category)}
+          >
+            {category}
+          </button>
+        ))}
       </div>
 
       {/* Middle Section - Dynamic Content */}
-      <div className="mt-12 grid grid-cols-2 gap-4">
-        {/* Left Side - Image (Centered) */}
-        <div className="flex justify-center items-start">
+      <div className="mt-8 flex gap-8 md:gap-24 items-center flex-col md:flex-row">
+        {/* Left Side - Image */}
+        <motion.div
+          className="flex justify-center items-start w-full md:w-[600px]"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        >
           <img
-            src={categoryImages[activeCategory]}
+            src={categoryDetails[activeCategory].image}
             alt={activeCategory}
-            className="mt-4 rounded-xl shadow-md w-96"
+            className="mt-4 rounded-xl shadow-md w-full md:w-[500px] h-[300px]"
           />
+        </motion.div>
+
+        {/* Right Side - Text */}
+        <div className="flex flex-col justify-center items-start ml-auto w-full md:w-2/4 mt-4 md:mt-0">
+          <motion.p
+            className="text-2xl font-bold text-gray-700"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+          >
+            {activeCategory}
+          </motion.p>
+
+          {categoryDetails[activeCategory].text
+            .split("\n")
+            .map((line, index) => (
+              <motion.p
+                key={index}
+                className={`text-lg font-medium text-gray-700 mt-4 ${
+                  index > 0 ? "mt-6" : ""
+                }`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1 + index * 0.5, duration: 1 }}
+              >
+                {line}
+              </motion.p>
+            ))}
         </div>
       </div>
 
       {/* Bottom Section - Explore Courses Button */}
-      <div className="flex justify-center mt-10">
-        <button className="px-6 py-3 rounded-lg bg-green-600 text-white font-semibold text-lg shadow-md hover:bg-green-800 transition">
-          Explore Courses &gt;&gt;&gt;
-        </button>
-      </div>
+      <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <div className="flex justify-center md:justify-center w-full">
+          <button
+            className="flex items-center justify-center gap-2 px-5 py-3 rounded-full border text-white hover:bg-green-800 bg-[#004726] transition duration-300 ease-in-out md:mt-6 ml-[700px]"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <span className="font-medium">Explore Courses</span>
+            <span
+              className={`transform transition-transform duration-300 ${
+                isHovered
+                  ? "translate-x-0 opacity-100"
+                  : "translate-x-2 opacity-0"
+              }`}
+            >
+              <FaArrowRight />
+            </span>
+          </button>
+        </div>
+      </motion.button>
     </div>
   );
 };

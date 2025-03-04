@@ -61,19 +61,19 @@ const Card = () => {
   };
 
   return (
-    <div className="bg-[#fffaf1] relative lg:max-w-[1420px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div className="bg-[#fff] relative lg:max-w-[1470px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
       {/* Left Arrow - Thoda Door */}
 
       {/* Card Container - Large Enough to Show 4 Cards */}
       <div
         ref={scrollContainerRef}
-        className="flex space-x-6 overflow-x-auto scrollbar-hide"
+        className="flex space-x-4 overflow-x-auto scrollbar-hide"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {courses.map((course, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-full sm:w-[48%] md:w-[32%] lg:w-80 rounded-xl border border-black overflow-hidden shadow-md hover:shadow-2xl transition-all bg-white hover:bg-yellow-50"
+            className="flex-shrink-0 w-full sm:w-[48%] md:w-[32%] lg:w-80 rounded-xl border border-black overflow-hidden shadow-md hover:shadow-2xl transition-all bg-white hover:bg-[#fffaf1]"
           >
             <div className="relative h-64 group overflow-hidden">
               <img

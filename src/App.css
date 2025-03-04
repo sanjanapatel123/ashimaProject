@@ -5,6 +5,15 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-html,body{
+html,
+body {
   overflow-x: hidden;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

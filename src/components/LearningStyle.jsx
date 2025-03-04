@@ -1,7 +1,13 @@
-import { FaCertificate } from "react-icons/fa";
-import { MdOutlinePlayCircle } from "react-icons/md";
+import {
+  FaCertificate,
+  FaBroadcastTower,
+  FaChalkboardTeacher,
+  FaVideo,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
+import { MdOutlinePlayCircle } from "react-icons/md";
 import { useState, useEffect } from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 // Image array for rotation
 const images = [
@@ -19,12 +25,19 @@ function LearningSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 2000); // Change every 4 seconds
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
+  // Define icons for each label
+  const learningModes = [
+    { label: "LIVE", icon: FaBroadcastTower },
+    { label: "HYBRID", icon: FaChalkboardTeacher },
+    { label: "VIDEO", icon: FaVideo },
+  ];
+
   return (
-    <section className="bg-gradient-to-b from-[#fffaf1] to-white py-16 font-['Poppins'] ">
+    <section className="bg-gradient-to-b from-[#fffaf1] to-white py-16 font-inter">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +47,7 @@ function LearningSection() {
       >
         {/* Left Section */}
         <div className="space-y-8">
-          {/* Image - Animated on Hover + Auto Rotate */}
+          {/* Image Section */}
           <motion.div
             className="w-full md:w-[90%] h-80 overflow-hidden rounded-lg shadow-md"
             whileHover={{ scale: 1.03 }}
@@ -46,31 +59,33 @@ function LearningSection() {
             />
           </motion.div>
 
-          {/* Live | Hybrid | Video - Animated Icons */}
-          {/* Live | Hybrid | Video - Centered on Desktop, Attractive Hover Icons */}
+          {/* Live | Hybrid | Video - Animated Icons with Unique Icons */}
           <div className="flex justify-center md:justify-center gap-8">
-            {["LIVE", "HYBRID", "VIDEO"].map((label, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * index, duration: 0.5 }}
-                className="flex flex-col items-center space-y-2"
-              >
-                {/* Modern Circular Icon with Hover Effect */}
+            {learningModes.map((mode, index) => {
+              const Icon = mode.icon;
+              return (
                 <motion.div
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-r from-yellow-400 to-yellow-500 shadow-lg border border-yellow-600 cursor-pointer transition-transform"
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * index, duration: 0.5 }}
+                  className="flex flex-col items-center space-y-2"
                 >
-                  <MdOutlinePlayCircle className="text-[#1E3A8A]" size={28} />
-                </motion.div>
+                  {/* Unique Icon for Each */}
+                  <motion.div
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-r from-yellow-400 to-yellow-500 shadow-lg border border-yellow-600 cursor-pointer transition-transform"
+                  >
+                    <Icon className="text-[#1E3A8A]" size={28} />
+                  </motion.div>
 
-                {/* Label */}
-                <span className="font-semibold text-sm text-gray-800">
-                  {label}
-                </span>
-              </motion.div>
-            ))}
+                  {/* Label */}
+                  <span className="font-semibold text-sm text-gray-800">
+                    {mode.label}
+                  </span>
+                </motion.div>
+              );
+            })}
           </div>
 
           {/* Certificate Section */}
@@ -80,7 +95,6 @@ function LearningSection() {
             transition={{ duration: 0.6 }}
             className="flex items-center space-x-4"
           >
-            {/* Certificate Icon with Hover Effect */}
             <motion.div
               whileHover={{ scale: 1.15, rotate: 8 }}
               className="flex items-center justify-center w-14 h-14 rounded-full bg-[#1E3A8A] text-white cursor-pointer shadow-lg transition-transform"
@@ -124,15 +138,14 @@ function LearningSection() {
             learning style.
           </p>
 
-          {/* CTA Button - Animated Hover */}
+          {/* CTA Button */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            // className="mt-4 px-8 py-3 bg-[#FBBF24] text-[#1E3A8A] font-medium text-lg rounded-full hover:bg-[#f59e0b] transition-all"
           >
             <div className="flex justify-center">
               <button
-                className="flex items-center justify-center gap-2 px-6 py-3 rounded-full border  text-white hover:bg-green-800 bg-green-600 transition duration-300 ease-in-out"
+                className="flex items-center justify-center gap-2 px-6 py-3 rounded-full border text-white hover:bg-green-800 bg-[#004726] transition duration-300 ease-in-out"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
@@ -144,7 +157,7 @@ function LearningSection() {
                       : "translate-x-2 opacity-0"
                   }`}
                 >
-                  →
+                  <FaArrowRight />
                 </span>
               </button>
             </div>
