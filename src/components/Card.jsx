@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import design1 from "../assets/Design1.jpg";
 import design2 from "../assets/Design2.jpg";
 import design3 from "../assets/Design3.jpg";
@@ -37,28 +36,18 @@ const courses = [
     mentorImg:
       "https://i.ibb.co/hJ6nYkyG/2cd408e1-2e65-4667-b4c3-42f18fc9d77a.jpg",
   },
+  {
+    title: "Generative AI for Marketers",
+    duration: "10+ Hours",
+    mentor: "Multiple mentors from AdWorld and Even",
+    img: design4,
+    mentorImg:
+      "https://i.ibb.co/hJ6nYkyG/2cd408e1-2e65-4667-b4c3-42f18fc9d77a.jpg",
+  },
 ];
 
 const Card = () => {
   const scrollContainerRef = useRef(null);
-
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({
-        left: -300 * 4, // Scroll by 4 cards
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({
-        left: 300 * 4, // Scroll by 4 cards
-        behavior: "smooth",
-      });
-    }
-  };
 
   return (
     <div className="bg-[#fff] relative lg:max-w-[1470px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
