@@ -71,10 +71,10 @@ const ModernMasonryGallery = () => {
   ];
 
   return (
-    <div className="bg-[#f8f8f8] font-[Inter] text-[#5C5E5F] mb-10">
+    <div className="bg-[#fffaf1] font-[Inter] text-[#5C5E5F] mb-4">
       <div className="scroll-indicator fixed top-0 left-0 h-[3px] bg-[#00A89D] z-50 transition-all"></div>
 
-      <div className="max-w-[1300px] mx-auto mt-8 px-6">
+      <div className="max-w-[1300px] mx-auto py-6 px-6">
         <h1 className="text-5xl font-extrabold text-black mb-20 text-center translate-y-8 animate-fadeUp">
           Dive into Our Community <br />
           <span className="text-gray-500 text-2xl">

@@ -13,26 +13,26 @@ const reviews = [
   {
     name: "Sample Name 2",
     companyName: "Company Name",
-    review: "Sample review",
+    review: "Sample review I recently completed the Generative AI course from AI Skills, and it was fantastic! The content was well-structured, and the hands-on projects made learning practical and engaging. Plus, the certification is a great addition to my resume! Highly recommend it to anyone looking to dive into AI!",
     image: review,
   },
   {
     name: "Sample Name 3",
     companyName: "Company Name",
-    review: "Sample review",
+    review: "Sample review I recently completed the Generative AI course from AI Skills, and it was fantastic! The content was well-structured, and the hands-on projects made learning practical and engaging. Plus, the certification is a great addition to my resume! Highly recommend it to anyone looking to dive into AI!",
     image: review,
   },
   {
     name: "Sample Name 4",
-    companyName: "Company Name",
-    review: "Sample review",
+    companyName: "Company Name ",
+    review: "Sample review I recently completed the Generative AI course from AI Skills, and it was fantastic! The content was well-structured, and the hands-on projects made learning practical and engaging. Plus, the certification is a great addition to my resume! Highly recommend it to anyone looking to dive into AI!",
     image: review,
   },
 ];
 
 const ReviewCards = () => {
   return (
-    <div className="w-full bg-[#f5f5f5] text-black py-12">
+    <div className="w-full bg-[#fffaf1] text-black py-12">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-5xl font-extrabold text-center mb-10">
           Why our learners love us
