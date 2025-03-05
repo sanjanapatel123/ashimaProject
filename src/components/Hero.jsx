@@ -4,6 +4,7 @@ import podcastMan from "../assets/image1.png"; // Image 1 - Man with Mic
 import onlineClassWoman from "../assets/image2.png"; // Image 2 - Woman with Headphones
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
+import ai from "../assets/ai.png";
 
 function Hero() {
   const [isHovered, setIsHovered] = useState(false);
@@ -11,12 +12,13 @@ function Hero() {
   return (
     <main
       className="relative bg-cover bg-center bg-no-repeat text-white min-h-[85vh] flex items-center"
-      style={{ backgroundImage: `url(${bgGridImage})` }}
+      // style={{ backgroundImage: `url(${bgGridImage})` }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col md:flex-row justify-between items-center mt-10">
         {/* Left Text Section */}
         <div className="max-w-3xl text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-black leading-tight">
+            <img src={ai} alt="" width={40} height={40} />
             <span className="block text-5xl sm:text-6xl md:text-7xl">
               AI SKILLS
             </span>
