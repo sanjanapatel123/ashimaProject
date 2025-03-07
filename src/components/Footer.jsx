@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-wrap md:flex-nowrap justify-between gap-8 text-center md:text-left">
           {/* Brand & Newsletter Section */}
           <div className="flex-1 space-y-5 min-w-[200px]">
-            <h2 className="text-3xl font-extrabold tracking-wide text-green-400">
+            <h2 className="text-3xl font-extrabold tracking-wide text-white">
               AiSkills
             </h2>
             <p className="text-sm leading-relaxed text-gray-300">

@@ -157,25 +157,26 @@ const CategoryButtons = () => {
       </div>
 
       {/* Bottom Section - Explore Courses Button */}
-      <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        <div className="flex justify-center md:justify-center w-full">
-          <button
-            className="flex items-center justify-center gap-2 px-5 py-3 rounded-full border text-white hover:bg-green-800 bg-[#004726] transition duration-300 ease-in-out mt-6 mx-auto md:ml-[700px]"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            <span className="font-medium">Explore Courses</span>
-            <span
-              className={`transform transition-transform duration-300 ${
-                isHovered
-                  ? "translate-x-0 opacity-100"
-                  : "translate-x-2 opacity-0"
-              }`}
-            >
-              <FaArrowRight />
-            </span>
-          </button>
-        </div>
+
+      <motion.button
+        className="flex items-center  text-white hover:bg-green-800 bg-[#004726] justify-center gap-2 px-5 py-3 rounded-full border font-semibold transition duration-300 mb-5 mx-auto mt-5"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        initial={{ scale: 1 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <span>Explore Courses</span>
+        <motion.span
+          initial={{ x: 10, opacity: 0 }}
+          animate={{
+            x: isHovered ? 0 : 10,
+            opacity: isHovered ? 1 : 0,
+          }}
+          transition={{ duration: 0.3 }}
+        >
+          <FaArrowRight />
+        </motion.span>
       </motion.button>
     </div>
   );
