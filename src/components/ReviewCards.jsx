@@ -32,7 +32,7 @@ const reviews = [
 
 const ReviewCards = () => {
   return (
-    <div className="w-full bg-[#fffaf1] text-black py-12">
+    <div className="w-full bg-white text-black py-12">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-5xl font-extrabold text-center mb-10">
           Why our learners love us
@@ -42,8 +42,8 @@ const ReviewCards = () => {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-3xl border-2 border-[#444444]
-              shadow-lg hover:shadow-2xl hover:scale-105 hover:border-yellow
+              className="Hover:bg-[#fff] p-6 rounded-3xl border-2 border-[#444444]
+              shadow-lg hover:shadow-2xl hover:scale-105 hover:border-yellow hover:bg-[#fffaf1]
               transition-all duration-300 
               w-full max-w-[360px] min-h-[400px]
               flex flex-col justify-between"

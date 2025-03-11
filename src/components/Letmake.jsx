@@ -3,7 +3,7 @@ import React from "react";
 const Letmake = () => {
   return (
     <div>
-      <main className="bg-[#fffaf1] font-inter">
+      <main className="bg-[#fff] font-inter">
         <div className="text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
             Let's make learning better

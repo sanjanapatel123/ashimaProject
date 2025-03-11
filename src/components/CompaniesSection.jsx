@@ -74,7 +74,7 @@ const CompaniesSection = () => {
   ];
 
   return (
-    <section className="bg-[#fffaf1] py-10 md:py-20">
+    <section className="bg-[#fff] py-10 md:py-20">
       <div className="px-4 sm:px-6 lg:px-8">
         <h1 className="text-center text-black text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
           Join over 100k+ learners to upskill hottest AI skills

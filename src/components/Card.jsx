@@ -47,22 +47,14 @@ const courses = [
 ];
 
 const Card = () => {
-  const scrollContainerRef = useRef(null);
-
   return (
     <div className="bg-[#fff] relative lg:max-w-[1470px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      {/* Left Arrow - Thoda Door */}
-
-      {/* Card Container - Large Enough to Show 4 Cards */}
-      <div
-        ref={scrollContainerRef}
-        className="flex space-x-4 overflow-x-auto scrollbar-hide"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-      >
-        {courses.map((course, index) => (
+      {/* Flex container to fit exactly 4 cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {courses.slice(0, 4).map((course, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-full sm:w-[48%] md:w-[32%] lg:w-80 rounded-xl border border-black overflow-hidden shadow-md hover:shadow-2xl transition-all bg-white hover:bg-[#fffaf1]"
+            className="w-full rounded-xl border border-black overflow-hidden shadow-md hover:shadow-2xl transition-all bg-white hover:bg-[#fffaf1]"
           >
             <div className="relative h-64 group overflow-hidden">
               <img
@@ -88,11 +80,7 @@ const Card = () => {
                 />
                 <div className="text-xs text-gray-600">
                   <p className="font-medium text-gray-800">{course.mentor}</p>
-                  {index === 2 || index === 3 ? (
-                    <p className="text-gray-500">{course.mentor}</p>
-                  ) : (
-                    <p className="text-gray-500">{course.role}</p>
-                  )}
+                  <p className="text-gray-500">{course.role}</p>
                 </div>
               </div>
             </div>
@@ -104,5 +92,3 @@ const Card = () => {
 };
 
 export default Card;
-
-
