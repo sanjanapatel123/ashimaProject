@@ -71,7 +71,7 @@ const CategoryButtons = () => {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
 
   return (
-    <div className="px-4 sm:px-6 lg:px-8 py-8">
+    <div className="px-4 sm:px-6 lg:px-8 py-8 font-[Inter]">
       {/* Heading */}
       <h1
         className="text-4xl md:text-5xl font-bold text-center mb-10"

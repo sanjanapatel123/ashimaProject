@@ -19,7 +19,7 @@ const products = [
 
 const DigitalProducts = () => {
   return (
-    <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-[#fffaf1]">
+    <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-[#fffaf1] font-[Inter]">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start lg:items-center">
         {/* Right Side - Text Section */}
         <motion.div

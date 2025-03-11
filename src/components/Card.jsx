@@ -48,7 +48,7 @@ const courses = [
 
 const Card = () => {
   return (
-    <div className="bg-[#fff] relative lg:max-w-[1470px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div className="bg-[#fff] relative lg:max-w-[1470px] mx-auto px-4 sm:px-6 lg:px-8 py-10 font-[Inter]">
       {/* Flex container to fit exactly 4 cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {courses.slice(0, 4).map((course, index) => (

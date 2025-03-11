@@ -8,7 +8,7 @@ const StartLearning = () => {
   const [getStartedHovered, setGetStartedHovered] = useState(false);
 
   return (
-    <div className="bg-[#fffaf1] py-16">
+    <div className="bg-[#fffaf1] py-16 font-[Inter]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main heading */}
         <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4">

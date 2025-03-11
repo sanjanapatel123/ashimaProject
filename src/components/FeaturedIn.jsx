@@ -2,7 +2,7 @@ import featureicon from "../assets/featureIcon.png";
 
 const FeaturedInSection = () => {
   return (
-    <div className="bg-[#002726] py-12">
+    <div className="bg-[#002726] py-12 font-[Inter]">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Heading - Responsive Text Size */}
         <h2 className="text-white text-center font-bold mb-12 text-3xl sm:text-4xl md:text-5xl">

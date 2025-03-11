@@ -32,7 +32,7 @@ const reviews = [
 
 const ReviewCards = () => {
   return (
-    <div className="w-full bg-white text-black py-12">
+    <div className="w-full bg-white text-black py-12 font-[Inter]">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-5xl font-extrabold text-center mb-10">
           Why our learners love us
