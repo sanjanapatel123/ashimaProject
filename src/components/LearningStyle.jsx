@@ -214,7 +214,7 @@ function LearningSection() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-[#fffaf1] to-white py-16 font-inter">
+    <section className="bg-gradient-to-b from-[#fffaf1] to-white py-16 font-roboto">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

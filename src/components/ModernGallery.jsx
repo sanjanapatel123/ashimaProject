@@ -71,7 +71,7 @@ const ModernMasonryGallery = () => {
   ];
 
   return (
-    <div className="bg-[#fffaf1] font-[Inter] text-[#5C5E5F] mb-4">
+    <div className="bg-[#fff] font-[Inter] text-[#5C5E5F] mb-4">
       <div className="scroll-indicator fixed top-0 left-0 h-[3px] bg-[#00A89D] z-50 transition-all"></div>
 
       <div className="max-w-[1300px] mx-auto py-6 px-6">

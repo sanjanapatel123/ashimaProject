@@ -42,7 +42,7 @@ const ReviewCards = () => {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-[#fffaf1] p-6 rounded-3xl border-2 border-[#444444]
+              className="Hover:bg-[#fff] p-6 rounded-3xl border-2 border-[#444444]
               shadow-lg hover:shadow-2xl hover:scale-105 hover:border-yellow hover:bg-[#fffaf1]
               transition-all duration-300 
               w-full max-w-[360px] min-h-[400px]

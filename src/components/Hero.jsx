@@ -4,7 +4,7 @@ import podcastMan from "../assets/image1.png"; // Image 1 - Man with Mic
 import onlineClassWoman from "../assets/image2.png"; // Image 2 - Woman with Headphones
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
-import ai from "../assets/ai.png";
+// import ai from "../assets/ai.png";
 // import walkingirl from "../assets/walkingirl";
 const walkingirl = "/assets/WalkingGirl.gif";
 
@@ -95,7 +95,7 @@ function Hero() {
           {/* Top Image - Shifted Left */}
           <div className="relative w-40 h-56 sm:w-40 sm:h-60 overflow-hidden rounded-xl border-8 border-white translate-x-[-110%] translate-y-14">
             <img
-              src={"https://c.stocksy.com/a/rIb100/z9/381725.jpg"}
+              src={"https://c8.alamy.com/comp/KY1DEY/businessman-having-phone-call-conversation-at-workplace-KY1DEY.jpg"}
               alt="Man with microphone"
               className="w-full h-full object-cover"
             />
@@ -104,7 +104,7 @@ function Hero() {
           {/* Bottom Image - Aligned normally to right */}
           <div className="relative w-36 h-56 sm:w-40 sm:h-60 overflow-hidden rounded-xl border-8 border-white translate-y-[-20%]">
             <img
-              src={"https://c.stocksy.com/a/YIb100/z9/381706.jpg"}
+              src={"https://static4.depositphotos.com/1017986/345/i/950/depositphotos_3450502-stock-photo-office-girl.jpg"}
               alt="Woman taking notes"
               className="w-full h-full object-cover"
             />
