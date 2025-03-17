@@ -8,7 +8,8 @@ export default {
     extend: { 
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
-        roboto: ['Roboto', 'sans-serif'],
+         roboto: ["Roboto Condensed", "sans-serif"],
+          impact: ["Impact", "sans-serif"],
       },
     },
   },
