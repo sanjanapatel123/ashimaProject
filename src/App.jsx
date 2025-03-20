@@ -17,11 +17,12 @@ import ModernGallery from "./components/ModernGallery";
 import Explore from "./components/Explore";
 
 function App() {
-
   return (
     <div>
       <Navbar></Navbar>
-      <Hero />
+      <div className="">
+        <Hero></Hero>
+      </div>
       <Explore />
       <CompaniesSection />
       <Trending />

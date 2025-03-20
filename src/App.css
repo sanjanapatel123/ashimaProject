@@ -8,7 +8,7 @@
 html,
 body {
   overflow-x: hidden;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
