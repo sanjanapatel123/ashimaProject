@@ -497,37 +497,33 @@ const TrendingWithCards = () => {
 
       {/* Scrollable Courses Section */}
 
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
+      <div className="relative lg:max-w-[1500px] mx-auto mt-20">
+        {/* Scrollable Cards Container */}
+        <div
+          ref={sliderRef}
+          className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide scroll-smooth"
+        >
+          {courses.map((course, index) => (
+            <div
+              key={index}
+              className={`rounded-xl border border-black overflow-hidden shadow-md hover:shadow-2xl transition-all bg-white flex flex-col ${
+                index === 0
+                  ? "w-[449.4716px] min-w-[449.4716px] h-[497px]" // ✅ First image (trending1) gets exact width & height
+                  : "w-[350px] min-w-[350px] h-[450px]" // ✅ Other images are adjusted
+              }`}
+            >
+              {/* Image Section */}
+              <div className="relative w-full h-full overflow-hidden bg-black">
+                <img
+                  src={course.img}
+                  alt={course.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Navigation Arrows */}
       <div className="flex justify-between w-full mt-4 px-6">
