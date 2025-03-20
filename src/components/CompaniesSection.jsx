@@ -1,139 +1,203 @@
+// import React from "react";
+// import { motion } from "framer-motion"; // Import Framer Motion for animation
+// import company1 from "../assets/company1.png";
+// import company2 from "../assets/company2.png";
+// import company3 from "../assets/company3.png";
+// import company4 from "../assets/company4.png";
+// import company5 from "../assets/company5.png";
+// import company6 from "../assets/company6.png";
+// import company7 from "../assets/company7.png";
+
+
+// const companies = [
+//   company1,
+//   company2,
+//   company3,
+//   company4,
+//   company5,
+//   company6,
+//   company7,
+// ];
+
+// const CompaniesSection = () => {
+//   return (
+//     <div className="flex flex-col md:flex-row items-center justify-between bg-gray-50 py-10 px-6 md:px-12 font-impact">
+//       {/* Left Section - Static Text */}
+//       <div className="w-full md:w-1/3 text-center md:text-left flex flex-col mb-6 md:mb-0">
+//         <h2 className="text-[25px] md:text-[30px] font-[400] leading-[40px] tracking-[0.5%] text-black">
+//           JOIN OVER <span className="text-red-500">100K+</span> LEARNERS
+//         </h2>
+//         <h3 className="text-[25px] md:text-[30px] font-[400] leading-[40px] tracking-[0.5%] text-black">
+//           TO UPSKILL HOTTEST AI SKILLS
+//         </h3>
+//       </div>
+
+//       {/* Right Section - Properly Styled Scrolling Logos */}
+//       <div className="w-full md:w-2/3 overflow-hidden relative flex">
+//         <motion.div
+//           className="flex gap-4 flex-shrink-0"
+//           initial={{ x: "-100%" }} // ✅ Start from left
+//           animate={{ x: "100%" }} // ✅ Move towards right
+//           transition={{
+//             duration: 8, // ✅ Adjusted smooth scrolling speed
+//             repeat: Infinity, // ✅ Infinite looping
+//             ease: "linear",
+//           }}
+//         >
+//           {[...companies, ...companies].map((logo, index) => (
+//             <div
+//               key={index}
+//               className="bg-white shadow-md rounded-lg p-3 flex items-center justify-center w-[90px] h-[70px]" // ✅ White Card Styling
+//             >
+//               <img
+//                 src={logo}
+//                 alt={`Company ${index + 1}`}
+//                 className="h-auto w-[70px] object-contain" // ✅ Properly Sized Logos
+//               />
+//             </div>
+//           ))}
+//         </motion.div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default CompaniesSection;
+
+
+
+// import React from "react";
+// import { motion } from "framer-motion"; // Import Framer Motion for smooth animation
+// import company1 from "../assets/company1.png";
+// import company2 from "../assets/company2.png";
+// import company3 from "../assets/company3.png";
+// import company4 from "../assets/company4.png";
+// import company5 from "../assets/company5.png";
+// import company6 from "../assets/company6.png";
+// import company7 from "../assets/company7.png";
+
+// const companies = [
+//   company1,
+//   company2,
+//   company3,
+//   company4,
+//   company5,
+//   company6,
+//   company7,
+// ];
+
+// const CompaniesSection = () => {
+//   return (
+//     <div className="flex flex-col md:flex-row items-center justify-between bg-gray-50 py-10 px-6 md:px-12 font-impact">
+//       {/* Left Section - Static Text */}
+//       <div className="w-full md:w-1/3 text-center md:text-left flex flex-col mb-6 md:mb-0">
+//         <h2 className="text-[25px] md:text-[30px] font-[400] leading-[40px] tracking-[0.5%] text-black">
+//           JOIN OVER <span className="text-red-500">100K+</span> LEARNERS
+//         </h2>
+//         <h3 className="text-[25px] md:text-[30px] font-[400] leading-[40px] tracking-[0.5%] text-black">
+//           TO UPSKILL HOTTEST AI SKILLS
+//         </h3>
+//       </div>
+
+//       {/* Right Section - Properly Styled Continuous Scrolling Logos */}
+//       <div className="w-full md:w-2/3 overflow-hidden relative flex">
+//         <motion.div
+//           className="flex gap-4 flex-shrink-0"
+//           animate={{ x: ["100%", "-100%"] }} // ✅ Continuous motion (Never stops)
+//           transition={{
+//             duration: 8, // ✅ Smooth and natural scrolling speed
+//             repeat: Infinity, // ✅ Infinite looping
+//             ease: "linear",
+//           }}
+//         >
+//           {[...companies, ...companies].map((logo, index) => (
+//             <div
+//               key={index}
+//               className="bg-white shadow-md rounded-lg p-3 flex items-center justify-center w-[90px] h-[70px]" // ✅ White Card Styling
+//             >
+//               <img
+//                 src={logo}
+//                 alt={`Company ${index + 1}`}
+//                 className="h-auto w-[70px] object-contain" // ✅ Properly Sized Logos
+//               />
+//             </div>
+//           ))}
+//         </motion.div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default CompaniesSection;
+
+
+
+
+
 import React from "react";
+import { motion } from "framer-motion"; // Import Framer Motion for smooth animation
+import company1 from "../assets/company1.png";
+import company2 from "../assets/company2.png";
+import company3 from "../assets/company3.png";
+import company4 from "../assets/company4.png";
+import company5 from "../assets/company5.png";
+import company6 from "../assets/company6.png";
+import company7 from "../assets/company7.png";
+
+const companies = [
+  company1,
+  company2,
+  company3,
+  company4,
+  company5,
+  company6,
+  company7,
+];
 
 const CompaniesSection = () => {
-  const companies = [
-    {
-      name: "Google",
-      logo:
-        "https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg",
-    },
-    {
-      name: "Tesla",
-      logo:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tesla_Motors.svg/512px-Tesla_Motors.svg.png",
-    },
-    {
-      name: "Coinbase",
-      logo:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Coinbase.svg/512px-Coinbase.svg.png",
-    },
-    {
-      name: "Amazon",
-      logo:
-        "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
-    },
-    {
-      name: "Microsoft",
-      logo:
-        "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
-    },
-    {
-      name: "Apple",
-      logo:
-        "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
-    },
-    {
-      name: "IBM",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
-    },
-    {
-      name: "Oracle",
-      logo:
-        "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
-    },
-    {
-      name: "Intel",
-      logo:
-        "https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel_logo_%282020%2C_dark_blue%29.svg",
-    },
-    {
-      name: "NVIDIA",
-      logo: "https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg",
-    },
-    {
-      name: "Adobe",
-      logo:
-        "https://upload.wikimedia.org/wikipedia/commons/d/d4/Adobe_Systems_logo_and_wordmark.svg",
-    },
-    {
-      name: "Salesforce",
-      logo:
-        "https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/Salesforce.com_logo.svg/512px-Salesforce.com_logo.svg.png",
-    },
-    {
-      name: "Twitter",
-      logo:
-        "https://upload.wikimedia.org/wikipedia/commons/5/5e/X_logo_2023.svg",
-    },
-
-    {
-      name: "LinkedIn",
-      logo:
-        "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png",
-    },
-  ];
-
   return (
-    <section className="bg-[#fff] py-10 md:py-20">
-      <div className="px-4 sm:px-6 lg:px-8">
-        <h1 className="text-center text-black text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-          Join over 100k+ learners to upskill hottest AI skills
-        </h1>
-
-        <div className="h-4 md:h-8"></div>
-
-        {/* Outer scroll container */}
-        <div className="overflow-hidden whitespace-nowrap relative">
-          {/* Infinite scrolling inner content */}
-          <div className="inline-block min-w-full">
-            <div
-              className="flex items-center space-x-8 md:space-x-16 animate-scroll"
-              style={{ minWidth: "200%" }}
-            >
-              {companies.map((company, index) => (
-                <div
-                  key={index}
-                  className="flex items-center space-x-2 text-black text-sm sm:text-lg md:text-xl font-medium whitespace-nowrap"
-                >
-                  <img
-                    src={company.logo}
-                    alt={`${company.name} logo`}
-                    className="h-6 w-6 md:h-8 md:w-8 object-contain"
-                  />
-                  <span>{company.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Inline Style for Animation */}
-        <style>{`
-          @keyframes scroll {
-            from {
-              transform: translateX(0);
-            }
-            to {
-              transform: translateX(-50%);
-            }
-          }
-          .animate-scroll {
-            animation: scroll 20s linear infinite;
-          }
-          @media (max-width: 640px) {
-            .animate-scroll {
-              animation-duration: 30s;
-            }
-          }
-          @media (min-width: 641px) {
-            .animate-scroll {
-              animation-duration: 20s;
-            }
-          }
-        `}</style>
+    <div className="flex flex-col md:flex-row items-center justify-between bg-gray-50 py-20 px-6 md:px-12 font-impact">
+      {/* Left Section - Static Text */}
+      <div className="w-full md:w-1/3 text-center md:text-left flex flex-col mb-6 md:mb-0">
+        <h2 className="text-[25px] md:text-[30px] font-[400] leading-[40px] tracking-[0.5%] text-black">
+          JOIN OVER <span className="text-red-500">100K+</span> LEARNERS
+        </h2>
+        <h3 className="text-[25px] md:text-[30px] font-[400] leading-[40px] tracking-[0.5%] text-black">
+          TO UPSKILL HOTTEST AI SKILLS
+        </h3>
       </div>
-    </section>
+
+      {/* Right Section - Properly Styled Continuous Scrolling Logos */}
+      <div className="w-full md:w-2/3 overflow-hidden relative flex">
+        <motion.div
+          className="flex gap-4 flex-shrink-0"
+          initial={{ x: "-100%" }} // ✅ Start from left
+          animate={{ x: "100%" }} // ✅ Move continuously towards the right
+          transition={{
+            duration: 8, // ✅ Smooth and natural scrolling speed
+            repeat: Infinity, // ✅ Infinite looping
+            ease: "linear",
+          }}
+        >
+          {[...companies, ...companies].map((logo, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-md rounded-lg p-3 flex items-center justify-center w-[90px] h-[70px]" // ✅ White Card Styling
+            >
+              <img
+                src={logo}
+                alt={`Company ${index + 1}`}
+                className="h-auto w-[70px] object-contain" // ✅ Properly Sized Logos
+              />
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </div>
   );
 };
 
 export default CompaniesSection;
+
+
+

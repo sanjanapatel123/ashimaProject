@@ -14,28 +14,32 @@ import Footer from "./components/Footer";
 import FAQSection from "./components/FAQSection";
 import ReviewCards from "./components/ReviewCards";
 import ModernGallery from "./components/ModernGallery";
+import Explore from "./components/Explore";
 
 function App() {
+
   return (
-    <>
+    <div>
       <Navbar></Navbar>
       <Hero />
+      <Explore />
       <CompaniesSection />
       <Trending />
       <LearningJourney />
-      <LearningStyle />
-      {/* <Ride /> */}
-      <CategoryButtons /> 
-      <FeaturedIn />
-      <StartLearning />
+      <CategoryButtons />
       <DigitalProducts />
+      <FeaturedIn />
       <Letmake />
-      <FAQSection/>
-      <ReviewCards/>
-      <ModernGallery/>
-     
-      <Footer/>
-    </>
+      <FAQSection />
+      <ReviewCards />
+      <StartLearning />
+      {/* <LearningStyle />
+
+      <ReviewCards />
+      <ModernGallery /> */}
+
+      {/* <Footer /> */}
+    </div>
   );
 }
 export default App;

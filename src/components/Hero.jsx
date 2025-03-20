@@ -1,119 +1,115 @@
-import { useState } from "react";
-import bgGridImage from "../assets/image.png"; // Background grid
-import podcastMan from "../assets/image1.png"; // Image 1 - Man with Mic
-import onlineClassWoman from "../assets/image2.png"; // Image 2 - Woman with Headphones
-import { FaArrowRight } from "react-icons/fa";
-import { motion } from "framer-motion";
-// import ai from "../assets/ai.png";
-// import walkingirl from "../assets/walkingirl";
-const walkingirl = "/assets/WalkingGirl.gif";
+// import React from "react";
 
-function Hero() {
-  const [isHovered, setIsHovered] = useState(false);
+// const HeroSection = () => {
+//   return (
+//     <div className="bg-white w-full px-7 py-44 flex flex-col md:flex-row justify-between items-center">
+//       {/* Left Content */}
+//       <div className="">
+//         <p className="text-[25px] font-semibold text-[#1E1E1E] tracking-wide font-roboto leading-6">
+//           AI SKILLS.
+//         </p>
+//         <h1 className="text-[50px] md:text-5xl font-normal text-black leading-[55px] mt-2 font-impact tracking-[0.5%]">
+//           TO LIFT UP YOUR CAREER <br />
+//           MASTER THE FUTURE OF TECHNOLOGY
+//         </h1>
+//         <button className="mt-8 bg-[#047670] text-white font-semibold w-[150px] h-[45px] p-[10px] rounded-[16px] shadow-md hover:bg-teal-800 transition">
+//           Explore Courses
+//         </button>
+//       </div>
 
+//       {/* Right Content */}
+//       {/* <div className="md:w-1/2 mt-10 md:mt-0">
+//         <p className="text-gray-700 text-sm font-bold leading-relaxed">
+//           A complete platform to provide you option to learn from Live,
+//           Hybrid,<br /> and Video courses. No more to look at separate places to <br /> learn.
+//           Technology changes very fast and it is very crucial to keep <br /> yourself updated with the latest innovations. 
+//           Our courses are AI-focused <br /> across all tech domains and help you learn from top experts in the field.
+//         </p>
+//         <div className="flex space-x-4 mt-6">
+//           <button className="bg-teal-400 text-black font-semibold px-6 py-3 rounded-lg shadow-md">
+//             Live
+//           </button>
+//           <button className="bg-black text-white font-semibold px-6 py-3 rounded-lg shadow-md">
+//             Hybrid
+//           </button>
+//           <button className="bg-red-400 text-white font-semibold px-6 py-3 rounded-lg shadow-md">
+//             Video
+//           </button>
+//         </div>
+//       </div> */}
+//       <div className="mt-10 ml-auto text-pretty">
+//         <p className="text-black font-roboto text-[16px] font-semibold leading-[18px] max-w-lg tracking-[2%]">
+//           A complete platform to provide you option to learn from Live, Hybrid,
+//           and Video courses. No more to look at separate places to learn.
+//           Technology changes very fast, and it is very crucial to keep yourself
+//           updated with the latest innovations. Our courses are AI-focused across
+//           all tech domains and help you learn from top experts in the field. Get
+//           the Skills to take your career forward!
+//         </p>
+//         <div className="flex mt-8 justify-between">
+//           <button className="bg-[#09D0C6] text-black font-semibold w-[120px] h-[40px] p-[10px] rounded-[16px] shadow-md">
+//             Live
+//           </button>
+//           <button className="bg-[#1E1E1E] text-white font-semibold p-[10px] w-[117px] h-[40px]  rounded-[16px] shadow-md">
+//             Hybrid
+//           </button>
+//           <button className="bg-[#FF757A] text-black font-semibold p-[10px] w-[120px] h-[40px] rounded-[16px] shadow-md">
+//             Video
+//           </button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default HeroSection;
+
+
+
+
+import React from "react";
+
+const HeroSection = () => {
   return (
-    <main
-      className="relative bg-cover bg-center bg-no-repeat text-white min-h-[85vh] flex items-center"
-      style={{ backgroundImage: `url(${bgGridImage})` }}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col md:flex-row justify-between items-center mt-10">
-        {/* Left Text Section */}
-        <div className="max-w-3xl text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-            <div className="flex items-end">
-              {/* <img
-                src={ai}
-                alt="AI Logo"
-                className="w-10 h-10 sm:w-10 sm:h-12"
-              /> */}
-              <span className="block text-5xl sm:text-6xl md:text-7xl mr-9">
-                AI SKILLS
-              </span>
-            </div>
-            <div className="flex items-end">
-              <span
-                className="block text-2xl sm:text-3xl md:text-4xl"
-                style={{ wordSpacing: "0.3rem" }}
-              >
-                to uplift your career
-              </span>
-              <img src={walkingirl} alt="Walking Girl" className="w-8 h-8" />
-            </div>
-          </h1>
+    <div className="bg-white w-full px-7 py-20 flex flex-col md:flex-row justify-between items-center">
+      {/* Left Content */}
+      <div className="text-center md:text-left">
+        <p className="text-[25px] font-semibold text-[#1E1E1E] tracking-wide font-roboto leading-6 font-Roboto Condensed">
+          AI SKILLS.
+        </p>
+        <h1 className="text-[40px] md:text-5xl font-normal text-black leading-[45px] md:leading-[55px] mt-2 font-impact tracking-[0.5%]">
+          TO LIFT UP YOUR CAREER <br />
+          MASTER THE FUTURE OF TECHNOLOGY
+        </h1>
+        <button className="mt-8 bg-[#047670] text-white font-semibold w-[150px] h-[45px] p-[10px] rounded-[16px] shadow-md hover:bg-teal-800 transition">
+          Explore Courses
+        </button>
+      </div>
 
-          <p className="mt-3 text-lg sm:text-2xl max-w-2xl">
-            Master the future of Technology
-          </p>
-
-          <p className="text-sm sm:text-base leading-relaxed mt-2">
-            A complete platform to provide you option to learn from Live,
-            Hybrid, and Video courses. No more to look at separate places to
-            learn.
-            <br />
-            Technology changes very fast and it is very crucial to keep yourself
-            updated with the latest innovations.
-            <br />
-            Our courses are AI-focused across all tech domains and help you
-            learn from top experts in the field.
-            <br />
-            Get the Skills to take your career forward!
-          </p>
-
-          <div className="flex flex-row justify-start gap-5 mt-5 font-bold">
-            <h4 className="text-lg sm:text-xl">Live</h4>
-            <h4 className="text-lg sm:text-xl">Hybrid</h4>
-            <h4 className="text-lg sm:text-xl">Video</h4>
-          </div>
-
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <div className="mt-6">
-              <button
-                className="flex items-center justify-center gap-2 px-4 py-3 rounded-full border bg-white text-black hover:bg-gray-100 font-semibold transition duration-300"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
-                <span>Explore Courses</span>
-                <span
-                  className={`transform transition-transform duration-300 font-bold  ${
-                    isHovered
-                      ? "translate-x-0 opacity-100"
-                      : "translate-x-2 opacity-0"
-                  }`}
-                >
-                  <FaArrowRight />
-                </span>
-              </button>
-            </div>
-          </motion.button>
-        </div>
-
-        {/* Right Image Section - Hidden on Mobile */}
-        <div className="relative mt-24 md:mt-0 hidden md:flex flex-col items-end gap-4">
-          {/* Top Image - Shifted Left */}
-          <div className="relative w-40 h-56 sm:w-40 sm:h-60 overflow-hidden rounded-xl border-8 border-white translate-x-[-110%] translate-y-14">
-            <img
-              src={"https://c8.alamy.com/comp/KY1DEY/businessman-having-phone-call-conversation-at-workplace-KY1DEY.jpg"}
-              alt="Man with microphone"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Bottom Image - Aligned normally to right */}
-          <div className="relative w-36 h-56 sm:w-40 sm:h-60 overflow-hidden rounded-xl border-8 border-white translate-y-[-20%]">
-            <img
-              src={"https://static4.depositphotos.com/1017986/345/i/950/depositphotos_3450502-stock-photo-office-girl.jpg"}
-              alt="Woman taking notes"
-              className="w-full h-full object-cover"
-            />
-          </div>
+      {/* Right Content */}
+      <div className="mt-10 md:ml-auto text-pretty text-center md:text-left">
+        <p className="text-[#000000] font-roboto text-[16px] md:text-[16px] font-Roboto Condensed leading-[20px] md:leading-[18px] max-w-lg tracking-[2%]">
+          A complete platform to provide you option to learn from Live, Hybrid,
+          and Video courses. No more to look at separate places to learn.
+          Technology changes very fast, and it is very crucial to keep yourself
+          updated with the latest innovations. Our courses are AI-focused across
+          all tech domains and help you learn from top experts in the field. Get
+          the Skills to take your career forward!
+        </p>
+        <div className="flex flex-col md:flex-row mt-8 items-center md:items-start justify-center md:justify-between space-y-4 md:space-y-0 md:space-x-4">
+          <button className="bg-[#09D0C6] text-black font-semibold w-[120px] h-[40px] p-[10px] rounded-[16px] shadow-md">
+            Live
+          </button>
+          <button className="bg-[#1E1E1E] text-white font-semibold p-[10px] w-[120px] h-[40px] rounded-[16px] shadow-md">
+            Hybrid
+          </button>
+          <button className="bg-[#FF757A] text-black font-semibold p-[10px] w-[120px] h-[40px] rounded-[16px] shadow-md">
+            Video
+          </button>
         </div>
       </div>
-    </main>
+    </div>
   );
-}
+};
 
-export default Hero;
-
+export default HeroSection;

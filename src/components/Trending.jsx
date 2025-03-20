@@ -1,40 +1,429 @@
-import React, { useState } from "react";
-import design1 from "../assets/Design1.jpg";
-import design2 from "../assets/Design2.jpg";
-import design3 from "../assets/Design3.jpg";
-import design4 from "../assets/Design4.jpg";
+// import React, { useRef, useState } from "react";
+// import { LuClock12 } from "react-icons/lu";
+// import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+// import Tranding1 from "../assets/Tranding1.png";
+// import Tranding2 from "../assets/Tranding2.png";
+// import Tranding3 from "../assets/Tranding3.png";
+
+// const courses = [
+//   {
+//     img: Tranding1,
+//     title: "AI AND ML",
+//     mentor: "Kapil Sharma",
+//     rating: 4.8,
+//     duration: "5 HRS",
+//   },
+//   {
+//     img: Tranding2,
+//     title: "DATA SCIENCE & ENGINEERING",
+//     mentor: "Kapil Sharma",
+//     rating: 4.8,
+//     duration: "5 HRS",
+//   },
+//   {
+//     img: Tranding3,
+//     title: "AI AND ML",
+//     mentor: "Kapil Sharma",
+//     rating: 4.8,
+//     duration: "5 HRS",
+//   },
+//   {
+//     img: Tranding1,
+//     title: "AI AND ML",
+//     mentor: "Kapil Sharma",
+//     rating: 4.8,
+//     duration: "5 HRS",
+//   },
+// ];
+
+// const trendingCourses = [
+//   "AI & ML",
+//   "Data Science & Engineering",
+//   "Product",
+//   "Design & Development",
+//   "DevOps",
+//   "Cybersecurity & Testing",
+//   "Business & Leadership",
+//   "Marketing & Sales",
+//   "No Code",
+//   "Gaming & Network",
+//   "Founder Connect",
+// ];
+
+// const TrendingWithCards = () => {
+//   const sliderRef = useRef(null);
+//   const [selectedCourse, setSelectedCourse] = useState("");
+
+//   const scrollLeft = () => {
+//     if (sliderRef.current) {
+//       sliderRef.current.scrollLeft -= 300;
+//     }
+//   };
+
+//   const scrollRight = () => {
+//     if (sliderRef.current) {
+//       sliderRef.current.scrollLeft += 300;
+//     }
+//   };
+
+//   const handleCourseClick = (course) => {
+//     setSelectedCourse(course);
+//   };
+
+//   const baseButtonClass =
+//     "rounded-full px-4 py-2 text-xs sm:px-6 sm:py-3 sm:text-sm font-medium shadow-sm transition duration-200 ease-in-out cursor-pointer";
+
+//   return (
+//     <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-[#fff]  relative">
+//       {/* Title */}
+//       <h2 className="text-6xl sm:text-5xl md:text-5xl mb-8 text-center leading-[50px] sm:leading-[60px] tracking-[0.5%] font-[400] text-black font-impact">
+//         TRENDING <span className="text-[#047670]">COURSES</span>
+//       </h2>
+
+//       {/* Course Categories */}
+//       <div className="flex flex-col gap-4 mt-10">
+//         {[0, 6].map((startIndex, rowIndex) => (
+//           <div
+//             key={rowIndex}
+//             className="flex flex-wrap justify-center gap-2 sm:gap-3"
+//           >
+//             {trendingCourses.slice(startIndex, startIndex + 6).map((label) => {
+//               const isSelected = selectedCourse === label;
+//               return (
+//                 <button
+//                   key={label}
+//                   className={`px-10 py-2 rounded-full text-[14px] font-semibold border transition-all ${
+//                     isSelected
+//                       ? "bg-[#002726] text-white border-[#002726]"
+//                       : "bg-white text-gray-800 border border-black hover:bg-[#fffaf1] hover:text-black"
+//                   }`}
+//                   onClick={() => handleCourseClick(label)}
+//                 >
+//                   {label}
+//                 </button>
+//               );
+//             })}
+//           </div>
+//         ))}
+//       </div>
+
+//       {/* Scrollable Courses Section */}
+
+//       <div className="relative lg:max-w-[1500px] mx-auto mt-20">
+//         {/* Scrollable Cards Container */}
+//         <div
+//           ref={sliderRef}
+//           className="flex gap-1 sm:gap-4 overflow-x-auto pb-4 scrollbar-hide scroll-smooth"
+//         >
+//           {courses.map((course, index) => (
+//             <div
+//               key={index}
+//               className="w-[300px] sm:w-[350px] min-w-[300px] sm:min-w-[350px] rounded-xl border border-black overflow-hidden shadow-md hover:shadow-2xl transition-all bg-white"
+//             >
+//               {/* Image Section */}
+//               <div className="relative h-[400px] sm:h-[500px] group overflow-hidden bg-black">
+//                 <img
+//                   src={course.img}
+//                   alt={course.title}
+//                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+//                 />
+
+//                 {/* Blur Overlay & Text (Adjusted) */}
+//                 <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 sm:px-6 pb-4 pt-10 text-white">
+//                   {/* Ensuring text stays inside the blur */}
+//                   <div className="w-full overflow-hidden">
+//                     <h3 className="text-lg sm:text-xl font-semibold truncate">
+//                       {course.title}
+//                     </h3>
+//                   </div>
+//                   <p className="text-sm sm:text-lg">By {course.mentor}</p>
+
+//                   {/* Rating & Duration */}
+//                   <div className="flex justify-between items-center text-sm sm:text-lg mt-2">
+//                     <div className="flex items-center gap-1">
+//                       {[...Array(5)].map((_, i) => (
+//                         <span
+//                           key={i}
+//                           className={
+//                             i < Math.floor(course.rating)
+//                               ? "text-yellow-400"
+//                               : "text-gray-300"
+//                           }
+//                         >
+//                           ★
+//                         </span>
+//                       ))}
+//                       <span className="text-xs sm:text-sm ml-1">
+//                         {course.rating}
+//                       </span>
+//                     </div>
+
+//                     <div className="flex items-center gap-1 text-xs sm:text-sm text-gray-300">
+//                       <LuClock12 /> {course.duration}
+//                     </div>
+//                   </div>
+
+//                   {/* Button */}
+//                   <button className="mt-4 w-full px-3 sm:px-4 py-2 bg-white text-black font-semibold rounded-3xl hover:bg-gray-200 transition">
+//                     Learn More
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+
+//       <div className="flex justify-between w-full  mt-4 px-6">
+//         {/* Left Arrow */}
+//         <button
+//           onClick={scrollLeft}
+//           className="bg-[#00E0C6] text-black p-3 rounded-full hover:bg-[#00c5b0] transition"
+//         >
+//           <FaArrowLeft className="h-5 w-5" />
+//         </button>
+
+//         {/* Right Arrow */}
+//         <button
+//           onClick={scrollRight}
+//           className="bg-[#00E0C6] text-black p-3 rounded-full hover:bg-[#00c5b0] transition"
+//         >
+//           <FaArrowRight className="h-5 w-5" />
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default TrendingWithCards;
+
+
+
+
+// import React, { useRef, useState } from "react";
+// import { LuClock12 } from "react-icons/lu";
+// import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+// import trending1 from "../assets/trending1.png";
+// import trending2 from "../assets/trending2.png";
+// import trending3 from "../assets/trending3.png";
+
+// const courses = [
+//   {
+//     img: trending1,
+//     title: "AI AND ML",
+//     mentor: "Kapil Sharma",
+//     rating: 4.8,
+//     duration: "5 HRS",
+//   },
+//   {
+//     img: trending2,
+//     title: "DATA SCIENCE & ENGINEERING",
+//     mentor: "Kapil Sharma",
+//     rating: 4.8,
+//     duration: "5 HRS",
+//   },
+//   {
+//     img: trending3,
+//     title: "AI AND ML",
+//     mentor: "Kapil Sharma",
+//     rating: 4.8,
+//     duration: "5 HRS",
+//   },
+  
+// ];
+
+// const trendingCourses = [
+//   "AI & ML",
+//   "Data Science & Engineering",
+//   "Product",
+//   "Design & Development",
+//   "DevOps",
+//   "Cybersecurity & Testing",
+//   "Business & Leadership",
+//   "Marketing & Sales",
+//   "No Code",
+//   "Gaming & Network",
+//   "Founder Connect",
+// ];
+
+// const TrendingWithCards = () => {
+//   const sliderRef = useRef(null);
+//   const [selectedCourse, setSelectedCourse] = useState("");
+
+//   const scrollLeft = () => {
+//     if (sliderRef.current) {
+//       sliderRef.current.scrollLeft -= 300;
+//     }
+//   };
+
+//   const scrollRight = () => {
+//     if (sliderRef.current) {
+//       sliderRef.current.scrollLeft += 300;
+//     }
+//   };
+
+//   const handleCourseClick = (course) => {
+//     setSelectedCourse(course);
+//   };
+
+//   const baseButtonClass =
+//     "rounded-full px-4 py-2 text-xs sm:px-6 sm:py-3 sm:text-sm font-medium shadow-sm transition duration-200 ease-in-out cursor-pointer";
+
+//   return (
+//     <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-[#fff]  relative">
+//       {/* Title */}
+//       <h2 className="text-6xl sm:text-5xl md:text-5xl mb-8 text-center leading-[50px] sm:leading-[60px] tracking-[0.5%] font-[400] text-[#000000] font-impact">
+//         TRENDING <span className="text-[#047670]">COURSES</span>
+//       </h2>
+
+//       {/* Course Categories */}
+//       <div className="flex flex-col gap-4 mt-10">
+//         {[0, 6].map((startIndex, rowIndex) => (
+//           <div
+//             key={rowIndex}
+//             className="flex flex-wrap justify-center gap-2 sm:gap-3"
+//           >
+//             {trendingCourses.slice(startIndex, startIndex + 6).map((label) => {
+//               const isSelected = selectedCourse === label;
+//               return (
+//                 <button
+//                   key={label}
+//                   className={`px-10 py-2 rounded-full text-[14px] font-semibold border transition-all ${
+//                     isSelected
+//                       ? "bg-[#002726] text-white border-[#002726]"
+//                       : "bg-white text-gray-800 border border-black hover:bg-[#fffaf1] hover:text-black"
+//                   }`}
+//                   onClick={() => handleCourseClick(label)}
+//                 >
+//                   {label}
+//                 </button>
+//               );
+//             })}
+//           </div>
+//         ))}
+//       </div>
+
+//       {/* Scrollable Courses Section */}
+
+//       <div className="relative lg:max-w-[1500px] mx-auto mt-20">
+//         {/* Scrollable Cards Container */}
+//         <div
+//           ref={sliderRef}
+//           className="flex gap-1 sm:gap-4 overflow-x-auto pb-4 scrollbar-hide scroll-smooth"
+//         >
+//           {courses.map((course, index) => (
+//             <div
+//               key={index}
+//               className="w-[300px] sm:w-[350px] min-w-[300px] sm:min-w-[350px] rounded-xl border border-black overflow-hidden shadow-md hover:shadow-2xl transition-all bg-white"
+//             >
+//               {/* Image Section */}
+//               <div className="relative h-[400px] sm:h-[500px] group overflow-hidden bg-black">
+//                 <img
+//                   src={course.img}
+//                   alt={course.title}
+//                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+//                 />
+
+//                 {/* Blur Overlay & Text (Adjusted) */}
+//                 <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 sm:px-6 pb-4 pt-10 text-white">
+//                   {/* Ensuring text stays inside the blur */}
+//                   <div className="w-full overflow-hidden">
+//                     <h3 className="text-lg sm:text-xl font-semibold truncate">
+//                       {course.title}
+//                     </h3>
+//                   </div>
+//                   <p className="text-sm sm:text-lg">By {course.mentor}</p>
+
+//                   {/* Rating & Duration */}
+//                   <div className="flex justify-between items-center text-sm sm:text-lg mt-2">
+//                     <div className="flex items-center gap-1">
+//                       {[...Array(5)].map((_, i) => (
+//                         <span
+//                           key={i}
+//                           className={
+//                             i < Math.floor(course.rating)
+//                               ? "text-yellow-400"
+//                               : "text-gray-300"
+//                           }
+//                         >
+//                           ★
+//                         </span>
+//                       ))}
+//                       <span className="text-xs sm:text-sm ml-1">
+//                         {course.rating}
+//                       </span>
+//                     </div>
+
+//                     <div className="flex items-center gap-1 text-xs sm:text-sm text-gray-300">
+//                       <LuClock12 /> {course.duration}
+//                     </div>
+//                   </div>
+
+//                   {/* Button */}
+//                   <button className="mt-4 w-full px-3 sm:px-4 py-2 bg-white text-black font-semibold rounded-3xl hover:bg-gray-200 transition">
+//                     Learn More
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+
+//       <div className="flex justify-between w-full  mt-4 px-6">
+//         {/* Left Arrow */}
+//         <button
+//           onClick={scrollLeft}
+//           className="bg-[#00E0C6] text-black p-3 rounded-full hover:bg-[#00c5b0] transition"
+//         >
+//           <FaArrowLeft className="h-5 w-5" />
+//         </button>
+
+//         {/* Right Arrow */}
+//         <button
+//           onClick={scrollRight}
+//           className="bg-[#00E0C6] text-black p-3 rounded-full hover:bg-[#00c5b0] transition"
+//         >
+//           <FaArrowRight className="h-5 w-5" />
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default TrendingWithCards;
+
+
+
+
+import React, { useRef, useState } from "react";
+import { LuClock12 } from "react-icons/lu";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import trending1 from "../assets/trending1.png";
+import trending2 from "../assets/trending2.png";
+import trending3 from "../assets/trending3.png";
 
 const courses = [
   {
-    title: "Art of Advertising",
-    duration: "1.5+ Hours",
-    mentor: "Sudeep Chawla",
-    role: "Ex-Chief Marketing Manager - Pidilite, GrowthSchool",
-    img: design1,
-    mentorImg: design2,
+    img: trending1,
+    title: "AI AND ML",
+    mentor: "Kapil Sharma",
+    rating: 4.8,
+    duration: "5 HRS",
   },
   {
-    title: "SEO Ondemand",
-    duration: "10+ Hours",
-    mentor: "Kaushal",
-    role: "Founder & MD, Infidigit",
-    img: design2,
-    mentorImg: design4,
+    img: trending2,
+    title: "DATA SCIENCE & ENGINEERING",
+    mentor: "Kapil Sharma",
+    rating: 4.8,
+    duration: "5 HRS",
   },
   {
-    title: "Digital Marketing Kickstarter",
-    duration: "4 Hours",
-    mentor: "Multiple mentors from OTO, Google and 2 more",
-    img: design3,
-    mentorImg: design3,
-  },
-  {
-    title: "Generative AI for Marketers",
-    duration: "10+ Hours",
-    mentor: "Multiple mentors from AdWorld and Even",
-    img: design4,
-    mentorImg:
-      "https://i.ibb.co/hJ6nYkyG/2cd408e1-2e65-4667-b4c3-42f18fc9d77a.jpg",
+    img: trending3,
+    title: "AI AND ML",
+    mentor: "Kapil Sharma",
+    rating: 4.8,
+    duration: "5 HRS",
   },
 ];
 
@@ -53,30 +442,45 @@ const trendingCourses = [
 ];
 
 const TrendingWithCards = () => {
+  const sliderRef = useRef(null);
   const [selectedCourse, setSelectedCourse] = useState("");
+
+  const scrollLeft = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollLeft -= 300;
+    }
+  };
+
+  const scrollRight = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollLeft += 300;
+    }
+  };
 
   const handleCourseClick = (course) => {
     setSelectedCourse(course);
   };
 
-  const baseButtonClass =
-    "rounded-full px-6 py-3 text-sm font-medium shadow-sm transition duration-200 ease-in-out cursor-pointer";
-
   return (
-    <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-[#fff] font-[Inter]">
-      <h2 className="text-5xl sm:text-4xl md:text-5xl font-bold mb-12 text-center text-gray-800">
-        Trending Courses
+    <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-[#fff] relative">
+      {/* Title */}
+      <h2 className="text-6xl sm:text-5xl md:text-5xl mb-8 text-center leading-[50px] sm:leading-[60px] tracking-[0.5%] font-[400] text-[#000000] font-impact">
+        TRENDING <span className="text-[#047670]">COURSES</span>
       </h2>
 
-      <div className="flex flex-col gap-4 mt-6">
+      {/* Course Categories */}
+      <div className="flex flex-col gap-4 mt-10">
         {[0, 6].map((startIndex, rowIndex) => (
-          <div key={rowIndex} className="flex flex-wrap justify-center gap-3">
+          <div
+            key={rowIndex}
+            className="flex flex-wrap justify-center gap-2 sm:gap-3"
+          >
             {trendingCourses.slice(startIndex, startIndex + 6).map((label) => {
               const isSelected = selectedCourse === label;
               return (
                 <button
                   key={label}
-                  className={`${baseButtonClass} ${
+                  className={`px-10 py-2 rounded-full text-[14px] font-semibold border transition-all ${
                     isSelected
                       ? "bg-[#002726] text-white border-[#002726]"
                       : "bg-white text-gray-800 border border-black hover:bg-[#fffaf1] hover:text-black"
@@ -91,48 +495,64 @@ const TrendingWithCards = () => {
         ))}
       </div>
 
-      {/* Card Section */}
-      <div className="bg-[#fff] relative lg:max-w-[1470px] mx-auto py-10 font-[Inter]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {courses.slice(0, 4).map((course, index) => (
-            <div
-              key={index}
-              className="w-full rounded-xl border border-black overflow-hidden shadow-md hover:shadow-2xl transition-all bg-white hover:bg-[#fffaf1]"
-            >
-              <div className="relative h-64 group overflow-hidden">
-                <img
-                  src={course.img}
-                  alt={course.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-lg font-semibold">
-                  {course.title}
-                </div>
-              </div>
+      {/* Scrollable Courses Section */}
 
-              <div className="p-6">
-                <h3 className="text-lg font-semibold mb-2">{course.title}</h3>
-                <p className="text-sm text-gray-600 flex items-center gap-1 mb-3">
-                  ⏱️ {course.duration}
-                </p>
-                <div className="flex items-center gap-3">
-                  <img
-                    src={course.mentorImg}
-                    className="w-10 h-10 rounded-full object-cover"
-                    alt="Mentor"
-                  />
-                  <div className="text-xs text-gray-600">
-                    <p className="font-medium text-gray-800">{course.mentor}</p>
-                    <p className="text-gray-500">{course.role}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+      {/* Navigation Arrows */}
+      <div className="flex justify-between w-full mt-4 px-6">
+        {/* Left Arrow */}
+        <button
+          onClick={scrollLeft}
+          className="bg-[#00E0C6] text-black p-3 rounded-full hover:bg-[#00c5b0] transition"
+        >
+          <FaArrowLeft className="h-5 w-5" />
+        </button>
+
+        {/* Right Arrow */}
+        <button
+          onClick={scrollRight}
+          className="bg-[#00E0C6] text-black p-3 rounded-full hover:bg-[#00c5b0] transition"
+        >
+          <FaArrowRight className="h-5 w-5" />
+        </button>
       </div>
     </div>
   );
 };
 
 export default TrendingWithCards;
+
+
+
+

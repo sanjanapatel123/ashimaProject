@@ -8,6 +8,7 @@
 html,
 body {
   overflow-x: hidden;
+  background-color: black;
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
@@ -16,4 +17,20 @@ body {
 .scrollbar-hidden {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(-80%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/* Slow animation - Increase duration */
+.animate-scroll-right {
+  animation: scroll-right 25s linear infinite;
 }
