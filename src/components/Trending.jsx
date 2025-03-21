@@ -74,27 +74,29 @@ const TrendingWithCards = () => {
       {/* Course Categories */}
 
       <div className="flex flex-col gap-6 mt-10">
-        {[0, 4, 8].map((startIndex, rowIndex) => (
+        {[0, 5, 9].map((startIndex, rowIndex) => (
           <div
             key={rowIndex}
             className="flex flex-wrap justify-center gap-3 sm:gap-4"
           >
-            {trendingCourses.slice(startIndex, startIndex + 4).map((label) => {
-              const isSelected = selectedCourse === label;
-              return (
-                <button
-                  key={label}
-                  className={`px-10 py-2 rounded-full text-[14px] font-semibold uppercase border transition-all ${
-                    isSelected
-                      ? "bg-[#002726] text-white border-[#002726]"
-                      : "bg-white text-gray-800 border border-black hover:bg-[#fffaf1] hover:text-black"
-                  }`}
-                  onClick={() => handleCourseClick(label)}
-                >
-                  {label}
-                </button>
-              );
-            })}
+            {trendingCourses
+              .slice(startIndex, startIndex + [5, 4, 2][rowIndex])
+              .map((label) => {
+                const isSelected = selectedCourse === label;
+                return (
+                  <button
+                    key={label}
+                    className={`px-10 py-2 rounded-full text-[14px] font-semibold uppercase border transition-all ${
+                      isSelected
+                        ? "bg-[#002726] text-white border-[#002726]"
+                        : "bg-white text-gray-800 border border-black hover:bg-[#fffaf1] hover:text-black"
+                    }`}
+                    onClick={() => handleCourseClick(label)}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
           </div>
         ))}
       </div>
@@ -103,7 +105,7 @@ const TrendingWithCards = () => {
 
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-[#fff] relative font-Roboto Condensed case-uppercase">
         {/* Scrollable Courses Section */}
-        <div className="relative lg:max-w-[900px] mx-auto mt-10">
+        <div className="relative lg:max-w-[2000px] mx-auto mt-10">
           {/* Scrollable Cards Container */}
           <div
             ref={sliderRef}
@@ -112,10 +114,10 @@ const TrendingWithCards = () => {
             {courses.map((course, index) => (
               <div
                 key={index}
-                className="w-[450px] min-w-[300px] rounded-xl border border-black overflow-hidden shadow-lg hover:shadow-2xl transition-all bg-white"
+                className="w-[2000px] min-w-[400px] rounded-xl border border-black overflow-hidden shadow-lg hover:shadow-2xl transition-all bg-white"
               >
                 {/* Image Section */}
-                <div className="relative h-[500px] w-[300px] overflow-hidden bg-black">
+                <div className="relative h-[500px] w-[470px] overflow-hidden bg-black">
                   <img
                     src={course.img}
                     alt={course.title}
@@ -191,9 +193,3 @@ const TrendingWithCards = () => {
 };
 
 export default TrendingWithCards;
-
-
-
-
-
-
