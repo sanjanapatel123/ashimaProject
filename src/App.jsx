@@ -34,12 +34,10 @@ function App() {
       <FAQSection />
       <ReviewCards />
       <StartLearning />
-      {/* <LearningStyle />
-
+      <LearningStyle />
       <ReviewCards />
-      <ModernGallery /> */}
-
-      {/* <Footer /> */}
+      <ModernGallery />
+      <Footer />
     </div>
   );
 }
