@@ -15,6 +15,7 @@ import FAQSection from "./components/FAQSection";
 import ReviewCards from "./components/ReviewCards";
 import ModernGallery from "./components/ModernGallery";
 import Explore from "./components/Explore";
+import AllCourses from "./components/AllCourses";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
       <FAQSection />
       <ReviewCards />
       <StartLearning />
+      <AllCourses/>
       {/* <LearningStyle />
 
       <ReviewCards />
