@@ -38,7 +38,7 @@ function App() {
       <ReviewCards />
       <ModernGallery /> */}
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
