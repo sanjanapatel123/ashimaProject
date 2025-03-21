@@ -349,12 +349,11 @@ const RideTheAIWave = () => {
       </h2>
 
       {/* Cards Container */}
-
       <div className="flex gap-4 sm:gap-6 overflow-x-auto px-4 scrollbar-hide justify-start sm:justify-center mt-10 sm:mt-20">
         {courses.map((course, index) => (
           <div
             key={index}
-            className="bg-white text-black rounded-lg shadow-lg p-6 w-[90%] sm:w-[340px] min-w-[90%] sm:min-w-[340px] flex-shrink-0 min-h-[480px]" // Height increased
+            className="bg-white text-black rounded-lg shadow-lg p-6 w-[90%] sm:w-[340px] min-w-[90%] sm:min-w-[340px] flex-shrink-0"
           >
             {/* Title */}
             <h3 className="text-lg font-bold mb-4">{course.title}</h3>

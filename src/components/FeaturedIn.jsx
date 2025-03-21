@@ -66,14 +66,14 @@ import featureicon from "../assets/featureIcon.png";
 
 const FeaturedInSection = () => {
   return (
-    <div className="bg-black py-16 font-impact px-6 sm:px-8">
+    <div className="bg-black py-16  px-6 sm:px-8">
       <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-16 items-center text-center sm:text-left">
         {/* Left Section - Heading & Description */}
         <div className="text-white">
-          <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl mb-4">
+          <h2 className="font-[400] text-[55px] leading-[65px] tracking-[0.5%] sm:text-4xl md:text-5xl mb-4 font-impact">
             FEATURED IN
           </h2>
-          <p className="text-base sm:text-lg text-gray-300">
+          <p className="text-base sm:text-lg text-gray-300 font-Roboto Condensed">
             ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS<br></br> FROM
             INSTANT REAL-WORLD PROJECTS TO PROMPTS.
           </p>

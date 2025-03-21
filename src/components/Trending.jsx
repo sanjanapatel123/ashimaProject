@@ -100,7 +100,7 @@ const TrendingWithCards = () => {
 
       {/* Scrollable Courses Section */}
 
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-[#fff] relative font-Roboto Condensed">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-[#fff] relative font-Roboto Condensed case-uppercase">
         {/* Scrollable Courses Section */}
         <div className="relative lg:max-w-[2000px] mx-auto mt-10">
           {/* Scrollable Cards Container */}
