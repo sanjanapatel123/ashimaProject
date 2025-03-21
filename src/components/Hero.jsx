@@ -22,7 +22,7 @@
 //         <p className="text-gray-700 text-sm font-bold leading-relaxed">
 //           A complete platform to provide you option to learn from Live,
 //           Hybrid,<br /> and Video courses. No more to look at separate places to <br /> learn.
-//           Technology changes very fast and it is very crucial to keep <br /> yourself updated with the latest innovations. 
+//           Technology changes very fast and it is very crucial to keep <br /> yourself updated with the latest innovations.
 //           Our courses are AI-focused <br /> across all tech domains and help you learn from top experts in the field.
 //         </p>
 //         <div className="flex space-x-4 mt-6">
@@ -64,14 +64,11 @@
 
 // export default HeroSection;
 
-
-
-
 import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="bg-white w-full px-7 py-20 flex flex-col md:flex-row justify-between items-center">
+    <div className="bg-white w-full px-7 py-20 flex flex-col md:flex-row justify-between items-center mt-10 lg:mt-[100px] sm:mt-[50px]">
       {/* Left Content */}
       <div className="text-center md:text-left">
         <p className="text-[25px] font-semibold text-[#1E1E1E] tracking-wide font-roboto leading-6 font-Roboto Condensed">
@@ -96,7 +93,18 @@ const HeroSection = () => {
           all tech domains and help you learn from top experts in the field. Get
           the Skills to take your career forward!
         </p>
-        <div className="flex flex-col md:flex-row mt-8 items-center md:items-start justify-center md:justify-between space-y-4 md:space-y-0 md:space-x-4">
+        {/* <div className="flex flex-col md:flex-row mt-8 items-center md:items-start justify-center md:justify-between space-y-4 md:space-y-0 md:space-x-4">
+          <button className="bg-[#09D0C6] text-black font-semibold w-[120px] h-[40px] p-[10px] rounded-[16px] shadow-md">
+            Live
+          </button>
+          <button className="bg-[#1E1E1E] text-white font-semibold p-[10px] w-[120px] h-[40px] rounded-[16px] shadow-md">
+            Hybrid
+          </button>
+          <button className="bg-[#FF757A] text-black font-semibold p-[10px] w-[120px] h-[40px] rounded-[16px] shadow-md">
+            Video
+          </button>
+        </div> */}
+        <div className="flex flex-row flex-wrap justify-center gap-4 mt-8">
           <button className="bg-[#09D0C6] text-black font-semibold w-[120px] h-[40px] p-[10px] rounded-[16px] shadow-md">
             Live
           </button>

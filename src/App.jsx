@@ -18,11 +18,12 @@ import Explore from "./components/Explore";
 import AllCourses from "./components/AllCourses";
 
 function App() {
-
   return (
     <div>
       <Navbar></Navbar>
-      <Hero />
+      <div className="">
+        <Hero></Hero>
+      </div>
       <Explore />
       <CompaniesSection />
       <Trending />
@@ -34,13 +35,10 @@ function App() {
       <FAQSection />
       <ReviewCards />
       <StartLearning />
-      <AllCourses/>
-      {/* <LearningStyle />
-
+      <LearningStyle />
       <ReviewCards />
-      <ModernGallery /> */}
-
-      {/* <Footer /> */}
+      <ModernGallery />
+      <Footer />
     </div>
   );
 }
