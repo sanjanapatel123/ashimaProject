@@ -32,10 +32,10 @@ const courses = [
 
 const trendingCourses = [
   "AI & ML",
-  "Data Science & Engineering",
-  "Product",
-  "Design & Development",
-  "DevOps",
+  "DEVOPS",
+  "NO CODE",
+  "DATA SCIENCE AND ENGINERRING",
+  "DESIGN AND DEVLOPMENT",
   "Cybersecurity & Testing",
   "Business & Leadership",
   "Marketing & Sales",
@@ -72,18 +72,19 @@ const TrendingWithCards = () => {
       </h2>
 
       {/* Course Categories */}
-      <div className="flex flex-col gap-4 mt-10">
-        {[0, 6].map((startIndex, rowIndex) => (
+
+      <div className="flex flex-col gap-6 mt-10">
+        {[0, 4, 8].map((startIndex, rowIndex) => (
           <div
             key={rowIndex}
-            className="flex flex-wrap justify-center gap-2 sm:gap-3"
+            className="flex flex-wrap justify-center gap-3 sm:gap-4"
           >
-            {trendingCourses.slice(startIndex, startIndex + 6).map((label) => {
+            {trendingCourses.slice(startIndex, startIndex + 4).map((label) => {
               const isSelected = selectedCourse === label;
               return (
                 <button
                   key={label}
-                  className={`px-10 py-2 rounded-full text-[14px] font-semibold border transition-all ${
+                  className={`px-10 py-2 rounded-full text-[14px] font-semibold uppercase border transition-all ${
                     isSelected
                       ? "bg-[#002726] text-white border-[#002726]"
                       : "bg-white text-gray-800 border border-black hover:bg-[#fffaf1] hover:text-black"
