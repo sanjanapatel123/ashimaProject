@@ -102,7 +102,7 @@ const TrendingWithCards = () => {
 
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-[#fff] relative font-Roboto Condensed">
         {/* Scrollable Courses Section */}
-        <div className="relative lg:max-w-[2000px] mx-auto mt-10">
+        <div className="relative lg:max-w-[900px] mx-auto mt-10">
           {/* Scrollable Cards Container */}
           <div
             ref={sliderRef}
@@ -111,10 +111,10 @@ const TrendingWithCards = () => {
             {courses.map((course, index) => (
               <div
                 key={index}
-                className="w-[450px] min-w-[450px] rounded-xl border border-black overflow-hidden shadow-lg hover:shadow-2xl transition-all bg-white"
+                className="w-[450px] min-w-[300px] rounded-xl border border-black overflow-hidden shadow-lg hover:shadow-2xl transition-all bg-white"
               >
                 {/* Image Section */}
-                <div className="relative h-[500px] overflow-hidden bg-black">
+                <div className="relative h-[500px] w-[300px] overflow-hidden bg-black">
                   <img
                     src={course.img}
                     alt={course.title}
@@ -168,7 +168,7 @@ const TrendingWithCards = () => {
       </div>
 
       {/* Navigation Arrows */}
-      <div className="flex justify-between w-full mt-4 px-6">
+      <div className="flex justify-between w-full mt-0 px-6">
         {/* Left Arrow */}
         <button
           onClick={scrollLeft}
