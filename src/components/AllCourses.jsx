@@ -183,39 +183,70 @@ function AllCourses() {
               className="d-flex align-items-center overflow-auto px-2 justify-content-between"
               style={{ whiteSpace: "nowrap", scrollBehavior: "smooth" }}
             >
-              <Button variant="success" className="me-2 flex-shrink-0">
+              <Button variant="success" 
+               style={{width:"73px", height:"44px", top:"142px",left:"42px", borderRadius:"12px", padding:"10px", gap:"10px", background:"#047670"}}>
                 AI & ML
               </Button>
              
-                <img src={arrow} className="h-12 w-6"/>
+                <img src={arrow} style={{width:"32px", height:"67px", top:"131px",opacity:"30%", color:"#706D6E"}}/>
              
-              <span className="text-muted mx-2">/</span>
-              <span className="text-dark fw-bold me-2 flex-shrink-0">
-                DevOps
+              <span className="text-uppercase fw-bold" style={{
+          fontFamily: "'Roboto Condensed', sans-serif",
+          fontWeight: 500,
+          fontSize: '16px',
+          lineHeight: '24px',
+          letterSpacing: '0.32px', // 2% of 16px
+        }}>
+               DevOps
               </span>
 
-              <span className="text-muted mx-2">/</span>
-              <span className="text-dark fw-bold me-2 flex-shrink-0">
-                No Code
+              <span className="text-uppercase fw-bold" style={{
+          fontFamily: "'Roboto Condensed', sans-serif",
+          fontWeight: 500,
+          fontSize: '16px',
+          lineHeight: '24px',
+          letterSpacing: '0.32px', // 2% of 16px
+        }}>
+               No Code
               </span>
 
-              <span className="text-muted mx-2">/</span>
-              <span className="text-dark fw-bold me-2 flex-shrink-0">
+              <span className="text-uppercase fw-bold" style={{
+          fontFamily: "'Roboto Condensed', sans-serif",
+          fontWeight: 500,
+          fontSize: '16px',
+          lineHeight: '24px',
+          letterSpacing: '0.32px', // 2% of 16px
+        }}>
                 Cyber Security
               </span>
 
-              <span className="text-muted mx-2">/</span>
-              <span className="text-dark fw-bold me-2 flex-shrink-0">
+              <span className="text-uppercase fw-bold" style={{
+          fontFamily: "'Roboto Condensed', sans-serif",
+          fontWeight: 500,
+          fontSize: '16px',
+          lineHeight: '24px',
+          letterSpacing: '0.32px', // 2% of 16px
+        }}>
                 Data Science
               </span>
 
-              <span className="text-muted mx-2">/</span>
-              <span className="text-dark fw-bold me-2 flex-shrink-0">
+              <span className="text-uppercase fw-bold" style={{
+          fontFamily: "'Roboto Condensed', sans-serif",
+          fontWeight: 500,
+          fontSize: '16px',
+          lineHeight: '24px',
+          letterSpacing: '0.32px', // 2% of 16px
+        }}>
                 Gaming & Network
               </span>
 
-              <span className="text-muted mx-2">/</span>
-              <span className="text-dark fw-bold me-2 flex-shrink-0">
+              <span className="text-uppercase fw-bold" style={{
+          fontFamily: "'Roboto Condensed', sans-serif",
+          fontWeight: 500,
+          fontSize: '16px',
+          lineHeight: '24px',
+          letterSpacing: '0.32px', // 2% of 16px
+        }}>
                 Design & Development
               </span>
             </div>
