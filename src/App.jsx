@@ -15,11 +15,13 @@ import FAQSection from "./components/FAQSection";
 import ReviewCards from "./components/ReviewCards";
 import ModernGallery from "./components/ModernGallery";
 import Explore from "./components/Explore";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div>
-      <Navbar></Navbar>
+      <Header></Header>
+      {/* <Navbar></Navbar> */}
       <div className="">
         <Hero></Hero>
       </div>
