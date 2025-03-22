@@ -7,6 +7,7 @@ import courses3 from "../assets/courses3.png";
 import courses4 from "../assets/courses4.png";
 import trending1 from "../assets/trending1.png";
 import COURSES from "../assets/COURSE.png";
+import dot from "../assets/3dot.png";
 import {
   Container,
   Row,
@@ -177,47 +178,44 @@ function AllCourses() {
     <>
       <Container fluid>
         {/* Top Navigation */}
-        <Row className="bg-light py-2 ">
+        <Row className="bg-light py-2 uppercase">
           <Col>
             <div
-              className="d-flex align-items-center overflow-auto px-2 justify-content-between"
+              className="d-flex align-items-center  overflow-auto px-2 justify-content-between font-Roboto Condensed"
               style={{ whiteSpace: "nowrap", scrollBehavior: "smooth" }}
             >
-              <Button variant="success" className="me-2 flex-shrink-0">
+              <Button className=" bg-[#047670] me-2 flex-shrink-0">
                 AI & ML
               </Button>
-             
-                <img src={arrow} className="h-12 w-6"/>
-             
-              <span className="text-muted mx-2">/</span>
+
+              <img src={arrow} className="h-12 w-6" />
+
               <span className="text-dark fw-bold me-2 flex-shrink-0">
                 DevOps
               </span>
 
-              <span className="text-muted mx-2">/</span>
               <span className="text-dark fw-bold me-2 flex-shrink-0">
                 No Code
               </span>
 
-              <span className="text-muted mx-2">/</span>
               <span className="text-dark fw-bold me-2 flex-shrink-0">
                 Cyber Security
               </span>
 
-              <span className="text-muted mx-2">/</span>
               <span className="text-dark fw-bold me-2 flex-shrink-0">
                 Data Science
               </span>
 
-              <span className="text-muted mx-2">/</span>
               <span className="text-dark fw-bold me-2 flex-shrink-0">
                 Gaming & Network
               </span>
 
-              <span className="text-muted mx-2">/</span>
               <span className="text-dark fw-bold me-2 flex-shrink-0">
                 Design & Development
               </span>
+              
+                <img src={dot} className="bg-[#FFFFFF]" />
+             
             </div>
           </Col>
         </Row>
@@ -243,7 +241,7 @@ function AllCourses() {
           </Col>
           <Col md={3}>
             <Dropdown>
-              <Dropdown.Toggle variant="outline-dark" className="w-100">
+              <Dropdown.Toggle variant="" className="w-100">
                 Sort By: {sortOption}
               </Dropdown.Toggle>
               <Dropdown.Menu>
@@ -564,3 +562,8 @@ function AllCourses() {
 }
 
 export default AllCourses;
+
+
+
+
+

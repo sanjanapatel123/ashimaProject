@@ -39,74 +39,77 @@ const MakeLearningBetter = () => {
   };
 
   return (
-    <div className="bg-[#FAFAF8] py-10 px-6 sm:px-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 items-center text-center sm:text-left">
-        {/* Left Section - Heading */}
-        <div className="text-[#000000] font-impact text-3xl sm:text-5xl md:text-6xl tracking-[0.5%] leading-[65px]">
-          LET'S MAKE <br /> LEARNING BETTER
+    <div className="bg-[#FAFAF8] ">
+      <div className="w-full flex flex-col sm:flex-row justify-between px-4 sm:px-16 lg:px-32 py-10">
+        {/* Left Section - Stays on top in mobile */}
+        <div className="w-full sm:w-1/2 text-left mb-6 sm:mb-0">
+          <h2 className="text-2xl sm:text-5xl font-impact tracking-wide uppercase ml-0 sm:ml-5">
+            lets make <br /> learning better
+          </h2>
         </div>
 
-        {/* Right Section - Text & Button */}
-        <div>
-          <p className="text-lg text-black mb-6 font-Roboto Condensed">
-            BECOME A PRO WITH US THROUGH INDUSTRY-RELEVANT SKILLS
+        {/* Right Section - Stays below in mobile */}
+        <div className="w-full sm:w-1/2 flex flex-col items-start text-start sm:ml-96">
+          <p className="text-lg sm:text-sm font-Roboto Condensed text-[#000000] uppercase tracking-[0.2em] leading-relaxed mb-4">
+            Become a Pro with us through industry-relevant <br /> skills
           </p>
-          <button className="bg-[#FF6B6B] text-black font-bold px-16 py-3 rounded-2xl hover:bg-[#FF4C4C] transition">
-            SIGN UP
+          <button className="px-16 -mt-2 py-2 bg-[#FF757A] text-black font-Roboto Condensed rounded-2xl hover:bg-[#035f59] transition text-start">
+            sign up
           </button>
         </div>
       </div>
 
-      <div className="max-w-[1400px] mx-auto overflow-x-auto mt-20">
-        <div className="flex gap-8 min-w-[1320px] justify-center px-4">
-          {[
-            {
-              title: "INDUSTRY-RELEVANT SKILLS",
-              description:
-                "STAY AHEAD IN YOUR FIELD BY MASTERING HIGH-DEMAND SKILLS THROUGH OUR ONLINE SESSIONS",
-              image: letstart1,
-            },
-            {
-              title: "HYBRID LEARNING PLATFORM",
-              description:
-                "WORK EXPERIENCE CERTIFICATES FOR REAL PROJECTS AND COHORT LEARNING",
-              image: letstart2,
-            },
-            {
-              title: "CAREER NETWORKING",
-              description:
-                "STAY AHEAD IN YOUR FIELD BY MASTERING HIGH-DEMAND SKILLS THROUGH OUR ONLINE SESSIONS",
-              image: letstart3,
-            },
-          ].map((course, index) => (
-            <div
-              key={index}
-              className="w-[440px] rounded-2xl border border-gray-200 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-white transform hover:scale-[1.03]"
-            >
-              {/* Image Section */}
-              <div className="relative h-[400px] sm:h-[440px] overflow-hidden">
-                <img
-                  src={course.image}
-                  alt={course.title}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                />
-                {/* Gradient Overlay */}
-                <div className="absolute bottom-0 left-0 w-full h-[200px] bg-gradient-to-t from-black/90 via-black/60 to-transparent backdrop-blur-md p-6 flex flex-col justify-end">
-                  <h3 className="text-2xl font-extrabold text-white">
-                    {course.title}
-                  </h3>
-                  <p className="text-sm sm:text-md font-medium text-gray-200 mt-2">
-                    {course.description}
-                  </p>
-                  <button className="mt-3 px-6 py-2 bg-black text-white text-md font-semibold rounded-full hover:bg-gray-800 transition transform hover:scale-105">
-                    Learn More
-                  </button>
-                </div>
-              </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-8 lg:px-16 py-12">
+        {[
+          {
+            image: letstart1,
+            title: "INDUSTRY-RELEVANT SKILLS",
+            description:
+              "STAY AHEAD IN YOUR FIELD BY MASTERING HIGH-DEMAND SKILLS THROUGH OUR ONLINE SESSIONS",
+          },
+          {
+            image: letstart2,
+            title: "HYBRID LEARNING PLATFORM",
+            description:
+              "WORK EXPERIENCE CERTIFICATES FOR REAL PROJECTS AND COHORT LEARNING",
+          },
+          {
+            image: letstart3,
+            title: "CAREER NETWORKING",
+            description:
+              "STAY AHEAD IN YOUR FIELD BY MASTERING HIGH-DEMAND SKILLS THROUGH OUR ONLINE SESSIONS",
+          },
+        ].map((card, index) => (
+          <div
+            key={index}
+            className="relative bg-white shadow-lg rounded-lg overflow-hidden border border-gray-300 w-full sm:w-[480px] h-[550px] mx-auto flex-shrink-0"
+          >
+            {/* Image */}
+            <img
+              src={card.image}
+              alt={card.title}
+              className="w-full h-full object-cover"
+            />
+
+            {/* Dark Blur Overlay - Proper Height */}
+            <div className="absolute bottom-0 left-0 w-full h-[45%] bg-gradient-to-t from-black/80 via-black/50 to-transparent backdrop-blur-md"></div>
+
+            {/* Text Content - Inside Blur Section */}
+            <div className="absolute bottom-6 left-6 right-6 text-white">
+              <h3 className="text-xl font-Roboto Condensed uppercase">
+                {card.title}
+              </h3>
+              <p className="text-md">{card.description}</p>
+
+              {/* Button */}
+              <button className="px-10 py-2 bg-black text-white rounded-full transition">
+                Learn More
+              </button>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
+
       {/* Navigation Arrows & Dots Indicator */}
       <div className="flex flex-col items-center mt-6">
         {/* Dots Indicator */}
@@ -122,15 +125,19 @@ const MakeLearningBetter = () => {
         </div>
 
         {/* Arrows Below Cards */}
-        <div className="w-full flex justify-between items-center px-10">
-          {/* Left Arrow */}
-          <button className="bg-[#00E0C6] text-black p-3 rounded-full hover:bg-[#00c5b0] transition">
-            <FaArrowLeft className="h-4 w-4" />
-          </button>
 
-          {/* Right Arrow */}
-          <button className="bg-[#00E0C6] text-black p-3 rounded-full hover:bg-[#00c5b0] transition">
-            <FaArrowRight className="h-4 w-4" />
+        <div className="absolute  -translate-y-6 left-8 right-8 flex justify-between">
+          <button
+            onClick={scrollLeft}
+            className="bg-[#00E0C6] text-black p-2 rounded-full hover:bg-[#00c5b0] transition"
+          >
+            <FaArrowLeft className="h-3 w-3" />
+          </button>
+          <button
+            onClick={scrollRight}
+            className="bg-[#00E0C6] text-black p-2 rounded-full hover:bg-[#00c5b0] transition"
+          >
+            <FaArrowRight className="h-3 w-3" />
           </button>
         </div>
       </div>

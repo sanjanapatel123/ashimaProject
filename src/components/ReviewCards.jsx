@@ -29,16 +29,16 @@ const Testimonials = () => {
   return (
     <div className="py-12 bg-white px-4 sm:px-6 lg:px-8">
       {/* Heading Section */}
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-8 text-center sm:text-left font-impact">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl text-black mb-8 text-start sm:text-left font-impact">
         WHY OUR LEARNERS LOVE US <span className="text-red-500">❤</span>
       </h1>
 
       {/* Testimonials Grid */}
-      <div className="flex flex-wrap justify-center sm:justify-start gap-6">
+      <div className="flex flex-wrap justify-center sm:justify-start gap-6 font-Roboto Condensed">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="bg-[#0F7768] text-white w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] min-h-[350px] p-6 rounded-xl shadow-lg text-left transition-all duration-300 hover:scale-105"
+            className="bg-[#0F7768] text-white w-full sm:w-[48%] lg:w-[31.5%] min-h-[350px] p-6 rounded-xl shadow-lg text-left transition-all duration-300 hover:scale-105"
           >
             {/* Circular Image and Name Section */}
             <div className="flex flex-col sm:flex-row items-center mb-4">

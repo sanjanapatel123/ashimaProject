@@ -1,5 +1,5 @@
 // import React from "react";
-// import { motion } from "framer-motion"; // Import Framer Motion for animations
+// import { motion } from "framer-motion";
 // import img1 from "../assets/Courses.png";
 // import img2 from "../assets/Business.png";
 // import img3 from "../assets/Newsletter.png";
@@ -14,33 +14,31 @@
 //   return (
 //     <div
 //       className="relative overflow-hidden bg-white p-4 md:p-8 flex items-center"
-//       style={{ width: "1659px", height: "330px" }} // ✅ Set exact width & height
+//       style={{ width: "1659px", height: "330px" }}
 //     >
 //       <motion.div
-//         className="flex"
-//         initial={{ x: "0%" }} // ✅ Start from the first position (images are fully visible first)
-//         animate={{ x: "-100%" }} // ✅ Then start moving left
+//         className="flex gap-2" // ✅ Small gap for spacing
+//         animate={{ x: ["0%", "-100%"] }} // ✅ Perfect loop animation
 //         transition={{
-//           duration: 5, // ✅ Increased speed (reduced duration from 10s to 5s)
+//           duration: 10, // ✅ Adjusted speed (smooth motion)
 //           repeat: Infinity,
 //           ease: "linear",
-//           delay: 2, // ✅ Images will be visible for 2 seconds before scrolling starts
 //         }}
 //       >
-//         {/* Duplicating images for seamless scrolling effect */}
+//         {/* Duplicate images for seamless effect */}
 //         {[...cards, ...cards].map((card, index) => (
 //           <div
 //             key={index}
 //             className="flex-shrink-0 flex items-center justify-center"
-//             style={{ height: "330px", width: "auto" }} // ✅ Proper image container height
+//             style={{ height: "330px", width: "auto" }}
 //           >
 //             <img
 //               src={card.image}
 //               alt={card.title}
 //               style={{
-//                 height: "100%", // ✅ Ensure image height fits exactly 330px
-//                 width: "auto", // ✅ Maintain aspect ratio
-//                 objectFit: "contain", // ✅ No cropping, full image visible
+//                 height: "100%",
+//                 width: "auto",
+//                 objectFit: "contain",
 //                 display: "block",
 //               }}
 //             />
@@ -52,9 +50,6 @@
 // };
 
 // export default Explore;
-
-
-
 
 
 
@@ -74,20 +69,17 @@
 //   return (
 //     <div
 //       className="relative overflow-hidden bg-white p-4 md:p-8 flex items-center"
-//       style={{ width: "1659px", height: "330px" }} // ✅ Set exact width & height
+//       style={{ width: "1659px", height: "330px" }}
 //     >
 //       <motion.div
-//         className="flex gap-1" // ✅ Added gap-1 for space between images
-//         initial={{ x: "0%" }} // ✅ Start from the first position
-//         animate={{ x: "-100%" }} // ✅ Continuous movement
+//         className="flex gap-2"
+//         animate={{ x: ["0%", "-100%"] }}
 //         transition={{
-//           duration: 5, // ✅ Smooth fast scrolling
+//           duration: 20, // ✅ Slower and smoother
 //           repeat: Infinity,
 //           ease: "linear",
-//           delay: 2, // ✅ Starts scrolling after 2s delay
 //         }}
 //       >
-//         {/* Duplicate images for seamless scrolling */}
 //         {[...cards, ...cards].map((card, index) => (
 //           <div
 //             key={index}
@@ -98,9 +90,64 @@
 //               src={card.image}
 //               alt={card.title}
 //               style={{
-//                 height: "100%", // ✅ Image fits exactly 330px
-//                 width: "auto", // ✅ Maintain aspect ratio
-//                 objectFit: "contain", // ✅ No cropping
+//                 height: "100%",
+//                 width: "auto",
+//                 objectFit: "contain",
+//                 display: "block",
+//               }}
+//             />
+//           </div>
+//         ))}
+//       </motion.div>
+//     </div>
+//   );
+// };
+
+// export default Explore;
+
+
+
+
+// import React from "react";
+// import { motion } from "framer-motion";
+// import img1 from "../assets/Courses.png";
+// import img2 from "../assets/Business.png";
+// import img3 from "../assets/Newsletter.png";
+
+// const cards = [
+//   { title: "Courses", image: img1 },
+//   { title: "Business", image: img2 },
+//   { title: "Newsletter", image: img3 },
+// ];
+
+// const Explore = () => {
+//   return (
+//     <div
+//       className="relative overflow-hidden bg-white p-4 md:p-8 flex items-center rounded-xl"
+//       style={{ height: "330px" }} // Removed fixed width
+//     >
+//       <motion.div
+//         className="flex gap-2"
+//         animate={{ x: ["0%", "-100%"] }}
+//         transition={{
+//           duration: 20, // Slower scroll
+//           repeat: Infinity,
+//           ease: "linear",
+//         }}
+//       >
+//         {[...cards, ...cards].map((card, index) => (
+//           <div
+//             key={index}
+//             className="flex-shrink-0 flex items-center justify-center"
+//             style={{ height: "330px", width: "auto" }}
+//           >
+//             <img
+//               src={card.image}
+//               alt={card.title}
+//               style={{
+//                 height: "100%",
+//                 width: "auto",
+//                 objectFit: "contain",
 //                 display: "block",
 //               }}
 //             />
@@ -131,19 +178,21 @@ const cards = [
 const Explore = () => {
   return (
     <div
-      className="relative overflow-hidden bg-white p-4 md:p-8 flex items-center"
-      style={{ width: "1659px", height: "330px" }}
+      className="relative overflow-hidden bg-white py-4 md:py-8 rounded-xl w-full"
+      style={{ height: "330px" }}
     >
       <motion.div
-        className="flex gap-2" // ✅ Small gap for spacing
-        animate={{ x: ["0%", "-100%"] }} // ✅ Perfect loop animation
+        className="flex items-center gap-3 pl-10" // 👈 Add left padding here
+        animate={{ x: ["0%", "-100%"] }}
         transition={{
-          duration: 10, // ✅ Adjusted speed (smooth motion)
+          duration: 20,
           repeat: Infinity,
           ease: "linear",
         }}
       >
-        {/* Duplicate images for seamless effect */}
+        {/* 👇 Dummy spacer to simulate left padding at scroll start */}
+        <div style={{ width: "2.5rem" }}></div>
+
         {[...cards, ...cards].map((card, index) => (
           <div
             key={index}
@@ -153,12 +202,7 @@ const Explore = () => {
             <img
               src={card.image}
               alt={card.title}
-              style={{
-                height: "100%",
-                width: "auto",
-                objectFit: "contain",
-                display: "block",
-              }}
+              className="h-full w-auto object-contain block"
             />
           </div>
         ))}

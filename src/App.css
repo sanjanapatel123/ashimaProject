@@ -34,3 +34,7 @@ body {
 .animate-scroll-right {
   animation: scroll-right 25s linear infinite;
 }
+.box{
+  border-left:35px solid black ;
+  border-right:35px solid black ;
+}

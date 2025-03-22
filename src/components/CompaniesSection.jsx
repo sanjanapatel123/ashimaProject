@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion"; // Import Framer Motion for smooth animation
+import { motion } from "framer-motion";
 import company1 from "../assets/company1.png";
 import company2 from "../assets/company2.png";
 import company3 from "../assets/company3.png";
@@ -20,42 +20,43 @@ const companies = [
 
 const CompaniesSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between bg-gray-50 py-20 px-6 md:px-12 font-impact">
-      {/* Left Section - Static Text */}
-      <div className="w-full md:w-1/3 text-left md:text-left flex flex-col mb-6 md:mb-0">
-        <h2 className="text-[25px] md:text-[30px] font-[400] leading-[40px] tracking-[0.5%] text-black">
-          JOIN OVER <span className="text-red-500">100K+</span> LEARNERS
-        </h2>
-        <h3 className="text-[25px] md:text-[30px] font-[400] leading-[40px] tracking-[0.5%] text-black">
-          TO UPSKILL HOTTEST AI SKILLS
-        </h3>
-      </div>
+    <div className="bg-gray-50 py-20 px-6 md:px-12 font-impact overflow-hidden">
+      <div className="flex flex-col md:flex-row items-center justify-between">
+        {/* Left Static Text */}
+        <div className="w-full md:w-1/3 text-left mb-6 md:mb-0">
+          <h2 className="text-[25px] md:text-[30px] font-[400] leading-[40px] tracking-[0.5%] text-black">
+            JOIN OVER <span className="text-red-500">100K+</span> LEARNERS
+          </h2>
+          <h3 className="text-[25px] md:text-[30px] font-[400] leading-[40px] tracking-[0.5%] text-black">
+            TO UPSKILL HOTTEST AI SKILLS
+          </h3>
+        </div>
 
-      {/* Right Section - Properly Styled Continuous Scrolling Logos */}
-      <div className="w-full md:w-2/3 overflow-hidden relative flex">
-        <motion.div
-          className="flex gap-4 flex-shrink-0"
-          initial={{ x: "-100%" }} // ✅ Start from left
-          animate={{ x: "100%" }} // ✅ Move continuously towards the right
-          transition={{
-            duration: 15, // ✅ Slower scrolling (increased from 8s to 15s)
-            repeat: Infinity, // ✅ Infinite looping
-            ease: "linear",
-          }}
-        >
-          {[...companies, ...companies].map((logo, index) => (
-            <div
-              key={index}
-              className="bg-white shadow-md rounded-lg p-3 flex items-center justify-center w-[90px] h-[70px]" // ✅ White Card Styling
-            >
-              <img
-                src={logo}
-                alt={`Company ${index + 1}`}
-                className="h-auto w-[70px] object-contain" // ✅ Properly Sized Logos
-              />
-            </div>
-          ))}
-        </motion.div>
+        {/* Right Scrolling Logos (Left ➡️ Right) */}
+        <div className="w-full md:w-2/3 overflow-hidden relative">
+          <motion.div
+            className="flex w-max gap-6"
+            animate={{ x: ["-50%", "0%"] }} // 👈 scroll left to right
+            transition={{
+              duration: 30,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          >
+            {[...companies, ...companies].map((logo, index) => (
+              <div
+                key={index}
+                className="bg-white shadow-md rounded-lg p-3 flex items-center justify-center w-[90px] h-[70px]"
+              >
+                <img
+                  src={logo}
+                  alt={`Company ${index + 1}`}
+                  className="h-auto w-[70px] object-contain"
+                />
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </div>
   );
