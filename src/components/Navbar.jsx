@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,16 +11,19 @@ export default function Navbar() {
       <div className="container mx-auto flex justify-between  items-center px-4 sm:px-2 md:px-2 h-full py-4">
         {/* Left side: AiSkills + Menu Links combined */}
         <div className="flex items-center space-x-4 h-full">
-          <h1 className="text-[55px] leading-[55px] tracking-[0.5%] font-[400] text-black font-impact mr-12">
-            AiSkills
+          <h1 className="text-[55px] leading-[55px] tracking-[0.5%] font-[400] text-[#000000] font-impact mr-12">
+            AI SKILLS
           </h1>
 
           {/* Desktop Menu - close to AiSkills */}
 
           <ul className="hidden md:flex space-x-6 items-center font-roboto">
-            <li className="flex items-center cursor-pointer font-[500] text-[18px] text-[#1e1e1e] leading-[20px] tracking-[0%]">
-              Courses
-            </li>
+            <Link to="/AllCourses" className="no-underline">
+              <li className="flex items-center cursor-pointer font-[500] text-[18px] text-[#1e1e1e] leading-[20px] tracking-[0%] hover:text-[#00E0C6] transition">
+                Courses
+              </li>
+            </Link>
+
             <li className="flex items-center cursor-pointer font-[500] text-[18px] text-[#1e1e1e] leading-[20px] tracking-[0%]">
               Business
             </li>
@@ -81,4 +85,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

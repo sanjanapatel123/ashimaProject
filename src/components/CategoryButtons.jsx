@@ -342,9 +342,9 @@ const courses = [
 
 const RideTheAIWave = () => {
   return (
-    <div className="bg-black text-white py-10 px-4 sm:px-6">
+    <div className="bg-black text-white py-10 px-4 sm:px-6 ">
       {/* Heading */}
-      <h2 className="text-center text-3xl sm:text-5xl font-extrabold uppercase mb-10">
+      <h2 className="text-center text-3xl sm:text-5xl font-impact uppercase mb-10">
         RIDE THE AI WAVE WITH US
       </h2>
 

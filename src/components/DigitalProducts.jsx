@@ -35,7 +35,7 @@
 //           Enhance your learning with instant digital products from instant
 //           real-world projects to prompts.
 //         </p>
-//       </div>    
+//       </div>
 
 //       {/* Second Row - Same as Above */}
 //       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-20">
@@ -72,18 +72,11 @@
 
 // export default DigitalProducts;
 
-
-
-
-
-
-
 // import React from "react";
 // import product1 from "../assets/product1.png"
 // import product2 from "../assets/product2.png";
 // import product3 from "../assets/product3.png";
 // import product4 from "../assets/product4.png";
-
 
 // const products = [
 //   {
@@ -149,9 +142,6 @@
 // };
 
 // export default DigitalProducts;
-
-
-
 
 // import React from "react";
 // import product1 from "../assets/product1.png";
@@ -224,9 +214,6 @@
 
 // export default DigitalProducts;
 
-
-
-
 import React from "react";
 import product1 from "../assets/product1.png";
 import product2 from "../assets/product2.png";
@@ -266,18 +253,21 @@ const products = [
 
 const DigitalProducts = () => {
   return (
-    <div className="bg-white text-black py-16 px-6 sm:px-8">
+    <div className="bg-white text-black py-16 px-6 sm:px-8 ">
       {/* Heading Section */}
-      <h2 className="text-center text-3xl sm:text-5xl font-extrabold uppercase mb-4">
+      <h2
+        className="text-center text-3xl sm:text-5xl font-impact
+ uppercase mb-4 "
+      >
         DIGITAL <span className="text-[#008578]">PRODUCTS</span>
       </h2>
-      <p className="text-center text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">
-        ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS FROM INSTANT
+      <p className="text-center text-base sm:text-lg text-gray-700 max-w-2xl mx-auto font-Roboto Condensed">
+        ENHANCE YOUR LEARNING WITH INSTANT DIGITAL<br></br> PRODUCTS FROM INSTANT
         REAL-WORLD PROJECTS TO PROMPTS.
       </p>
 
       {/* Product Cards Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
         {products.map((product) => (
           <div
             key={product.id}
