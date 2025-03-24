@@ -86,7 +86,7 @@ const TrendingWithCards = () => {
                   <button
                     key={label}
                     onClick={() => handleCourseClick(label)}
-                    className={`px-2 py-2 rounded-full text-[16px] font-Roboto Condensed uppercase border transition-all 
+                    className={`px-2 py-2 rounded-full text-[16px] font-Roboto Condensed uppercase border transition-all
                 ${
                   isSelected
                     ? "bg-[#002726] text-white border-[#002726]"
@@ -102,7 +102,7 @@ const TrendingWithCards = () => {
       </div>
 
       {/* Scrollable Courses Section */}
-      <div className=" px-2 sm:px-6 lg:px-8 py-8 bg-[#f4F3F3] relative font-Roboto Condensed uppercase">
+      <div className=" px-2 sm:px-6 lg:px-8 py-8 bg-[#f4F3F3] relative font-Roboto Condensed uppercase ">
         <div className="relative max-w-full overflow-x-auto mt-10">
           <div
             ref={sliderRef}
@@ -111,7 +111,7 @@ const TrendingWithCards = () => {
             {courses.map((course, index) => (
               <div
                 key={index}
-                className="min-w-[270px] sm:min-w-[350px] lg:min-w-[400px] w-full max-w-[400px]  rounded-xl border border-black overflow-hidden shadow-lg hover:shadow-2xl transition-all bg-[#f4F3F3] uppercaseer"
+                className="min-w-[270px] sm:min-w-[350px] lg:min-w-[45px] w-full max-w-[450px]  rounded-xl border border-black overflow-hidden shadow-lg hover:shadow-2xl transition-all bg-[#f4F3F3] uppercaseer"
               >
                 <div className="relative h-[450px] sm:h-[500px] w-full overflow-hidden bg-black uppercase">
                   <img

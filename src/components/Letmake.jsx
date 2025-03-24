@@ -221,7 +221,7 @@ const MakeLearningBetter = () => {
           ].map((card, index) => (
             <div
               key={index}
-              className="relative bg-white rounded-lg overflow-hidden w-[448px] h-[497px] flex-shrink-0 border border-gray-200 shadow-md"
+              className="relative bg-white rounded-lg overflow-hidden w-[390px] h-[497px] flex-shrink-0 border border-gray-200 shadow-md"
             >
               <img
                 src={card.image}
