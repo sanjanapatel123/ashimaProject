@@ -28,7 +28,7 @@ const FeaturedInSection = () => {
     <div className="bg-black py-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-16 items-center">
         {/* Left Section - Heading & Description */}
-        <div className="text-white text-center sm:text-left px-4">
+        <div className="text-white  sm:text-left px-4">
           <h2 className="font-[400] text-[40px] sm:text-[55px] leading-[50px] sm:leading-[65px] tracking-[0.5%] mb-4 font-impact">
             FEATURED IN
           </h2>
