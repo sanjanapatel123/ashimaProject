@@ -1,46 +1,22 @@
-import Hero from "./components/Hero";
-import LearningJourney from "./components/LearningJourney";
-import LearningStyle from "./components/LearningStyle";
-import Trending from "../src/components/Trending";
-import FeaturedIn from "./components/FeaturedIn";
-import StartLearning from "./components/StartLearning";
-import DigitalProducts from "./components/DigitalProducts";
-import Letmake from "./components/Letmake";
-import CategoryButtons from "./components/CategoryButtons";
-import Navbar from "./components/Navbar";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
 import "./App.css";
-import CompaniesSection from "./components/CompaniesSection";
-import Footer from "./components/Footer";
-import FAQSection from "./components/FAQSection";
-import ReviewCards from "./components/ReviewCards";
-import ModernGallery from "./components/ModernGallery";
-import Explore from "./components/Explore";
-import Header from "./components/Header";
+import Courses from "./components/Courses";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Header></Header>
-      {/* <Navbar></Navbar> */}
-      <div className="">
-        <Hero></Hero>
-      </div>
-      <Explore />
-      <CompaniesSection />
-      <Trending />
-      <LearningJourney />
-      <CategoryButtons />
-      <DigitalProducts />
-      <FeaturedIn />
-      <Letmake />
-      <FAQSection />
-      <ReviewCards />
-      <StartLearning />
-      <LearningStyle />
-      <ReviewCards />
-      <ModernGallery />
-      <Footer />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/allcourses" element={<Courses></Courses>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/signup" element={<Signup></Signup>}></Route>
+      </Routes>
+    </>
   );
-}
+};
+
 export default App;

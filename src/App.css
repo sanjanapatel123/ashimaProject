@@ -5,11 +5,6 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-html,
-body {
-  overflow-x: hidden;
-  /* background-color: black; */
-}
 
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
@@ -18,8 +13,6 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-
-
 
 @keyframes scroll-right {
   from {
@@ -33,4 +26,8 @@ body {
 /* Slow animation - Increase duration */
 .animate-scroll-right {
   animation: scroll-right 25s linear infinite;
+}
+.box {
+  border-left: 35px solid black;
+  border-right: 35px solid black;
 }

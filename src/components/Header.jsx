@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
-      <div className="max-w-screen-xl mx-auto p-4 flex items-center justify-between">
+      <div className="max-w-screen-xl h-[80px] mx-auto p-4 flex items-center justify-between">
         {/* Logo */}
         <div className="font-bold text-2xl text-black">AI SKILLS</div>
 
@@ -42,7 +42,7 @@ const Header = () => {
           <div className="relative">
             <input
               type="text"
-              placeholder="Search for anything"
+              placeholder="        Search for anything"
               className="p-2 pl-10 pr-3 border border-gray-300 rounded-md"
             />
             <BsSearch
@@ -143,7 +143,7 @@ const Header = () => {
         // </div>
 
         <motion.div
-          className="md:hidden bg-white p-4"
+          className="md:hidden bg-white text-black p-4"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}

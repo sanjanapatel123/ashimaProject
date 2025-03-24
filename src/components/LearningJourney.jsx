@@ -1,54 +1,24 @@
-// import React, { useState } from "react";
-// import img from "../assets/Bookimg.png";
-// import { FaArrowRight } from "react-icons/fa";
-// import { motion } from "framer-motion";
-
 // const LearningJourney = () => {
-//   const [isHovered, setIsHovered] = useState(false);
-
 //   return (
-//     <div
-//       className="relative w-full min-h-[200px] sm:min-h-[250px] md:min-h-[300px] lg:min-h-[400px] flex flex-col justify-center items-start px-6 sm:px-12 lg:px-20 text-white"
-//       style={{
-//         backgroundImage: `url(${img})`,
-//         backgroundSize: "cover",
-//         backgroundPosition: "center",
-//         backgroundAttachment: "fixed",
-//       }}
-//     >
-//       {/* Overlay for opacity (dark background effect) */}
-//       <div className="absolute inset-0 bg-black opacity-40 pointer-events-none"></div>
+//     <div className="w-full bg-black text-[#FFFFFF] py-12 px-4 sm:px-8 lg:px-20 flex flex-col sm:flex-row justify-between items-start text-start sm:text-right font-impact tracking-[0.065em] leading-[1.2]">
+//       {/* Left Side - Bold Heading */}
+//       <div className="w-full sm:w-1/2 pl-2 sm:pl-6 mb-8 sm:mb-0">
+//         <h2 className="text-[55px] sm:text-5xl font-impact tracking-wide uppercase">
+//           Start Your Learning <br /> Journey Today
+//         </h2>
+//       </div>
 
-//       {/* Content - text and button */}
-//       <div className="relative z-10">
-//         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-//           Start Your Learning Journey Today.
-//         </h1>
-//         <p className="mt-4 max-w-2xl text-base sm:text-lg">
-//           Unlock endless opportunities with expert-led courses. Learn anytime,
-//           anywhere, and boost your skills for a brighter future.
+//       {/* Right Side - Text & Button */}
+
+//       <div className="w-full sm:w-1/2 pr-2 sm:pr-6 flex flex-col items-start text-start sm:text-center sm:ml-0">
+//         <p className="text-[16px] sm:text-sm font-Roboto Condensed text-[#FFFFFF] uppercase tracking-[0.2em] mb-4 max-w-xl">
+//           Unlock endless opportunities with expert-led courses. Learn <br />
+//           anytime, anywhere, and boost your skills for a brighter future.
 //         </p>
 
-//         <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-//           <div className="mt-6">
-//             <button
-//               className="flex items-center justify-center gap-2 px-5 py-2 rounded-full border bg-white text-black hover:bg-gray-100 font-semibold transition duration-300 mb-5"
-//               onMouseEnter={() => setIsHovered(true)}
-//               onMouseLeave={() => setIsHovered(false)}
-//             >
-//               <span>Get Started!</span>
-//               <span
-//                 className={`transform transition-transform duration-300 font-bold ${
-//                   isHovered
-//                     ? "translate-x-0 opacity-100"
-//                     : "translate-x-2 opacity-0"
-//                 }`}
-//               >
-//                 <FaArrowRight />
-//               </span>
-//             </button>
-//           </div>
-//         </motion.button>
+//         <button className="px-10 py-3 bg-[#047670] text-white font-Roboto Condensed rounded-2xl hover:bg-[#035f59] transition">
+//           GET STARTED
+//         </button>
 //       </div>
 //     </div>
 //   );
@@ -56,31 +26,39 @@
 
 // export default LearningJourney;
 
-
-
-
-
-
-
 const LearningJourney = () => {
   return (
-    <div className="w-full bg-black text-white py-16 px-6 sm:px-10 lg:px-20 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
-      {/* Left Side - Bold Heading */}
-      <h2 className="text-2xl sm:text-5xl font-extrabold tracking-wide uppercase mb-6 sm:mb-0">
-        Start Your Learning <br /> Journey Today
-      </h2>
+    <div className="w-full bg-black text-white py-16">
+      <div className="max-w-[1366px] mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+        {/* Left Side - Bold Heading */}
+        <div className="w-full md:w-1/2 mb-8 md:mb-0">
+          <h2 className="text-[45px] pl-2 sm:text-[55px] font-impact font-400 tracking-wide uppercase leading-[1.2]">
+            Start Your Learning <br /> Journey Today
+          </h2>
+        </div>
 
-      {/* Right Side - Text & Button */}
-      <div className="max-w-md">
-        <p className="text-lg sm:text-sm font-medium text-gray-300">
-          Unlock endless opportunities with expert-led courses. Learn anytime,
-          anywhere, and boost your skills for a brighter future.
-        </p>
+        {/* Right Side - Text & Button */}
+        {/* <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+          <p className="text-[16px] sm:text-sm font-Roboto Condensed uppercase tracking-[0.2em] mb-4 w-full max-w-[520px] leading-[1.6]">
+            Unlock endless opportunities with expert-led courses. Learn <br />
+            anytime, anywhere, and boost your skills for a brighter future.
+          </p>
 
-        {/* Button */}
-        <button className="mt-6 px-8 py-3 bg-[#047670] text-white font-bold rounded-xl hover:bg-[#035f59] transition">
-          GET STARTED
-        </button>
+          <button className="px-10 py-3 bg-[#047670] text-white font-Roboto Condensed rounded-2xl hover:bg-[#035f59] transition">
+            GET STARTED
+          </button>
+        </div> */}
+
+        {/* Right Side - Text & Button */}
+        <div className="w-full md:w-1/2 flex flex-col items-start text-left">
+          <p className="text-[16px] sm:text-sm font-Roboto Condensed uppercase tracking-[0.2em] mb-4 max-w-[600px] leading-snug md:leading-[26px]">
+            Unlock endless opportunities with expert-led courses. Learn anytime,
+            anywhere, and boost your skills for a brighter future.
+          </p>
+          <button className="px-10 py-3 bg-[#047670] text-white font-Roboto Condensed rounded-2xl hover:bg-[#035f59] transition">
+            GET STARTED
+          </button>
+        </div>
       </div>
     </div>
   );

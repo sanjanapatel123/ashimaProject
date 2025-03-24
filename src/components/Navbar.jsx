@@ -1,160 +1,91 @@
-import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
-import { motion } from "framer-motion";
-
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <nav className="text-black min-h-[70px] fixed w-full top-0 z-50  shadow-md ">
-      <div className="container mx-auto flex justify-between  items-center px-4 sm:px-2 md:px-2 h-full py-4">
-        {/* Left side: AiSkills + Menu Links combined */}
-        <div className="flex items-center space-x-4 h-full">
-          <h1 className="text-[55px] leading-[55px] tracking-[0.5%] font-[400] text-black font-impact mr-12">
-            AiSkills
-          </h1>
-
-          {/* Desktop Menu - close to AiSkills */}
-
-          <ul className="hidden md:flex space-x-6 items-center font-roboto">
-            <li className="flex items-center cursor-pointer font-[500] text-[18px] text-[#1e1e1e] leading-[20px] tracking-[0%]">
-              Courses
-            </li>
-            <li className="flex items-center cursor-pointer font-[500] text-[18px] text-[#1e1e1e] leading-[20px] tracking-[0%]">
-              Business
-            </li>
-            <li className="flex items-center cursor-pointer font-[500] text-[18px] text-[#1e1e1e] leading-[20px] tracking-[0%]">
-              Digital Product
-            </li>
-            <li className="flex items-center cursor-pointer font-[500] text-[18px] text-[#1e1e1e] leading-[20px] tracking-[0%]">
-              Newsletter
-            </li>
-          </ul>
-        </div>
-
-        {/* Right side: Instructor & Login buttons */}
-        <div className="hidden md:flex space-x-4">
-          <button className="p-[10px] w-[150px] h-[45px] text-white rounded-[16px] bg-[#1E1E1E]">
-            Login
-          </button>
-          <button className="p-[10px] w-[150px] h-[45px] text-white rounded-[16px] bg-[#047670]">
-            Instructor
-          </button>
-        </div>
-
-        {/* Mobile Menu Section (Untouched) */}
-        <div className="flex items-center md:hidden">
-          <button className="flex items-center px-4 py-2 text-white rounded-[16px] font-semibold text-lg mr-4 bg-[#047670]">
-            Courses
-            <ChevronDown size={16} className="ml-2" />
-          </button>
-
-          {/* Hamburger Menu Icon */}
-          <button onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu Dropdown (Untouched) */}
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="md:hidden p-4 bg-white"
-        >
-          <ul className="space-y-4">
-            <li className="cursor-pointer">Business</li>
-            <li className="cursor-pointer">Digital Product</li>
-            <li className="cursor-pointer">Newsletter</li>
-          </ul>
-          <div className="mt-4 space-y-2">
-            <button className="w-full px-4 py-2 border text-white rounded-lg border-white bg-[#1e1e1e]">
-              Instructor
-            </button>
-            <button className="w-full px-4 py-2 border text-white rounded-lg border-white bg-[#047670]">
-              Login
-            </button>
-          </div>
-        </motion.div>
-      )}
-    </nav>
-  );
-}
-
-// import { useState } from "react";
-// import { Menu, X, ChevronDown } from "lucide-react";
+// import React, { useState } from "react";
 // import { motion } from "framer-motion";
+// import { Link } from "react-router-dom";
 
-// export default function Navbar() {
-//   const [isOpen, setIsOpen] = useState(false);
+// const Navbar = () => {
+//   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 //   return (
-//     <nav className="text-black min-h-[70px] fixed lg:rounded-sm w-full top-0 z-50 bg-white shadow-md lg:w-[calc(100%-4rem)] lg:mx-8">
-//       <div className="container mx-auto flex justify-between  items-center px-4 sm:px-2 md:px-2 h-full py-4">
-//         {/* Left side: AiSkills + Menu Links combined */}
-//         <div className="flex items-center space-x-4 h-full">
-//           <h1 className="text-[55px] leading-[55px] tracking-[0.5%] font-[400] text-black font-impact mr-12">
-//             AiSkills
-//           </h1>
+//     <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+//       <div className="max-w-screen-xl mx-auto p-4 flex items-center justify-between relative">
+//         {/* Left: Logo */}
+//         <Link>
+//           <div className="font-bold text-2xl text-black z-10">AI SKILLS</div>
+//         </Link>
 
-//           {/* Desktop Menu - close to AiSkills */}
-
-//           <ul className="hidden md:flex space-x-6 items-center font-roboto">
-//             <li className="flex items-center cursor-pointer font-[500] text-[18px] text-[#1e1e1e] leading-[20px] tracking-[0%]">
-//               Courses
-//             </li>
-//             <li className="flex items-center cursor-pointer font-[500] text-[18px] text-[#1e1e1e] leading-[20px] tracking-[0%]">
-//               Business
-//             </li>
-//             <li className="flex items-center cursor-pointer font-[500] text-[18px] text-[#1e1e1e] leading-[20px] tracking-[0%]">
-//               Digital Product
-//             </li>
-//             <li className="flex items-center cursor-pointer font-[500] text-[18px] text-[#1e1e1e] leading-[20px] tracking-[0%]">
-//               Newsletter
-//             </li>
-//           </ul>
+//         {/* Center: Menu Items */}
+//         <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-8">
+//           <Link to={"/AllCourses"} className="text-black hover:text-green-500">
+//             Courses
+//           </Link>
+//           <a href="#" className="text-black hover:text-green-500">
+//             Business
+//           </a>
+//           <a href="#" className="text-black hover:text-green-500">
+//             Digital Product
+//           </a>
+//           <a href="#" className="text-black hover:text-green-500">
+//             Newsletter
+//           </a>
 //         </div>
 
-//         {/* Right side: Instructor & Login buttons */}
-//         <div className="hidden md:flex space-x-4">
-//           <button className="p-[10px] w-[150px] h-[45px] text-white rounded-[16px] bg-[#1E1E1E]">
+//         {/* Right: Auth Buttons */}
+//         <div className="hidden md:flex items-center space-x-4 z-10">
+//           <button className="text-teal-500 px-4 py-2 rounded-md border border-teal-500">
 //             Login
 //           </button>
-//           <button className="p-[10px] w-[150px] h-[45px] text-white rounded-[16px] bg-[#047670]">
-//             Instructor
+//           <button className="bg-teal-500 text-white px-4 py-2 rounded-md">
+//             Sign Up
 //           </button>
 //         </div>
 
-//         {/* Mobile Menu Section (Untouched) */}
-//         <div className="flex items-center md:hidden">
-//           <button className="flex items-center px-4 py-2 text-white rounded-[16px] font-semibold text-lg mr-4 bg-[#047670]">
-//             Courses
-//             <ChevronDown size={16} className="ml-2" />
-//           </button>
-
-//           {/* Hamburger Menu Icon */}
-//           <button onClick={() => setIsOpen(!isOpen)}>
-//             {isOpen ? <X size={28} /> : <Menu size={28} />}
+//         {/* Mobile: Hamburger Menu */}
+//         <div className="md:hidden flex items-center space-x-4">
+//           <button
+//             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+//             className="text-black"
+//           >
+//             <svg
+//               xmlns="http://www.w3.org/2000/svg"
+//               className="h-6 w-6"
+//               fill="none"
+//               stroke="currentColor"
+//               viewBox="0 0 24 24"
+//               strokeWidth="2"
+//             >
+//               <path
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//                 d="M4 6h16M4 12h16M4 18h16"
+//               />
+//             </svg>
 //           </button>
 //         </div>
 //       </div>
 
-//       {/* Mobile Menu Dropdown (Untouched) */}
-//       {isOpen && (
+//       {/* Mobile Menu */}
+//       {isMobileMenuOpen && (
 //         <motion.div
+//           className="md:hidden bg-white p-4"
 //           initial={{ opacity: 0, y: -10 }}
 //           animate={{ opacity: 1, y: 0 }}
-//           className="md:hidden p-4 bg-white"
+//           transition={{ duration: 0.3 }}
 //         >
-//           <ul className="space-y-4">
-//             <li className="cursor-pointer">Business</li>
-//             <li className="cursor-pointer">Digital Product</li>
-//             <li className="cursor-pointer">Newsletter</li>
-//           </ul>
+//           <a href="#" className="block py-2">
+//             Courses
+//           </a>
+//           <a href="#" className="block py-2">
+//             Business
+//           </a>
+//           <a href="#" className="block py-2">
+//             Digital Product
+//           </a>
+//           <a href="#" className="block py-2">
+//             Newsletter
+//           </a>
 //           <div className="mt-4 space-y-2">
 //             <button className="w-full px-4 py-2 border text-white rounded-lg border-white bg-[#1e1e1e]">
-//               Instructor
+//               Signup
 //             </button>
 //             <button className="w-full px-4 py-2 border text-white rounded-lg border-white bg-[#047670]">
 //               Login
@@ -162,126 +93,129 @@ export default function Navbar() {
 //           </div>
 //         </motion.div>
 //       )}
-//     </nav>
-//   );
-// }
-
-// import React from "react";
-
-// import React, { useState } from "react";
-// import { motion } from "framer-motion";
-// import { Menu, X, ChevronDown } from "lucide-react";
-
-// const Header = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-//   return (
-//     <header className="bg-white p-4 shadow-md">
-//       <div className="flex justify-between items-center">
-//         {/* Logo */}
-//         <h1 className="text-3xl font-bold">AI SKILLS</h1>
-
-//         {/* Search bar (Only visible on lg screens) */}
-//         <div className="hidden lg:flex items-center border border-gray-300 rounded-full p-2 w-1/3">
-//           <input
-//             type="text"
-//             className="w-full p-2 outline-none text-sm"
-//             placeholder="Search for anything"
-//           />
-//           {/* <button className="p-2 text-gray-600">
-//             <svg
-//               xmlns="http://www.w3.org/2000/svg"
-//               fill="none"
-//               viewBox="0 0 24 24"
-//               stroke="currentColor"
-//               className="w-5 h-5"
-//             >
-//               <path
-//                 strokeLinecap="round"
-//                 strokeLinejoin="round"
-//                 strokeWidth="2"
-//                 d="M11 19a8 8 0 100-16 8 8 0 000 16zM21 21l-4.35-4.35"
-//               />
-//             </svg>
-//           </button> */}
-//         </div>
-
-//         {/* Navigation Links (Hidden on small screens) */}
-//         <nav className="hidden lg:flex space-x-4 text-sm font-medium">
-//           <a href="#courses" className="text-gray-700 hover:text-teal-600">
-//             Courses
-//           </a>
-//           <a href="#business" className="text-gray-700 hover:text-teal-600">
-//             Business
-//           </a>
-//           <a href="#digital" className="text-gray-700 hover:text-teal-600">
-//             Digital Product
-//           </a>
-//           <a href="#newsletter" className="text-gray-700 hover:text-teal-600">
-//             Newsletter
-//           </a>
-//         </nav>
-
-//         {/* Mobile Menu & Auth buttons */}
-//         <div className="flex items-center space-x-4">
-//           {/* Mobile Menu Icon (Only visible on small screens) */}
-//           {/* <button className="lg:hidden text-gray-700 hover:text-teal-600">
-//             <svg
-//               xmlns="http://www.w3.org/2000/svg"
-//               fill="none"
-//               viewBox="0 0 24 24"
-//               stroke="currentColor"
-//               className="w-6 h-6"
-//             >
-//               <path
-//                 strokeLinecap="round"
-//                 strokeLinejoin="round"
-//                 strokeWidth="2"
-//                 d="M4 6h16M4 12h16m-7 6h7"
-//               />
-//             </svg>
-//           </button> */}
-//           <button className="bg-teal-500 text-white py-2 px-4 rounded-md text-sm">
-//             Login
-//           </button>
-//           <button className="bg-teal-500 text-white py-2 px-4 rounded-md text-sm">
-//             Sign Up
-//           </button>
-
-//           <div className="flex items-center md:hidden">
-//             {/* Hamburger Menu Icon */}
-//             <button onClick={() => setIsOpen(!isOpen)}>
-//               {isOpen ? <X size={28} /> : <Menu size={28} />}
-//             </button>
-//           </div>
-
-//           {/* Auth buttons */}
-
-//           {/* Mobile Menu Dropdown (Untouched) */}
-//           {isOpen && (
-//             <motion.div
-//               initial={{ opacity: 0, y: -10 }}
-//               animate={{ opacity: 1, y: 0 }}
-//               className="md:hidden p-4 bg-white"
-//             >
-//               <ul className="space-y-4">
-//                 <li className="cursor-pointer">Business</li>
-//                 <li className="cursor-pointer">Digital Product</li>
-//                 <li className="cursor-pointer">Newsletter</li>
-//               </ul>
-//               <div className="mt-4 space-y-2">
-//                 <button className="w-full px-4 py-2 border text-white rounded-lg border-white bg-[#1e1e1e]">
-//                   Instructor
-//                 </button>
-//                 <button className="w-full px-4 py-2 border text-white rounded-lg border-white bg-[#047670]">
-//                   Login
-//                 </button>
-//               </div>
-//             </motion.div>
-//           )}
-//         </div>
-//       </div>
 //     </header>
 //   );
 // };
 
-// export default Header;
+// export default Navbar;
+
+import  { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  return (
+    <header className="fixed z-50 w-full px-0 sm:px-4 md:px-6 lg:px-8">
+      <div className="bg-white shadow-md max-w-[1190px] mx-auto h-[80px] flex items-center justify-between px-4 md:px-6">
+        {/* Left: Logo */}
+        <Link to="/">
+          <div className="font-[400] text-[50px] text-black tracking-[0.5%] leading-[55px] font-impact  ">
+            AI SKILLS
+          </div>
+        </Link>
+        
+        {/* Center: Menu Items */}
+        <nav className="hidden md:flex space-x-10 font-medium text-[16px] text-[#1e1e1e]">
+          <Link
+            to="/allcourses"
+            className="font-roboto font-[500] text-[18px] leading-[20px]"
+          >
+            Courses
+          </Link>
+          <a
+            href="#"
+            className="font-roboto font-[500] text-[18px] leading-[20px]"
+          >
+            Business
+          </a>
+          <a
+            href="#"
+            className="font-roboto font-[500] text-[18px] leading-[20px]"
+          >
+            Digital Product
+          </a>
+          <a
+            href="#"
+            className="font-roboto font-[500] text-[18px] leading-[20px]"
+          >
+            Newsletter
+          </a>
+        </nav>
+
+        {/* Right: Auth Buttons */}
+        <div className="hidden md:flex items-center space-x-4">
+          <Link
+            to={"/login"}
+            className="p-[10px] w-[150px] h-[45px] text-center  text-white text-[18px] bg-[#1e1e1e] rounded-[16px] font-[500] font-roboto "
+          >
+            Login
+          </Link>
+          <Link className="p-[10px] w-[150px] h-[45px] text-center text-white text-[18px] bg-[#047670] rounded-[16px] font-[500] font-roboto ">
+            Instructor
+          </Link>
+        </div>
+
+        {/* Mobile Hamburger Button */}
+        <div className="md:hidden flex items-center">
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-black"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isMobileMenuOpen && (
+        <motion.div
+          className="md:hidden bg-white rounded-b-md shadow-md max-w-[1364px] mx-auto p-4"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <Link
+            to="/AllCourses"
+            className="block py-2 text-black hover:text-teal-500"
+          >
+            Courses
+          </Link>
+          <a href="#" className="block py-2 text-black hover:text-teal-500">
+            Business
+          </a>
+          <a href="#" className="block py-2 text-black hover:text-teal-500">
+            Digital Product
+          </a>
+          <a href="#" className="block py-2 text-black hover:text-teal-500">
+            Newsletter
+          </a>
+          <div className="mt-4 space-y-2">
+            <button className="w-full px-4 py-2 border text-white rounded-lg border-white bg-[#1e1e1e]">
+              Signup
+            </button>
+            <button className="w-full px-4 py-2 border text-white rounded-lg border-white bg-[#047670]">
+              Login
+            </button>
+          </div>
+        </motion.div>
+      )}
+    </header>
+  );
+};
+
+export default Navbar;
