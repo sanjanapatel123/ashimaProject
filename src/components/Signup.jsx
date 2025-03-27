@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Card, Form, Button } from "react-bootstrap";
 import { FaLinkedin, FaGoogle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Signup() {
   return (
@@ -79,9 +80,9 @@ function Signup() {
           <div className="text-center mt-4">
             <span style={{ fontSize: "12px", color: "#333" }}>
               Already Have An Account?{" "}
-              <a href="#" style={{ fontSize: "12px", color: "#02756A" }}>
+              <Link to="/login" style={{ fontSize: "12px", color: "#02756A" }}>
                 Log In
-              </a>
+              </Link>
             </span>
           </div>
         </Form>

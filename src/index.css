@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+/* html,
 body {
   @apply bg-black text-white m-0 p-0 overflow-x-hidden;
-}
+} */
 
 *,
 *::before,
@@ -15,10 +15,20 @@ body {
 
 a {
   text-decoration: none !important;
-  color: black !important;
+  
 }
 
 a:hover {
   text-decoration: none !important;
-  /* color: black !important; */
+  color: black !important; 
+}
+ol, ul {
+    padding-left: 0rem !important;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

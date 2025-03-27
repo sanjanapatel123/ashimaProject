@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "./Header";
-import AllCourses from "./AllCourses";
+import Header from "../components/Courses/Header"
+import AllCourses from "./Courses/AllCourses";
 
 const Courses = () => {
   return (
-    <div className="lg:bg-black lg:px-[34px]">
+    <div className="lg:px-[34px]">
       <Header></Header>
       <AllCourses></AllCourses>
     </div>
