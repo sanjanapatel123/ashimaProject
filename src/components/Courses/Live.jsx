@@ -471,30 +471,30 @@ const Live = () => {
               </p>
               <p className="flex items-center text-[14px] mt-2">
                 {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} className="text-yellow-400 mr-1" />
+                  <FaStar key={i} className="text-[#fBBC09] mr-1" />
                 ))}
                 <span className="ml-2">4.8</span>
                 <span className="mx-2 text-[#ffffff] font-roboto">|</span>
                 1,942,239 STUDENTS
               </p>
 
-              <div className="flex items-center mt-1">
-                <p className="font-bold text-sm mt-3">HOSTED BY</p>
+              <div className="flex mt-1">
+                <p className="font-roboto text-sm mt-3">HOSTED BY</p>
                 <img src={liveimg2} className="rounded-full mr-2" />
                 <span className="mr-3">ASHWARYA RAI</span>
                 <img src={liveimg3} className="rounded-full mr-2" />
                 <span>KAPIL SHARMA</span>
               </div>
-              <p className="font-bold text-sm mt-4">NEXT COHORTS</p>
-              <button className="bg-green-500 text-white text-xs px-2 py-1 mr-2 rounded">
-                LIVE
-              </button>
-              <span className="text-gray-300 text-sm mr-2">
-                MAY 24 – JUNE 28, 2025
-              </span>
-              <button className="bg-cyan-500 text-white text-xs px-2 py-1 rounded">
-                ENROLL
-              </button>
+              <div className="flex">
+                <p className="font-roboto text-sm mt-4">NEXT COHORTS</p>
+                <span className="text-gray-300 text-sm mr-2">
+                  MAY 24 – JUNE 28, 2025
+                </span>
+                <button className="bg-cyan-500 text-white text-xs px-2 py-1 rounded">
+                  ENROLL
+                </button>
+              </div>
+              <button className="bg-green-600">Live</button>
             </div>
 
             <div className="md:w-1/3 mt-6 md:mt-0 text-center">

@@ -16,7 +16,7 @@ const Login = () => {
       >
         <h3
           className="text-center mb-4"
-          style={{ fontSize: "22px", fontWeight: "bold", color: "#02756A" }}
+          style={{ fontSize: "30px", fontWeight: "bold", color: "#02756A" }}
         >
           LOG IN TO YOUR ACCOUNT
         </h3>
@@ -80,7 +80,7 @@ const Login = () => {
           <div className="text-center mt-4">
             <span style={{ fontSize: "12px", color: "#333" }}>
               Don't Have An Account?{" "}
-              <Link to={'/signup'} style={{ fontSize: "12px", color: "#02756A" }}>
+              <Link to="/signup" style={{ fontSize: "12px", color: "#02756A" }}>
                 Sign Up
               </Link>
             </span>
