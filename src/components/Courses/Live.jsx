@@ -461,7 +461,7 @@ const Live = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div className="text-[#ffffff] md:w-2/3">
-              <h2 className="font-impact text-[16px] md:text-3xl">
+              <h2 className="font-impact text-[40px] ">
                 AI AND ML FOR BEGINNERS
               </h2>
               <p className="text-[26px] font-roboto mt-2">
@@ -474,20 +474,15 @@ const Live = () => {
                   <FaStar key={i} className="text-yellow-400 mr-1" />
                 ))}
                 <span className="ml-2">4.8</span>
-                <span className="mx-2 text-gray-300">|</span>
+                <span className="mx-2 text-[#ffffff] font-roboto">|</span>
                 1,942,239 STUDENTS
               </p>
-              <p className="font-bold text-sm mt-3">HOSTED BY</p>
+
               <div className="flex items-center mt-1">
-                <img
-                  src={liveimg2}
-                  className="rounded-full mr-2"
-                />
+                <p className="font-bold text-sm mt-3">HOSTED BY</p>
+                <img src={liveimg2} className="rounded-full mr-2" />
                 <span className="mr-3">ASHWARYA RAI</span>
-                <img
-                  src={liveimg3}
-                  className="rounded-full mr-2"
-                />
+                <img src={liveimg3} className="rounded-full mr-2" />
                 <span>KAPIL SHARMA</span>
               </div>
               <p className="font-bold text-sm mt-4">NEXT COHORTS</p>
@@ -503,7 +498,7 @@ const Live = () => {
             </div>
 
             <div className="md:w-1/3 mt-6 md:mt-0 text-center">
-              <div className="bg-white rounded shadow overflow-hidden">
+              <div className="bg-[#ffffff] rounded shadow overflow-hidden">
                 <img src={liveimg1} alt="Course Preview" className="w-full" />
                 <div className="p-4">
                   <h3 className="font-bold text-xl">$79.44</h3>
