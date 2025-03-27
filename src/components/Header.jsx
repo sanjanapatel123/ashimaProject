@@ -33,7 +33,8 @@ const Header = () => {
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
-          </button>
+          </button>console.log('Header component rendered');
+console.log('isMobileMenuOpen:', isMobileMenuOpen);
         </div>
 
         {/* Desktop Menu (Medium and larger devices) */}
