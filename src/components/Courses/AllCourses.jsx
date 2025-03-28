@@ -24,7 +24,6 @@ import {
 } from "react-bootstrap";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
-
 function AllCourses() {
   const [sortOption, setSortOption] = useState("Most Popular");
 
@@ -167,10 +166,16 @@ function AllCourses() {
       <Container fluid className="bg-[#ffffff]">
         {/* Top Navigation */}
         <Row className="bg-[#ffffff] py-2 uppercase">
+        
           <Col>
+          <hr style={{margin:"0px"}}/>
             <div
               className="d-flex align-items-center  overflow-auto px-2 justify-content-between font-Roboto Condensed"
-              style={{ whiteSpace: "nowrap", scrollBehavior: "smooth" }}
+              style={{
+                whiteSpace: "nowrap",
+                scrollBehavior: "smooth",
+                border: "0px px 1px 0px  solid gray",
+              }}
             >
               <Button
                 variant="success"
@@ -276,7 +281,8 @@ function AllCourses() {
               >
                 Design & Development
               </span>
-
+               
+                  
               {/* <img src={dot} className="bg-[#FFFFFF]" /> */}
               <div
                 style={{
@@ -284,7 +290,7 @@ function AllCourses() {
                   overflowY: "visible",
                   zIndex: 1,
                 }}
-              >
+                  >                
                 <Dropdown align="end">
                   <Dropdown.Toggle
                     id="sort-dropdown"
@@ -322,6 +328,7 @@ function AllCourses() {
                 </Dropdown>
               </div>
             </div>
+            <hr style={{margin:"0px"}}/>
           </Col>
         </Row>
 
