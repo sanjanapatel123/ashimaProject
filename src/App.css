@@ -31,3 +31,16 @@
   border-left: 35px solid black;
   border-right: 35px solid black;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+/* Handle */
+
+.shraddha {
+    width: 100%;
+    height: auto;
+}
+
