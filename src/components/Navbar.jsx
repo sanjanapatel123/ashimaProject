@@ -167,7 +167,7 @@ const Navbar = () => {
             href="#"
             className="font-roboto font-[500] text-[18px] leading-[20px] text-[#000000]"
           >
-            Newsletter
+            News letter
           </a>
         </nav>
 

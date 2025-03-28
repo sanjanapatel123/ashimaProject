@@ -16,7 +16,7 @@ const Header = () => {
         {/* Center: Search + Menu */}
         <div className="hidden md:flex items-center gap-6">
           {/* Search Bar */}
-          <div className="flex items-center border border-gray-400 rounded-full px-4 py-2 w-[325px]">
+          <div className="flex items-center border border-gray-400 rounded-full px-4 py-2 w-[315px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5 text-[#E1E1E1]"
@@ -50,7 +50,7 @@ const Header = () => {
               <span className="cursor-pointer text-[#1E1E1E]">Digital Product</span>
             </Link>
             <Link to="/newsletter">
-              <span className="cursor-pointer text-[#1E1E1E] mr-2">Newsletter</span>
+              <span className="cursor-pointer text-[#1E1E1E] mr-2">News letter</span>
             </Link>
           </div>
         </div>
