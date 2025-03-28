@@ -79,7 +79,8 @@ const DigitalProducts = () => {
                 {product.description}
               </p>
             </div>
-          </div>
+          </div>3
+          
         ))}
       </div> */}
 

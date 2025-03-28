@@ -29,7 +29,7 @@
 const LearningJourney = () => {
   return (
     <div className="w-full bg-black text-white py-16">
-      <div className="max-w-[1366px] mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+      <div className="max-w-[1366px] mx-auto flex flex-col md:flex-row justify-between  md:text-left">
         {/* Left Side - Bold Heading */}
         <div className="w-full md:w-1/2 mb-8 md:mb-0">
           <h2 className="text-[45px] pl-2 sm:text-[55px] font-impact font-400 tracking-wide uppercase leading-[1.2]">

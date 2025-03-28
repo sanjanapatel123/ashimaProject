@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Container, Form, FormControl, Button } from 'react-bootstrap';
 import { Search, ShoppingCart } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const ResponsiveNavbar = () => {
   return (
@@ -35,8 +36,8 @@ const ResponsiveNavbar = () => {
             <Nav.Link href="#cart" className="text-dark">
               <ShoppingCart size={24} />
             </Nav.Link>
-            <Button variant="outline-primary" className="rounded-pill px-3">Login</Button>
-            <Button variant="primary" className="rounded-pill px-3">Sign Up</Button>
+            <Link to="/login" variant="outline-primary" className="rounded-pill px-3">Login</Link>
+            <Link to="/signup" variant="primary" className="rounded-pill px-3">Sign Up</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

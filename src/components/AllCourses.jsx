@@ -350,10 +350,10 @@ function AllCourses() {
 
         <Row>
           {/* Sidebar Filters */}
-          <Col md={3} className="border-end">
+          <Col md={3} className="border-end  ">
             <hr />
             <h5 className="fw-bold">Ratings</h5>
-            <Form>
+            <Form >
               <Form.Check
                 type="radio"
                 label="4.5 & UP ⭐⭐⭐⭐⭐ (100)"
