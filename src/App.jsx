@@ -13,12 +13,11 @@ import FAQSection from "./components/Home/FAQSection";
 import ReviewCards from "./components/Home/ReviewCards";
 import StartLearning from "./components/Home/StartLearning";
 import Footer from "./components/Footer";
- import Courses from "./components/Courses";
+import Courses from "./components/Courses";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Digital from "./components/DigitalProduct/Digital";
 import "./App.css";
-import { Nav } from "react-bootstrap";
 import MarketProduct from "./components/DigitalProduct/MarketProductPage";
 import Hybrid from "./components/Courses/Hybrid";
 import Video from "./components/Courses/Video";
@@ -46,6 +45,7 @@ const App = () => {
                 <FAQSection />
                 <ReviewCards />
                 <StartLearning />
+                <Footer />
               </div>
             </div>
           }
@@ -59,7 +59,7 @@ const App = () => {
         <Route path="/hybrid" element={<Hybrid />} />
         <Route path="/video" element={<Video />} />
       </Routes>
-      <Footer />
+      
     </div>
   );
 };

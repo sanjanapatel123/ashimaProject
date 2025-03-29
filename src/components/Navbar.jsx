@@ -549,21 +549,21 @@ const Navbar = () => {
 
           <a
             href="#"
-            className="font-roboto font-medium text-[18px] leading-[20px] text-[#000000]"
+            className="font-roboto font-medium text-[18px]  text-[#000000]"
           >
             Business
           </a>
           <Link
             to="/digital"
-            className="font-roboto font-medium text-[18px] leading-[20px] text-[#000000]"
+            className="font-roboto font-medium text-[18px]  text-[#000000]"
           >
             Digital Products
           </Link>
           <a
             href="#"
-            className="font-roboto font-medium text-[18px] leading-[20px] text-[#000000]"
+            className="font-roboto font-medium text-[18px]  text-[#000000]"
           >
-            Newsletter
+            News letter
           </a>
         </nav>
 

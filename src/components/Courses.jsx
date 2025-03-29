@@ -4,7 +4,7 @@ import AllCourses from "./Courses/AllCourses";
 
 const Courses = () => {
   return (
-    <div className="lg:px-[34px]">
+    <div>
       <Header></Header>
       <AllCourses></AllCourses>
     </div>
