@@ -16,7 +16,7 @@ const Login = () => {
       >
         <h3
           className="text-center mb-4"
-          style={{ fontSize: "30px", fontWeight: "bold", color: "#02756A" }}
+          style={{ fontSize: "36px", fontFamily: "Impact", color: "#047670", width:"400", lineHeight:"20px", letterSpacing:"0%", }}
         >
           LOG IN TO YOUR ACCOUNT
         </h3>

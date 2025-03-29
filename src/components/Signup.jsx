@@ -14,10 +14,10 @@ function Signup() {
         style={{ width: "480px", borderRadius: "8px", padding:"25px" }}
       >
         <h3
-          className="text-center mb-4"
-          style={{ fontSize: "30px", fontWeight: "bold", color: "#02756A" }}
+          className="text-center mb-4 "
+          style={{ fontSize: "36px", fontFamily: "Impact", color: "#047670", width:"400", lineHeight:"20px", letterSpacing:"0%", }}
         >
-          CREATE AN ACCOUNT
+         SIGN UP AS INSTRUCTOR
         </h3>
 
         {/* Social Signup Buttons */}
