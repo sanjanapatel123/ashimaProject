@@ -278,7 +278,7 @@ function AllCourses() {
               </span>
 
               {/* <img src={dot} className="bg-[#FFFFFF]" /> */}
-              <div
+              {/* <div
                 style={{
                   position: "relative",
                   overflowY: "visible",
@@ -320,7 +320,7 @@ function AllCourses() {
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
-              </div>
+              </div> */}
             </div>
           </Col>
         </Row>

@@ -91,7 +91,7 @@ function DigitalProductsSection() {
         </h2>
 
         {/* Right Filters */}
-        <div className="flex flex-wrap gap-3 font-inter">
+        <div className="flex flex-wrap  font-inter">
           <select className="border rounded px-4 py-2 text-[14px]">
             <option>Price Range</option>
           </select>
@@ -250,7 +250,7 @@ function DigitalProductsSection() {
           <div className="min-w-[1024px] flex gap-10 px-6 py-2 rounded-[8px]">
             {/* Card 1 */}
             <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex  mb-4">
                 <img
                   src={reviewimage}
                   alt="Neha Sharma"
@@ -272,7 +272,7 @@ function DigitalProductsSection() {
 
             {/* Card 2 */}
             <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center  mb-4">
                 <img
                   src={reviewimage}
                   alt="Neha Sharma"
@@ -294,7 +294,7 @@ function DigitalProductsSection() {
 
             {/* Card 3 */}
             <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center  mb-4">
                 <img
                   src={reviewimage}
                   alt="Neha Sharma"

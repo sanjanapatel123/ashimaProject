@@ -296,7 +296,7 @@ const Header = () => {
   return (
     <>
       {/* Top Header */}
-      <div className="h-[80px] mx-auto px-4 flex items-center shadow-sm justify-between">
+      <div className="h-[80px]/fixed mx-auto px-4 flex items-center shadow-sm justify-between">
         {/* Left: Logo */}
         <div className="font-[Impact] font-normal text-[50px] leading-[55px] tracking-[0.005em] text-[#000000] whitespace-nowrap">
           AI SKILLS
