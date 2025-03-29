@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import marketproduct1 from "../../assets/marketproduct1.png";
 import marketproduct2 from "../../assets/marketproduct2.png";
 import marketproduct3 from "../../assets/marketproduct3.png";
@@ -52,9 +53,11 @@ const MarketProduct = () => {
           </div>
 
           {/* Buy Now Button */}
+          <Link to="/blogsDetail">
           <button className="w-full bg-[#047670] hover:bg-[#005b4f] text-white border border-[#047670] rounded-[12px] px-px py-[10px] flex items-center justify-center gap-[10px] text-lg lg:text-[22px] mt-3">
             Buy Now
           </button>
+          </Link>
 
           {/* Unlock and Access Button */}
           <button className="w-full lg:w-[214px] mx-auto lg:ml-20 h-[32.33px] bg-[#ffffff] rounded-[4px] text-sm lg:text-[18px] text-[#1E1E1ECC] flex items-center justify-center gap-4 mt-4 font-jost">

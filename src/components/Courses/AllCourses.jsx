@@ -166,7 +166,7 @@ function AllCourses() {
         {/* Top Navigation */}
         <Row className="bg-[#ffffff] py-2 uppercase">
           <Col>
-            <hr style={{ margin: "0px" }} />
+             <hr className="m-0 bg-[#047670] h-[2px] border-none" />
             <div
               className="d-flex align-items-center  overflow-auto px-2 justify-content-between font-Roboto Condensed"
               style={{
@@ -325,7 +325,7 @@ function AllCourses() {
                 </Dropdown>
               </div>
             </div>
-            <hr style={{ margin: "0px" }} />
+            <hr className="m-0 bg-[#047670] h-[2px] border-none" />
           </Col>
         </Row>
 

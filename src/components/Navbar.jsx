@@ -150,12 +150,12 @@ const Navbar = () => {
           >
             Courses
           </Link>
-          <a
-            href="#"
+          <Link
+            to="/instructor"
             className="font-roboto font-[500] text-[18px] leading-[20px] text-[#000000]"
           >
             Business
-          </a>
+          </Link>
 
           <Link
             to="/digital"
@@ -222,9 +222,9 @@ const Navbar = () => {
           >
             Courses
           </Link>
-          <a href="#" className="block py-2 text-black hover:text-teal-500">
+          <Link to="/instructor" className="block py-2 text-black hover:text-teal-500">
             Business
-          </a>
+          </Link>
 
           <Link to="/digitalproducts">Digital Products</Link>
           <a href="#" className="block py-2 text-black hover:text-teal-500">
