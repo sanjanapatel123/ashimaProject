@@ -26,6 +26,8 @@ import Live from "./components/Courses/Live"
   import AITeacherLanding from "./components/Instructor";
 import BlogsDetails from "./components/Blogs/BlogsDetails";
 
+import Blog from "./components/Blog"
+
 const App = () => {
   return (
     <div>
@@ -63,8 +65,8 @@ const App = () => {
         <Route path="/hybrid" element={<Hybrid />} />
         <Route path="/video" element={<Video />} />
         <Route path="/blogsDetail" element={<BlogsDetails/>}/>
+        <Route path="/blog" element={<Blog/>} />
       </Routes>
-      
     </div>
   );
 };

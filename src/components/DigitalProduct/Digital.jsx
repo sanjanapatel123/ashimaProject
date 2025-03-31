@@ -9,6 +9,7 @@ import reviewimage from "../../assets/reviewimage.jpg";
 import FAQSection from "../../components/Home/FAQSection";
 import Nav_DigitalProduct from "./Nav_DigitalProduct";
 import StartLearning from "../Home/StartLearning";
+import Header from "../Courses/Header";
 
 function DigitalProductsSection() {
   const products = [
@@ -44,10 +45,10 @@ function DigitalProductsSection() {
 
   return (
     <>
-     <Nav_DigitalProduct/>
+     <Header/>
 
       {/* HERO SECTION */}
-      <div className="h-auto bg-[#0E7369] mt-20 flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 py-10 gap-6">
+      <div className="h-auto bg-[#0E7369] flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 py-10 gap-6 mt-24 ">
         {/* Left Side Content */}
         <div className="text-[#ffffff] w-full lg:w-[475px]">
           <h2 className="text-[32px] md:text-[40px] font-impact uppercase">

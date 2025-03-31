@@ -93,7 +93,8 @@ const Live = () => {
       {/* Breadcrumb Navigation */}
 
       {/* Hero + Course Intro Section */}
-      <div className="h-[467px] bg-[#047670]  sm:px-10 md:px-20 py-6 sm:py-12">
+
+      <div className="h-[467px] bg-[#047670] sm:px-10 md:px-20 py-6 sm:py-16">
         {/* Breadcrumb */}
         <nav className="text-[18px] sm:text-[20px] md:text-[22px] text-white uppercase font-impact font-semibold mb-4 sm:mb-6">
           <a href="#" className="mr-2">
@@ -108,79 +109,80 @@ const Live = () => {
         </nav>
 
         {/* Main Section */}
-        <div className="flex flex-col lg:flex-row gap-6 h-[75%]">
-          {/* Left */}
-          <div className="w-full lg:w-2/3 flex flex-col justify-between h-full uppercase">
-            <div className="">
-              <h2 className="text-[48px]  font-normal font-impact  mb-2 text-[#ffffff] uppercase">
-                AI AND ML FOR BEGINNERS
-              </h2>
-              <p className="text-[12px] sm:text-[16px] font-normal font-roboto text-[#ffffff] mb-4">
-                Learn to program using the AI & ML. Master AI & ML by building
-                100 <br />
-                projects in 100 days. Learn data science, automation, build
-                websites,
-                <br /> games and apps!
-              </p>
+        <div className="flex flex-col lg:flex-row gap-6 h-full">
+          {/* Background Container */}
+          <div className="w-full sm:w-11/12 lg:w-2/3 bg-[#047670] sm:px-6 md:px-12 py-4 mx-auto">
+            {/* Left Section */}
+            <div className="w-full flex flex-col justify-between h-full">
+              <div>
+                <h2 className="text-[32px] sm:text-[40px] md:text-[48px] font-normal font-impact mb-2 text-[#ffffff] uppercase">
+                  AI AND ML FOR BEGINNERS
+                </h2>
+                <p className="text-[12px] sm:text-[14px] md:text-[16px] font-normal font-roboto text-[#ffffff] mb-4">
+                  Learn to program using the AI & ML. Master AI & ML by building
+                  100 projects in 100 days. Learn data science, automation,
+                  build websites, games, and apps!
+                </p>
 
-              <div className="flex items-center font-roboto font-bold text-[14px] text-[#ffffff] mb-4">
-                <span className="text-[#fBBC09] flex items-center">
-                  <span className="text-white">4.8</span>
-                  <FaStar className="mx-1" />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
+                <div className="flex items-center font-roboto font-bold text-[14px] text-[#ffffff] mb-4">
+                  <span className="text-[#fBBC09] flex items-center">
+                    <span className="text-white">4.8</span>
+                    <FaStar className="mx-1" />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                  </span>
+                  <span className="ml-4">| 1,942,239 STUDENTS</span>
+                </div>
+
+                {/* Hosts */}
+                <div className="flex flex-wrap items-center gap-4 font-roboto font-bold mb-4">
+                  <span className="text-[#fBBC09] text-[14px]">HOSTED BY</span>
+                  <div className="flex items-center gap-2">
+                    <img
+                      src={liveimg2}
+                      className="w-[50px] h-[50px] rounded-full"
+                      alt="Ashwarya Rai"
+                    />
+                    <span className="text-[14px] text-[#ffffff]">
+                      ASHWARYA RAI
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <img
+                      src={liveimg3}
+                      className="w-[50px] h-[50px] rounded-full"
+                      alt="Kapil Sharma"
+                    />
+                    <span className="text-[14px] text-[#ffffff]">
+                      KAPIL SHARMA
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Cohort & Login */}
+              <div className="flex flex-wrap items-center gap-2 font-roboto font-semibold uppercase">
+                <span className="text-[12px] text-[#ffffff]">NEXT COHORTS</span>
+
+                <span className="text-[12px] text-[#ffffff] px-3 py-1 rounded-full flex items-center">
+                  <FaCalendarAlt className="mr-2 text-[14px]" />
+                  MAY 24 – JUNE 28, 2025
                 </span>
-                <span className="ml-4">| 1,942,239 STUDENTS</span>
+
+                <button className="bg-[#09D0C6] text-[#000000] text-[12px] px-3 py-1 rounded-[12px]">
+                  ENROLL
+                </button>
               </div>
-
-              {/* Hosts */}
-              <div className="flex flex-wrap items-center gap-4 font-roboto font-bold mb-4">
-                <span className="text-[#fBBC09] text-[14px]">HOSTED BY</span>
-                <div className="flex items-center gap-2">
-                  <img
-                    src={liveimg2}
-                    className="w-[50px] h-[50px] rounded-full"
-                    alt="Ashwarya Rai"
-                  />
-                  <span className="text-[14px] text-[#ffffff]">
-                    ASHWARYA RAI
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <img
-                    src={liveimg3}
-                    className="w-[50px] h-[50px] rounded-full"
-                    alt="Kapil Sharma"
-                  />
-                  <span className="text-[14px] text-[#ffffff]">
-                    KAPIL SHARMA
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Cohort & Login */}
-            <div className="flex flex-wrap items-center gap-2 font-roboto font-semibold uppercase">
-              <span className="text-[12px] text-[#ffffff]">NEXT COHORTS</span>
-
-              <span className="text-[12px] text-[#ffffff] px-3 py-1 rounded-full flex items-center">
-                <FaCalendarAlt className="mr-2 text-[14px]" />
-                MAY 24 – JUNE 28, 2025
-              </span>
-
-              <button className="bg-[#09D0C6] text-[#000000] text-[12px] px-3 py-1 rounded-[12px]">
-                ENROLL
+              <button className="bg-[#09D0C6] w-[85px] h-[26px] text-[#000000] text-[12px] px-3 py-1 rounded-[12px] font-roboto font-semibold">
+                Live
               </button>
             </div>
-            <button className="bg-[#09D0C6] w-[85px] h-[26px] text-[#000000] text-[12px] px-3 py-1 rounded-[12px] font-roboto font-semibold">
-              Live
-            </button>
           </div>
 
-          {/* Right */}
-          <div className="w-full lg:w-1/3 flex flex-col items-start">
+          {/* Right Section */}
+          <div className="w-full sm:w-11/12 lg:w-1/3 flex flex-col items-start flex-grow mx-auto">
             <div className="w-full bg-[#ffffff] rounded shadow text-[#000000] relative">
               <img
                 src={liveimg1}
@@ -190,9 +192,9 @@ const Live = () => {
               {/* YouTube Logo and Text Overlay */}
               <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
                 <div className="">
-                  <FaYoutube className="text-[#ffffff] bg-[#CD201F]  w-[60px] h-[27px] rounded" />
+                  <FaYoutube className="text-[#ffffff] bg-[#CD201F] w-[60px] h-[27px] rounded" />
                 </div>
-                <span className="text-[#ffffff] font-semibold  text-[22px] font-jost mt-2">
+                <span className="text-[#ffffff] font-semibold text-[22px] font-jost mt-2">
                   Preview this course
                 </span>
               </div>
@@ -252,7 +254,7 @@ const Live = () => {
               What you will learn
             </h2>
 
-            <ul className="mt-6 space-y-2 ">
+            <ul className="mt-6 space-y-2">
               {[
                 {
                   title: "Master Applied Generative AI Concepts",

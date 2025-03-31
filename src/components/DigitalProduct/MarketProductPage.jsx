@@ -7,17 +7,68 @@ import marketproduct4 from "../../assets/marketproduct4.png";
 import marketproduct5 from "../../assets/marketproduct5.png";
 import marketproduct6 from "../../assets/marketproduct6.png";
 import marketproduct8 from "../../assets/marketproduct8.png";
-import digitalproduct1 from "../../assets/digitalproduct1.png"
+import digitalproduct1 from "../../assets/digitalproduct1.png";
 import StartLearning from "../Home/StartLearning";
 import reviewimage from "../../assets/reviewimage.jpg";
 import Nav_DigitalProduct from "./Nav_DigitalProduct";
-
+import Header from "../Courses/Header";
 
 const MarketProduct = () => {
+  const [openIndex, setOpenIndex] = useState(null); // Track the open question index
+
+  const handleToggle = (index) => {
+    // Toggle the clicked question's visibility
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const faqData = [
+    {
+      question: "WHAT TYPES OF DIGITAL PRODUCTS ARE AVAILABLE ON AISKILLS?",
+      answer:
+        "AISKILLS offers a wide range of digital products including eBooks, online courses, software tools, templates, and more.",
+    },
+    {
+      question: "ARE THE DIGITAL PRODUCTS ON AISKILLS BEGINNER-FRIENDLY?",
+      answer:
+        "Yes, most of our digital products are beginner-friendly, with easy-to-follow instructions and tutorials.",
+    },
+    {
+      question: "HOW DO I ACCESS MY PURCHASED DIGITAL PRODUCTS?",
+      answer:
+        "After purchase, you will receive an email with a download link or access instructions. You can also find your products in your account under 'My Purchases'.",
+    },
+    {
+      question:
+        "CAN I GET A REFUND IF I'M NOT SATISFIED WITH A DIGITAL PRODUCT?",
+      answer:
+        "Refunds are available within 30 days of purchase. Please contact customer support for assistance.",
+    },
+    {
+      question: "CAN INSTRUCTORS SELL THEIR OWN DIGITAL PRODUCTS ON AISKILLS?",
+      answer:
+        "Yes, instructors can sell their digital products on AISKILLS. You can sign up as a seller and upload your products for sale.",
+    },
+    {
+      question: "ARE THERE ANY FREE DIGITAL PRODUCTS AVAILABLE?",
+      answer:
+        "Yes, AISKILLS offers several free digital products, including free courses, templates, and resources.",
+    },
+    {
+      question: "CAN I USE AISKILLS DIGITAL PRODUCTS FOR COMMERCIAL PROJECTS?",
+      answer:
+        "Some digital products are licensed for commercial use, but please review the license terms of each product before using them in commercial projects.",
+    },
+    {
+      question: "DO I NEED SPECIAL SOFTWARE TO USE THE DIGITAL PRODUCTS?",
+      answer:
+        "In most cases, you don't need special software, but some products may require specific software like PDF readers or course platforms.",
+    },
+  ];
+
   return (
     <>
-     <Nav_DigitalProduct/>
-      <div className="flex flex-col lg:flex-row bg-[#047670] lg:h-[652px] p-4 lg:p-0 mt-24">
+      <Header />
+      <div className="flex flex-col lg:flex-row bg-[#047670] lg:h-[652px] p-4 lg:p-0 mt-4">
         {/* Left Image Section */}
         <div className="flex w-full lg:w-1/2 items-center justify-center lg:justify-start p-6 lg:pl-20">
           <img
@@ -30,7 +81,7 @@ const MarketProduct = () => {
         {/* Right Content Section */}
         <div className="relative w-full lg:absolute lg:w-[460px] bg-[#ffffff] rounded-md p-6 mt-6 lg:mt-40 lg:left-[50%] xl:left-[931px]">
           {/* eBook Tag */}
-          <div className="text-[13px] font-roboto text-[#000000] mt-5">
+          <div className="text-[13px] font-roboto text-[#000000] mt-4">
             e Book
           </div>
 
@@ -60,7 +111,7 @@ const MarketProduct = () => {
           </Link>
 
           {/* Unlock and Access Button */}
-          <button className="w-full lg:w-[214px] mx-auto lg:ml-20 h-[32.33px] bg-[#ffffff] rounded-[4px] text-sm lg:text-[18px] text-[#1E1E1ECC] flex items-center justify-center gap-4 mt-4 font-jost">
+          <button className="w-full lg:w-[214px] mx-auto lg:ml-20 h-[32.33px] bg-[#ffffff] rounded-[4px] text-sm lg:text-[18px] text-[#1E1E1ECC] flex items-center justify-center gap-4 mt-2 font-jost">
             <img
               src={marketproduct2}
               alt="lock"
@@ -70,7 +121,7 @@ const MarketProduct = () => {
           </button>
 
           {/* PDF Download Section */}
-          <div className="flex items-center border border-[#047670] justify-center gap-[12px] font-roboto p-2 rounded-[12px] mt-4">
+          <div className="flex items-center border border-[#047670] justify-center gap-[12px] font-roboto p-2 rounded-[12px] mt-5">
             <img src={marketproduct1} alt="icon" className="w-6 h-6" />
             <a
               href="#"
@@ -110,29 +161,27 @@ const MarketProduct = () => {
           </div>
 
           {/* Images Row with fixed min-width */}
-          <div className="">
-            <div className="flex gap-4 min-w-[850px]  mt-2">
-              <img
-                src={marketproduct3}
-                alt="img1"
-                className="w-[190px] h-[120px] object-cover rounded-md"
-              />
-              <img
-                src={marketproduct4}
-                alt="img2"
-                className="w-[190px] h-[120px] object-cover rounded-md"
-              />
-              <img
-                src={marketproduct5}
-                alt="img3"
-                className="w-[190px] h-[120px] object-cover rounded-md"
-              />
-              <img
-                src={marketproduct6}
-                alt="img4"
-                className="w-[190px] h-[120px] object-cover rounded-md"
-              />
-            </div>
+          <div className="flex gap-4 min-w-[850px] mt-2">
+            <img
+              src={marketproduct3}
+              alt="img1"
+              className="w-[190px] h-[120px] object-cover rounded-md"
+            />
+            <img
+              src={marketproduct4}
+              alt="img2"
+              className="w-[190px] h-[120px] object-cover rounded-md"
+            />
+            <img
+              src={marketproduct5}
+              alt="img3"
+              className="w-[190px] h-[120px] object-cover rounded-md"
+            />
+            <img
+              src={marketproduct6}
+              alt="img4"
+              className="w-[190px] h-[120px] object-cover rounded-md"
+            />
           </div>
         </div>
       </div>
@@ -173,108 +222,33 @@ const MarketProduct = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className="w-full lg:w-[870px] bg-black text-white px-6 py-8 lg:py-16 mt-8 lg:mt-20 ">
+      <div className="w-full lg:w-[870px] bg-black text-[#ffffff] px-6 py-8 lg:py-16 mt-8 lg:mt-20 ">
         <div className="w-full lg:w-[738px] h-auto bg-black text-white p-4 lg:p-6 lg:ml-10">
           <div className="flex flex-col gap-6 lg:gap-[36px]">
-            {[
-              "WHAT TYPES OF DIGITAL PRODUCTS ARE AVAILABLE ON AISKILLS?",
-              "ARE THE DIGITAL PRODUCTS ON AISKILLS BEGINNER-FRIENDLY?",
-              "HOW DO I ACCESS MY PURCHASED DIGITAL PRODUCTS?",
-              "CAN I GET A REFUND IF I'M NOT SATISFIED WITH A DIGITAL PRODUCT?",
-              "CAN INSTRUCTORS SELL THEIR OWN DIGITAL PRODUCTS ON AISKILLS?",
-              "ARE THERE ANY FREE DIGITAL PRODUCTS AVAILABLE?",
-              "CAN I USE AISKILLS DIGITAL PRODUCTS FOR COMMERCIAL PROJECTS?",
-              "DO I NEED SPECIAL SOFTWARE TO USE THE DIGITAL PRODUCTS?",
-            ].map((question, index) => (
+            {faqData.map((item, index) => (
               <div
                 key={index}
-                className="border-b border-white pb-2 flex justify-between items-center text-sm lg:text-[16px] font-roboto"
+                className="border-b border-white pb-2 flex justify-between items-center text-sm lg:text-[16px] font-roboto cursor-pointer"
+                onClick={() => handleToggle(index)} // Toggle question on click
               >
-                {question}
-                <span className="text-lg lg:text-[24px] font-roboto">+</span>
+                {item.question}
+                <span className="text-lg lg:text-[24px] font-roboto">
+                  {openIndex === index ? "-" : "+"}
+                </span>
               </div>
             ))}
+
+            {/* Display the answer of the clicked question */}
+            {openIndex !== null && (
+              <div className="text-sm lg:text-[16px] font-roboto text-white pt-2">
+                <p>{faqData[openIndex].answer}</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
+
       <StartLearning />
-      <div className="w-full px-4 sm:px-6 lg:px-8 py-8">
-        {/* Heading */}
-        <h2 className="text-[36px] font-roboto mb-6 ml-0 sm:ml-36">
-          FEATURED REVIEWS:
-        </h2>
-
-        {/* Scrollable Card Section */}
-        <div className="w-full overflow-x-auto mt-10 ml-0 sm:ml-36">
-          <div className="min-w-[1024px] flex gap-10 px-6 py-2 rounded-[8px]">
-            {/* Card 1 */}
-            <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-              <div className="flex items-center gap-4 mb-4">
-                <img
-                  src={reviewimage}
-                  alt="Neha Sharma"
-                  className="w-[91px] h-[91px] rounded-full "
-                />
-                <h3 className="font-['Roboto_Condensed'] font-bold text-[25px] leading-[24px] tracking-[0.02em] uppercase">
-                  NEHA SHARMA
-                </h3>
-              </div>
-              <p className="font-['Roboto_Condensed'] font-medium text-[16px] leading-[22px] tracking-[0.02em] uppercase mb-4">
-                LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO
-                EUSMOD TEMPOR
-              </p>
-              <div className="text-[14px] font-['Roboto_Condensed'] flex items-center gap-2">
-                RATING 4.8
-                <span className="text-[#FBBC09] flex">★ ★ ★ ★ ☆</span>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-              <div className="flex items-center gap-4 mb-4">
-                <img
-                  src={reviewimage}
-                  alt="Neha Sharma"
-                  className="w-[91px] h-[91px] rounded-full "
-                />
-                <h3 className="font-['Roboto_Condensed'] font-bold text-[25px] leading-[24px] tracking-[0.02em] uppercase">
-                  NEHA SHARMA
-                </h3>
-              </div>
-              <p className="font-['Roboto_Condensed'] font-medium text-[16px] leading-[22px] tracking-[0.02em] uppercase mb-4">
-                LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO
-                EUSMOD TEMPOR
-              </p>
-              <div className="text-[14px] font-['Roboto_Condensed'] flex items-center gap-2">
-                RATING 4.8
-                <span className="text-[#FBBC09] flex">★ ★ ★ ★ ☆</span>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-              <div className="flex items-center gap-4 mb-4">
-                <img
-                  src={reviewimage}
-                  alt="Neha Sharma"
-                  className="w-[91px] h-[91px] rounded-full "
-                />
-                <h3 className="font-['Roboto_Condensed'] font-bold text-[25px] leading-[24px] tracking-[0.02em] uppercase">
-                  NEHA SHARMA
-                </h3>
-              </div>
-              <p className="font-['Roboto_Condensed'] font-medium text-[16px] leading-[22px] tracking-[0.02em] uppercase mb-4">
-                LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO
-                EUSMOD TEMPOR
-              </p>
-              <div className="text-[14px] font-['Roboto_Condensed'] flex items-center gap-2">
-                RATING 4.8
-                <span className="text-[#FBBC09] flex">★ ★ ★ ★ ☆</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 };
