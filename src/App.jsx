@@ -16,6 +16,8 @@ import Footer from "./components/Footer";
 import Courses from "./components/Courses";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import BlogDeatils from "./components/Blogs/BlogsDetails";
+import Instructor from "./components/Instructor";
 import Digital from "./components/DigitalProduct/Digital";
 import "./App.css";
 import MarketProduct from "./components/DigitalProduct/MarketProductPage";
@@ -24,6 +26,7 @@ import Video from "./components/Courses/Video";
 import Live from "./components/Courses/Live";
 import Blog from "./components/Blog";
 import MyDigital from "./components/DigitalProduct/MyDigital";
+import InstructorSignup from "./components/InstructorSignup";
 
 const App = () => {
   return (
@@ -61,6 +64,12 @@ const App = () => {
         <Route path="/hybrid" element={<Hybrid />} />
         <Route path="/video" element={<Video />} />
         <Route path="/blog" element={<Blog />} />
+        <Route
+          path="/blogsDetail"
+          element={<BlogDeatils></BlogDeatils>}
+        ></Route>
+        <Route path="/instructor" element={<Instructor></Instructor>}></Route>
+        <Route path="/instructorSignup" element={<InstructorSignup></InstructorSignup>}></Route>
       </Routes>
     </div>
   );

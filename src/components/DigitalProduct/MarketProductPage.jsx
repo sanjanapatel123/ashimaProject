@@ -69,7 +69,7 @@ const MarketProduct = () => {
   return (
     <>
       <Header />
-      <div className="flex flex-col lg:flex-row bg-[#047670] lg:h-[652px] p-4 lg:p-0 mt-4">
+      <div className="flex flex-col lg:flex-row bg-[#047670] lg:h-[652px] p-4 lg:p-0 pt-4">
         {/* Left Image Section */}
         <div className="flex w-full lg:w-1/2 items-center justify-center lg:justify-start p-6 lg:pl-20">
           <img
@@ -105,7 +105,7 @@ const MarketProduct = () => {
           </div>
 
           {/* Buy Now Button */}
-          <Link to="/blogsDetail">
+          <Link to="/blog">
           <button className="w-full bg-[#047670] hover:bg-[#005b4f] text-white border border-[#047670] rounded-[12px] px-px py-[10px] flex items-center justify-center gap-[10px] text-lg lg:text-[22px] mt-3">
             Buy Now
           </button>

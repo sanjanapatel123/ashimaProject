@@ -9,6 +9,7 @@ import {
   Card,
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 import { TfiLayoutSlider } from "react-icons/tfi";
 import Header from "./Courses/Header";
@@ -19,7 +20,7 @@ const AITeacherLanding = () => {
   return (
     <div>
       <Header />
-      <div className="container-fluid mt-24 p-0">
+      <div className="container-fluid pt-20">
         <section
           style={{
             backgroundColor: "#00766e",
@@ -55,7 +56,9 @@ const AITeacherLanding = () => {
                   }}
                   className="rounded"
                 >
-                  Get Started As An Instructor
+                  <Link to={"/instructorSignup"} className="text-[#00766e]">
+                    Get Started As An Instructor
+                  </Link>
                 </Button>
               </Col>
 
