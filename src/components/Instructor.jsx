@@ -11,49 +11,15 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { TfiLayoutSlider } from "react-icons/tfi";
+import Header from "./Courses/Header";
+import FAQSection from "./Home/FAQSection";
+import Footer from "./Footer";
 
 const AITeacherLanding = () => {
   return (
     <div>
-      <div className="container-fluid">
-        <Navbar
-          style={{ backgroundColor: "#ffffff" }}
-          expand="lg"
-          className="border-bottom px-3 py-2"
-        >
-          <div className="container">
-            <Navbar
-              className="fs-3"
-              style={{
-                fontFamily: "Impact",
-                width: "400",
-                fontSize: "50px",
-                lineHeight: "55px",
-                letterSpacing: "0.5%",
-              }}
-            >
-              AI SKILLS
-            </Navbar>
-            <Nav className="ms-auto d-flex align-items-center gap-3">
-              <div style={{ width: "30px", height: "30px" }}>
-                <i
-                  className="fas fa-globe fa-2x"
-                  style={{ color: "#00766e" }}
-                ></i>
-              </div>
-              <Button
-                className="rounded px-3 py-1 fw-semibold"
-                style={{
-                  backgroundColor: "#00766e",
-                  color: "white",
-                  border: "none",
-                }}
-              >
-                Sign Up
-              </Button>
-            </Nav>
-          </div>
-        </Navbar>
+      <Header />
+      <div className="container-fluid mt-24 p-0">
         <section
           style={{
             backgroundColor: "#00766e",
@@ -62,7 +28,7 @@ const AITeacherLanding = () => {
           }}
           className="py-5"
         >
-          <div className="container">
+          <div className="container-fluid">
             <Row className="align-items-center">
               {/* Left Content */}
               <Col md={6} className="mb-4 mb-md-0 text-center text-md-start">
@@ -244,7 +210,7 @@ const AITeacherLanding = () => {
             </Row>
             <div className="mt-5  text-center">
               <button
-                className="text-cenetr text-white"
+                className="text-cenetr text-[#ffffff]"
                 style={{
                   backgroundColor: "#047670",
                   border: "none",
@@ -311,128 +277,11 @@ const AITeacherLanding = () => {
             </div>
           </div>
         </section>
-
-        <section>
-          <div
-            className="row mt-5 mb-3 p-5"
-            style={{ backgroundColor: "black", color: "white" }}
-          >
-            <div className="col-md-5 d-flex flex-column justify-content-center align-item-center ">
-              <h2
-                style={{
-                  fontFamily: "Impact",
-                  fontWeight: "400",
-                  fontSize: "55px",
-                }}
-              >
-                frequently asked questions
-              </h2>
-              <p
-                style={{
-                  fontFamily: "Roboto Condensed",
-                  fontWeight: "400",
-                  fontSize: "16px",
-                }}
-              >
-                Enhance your learning with instant digital products from instant
-                real-world projects to prompts.
-              </p>
-            </div>
-
-            <div className="col-md-7">
-              <div className="d-flex justify-content-between">
-                <p
-                  style={{
-                    fontFamily: "Roboto Condensed",
-                    fontSize: "24px",
-                    fontWeight: "400",
-                  }}
-                >
-                  What types of courses can I create on the platform?
-                </p>
-                <i class="fa-solid fa-plus"></i>
-              </div>
-              <hr />
-              <div className="d-flex justify-content-between">
-                <p
-                  style={{
-                    fontFamily: "Roboto Condensed",
-                    fontSize: "24px",
-                    fontWeight: "400",
-                  }}
-                >
-                  How much commission does the platform take?
-                </p>
-                <i class="fa-solid fa-plus"></i>
-              </div>
-              <hr />
-              <div className="d-flex justify-content-between">
-                <p
-                  style={{
-                    fontFamily: "Roboto Condensed",
-                    fontSize: "24px",
-                    fontWeight: "400",
-                  }}
-                >
-                  hen will I receive my earnings
-                </p>
-                <i class="fa-solid fa-plus"></i>
-              </div>
-              <hr />
-              <div className="d-flex justify-content-between">
-                <p
-                  style={{
-                    fontFamily: "Roboto Condensed",
-                    fontSize: "24px",
-                    fontWeight: "400",
-                  }}
-                >
-                  How do I receive my payments?
-                </p>
-                <i class="fa-solid fa-plus"></i>
-              </div>
-              <hr />
-              <div className="d-flex justify-content-between">
-                <p
-                  style={{
-                    fontFamily: "Roboto Condensed",
-                    fontSize: "24px",
-                    fontWeight: "400",
-                  }}
-                >
-                  Can I set my own course prices?
-                </p>
-                <i class="fa-solid fa-plus"></i>
-              </div>
-              <hr />
-              <div className="d-flex justify-content-between">
-                <p
-                  style={{
-                    fontFamily: "Roboto Condensed",
-                    fontSize: "24px",
-                    fontWeight: "400",
-                  }}
-                >
-                  Do I own the content I upload?
-                </p>
-                <i class="fa-solid fa-plus"></i>
-              </div>
-              <hr />
-              <div className="d-flex justify-content-between">
-                <p
-                  style={{
-                    fontFamily: "Roboto Condensed",
-                    fontSize: "24px",
-                    fontWeight: "400",
-                  }}
-                >
-                  Can I edit my course after publishing?
-                </p>
-                <i class="fa-solid fa-plus"></i>
-              </div>
-              <hr />
-            </div>
-          </div>
+        <section className="mt-10 p-0">
+          <FAQSection />
+        </section>
+        <section className="mt-5">
+          <Footer />
         </section>
       </div>
     </div>

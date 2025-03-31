@@ -1,93 +1,36 @@
 import React,{useState} from "react";
+import Header from "../Courses/Header";
+import Footer from "../Footer";
 
 function BlogsDetails() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   return (
     <div>
-      <div className=" bg-light">
-        {/* Navbar Section */}
-        <nav className="bg-white p-4 flex justify-between items-center shadow-md">
-          {/* Left: Logo */}
-          <h1 className="text-4xl font-extrabold uppercase">AI Skills</h1>
-
-          {/* Middle: Search Bar */}
-          <div className="hidden md:flex items-center border border-gray-400 px-4 py-2 rounded-full w-1/3">
-            <span className="text-gray-500 mr-2">🔍</span>
-            <input
-              type="text"
-              placeholder="Search for anything"
-              className="bg-transparent w-full focus:outline-none text-gray-700"
-            />
-          </div>
-
-          {/* Middle: Navigation Links */}
-          <ul className="hidden lg:flex space-x-6 font-semibold text-gray-900">
-            <li>
-              <a href="#" className="hover:text-teal-600">
-                Courses
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-teal-600">
-                Business
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-teal-600">
-                Digital Product
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-teal-600">
-                Newsletter
-              </a>
-            </li>
-          </ul>
-
-          {/* Right: Cart, Login, and Signup */}
-          <div className="flex items-center space-x-4">
-            {/* Cart Icon */}
-            <a href="#" className="text-teal-600 text-xl">
-              🛒
-            </a>
-            {/* Login Button */}
-            <a
-              href="#"
-              className="border border-teal-600 px-4 py-2 rounded-full text-teal-600 font-semibold"
-            >
-              Login
-            </a>
-            {/* Signup Button */}
-            <a
-              href="#"
-              className="bg-teal-600 text-white px-5 py-2 rounded-full font-semibold"
-            >
-              Sign Up
-            </a>
-          </div>
-        </nav>
+      <Header/>
+      <div className=" bg-light ">
+    
 
         {/* Hero Section */}
-        <section className="bg-[#0E7C74] text-white py-10 px-6 ">
+        <section className="bg-[#0E7C74] text-[#ffffff] py-10 px-6 mt-24">
           {/* Breadcrumb */}
-          <div className="text-sm flex items-center space-x-2 text-white ">
+          <div className="text-sm flex items-center space-x-2 text-[#ffffff]">
             <span>📖 BLOG</span>
             <span>›</span>
-            <a href="#" className="text-white font-[jost] font-[20px] ">
+            <a href="#" className="text-[#FFFFFF] font-[jost] font-[20px] ">
               Best Artificial Intelligence Blogs
             </a>
             <span>›</span>
-            <a href="#" className="text-white font-[jost] font-[20px] ">
+            <a href="#" className="text-[#ffffff] font-[jost] font-[20px] ">
               How to Prepare for an Interview
             </a>
           </div>
 
-<div className="row">
+<div className="row ">
           <div className=" col-md-7 gap-2 items-center mt-4">
             {/* Left Content */}
             <div>
-              <h1 className="text-3xl md:text-4xl font-normal font-[impact] font-[36px] font-extrabold leading-tight">
+              <h1 className="text-3xl md:text-4xl font-normal font-[impact] text-[36px] leading-tight">
                 How To Prepare For An AI Interview?
               </h1>
               <p
@@ -102,20 +45,20 @@ function BlogsDetails() {
               <div className="mt-6 flex space-x-4">
                 <a
                   href="#"
-                  className="bg-white text-black font-semibold px-4 py-2 rounded-md shadow-md hover:bg-gray-100 "
+                  className="bg-[#ffffff] text-[#000000] font-semibold px-4 py-2 rounded-md shadow-md hover:bg-gray-100 "
                   style={{ color: "#047670" }}
                 >
                   Best Artificial Intelligence Blogs
                 </a>
                 <a
                   href="#"
-                  className="border border-white px-4 py-2 rounded-md font-semibold  text-white transition"
+                  className="border border-[#fffffff] px-4 py-2 rounded-md font-semibold  text-white transition"
                 >
                   View All Artificial Intelligence Blogs
                 </a>
               </div>
               {/* Last Updated */}
-              <p className="text-white text-sm mt-4">
+              <p className="text-[#ffffff] text-sm mt-4">
                 Last Updated: 28 Feb 2025 |
               </p>
             </div>
@@ -140,7 +83,7 @@ function BlogsDetails() {
             <div className="row mt-5 bg-light p-3">
               <div className="col-md-9">
                 <p
-                  className="font-[20px] font-normal"
+                  className="text-[20px] font-roboto font-normal"
                   style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
                 >
                   Want a job that pays six figures and is nearly
@@ -157,7 +100,7 @@ function BlogsDetails() {
                   Meanwhile, a{" "}
                   <a
                     href="#"
-                    className="text-black font-semibold hover:underline"
+                    className="text-[#000000] font-semibold hover:underline"
                   >
                     McKinsey report
                   </a>{" "}
@@ -168,7 +111,7 @@ function BlogsDetails() {
                 </p>
 
                 {/* Featured Project */}
-                <div className="bg-white p-6 rounded-lg shadow-md max-w-4xl mx-auto flex flex-col md:flex-row items-center">
+                <div className="bg-[#ffffff] p-6 rounded-lg shadow-md max-w-4xl mx-auto flex flex-col md:flex-row items-center">
                   {/* Image Section */}
                   <div className="md:w-1/2 mb-4 md:mb-0 md:mr-6">
                     <img
@@ -180,15 +123,15 @@ function BlogsDetails() {
 
                   {/* Text and Button Section */}
                   <div className="md:w-1/2 text-center md:text-left">
-                    <h3 className="font-[impact] font-normal font-[26px]">
+                    <h3 className="font-[impact] font-normal text-[26px]">
                       Microsoft Fabric Project To Build A Financial Reporting
                       Agent
                     </h3>
-                    <p className="font-[jost] font-normal font-[22px] mt-2">
+                    <p className="font-[jost] font-normal text-[22px] mt-2">
                       Downloadable Solution Code | Explanatory Videos | AISkills
                     </p>
                     <button
-                      className="mt-4 bg-teal-700 text-white py-2 px-6 rounded-md hover:bg-teal-700 transition-colors "
+                      className="mt-4 bg-[#047670] text-[#ffffff] py-2 px-6 rounded-md hover:bg-teal-700 transition-colors "
                       style={{
                         fontFamily: "Roboto Condensed",
                         fontSize: "22px",
@@ -258,7 +201,7 @@ function BlogsDetails() {
               </div>
             </div>
 
-            <div className="row">
+            <div className="row p-3">
               <div className="col-md-9">
                 <p
                   className="font-normal"
@@ -274,24 +217,24 @@ function BlogsDetails() {
             </div>
 
             {/* Table of Content */}
-            <div className=" row bg-white p-4 rounded-lg shadow-md mb-8">
+            <div className=" row bg-white p-3 rounded-lg shadow-md mb-8">
               <div className="col-md-9">
-                <h3 className="font-[26px] font-normal text-lg text-teal-700 font-[impact]">
+                <h3 className="text-[26px] font-normal text-lg text-teal-700 font-[impact]">
                   Table Of Content
                 </h3>
-                <ul className="list-disc list-inside text-gray-800 mt-2 font-[jost] font-[20px] font-medium">
+                <ul className="list-disc list-inside text-gray-800 mt-2 font-[jost] text-[20px] font-medium">
                   <li>
-                    <a href="#" className="text-black hover:underline">
+                    <a href="#" className="text-[#000000] hover:underline">
                       7 Essential Tips on How to Prepare for an AI Interview
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-black hover:underline">
+                    <a href="#" className="text-[#000000] hover:underline">
                       AI Mock Interview: Your Secret Weapon to Interview Success
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-black hover:underline">
+                    <a href="#" className="text-[#000000] hover:underline">
                       Learn How to Prepare for Your AI Interview with AISkills
                     </a>
                   </li>
@@ -299,20 +242,20 @@ function BlogsDetails() {
               </div>
             </div>
 
-            <div className="row">
+            <div className="row p-3">
               <div className="col-md-9">
                 {/* Article Title */}
-                <h2 className="text-teal-700  mb-4 font-[50px] font-[impact] font-normal">
+                <h2 className="text-[#047670]  mb-4 text-[50px] font-[impact] font-normal">
                   7 Essential Tips On How To Prepare For An AI Interview
                 </h2>
               </div>
             </div>
 
-            <div className="row">
+            <div className="row p-3">
               <div className="col-md-9">
                 {/* Article Description */}
                 <p
-                  className="text-gray-800 font-[20px] font-normal mb-6"
+                  className="text-[#000000] text-[20px] font-normal mb-6"
                   style={{ fontFamily: "Roboto Condensed" }}
                 >
                   Using AI-related keywords on your resume isn’t enough to get
@@ -330,7 +273,7 @@ function BlogsDetails() {
             </div>
 
             {/* Image Section */}
-            <div className="row">
+            <div className="row p-3">
               <div className="col-md-9 flex justify-center my-6">
                 <img
                   src="https://i.ibb.co/MxRm7Lg7/Rectangle-68.png"
@@ -340,16 +283,16 @@ function BlogsDetails() {
               </div>
             </div>
 
-            <div className="row">
+            <div className="row p-3">
               <div className="col-md-9 p-3">
                 {/* First Tip Title */}
-                <h3 className="text-teal-700 font-[impact] font-normal font-[50px] mt-8">
+                <h3 className="text-[#047670] font-[impact] font-normal text-[50px] mt-8">
                   1. Master The Basics For Interview Success
                 </h3>
 
                 {/* Article Description */}
                 <p
-                  className="text-gray-800  mb-6 font-normal font-[20px]"
+                  className="text-[#000000]  mb-6 font-normal text-[20px]"
                   style={{ fontFamily: "Roboto Condensed" }}
                 >
                   A strong foundation in AI and machine learning concepts is
@@ -361,7 +304,7 @@ function BlogsDetails() {
 
                 {/* Bullet Points */}
                 <ul
-                  className="text-gray-800  mb-6 font-normal font-[20px]"
+                  className="text-[#000000]  mb-6 font-normal text-[20px]"
                   style={{ fontFamily: "Roboto Condensed" }}
                 >
                   <li>
@@ -394,7 +337,7 @@ function BlogsDetails() {
             </div>
 
             {/* Image Section */}
-            <div className="row">
+            <div className="row p-3">
               <div
                 className="col-md-9 flex justify-center my-6"
                 style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
@@ -409,12 +352,12 @@ function BlogsDetails() {
 
             {/* Resources Section */}
             <h3
-              className=" font-normal font-[20px] text-lg mb-2"
+              className="  text-[20px] font-normal mb-2"
               style={{ fontFamily: "Roboto Condensed" }}
             >
               Resources
             </h3>
-            <ul className="list-disc list-inside text-blue-600 font-normal font-[20px] font-[Roboto Condensed]">
+            <ul className="list-disc p-3 list-inside text-[#047670] font-normal text-[20px] font-[Roboto Condensed]">
               <li>
                 <a href="#" className="">
                   Machine Learning Interview Questions and Answers
@@ -445,13 +388,13 @@ function BlogsDetails() {
         </section>
 
         <section className="p-3">
-          <h2 className="text-teal-700 font-[impact] font-[50px] font-normal">
+          <h2 className="text-[#047670] font-[impact] text-[50px] font-normal">
             2. Practice Coding through Real-World AI Projects
           </h2>
 
-          <div className="row">
+          <div className="row p-3">
             <div className="col-md-9 mt-3">
-              <p className=" font-[Roboto Condensed] font-[20px] font-normal">
+              <p className=" font-[Roboto Condensed] text-[20px] font-normal">
                 A structured approach to AI interview prep starts with
                 strengthening your Python programming skills, which is the
                 industry standard for AI development.  You can begin by building
@@ -471,11 +414,11 @@ function BlogsDetails() {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row p-3">
             <div className="col-md-9 p-3">
               {/* Article Description */}
               <p
-                className="text-gray-800  mb-6 font-normal font-[20px]"
+                className="text-[#000000] mb-6 font-normal text-[20px]"
                 style={{ fontFamily: "Roboto Condensed" }}
               >
                 Most AI interviews have different types of coding challenges to
@@ -487,7 +430,7 @@ function BlogsDetails() {
 
               {/* Bullet Points */}
               <ul
-                className="list-disc list-inside text-gray-800  mb-6 font-normal font-[20px]"
+                className="list-disc list-inside text-[#000000]  mb-6 font-normal text-[20px]"
                 style={{ fontFamily: "Roboto Condensed" }}
               >
                 <li>
@@ -518,41 +461,41 @@ function BlogsDetails() {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row p-3">
             <div className="col-md-9 mt-3">
-              <h2 className="text-teal-700 font-[impact] font-[50px] font-normal">
+              <h2 className="text-[#047670] font-[impact] textr-[50px] font-normal">
                 Here's what valued users are saying about ProjectPro
               </h2>
               <div className="row p-3 flex gap-2">
-                <div className="col-md-5 bg-teal-700 text-white rounded-2  ">
-                  <div className="mt-2 flex gap-2 mt-5">
+                <div className="col-md-5 bg-[#047670] text-[#ffffff] rounded-2  ">
+                  <div className=" flex gap-2 mt-5">
                     <img src="https://i.ibb.co/fGKZGkXR/Ellipse-6.png" />
-                    <h4 className="font-[Roboto Condensed] font-[25px] font-bold mt-4">
+                    <h4 className="font-[Roboto Condensed] text-[25px] font-bold mt-4">
                       NEHA SHARMA
                     </h4>
                   </div>
 
-                  <p className="font-[Roboto Condensed] font-[25px] font-semibold">
+                  <p className="font-[Roboto Condensed] text-[25px] font-semibold">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Laudantium, eaque?
                   </p>
-                  <p className="font-[Roboto Condensed] font-[25px] font-bold">
+                  <p className="font-[Roboto Condensed] text-[25px] font-bold">
                     Rating 4.8{" "}
                   </p>
                 </div>
-                <div className="col-md-5 bg-teal-700 text-white rounded-2">
-                  <div className="mt-2 flex gap-2 mt-5">
+                <div className="col-md-5 bg-[#047670] text-[#ffffff] rounded-2">
+                  <div className=" flex gap-2 mt-5">
                     <img src="https://i.ibb.co/fGKZGkXR/Ellipse-6.png" />
-                    <h4 className="font-[Roboto Condensed] font-[25px] font-bold mt-4">
+                    <h4 className="font-[Roboto Condensed] text-[25px] font-bold mt-4">
                       NEHA SHARMA
                     </h4>
                   </div>
 
-                  <p className="font-[Roboto Condensed] font-[25px] font-semibold">
+                  <p className="font-[Roboto Condensed] text-[25px] font-semibold">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Laudantium, eaque?
                   </p>
-                  <p className="font-[Roboto Condensed] font-[25px] font-bold">
+                  <p className="font-[Roboto Condensed] text-[25px] font-bold">
                     Rating 4.8{" "}
                   </p>
                 </div>
@@ -562,13 +505,13 @@ function BlogsDetails() {
         </section>
 
         <section className="p-3">
-          <h2 className="text-teal-700 font-[impact] font-[50px] font-normal">
+          <h2 className="text-[#047670] font-[impact] text-[50px] font-normal">
             3. Familiarize Yourself with Latest AI Tools and Libraries
           </h2>
 
-          <div className="row">
+          <div className="row p-3">
             <div className="col-md-9 mt-3">
-              <p className=" font-[Roboto Condensed] font-[20px] font-normal">
+              <p className=" font-[Roboto Condensed] text-[20px] font-normal">
                 Getting hands-on with popular AI tools and libraries is
                 essential for interview success because AI interviews are less
                 about theoretical knowledge and more about applying what you
@@ -591,11 +534,11 @@ function BlogsDetails() {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row p-3">
             <div className="col-md-7 p-3">
               {/* Article Description */}
               <p
-                className="text-gray-800  mb-6 font-normal font-[20px]"
+                className="text-[#000000] mb-6 font-normal text-[20px]"
                 style={{ fontFamily: "Roboto Condensed" }}
               >
                 Instead of just reading theory about these tools and
@@ -605,7 +548,7 @@ function BlogsDetails() {
 
               {/* Bullet Points */}
               <ul
-                className="list-disc list-inside text-gray-800  mb-6 font-normal font-[20px]"
+                className="list-disc list-inside text-[#000000]  mb-6 font-normal text-[20px]"
                 style={{ fontFamily: "Roboto Condensed" }}
               >
                 <li>Building a chatbot using LangChain</li>
@@ -617,13 +560,13 @@ function BlogsDetails() {
         </section>
 
         <section className="p-3">
-          <h2 className="text-teal-700 font-[impact] font-[50px] font-normal">
+          <h2 className="text-[#000000] font-[impact] text-[50px] font-normal">
             4. Prepare a Detailed Project Walkthrough 
           </h2>
 
-          <div className="row">
+          <div className="row p-3">
             <div className="col-md-9 mt-3">
-              <p className=" font-[Roboto Condensed] font-[20px] font-normal">
+              <p className=" font-[Roboto Condensed] text-[20px] font-normal">
                 A structured approach to AI interview prep starts with
                 strengthening your Python programming skills, which is the
                 industry standard for AI development.  You can begin by building
@@ -643,11 +586,11 @@ function BlogsDetails() {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row p-3">
             <div className="col-md-9 p-3">
               {/* Article Description */}
               <p
-                className="text-gray-800  mb-6 font-normal font-[20px]"
+                className="text-[#000000]  mb-6 font-normal text-[20px]"
                 style={{ fontFamily: "Roboto Condensed" }}
               >
                 Most AI interviews have different types of coding challenges to
@@ -659,7 +602,7 @@ function BlogsDetails() {
 
               {/* Bullet Points */}
               <ul
-                className="list-disc list-inside text-gray-800  mb-6 font-normal font-[20px]"
+                className="list-disc list-inside text-[#000000]  mb-6 font-normal text-[20px]"
                 style={{ fontFamily: "Roboto Condensed" }}
               >
                 <li>
@@ -690,41 +633,17 @@ function BlogsDetails() {
             </div>
           </div>
 
-          {/* <div className="row">
-                <div className="col-md-7 mt-3">
-                    <h2 className="text-teal-700 font-[impact] font-[50px] font-normal">Here's what valued users are saying about ProjectPro</h2>
-                    <div className="row p-3 flex gap-2">
-                        <div className="col-md-5 bg-teal-700 text-white rounded-2  " >
-                            <div className="mt-2 flex gap-2 mt-5">                            
-                                <img src="https://i.ibb.co/fGKZGkXR/Ellipse-6.png"/>
-                            <h4 className="font-[Roboto Condensed] font-[25px] font-bold mt-4">NEHA SHARMA</h4>
-                            </div>
-
-                            <p className="font-[Roboto Condensed] font-[25px] font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, eaque?</p>
-                            <p className="font-[Roboto Condensed] font-[25px] font-bold">Rating 4.8 </p>
-                        </div>
-                        <div className="col-md-5 bg-teal-700 text-white rounded-2" >
-                            <div className="mt-2 flex gap-2 mt-5">                            
-                                <img src="https://i.ibb.co/fGKZGkXR/Ellipse-6.png"/>
-                            <h4 className="font-[Roboto Condensed] font-[25px] font-bold mt-4">NEHA SHARMA</h4>
-                            </div>
-
-                            <p className="font-[Roboto Condensed] font-[25px] font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, eaque?</p>
-                            <p className="font-[Roboto Condensed] font-[25px] font-bold">Rating 4.8 </p>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
+      
         </section>
 
         <section className="p-3">
-          <h2 className="text-teal-700 font-[impact] font-[50px] font-normal">
+          <h2 className="text-[#047670] font-[impact] text-[50px] font-normal">
           5. Keep Up with AI Advancements for Job Interview Success
           </h2>
 
           <div className="row">
             <div className="col-md-9 mt-3">
-              <p className=" font-[Roboto Condensed] font-[20px] font-normal">
+              <p className=" font-[Roboto Condensed] text-[20px] font-normal">
               It is essential to stay informed and updated about the latest AI breakthroughs, emerging research, new models, and tools. This will sharpen your knowledge and help you confidently appear for the interview. Read research papers on platforms like ArXiv to understand new architectures, techniques, and improvements in transformers and diffusion models. Learning from real-world success stories is the best way to improve your AI interviewing skills. Listening to various AI podcasts like the AI Monetization Podcast, you can better understand AI's ROI value, practical applications, and new trends, which can help you in interviews.
               </p>
             </div>
@@ -743,7 +662,7 @@ function BlogsDetails() {
 
               {/* Bullet Points */}
               <ul
-                className="list-disc list-inside text-gray-800  mb-6 font-normal font-[20px]"
+                className="list-disc list-inside text-[#000000] mb-6 font-normal text-[20px]"
                 style={{ fontFamily: "Roboto Condensed" }}
               >
                 <li>
@@ -770,13 +689,13 @@ function BlogsDetails() {
         </section>
 
         <section className="p-3">
-        <h2 className="text-teal-700 font-[impact] font-[50px] font-normal">
+        <h2 className="text-[#047670] font-[impact] text-[50px] font-normal">
         6. Brush Up and Strengthen Your Math Foundation
           </h2>
 
-          <div className="row">
+          <div className="row p-3">
             <div className="col-md-9 mt-3">
-              <p className=" font-[Roboto Condensed] font-[20px] font-normal">
+              <p className=" font-[Roboto Condensed] text-[20px] font-normal">
               It is essential to stay informed and updated about the latest AI breakthroughs, emerging research, new models, and tools. This will sharpen your knowledge and help you confidently appear for the interview. Read research papers on platforms like ArXiv to understand new architectures, techniques, and improvements in transformers and diffusion models. Learning from real-world success stories is the best way to improve your AI interviewing skills. Listening to various AI podcasts like theMath is the foundation of machine learning and deep learning models, and having a strong mathematical understanding is essential for interview success. Interviewers frequently assess knowledge of probability and statistics (Bayesian probability, distributions, hypothesis testing) for model evaluation and uncertainty estimation, linear algebra (vectors, matrices, eigenvalues, SVD) for neural network computations, and calculus (derivatives, gradients, chain rule) for optimization techniques like backpropagation. Knowing how to apply these ideas to real-world AI projects rather than memorizing formulas will help you ace technical questions and show off your problem-solving abilities in real-world situations., you can better understand AI's ROI value, practical applications, and new trends, which can help you in interviews.
               </p>
             </div>
@@ -785,17 +704,17 @@ function BlogsDetails() {
         </section>
 
         <section className="p-3">
-        <h2 className="text-teal-700 font-[impact] font-[50px] font-normal">
+        <h2 className="text-[#047670] font-[impact] text-[50px] font-normal">
         7. Prepare for Open-ended Questions
           </h2>
 
-          <div className="row">
+          <div className="row p-3">
             <div className="col-md-9 mt-3">
-              <p className=" font-[Roboto Condensed] font-[20px] font-normal">
+              <p className=" font-[Roboto Condensed] text-[20px] font-normal">
               Open-ended questions are among the most commonly asked in the hiring process to gauge your aptitude for building, fine-tuning, and implementing AI solutions in enterprise settings. These questions help the hiring managers assess your ability to deconstruct complicated issues, defend model choices, and modify tactics in light of restrictions such as computational efficiency or data limitations. 
               In domains like model selection (e.g., when to employ transformers vs. traditional machine learning models), managing bias in datasets, and optimizing large-scale AI systems, interviewers look for systematic reasoning from the job seekers vs a definite answer to the question. Just like how strong communication skills help AI engineers convey their strategies to stakeholders and ensure solutions align with business goals, clearly explaining technical decisions, trade-offs, and model performance to hiring managers helps them assess your problem-solving approach, reasoning, and ability to translate AI concepts into real-world impact. You must always use a structured approach like the STAR (Situation, Task, Action, Result) method when answering. Here are some examples of open-ended questions -
               </p>
-              <ul  className="list-disc list-inside text-gray-800  mb-6 font-normal font-[20px]"
+              <ul  className="list-disc list-inside text-gray-800  mb-6 font-normal text-[20px]"
                 style={{ fontFamily: "Roboto Condensed" }}>
              <li>You need to deploy a deep learning model in a resource-constrained environment (e.g., edge devices). How would you optimize it?</li>
              <li>How would you decide whether to retrain an existing model or develop a new one from scratch?</li>
@@ -811,13 +730,13 @@ function BlogsDetails() {
         </section>
 
         <section className="p-3">
-        <h2 className="text-teal-700 font-[impact] font-[50px] font-normal">
+        <h2 className="text-[#047670] font-[impact] text-[50px] font-normal">
         AI Mock Interview: Your Secret Weapon to Interview Success
           </h2>
 
-          <div className="row">
+          <div className="row p-3">
             <div className="col-md-9 mt-3">
-              <p className=" font-[Roboto Condensed] font-[20px] font-normal">
+              <p className=" font-[Roboto Condensed] text-[20px] font-normal">
               You're gearing up for an AI job interview, but interview anxiety is creeping in? What if you had an AI-powered interview coach that helps you take practice interviews, refine your answers, and provide instant feedback to make sure you're fully prepared? AI Mock Interviews do just that—helping job seekers sharpen responses, refine resumes, and practice solving AI-related problems under pressure. Practicing with AI mock interviews can be the secret weapon that gives you a competitive edge over other top candidates. AI-powered mock interviews simulate realistic scenarios using the latest AI models to assess your technical and behavioral skills by providing actionable feedback that helps you improve. AI interview tools have become an integral part of the hiring process, and understanding how these AI mock interviews work and how to perform well in them can play a vital role in your interview success.
               </p>
             </div>
@@ -832,13 +751,13 @@ function BlogsDetails() {
         </section>
 
         <section className="p-3">
-        <h2 className="text-teal-700 font-[impact] font-[50px] font-normal">
+        <h2 className="text-[#047670] font-[impact] text-[50px] font-normal">
         What Are AI Mock Interviews?
           </h2>
 
-          <div className="row">
+          <div className="row p-3">
             <div className="col-md-9 mt-3">
-             <ul className="list-disc list-inside text-gray-800  mb-6 font-normal font-[20px]"
+             <ul className="list-disc list-inside text-[#000000]  mb-6 font-normal text-[20px]"
                 style={{ fontFamily: "Roboto Condensed" }}>
               <li>These interviews provide a structured approach to solving potential interview questions commonly asked in top companies to help you practice answering tough questions with clarity and confidence. Some AI mock interview platforms even use an AI interview copilot to assess facial expressions, voice modulation, and keyword relevance.</li>
               <li>â€‹â€‹With instant feedback based on your answers, you know where you need to improve so you can refine your answers to match the expectations of hiring managers.</li>
@@ -847,9 +766,9 @@ function BlogsDetails() {
              </ul>
             </div>
           </div>
-
-        </section>
+          </section>
       </div>
+      <Footer/>
     </div>
   );
 }
