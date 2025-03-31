@@ -47,34 +47,36 @@ function DigitalProductsSection() {
   return (
     <>
       {/* HERO SECTION */}
-      <div className="h-auto bg-[#0E7369] flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 py-10 gap-6">
-        {/* Left Side Content */}
-        <div className="text-[#ffffff] w-full lg:w-[475px]">
-          <h2 className="text-[32px] md:text-[40px] font-impact uppercase">
-            Digital Products
-          </h2>
-          <p className="text-[16px] font-roboto mt-2">
-            Download expertly crafted tools, resources, and templates developed
-            by top creatives.
-          </p>
+      <div className="pt-20">
+        <div className="h-auto bg-[#0E7369] flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 py-10 gap-6">
+          {/* Left Side Content */}
+          <div className="text-[#ffffff] w-full lg:w-[475px]">
+            <h2 className="text-[32px] md:text-[40px] font-impact uppercase">
+              Digital Products
+            </h2>
+            <p className="text-[16px] font-roboto mt-2">
+              Download expertly crafted tools, resources, and templates
+              developed by top creatives.
+            </p>
 
-          <div className="flex justify-center lg:justify-start">
-            <Link
-              to="/marketProduct"
-              className="inline-block mt-4 h-[50px] w-[162px] bg-[#FF757A] text-[#ffffff] px-6 py-2 rounded-[12px] shadow-lg font-roboto text-[18px] text-center"
-            >
-              Shop Now
-            </Link>
+            <div className="flex justify-center lg:justify-start">
+              <Link
+                to="/marketProduct"
+                className="inline-block mt-4 h-[50px] w-[162px] bg-[#FF757A] text-[#ffffff] px-6 py-2 rounded-[12px] shadow-lg font-roboto text-[18px] text-center"
+              >
+                Shop Now
+              </Link>
+            </div>
           </div>
-        </div>
 
-        {/* Right Side Image */}
-        <div className="w-full lg:w-auto">
-          <img
-            src={digitalproductsection}
-            alt="Shopping carts digital"
-            className="w-full max-w-[700px] h-auto rounded-[8px] shadow-lg"
-          />
+          {/* Right Side Image */}
+          <div className="w-full lg:w-auto">
+            <img
+              src={digitalproductsection}
+              alt="Shopping carts digital"
+              className="w-full max-w-[700px] h-auto rounded-[8px] shadow-lg"
+            />
+          </div>
         </div>
       </div>
 
@@ -316,7 +318,7 @@ function DigitalProductsSection() {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

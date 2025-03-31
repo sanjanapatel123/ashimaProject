@@ -6,6 +6,7 @@ import blog4 from "../assets/blog4.png";
 import blog5 from "../assets/blog5.png";
 import Header from "./Courses/Header";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 const Blog = () => {
     const blogPosts = [
       {
@@ -46,7 +47,7 @@ const Blog = () => {
     <>
     <Header/>
       {/* Hero Section */}
-      <section className="hero bg-[#047670] py-24 sm:px-6 md:px-10  flex flex-col lg:flex-row justify-around gap-10 flex-wrap mt-28">
+      <section className="hero bg-[#047670] py-24 sm:px-6 md:px-10  flex flex-col lg:flex-row justify-around gap-10 flex-wrap pt-28">
         <div className="bg-[#ffffff] rounded-lg shadow-md p-3 w-full lg:w-[670px] h-auto">
           <img
             src={blog1}
@@ -231,12 +232,12 @@ const Blog = () => {
                   {post.description}
                 </p>
 
-                <a
-                  href={post.link}
+                <Link
+                  to={'/blogsDetail'}
                   className="inline-flex justify-center items-center bg-[#047670] text-white w-[225px] h-[42px] text-[14px] font-bold font-roboto rounded-[8px] border-[1px]"
                 >
                   Best Artificial Intelligence Blogs
-                </a>
+                </Link>
               </div>
             </div>
           ))}

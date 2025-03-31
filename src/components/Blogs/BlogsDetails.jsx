@@ -12,7 +12,7 @@ function BlogsDetails() {
     
 
         {/* Hero Section */}
-        <section className="bg-[#0E7C74] text-[#ffffff] py-10 px-6 mt-24">
+        <section className="bg-[#0E7C74] text-[#ffffff] py-10 px-6 pt-32">
           {/* Breadcrumb */}
           <div className="text-sm flex items-center space-x-2 text-[#ffffff]">
             <span>📖 BLOG</span>

@@ -498,7 +498,7 @@ const Navbar = () => {
 
         {/* Center: Menu Items (Visible on medium and larger screens) */}
         <nav className="hidden md:flex space-x-10 font-medium text-[16px] text-[#1e1e1e]">
-          <Link
+          {/* <Link
             to="/allcourses"
             className="font-roboto font-[500] text-[18px] leading-[20px] text-[#000000]"
           >
@@ -509,7 +509,7 @@ const Navbar = () => {
             className="font-roboto font-[500] text-[18px] leading-[20px] text-[#000000]"
           >
             Business
-          </Link>
+          </Link> */}
 
           <div className="relative">
             <button

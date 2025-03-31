@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="bg-white pt-[150px] pb-20 px-4 text-[#000000]">
+    <section className="bg-white pt-[150px] pb-20 pl-12 text-[#000000]">
       <div className="max-w-[1364px] mx-auto flex flex-col md:flex-row justify-between items-start">
         {/* Left Side */}
         <div className="w-full md:w-1/2">
@@ -19,10 +19,10 @@ const HeroSection = () => {
         </div>
 
         {/* Right Side */}
-        <div className="md:w-1/2 mt-6 md:mt-0 md:ml-12">
+        <div className="md:w-1/2  md:mt-0 md:ml-12">
           <p
             style={{ fontWeight: "700" }}
-            className="text-[16px] text-[#1E1E1E] font-roboto leading-[22px] tracking-[1%] mt-5 w-full md:w-[500px] text-left"
+            className="text-[16px] text-[#1E1E1E] font-roboto leading-[22px] tracking-[1%] mt-[27px] w-full md:w-[500px] text-left"
           >
             A complete platform to provide you options to learn from Live,
             Hybrid, and Video courses. No need to look at separate places to
