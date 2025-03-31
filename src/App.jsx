@@ -13,16 +13,17 @@ import FAQSection from "./components/Home/FAQSection";
 import ReviewCards from "./components/Home/ReviewCards";
 import StartLearning from "./components/Home/StartLearning";
 import Footer from "./components/Footer";
- import Courses from "./components/Courses";
+import Courses from "./components/Courses";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Digital from "./components/DigitalProduct/Digital";
 import "./App.css";
-import { Nav } from "react-bootstrap";
 import MarketProduct from "./components/DigitalProduct/MarketProductPage";
 import Hybrid from "./components/Courses/Hybrid";
 import Video from "./components/Courses/Video";
 import Live from "./components/Courses/Live";
+import Blog from "./components/Blog";
+import MyDigital from "./components/DigitalProduct/MyDigital";
 
 const App = () => {
   return (
@@ -46,6 +47,7 @@ const App = () => {
                 <FAQSection />
                 <ReviewCards />
                 <StartLearning />
+                <Footer />
               </div>
             </div>
           }
@@ -53,13 +55,13 @@ const App = () => {
         <Route path="/allcourses" element={<Courses />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/digital" element={<Digital />} />
+        <Route path="/digital" element={<MyDigital />} />
         <Route path="/marketProduct" element={<MarketProduct />} />
         <Route path="/live" element={<Live />} />
         <Route path="/hybrid" element={<Hybrid />} />
         <Route path="/video" element={<Video />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
-      <Footer />
     </div>
   );
 };

@@ -6,7 +6,6 @@ import courses3 from "../../assets/courses3.png";
 import courses4 from "../../assets/courses4.png";
 import trending1 from "../../assets/trending1.png";
 import COURSES from "../../assets/COURSE.png";
-import dot from "../../assets/3dot.png";
 import { CiFilter } from "react-icons/ci";
 import { HiDotsVertical } from "react-icons/hi";
 import { Link } from "react-router-dom";
@@ -23,7 +22,6 @@ import {
   Nav,
 } from "react-bootstrap";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-
 
 function AllCourses() {
   const [sortOption, setSortOption] = useState("Most Popular");
@@ -166,11 +164,16 @@ function AllCourses() {
     <>
       <Container fluid className="bg-[#ffffff]">
         {/* Top Navigation */}
-        <Row className="bg-[#ffffff] py-2 uppercase">
+        <Row className="bg-[#ffffff] uppercase">
           <Col>
+            <hr style={{ margin: "0px" }} />
             <div
-              className="d-flex align-items-center  overflow-auto px-2 justify-content-between font-Roboto Condensed"
-              style={{ whiteSpace: "nowrap", scrollBehavior: "smooth" }}
+              className="d-flex align-items-center  overflow-auto px-2 justify-content-between font-roboto mt-40"
+              style={{
+                whiteSpace: "nowrap",
+                scrollBehavior: "smooth",
+                border: "0px px 1px 0px  solid gray",
+              }}
             >
               <Button
                 variant="success"
@@ -278,7 +281,7 @@ function AllCourses() {
               </span>
 
               {/* <img src={dot} className="bg-[#FFFFFF]" /> */}
-              <div
+              {/* <div
                 style={{
                   position: "relative",
                   overflowY: "visible",
@@ -320,8 +323,9 @@ function AllCourses() {
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
-              </div>
+              </div> */}
             </div>
+            <hr style={{ margin: "0px" }} />
           </Col>
         </Row>
 
@@ -462,32 +466,32 @@ function AllCourses() {
             <hr />
 
             <h5 className="fw-bold">Mode</h5>
-            <Link to="live">
+            <button>
               <div className="d-flex">
                 <Form.Check type="checkbox" />
                 <label htmlFor="" className="ms-4">
                   Live
                 </label>
               </div>
-            </Link>
+            </button>
 
             <div className="d-flex">
               <Form.Check type="checkbox" />
-              <Link to="/hybrid">
+              <button>
                 <label htmlFor="" className="ms-4">
                   Hybrid
                 </label>
-              </Link>
+              </button>
             </div>
 
-            <Link to="/vedio">
+            <button>
               <div className="d-flex">
                 <Form.Check type="checkbox" />
                 <label htmlFor="" className="ms-4">
                   Video
-                </label>
+                </label>    
               </div>
-            </Link>
+            </button>
           </Col>
 
           {/* Course List */}
@@ -495,8 +499,7 @@ function AllCourses() {
             {courses.map((course, index) => (
               <div key={index} className="mb-4">
                 <Row
-                  className="g-0 bg-[#background: #D9D9D9;
-]"
+                  className="g-0 bg-[#background: #D9D9D9;]"
                 >
                   <Col md={4}>
                     <img
@@ -609,7 +612,7 @@ function AllCourses() {
                             {course.mode}
                           </Button>
                         </Link> */}
-                        <Link
+                        {/* <Link
                           to={
                             course.mode === "LIVE"
                               ? "/live"
@@ -634,7 +637,7 @@ function AllCourses() {
                           >
                             {course.mode}
                           </Button>
-                        </Link>
+                        </Link> */}
                       </p>
                       <h4 className="text-end fw-bold text-success">
                         {course.price}
@@ -720,18 +723,30 @@ function AllCourses() {
                   <p className="text-muted mb-1">BY {course.instructor}</p>
                   <p className="mb-1">RATING {course.rating} ⭐⭐⭐⭐⭐</p>
                   <h5 className="fw-bold">{course.price}</h5>
-                  <Button
-                    variant={
+
+                  {/* Link buttons for different modes */}
+                  <Link
+                    to={
                       course.mode === "VIDEO"
-                        ? "danger"
+                        ? "/video"
                         : course.mode === "LIVE"
-                        ? "success"
-                        : "warning"
+                        ? "/live"
+                        : "/hybrid"
                     }
-                    size="sm"
                   >
-                    {course.mode}
-                  </Button>
+                    <Button
+                      variant={
+                        course.mode === "VIDEO"
+                          ? "danger"
+                          : course.mode === "LIVE"
+                          ? "success"
+                          : "warning"
+                      }
+                      size="sm"
+                    >
+                      {course.mode}
+                    </Button>
+                  </Link>
                 </Card.Body>
               </Card>
             ))}

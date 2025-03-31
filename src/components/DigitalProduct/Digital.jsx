@@ -9,6 +9,7 @@ import reviewimage from "../../assets/reviewimage.jpg";
 import FAQSection from "../../components/Home/FAQSection";
 import Nav_DigitalProduct from "./Nav_DigitalProduct";
 import StartLearning from "../Home/StartLearning";
+import Header from "../Courses/Header";
 
 function DigitalProductsSection() {
   const products = [
@@ -44,10 +45,8 @@ function DigitalProductsSection() {
 
   return (
     <>
-     <Nav_DigitalProduct/>
-
       {/* HERO SECTION */}
-      <div className="h-auto bg-[#0E7369] mt-20 flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 py-10 gap-6">
+      <div className="h-auto bg-[#0E7369] flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 py-10 gap-6">
         {/* Left Side Content */}
         <div className="text-[#ffffff] w-full lg:w-[475px]">
           <h2 className="text-[32px] md:text-[40px] font-impact uppercase">
@@ -57,7 +56,7 @@ function DigitalProductsSection() {
             Download expertly crafted tools, resources, and templates developed
             by top creatives.
           </p>
-          
+
           <div className="flex justify-center lg:justify-start">
             <Link
               to="/marketProduct"
@@ -91,7 +90,7 @@ function DigitalProductsSection() {
         </h2>
 
         {/* Right Filters */}
-        <div className="flex flex-wrap gap-3 font-inter">
+        <div className="flex flex-wrap  font-inter">
           <select className="border rounded px-4 py-2 text-[14px]">
             <option>Price Range</option>
           </select>
@@ -250,7 +249,7 @@ function DigitalProductsSection() {
           <div className="min-w-[1024px] flex gap-10 px-6 py-2 rounded-[8px]">
             {/* Card 1 */}
             <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex  mb-4">
                 <img
                   src={reviewimage}
                   alt="Neha Sharma"
@@ -272,7 +271,7 @@ function DigitalProductsSection() {
 
             {/* Card 2 */}
             <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center  mb-4">
                 <img
                   src={reviewimage}
                   alt="Neha Sharma"
@@ -294,7 +293,7 @@ function DigitalProductsSection() {
 
             {/* Card 3 */}
             <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center  mb-4">
                 <img
                   src={reviewimage}
                   alt="Neha Sharma"
