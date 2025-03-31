@@ -1,11 +1,20 @@
 import React from "react";
 import blog1 from "../assets/blog1.png"
-
+import blog2 from "../assets/blog2.png";
+import blog3 from "../assets/blog3.png";
+import blog4 from "../assets/blog4.png";
+import blog5 from "../assets/blog5.png";
 const Blog = () => {
     const blogPosts = [
       {
-        imageUrl:
-          "https://media-hosting.imagekit.io/1613f1e947184b31/screenshot_1743149465898.png?Expires=1837757467&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=SI53PV1CxwqVd4YUNfCzN735WAbb9ymsP6Q9tYb0RpxheXq-a1GEAdQWnVsSZQCJibN92C7u7PAja03PgDFR7owXrO2kMzkkdccPrvAJa1WzcvklDTfAF5~OSzOlxxJjE-Uzfcuy9hk2kP7uzeDNJWHDkjbBoxelE8Z3lfP8JRS9SxdFbHqxaprYSjgLCEO~iIkQaMTye1dcAdepkSQVFqtr63ebuPKEXGB6zQq0f0DR7zWU8gYLzUp1LkY3ZR3Rqkn05dXPu8v9AVg~fyF1uG0Y1qNlZ6h3ymubW~qa-qiSU~rFG1yF1p2qFAbPq~oS2v8WYbmRLXX4~VffmnRsXQ__",
+        imageUrl: blog2,
+        title: "LangGraph Tutorial for Beginners to Build AI Agents",
+        description:
+          "A step-by-step, hands-on Langgraph tutorial that takes you from the basics to advanced concepts, helping you quickly.",
+        link: "#",
+      },
+      {
+        imageUrl: blog3,
         meta: "25.march.2025",
         title: "LangGraph Tutorial for Beginners to Build AI Agents",
         description:
@@ -13,8 +22,15 @@ const Blog = () => {
         link: "#",
       },
       {
-        imageUrl:
-          "https://media-hosting.imagekit.io/f597e47896474538/screenshot_1743149422120.png?Expires=1837757423&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=lITmz6XcxKaNexc~voIcxmKxSezXJQVXYL8FlxEX4w6GGS8b1-j3krr8uwtmjY~PH29baztYTBJQfVcKa7YQH~Pgt7Px3YMI-Uao6PmmOpOgNWwgHPpTB1cef-MEC2msNcey~UcFytym8~hDfU678uN5~UuB2i~fXqEsAJ5NWosvurAS61itkyH6t~CCPds6jVpYvwieKI0YB4OhOlSlz8vR-K3xNR8t5vKf3e10dJqxrMof9~7FChkE~FvEg~Yehfj6WmgXNZI8l5rrSWD-urUm47JPpeWKgTMWZNQdly6GDiHY6eE2Chi0MtS89jvfoQMbvFLLHuPJ079p3QtbXA__",
+        imageUrl: blog4,
+        meta: "25.march.2025",
+        title: "LangGraph Tutorial for Beginners to Build AI Agents",
+        description:
+          "A step-by-step, hands-on Langgraph tutorial that takes you from the basics to advanced concepts, helping you quickly.",
+        link: "#",
+      },
+      {
+        imageUrl: blog5,
         meta: "25.march.2025",
         title: "LangGraph Tutorial for Beginners to Build AI Agents",
         description:
@@ -26,31 +42,43 @@ const Blog = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero bg-teal-700 py-24 px-10 flex justify-center items-center gap-10 flex-wrap">
-        <div className="bg-white rounded-lg shadow-md p-5 w-96" >  <img src={blog1} />
+      <section className="hero bg-[#047670] py-24 px-4 sm:px-6 md:px-10 h-auto flex flex-col lg:flex-row justify-evenly gap-10 flex-wrap">
+        <div className="bg-white rounded-lg shadow-md p-5 w-full lg:w-[670px] h-auto">
+          <img
+            src={blog1}
+            className="w-full h-auto max-h-[360px] object-cover rounded-md"
+          />
           <div className="mt-4">
-            <span className="text-xs text-gray-700">25 Mar 2025</span>
-            <span className="mx-2 text-xs text-gray-700">|</span>
-            <span className="text-xs text-gray-700">Featured</span>
+            <span className="text-[12px] font-normal text-[#1E1E1E1] font-jost">
+              25 Mar 2025
+            </span>
+            <span className="mx-2 text-[12px] font-normal text-[#1E1E1E1] font-jost">
+              |
+            </span>
+            <span className="text-[12px] font-normal text-[#1E1E1E1] font-jost">
+              Featured
+            </span>
           </div>
-          <h2 className="text-xl text-teal-700 mt-2">
+          <h2 className="text-[24px] sm:text-[28px] md:text-[36px] text-[#047670] mt-2 font-normal font-impact">
             How to Use Large Concept Models for Text Generation?
           </h2>
-          <p className="text-sm text-gray-700 mt-3">
+          <p className="text-[16px] sm:text-[18px] font-jost font-semibold text-[#1E1E1E] mt-3">
             Explore Large Concept Models, their architecture, differences from
             LLMs, implementation guide, and applications.
           </p>
-          <a href="#" className="block mt-4 text-teal-700 text-sm">
+          <button className="block mt-4 bg-[#047670] text-[#ffffff] text-[18px] sm:text-[20px] md:text-[22px] font-roboto border-[1px] font-bold rounded-[12px] h-[57px] w-full sm:w-[355px]">
             Best Artificial Intelligence Blogs
-          </a>
+          </button>
         </div>
 
         {/* Sign-Up Form */}
-        <div className="bg-white p-6 rounded-lg shadow-md w-96">
-          <h3 className="text-2xl font-semibold text-gray-900">
+        <div className="bg-[#ffffff] w-full sm:w-[400px] h-auto p-6 rounded-lg shadow-md mt-10 lg:mt-20">
+          <h3 className="text-[24px] sm:text-[30px] font-normal font-impact text-[#000000]">
             Start Learning Now
           </h3>
-          <p className="text-sm text-gray-600 mt-2">Learn by Doing</p>
+          <p className="text-[14px] sm:text-[16px] text-[#000000] font-[500px] font-jost mt-2">
+            Learn by Doing
+          </p>
           <div className="mt-4 space-y-4">
             <button className="flex items-center justify-center w-full py-2 border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-100">
               <img
@@ -76,16 +104,17 @@ const Blog = () => {
             <hr className="flex-grow border-gray-300" />
           </div>
 
-          {/* Email and Password Inputs */}
           <div className="space-y-3">
-            <label className="text-sm font-semibold text-gray-700">EMAIL</label>
+            <label className="text-[16px] sm:text-[18px] font-roboto font-normal text-[#1E1E1E]">
+              EMAIL
+            </label>
             <input
               type="email"
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your email"
             />
 
-            <label className="text-sm font-semibold text-gray-700">
+            <label className="text-[16px] sm:text-[18px] font-roboto font-normal text-[#1E1E1E]">
               PASSWORD
             </label>
             <input
@@ -95,11 +124,11 @@ const Blog = () => {
             />
           </div>
 
-          <button className="w-full bg-gray-300 text-gray-500 font-semibold py-2 rounded-lg mt-4 cursor-not-allowed">
+          <button className="w-full h-[47px] bg-[#1E1E1E]/10 text-[#1E1E1E]/50 font-medium py-2 rounded-lg mt-4 cursor-not-allowed text-[16px] sm:text-[18px]">
             SIGN UP
           </button>
 
-          <p className="text-xs text-center text-gray-500 mt-3">
+          <p className="text-[12px] font-roboto font-normal text-center text-[#047670] mt-3">
             By continuing, you agree to AI Skills{" "}
             <a href="#" className="text-blue-600">
               Terms
@@ -114,96 +143,140 @@ const Blog = () => {
       </section>
 
       {/* Blog Categories */}
-      <section className="blog-categories px-10 mt-12">
-        <h2 className="text-5xl text-black mb-12">Blog Categories</h2>
-        <div className="flex flex-wrap justify-center gap-6">
+    
+
+      <section className="px-10 mt-12">
+        <h2 className="text-[50px] font-normal font-impact text-[#000000] mb-10">
+          Blog Categories
+        </h2>
+
+        <div className="flex flex-wrap justify-center items-center  gap-3 w-[993px] h-[140px] ml-44">
+          {/* First Row - 5 */}
           {[
             "AI & ML",
-            "DevOps",
-            "No Code",
-            "Cyber Security",
-            "Data Science",
-            "Design and Development",
-            "Founder Connect",
-            "Gaming",
-            "Business",
-            "Marketing",
+            "Devops",
+            "NO CODE",
+            "CYBER SECURITY AND TESTING",
+            "DATA SCIENCE AND ENGINEERING",
           ].map((category, index) => (
-            <div
+            <span
               key={index}
-              className="bg-transparent border-2 border-gray-800 rounded-full px-5 py-2 text-gray-800 text-sm capitalize cursor-pointer"
+              className="px-4 py-1 border-[1px] border-[#1E1E1E] rounded-[16px] font-roboto text-[16px] font-bold text-[#1E1E1E] whitespace-nowrap"
             >
               {category}
-            </div>
+            </span>
           ))}
+
+          {/* Row break (invisible but full width) */}
+          <div className="w-full h-0" />
+
+          {/* Second Row - 4 */}
+          {[
+            "DESIGN AND DEVELOPMENT",
+            "FOUNDER CONNECT",
+            "GAMING AND NETWORK",
+            "PRODUCT",
+          ].map((category, index) => (
+            <span
+              key={index + 5}
+              className="px-4 py-1 border-[1px] border-[#1E1E1E] rounded-[16px] font-roboto text-[16px] font-bold text-[#1E1E1E] whitespace-nowrap"
+            >
+              {category}
+            </span>
+          ))}
+
+          {/* Row break */}
+          <div className="w-full h-0" />
+
+          {/* Third Row - 2 */}
+          {["BUSINESS AND LEADERSHIP", "MARKETING AND SALES"].map(
+            (category, index) => (
+              <span
+                key={index + 9}
+                className="px-4 py-1  border-[1px] border-[#1E1E1E] rounded-[16px] font-roboto text-[16px] font-bold text-[#1E1E1E] whitespace-nowrap"
+              >
+                {category}
+              </span>
+            )
+          )}
         </div>
       </section>
 
-      {/* Blog Posts */}
-      {/* <section className="blog-posts px-10 mt-12">
-        <h2 className="text-5xl font-impact text-black mb-12">All Blogs</h2>
-        <div className="grid grid-cols-4 gap-6">
-          {[...Array(4)].map((_, index) => (
-            <div key={index} className="bg-white shadow-md rounded-lg">
+     
+      <section className="blog-posts px-10 mt-16">
+        <h2 className="text-[50px] font-impact font-normal text-[#000000] mb-12">
+          <span className="text-[#000000]">All </span>
+          <span className="text-[#047670]">Blogs</span>
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2  h-[456px] lg:grid-cols-4 gap-8">
+          {blogPosts.map((post, index) => (
+            <div
+              key={index}
+              className="bg-[#ffffff] rounded-lg shadow-md overflow-hidden"
+            >
               <div
-                className="h-56 bg-cover rounded-t-lg"
-                style={{
-                  backgroundImage: `url('https://media-hosting.imagekit.io/1613f1e947184b31/screenshot_1743149465898.png')`,
-                }}
+                className="h-[235px] bg-cover bg-center"
+                style={{ backgroundImage: `url(${post.imageUrl})` }}
               ></div>
               <div className="p-5">
-                <div className="font-jost text-xs text-gray-800">
-                  25 March 2025
+                <div className="font-jost font-normal  text-[12px] text-[#000000] mb-1">
+                  {post.meta}
                 </div>
-                <h3 className="text-xl font-impact text-black mt-2">
-                  LangGraph Tutorial for Beginners to Build AI Agents
+                <h3 className="text-[20px] font-impact font-normal text-[#000000] ">
+                  {post.title}
                 </h3>
-                <p className="text-sm text-gray-700 mt-2">
-                  A step-by-step, hands-on Langgraph tutorial that takes you
-                  from the basics to advanced concepts, helping you quickly.
+              <p className="text-[12px] text-[#1E1E1E1]/80 font-normal mt-2 font-jost">
+                  {post.description}
                 </p>
-                <a href="#" className="text-teal-700 text-sm mt-3 inline-block">
-                  Read More
+                <a
+                  href={post.link}
+                  className="inline-block mt-4 bg-[#047670] text-white text-[14px] font-bold font-roboto py-2 px-4 rounded-md"
+                >
+                  Best Artificial Intelligence Blogs
                 </a>
               </div>
             </div>
           ))}
         </div>
-      </section> */}
 
-      <section className="blog-posts">
-        <h2 className="text-2xl font-bold">
-          <span className="text-black">All</span>
-          <span className="text-teal-700">Blogs</span>
-        </h2>
-
-        <div className="posts-grid">
-          {blogPosts.map((post, index) => (
-            <div className="post-card" key={index}>
-              <div
-                className="image"
-                style={{ backgroundImage: `url(${post.imageUrl})` }}
-              ></div>
-              <div className="meta">{post.meta}</div>
-              <h3>{post.title}</h3>
-              <p>{post.description}</p>
-              <a href={post.link} className="read-more">
-                best artificial intelligence blogs
-              </a>
-            </div>
-          ))}
-        </div>
-
-        <div className="pagination">
-          <a href="#">PREV</a>
-          <a href="#">1</a>
-          <a href="#">2</a>
-          <span>...</span>
-          <a href="#">67</a>
-          <a href="#">NEXT</a>
+        {/* Pagination (Optional) */}
+        <div className="pagination flex justify-center items-center gap-3 mt-10 font-jost text-sm">
+          <a href="#" className="text-[#047670] hover:underline">
+            PREV
+          </a>
+          <a href="#" className="text-[#047670] font-bold">
+            1
+          </a>
+          <a href="#" className="text-[#047670]">
+            2
+          </a>
+          <span className="text-gray-500">...</span>
+          <a href="#" className="text-[#047670]">
+            67
+          </a>
+          <a href="#" className="text-[#047670] hover:underline">
+            NEXT
+          </a>
         </div>
       </section>
 
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
       {/* Trending Section */}
       <section className="trending-section px-10 mt-12">
         <h2 className="text-5xl font-impact text-black mb-12">
