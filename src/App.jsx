@@ -22,6 +22,7 @@ import MarketProduct from "./components/DigitalProduct/MarketProductPage";
 import Hybrid from "./components/Courses/Hybrid";
 import Video from "./components/Courses/Video";
 import Live from "./components/Courses/Live";
+import Blog from "./components/Blog"
 
 const App = () => {
   return (
@@ -58,8 +59,8 @@ const App = () => {
         <Route path="/live" element={<Live />} />
         <Route path="/hybrid" element={<Hybrid />} />
         <Route path="/video" element={<Video />} />
+        <Route path="/blog" element={<Blog/>} />
       </Routes>
-      
     </div>
   );
 };
