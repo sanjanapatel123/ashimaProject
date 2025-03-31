@@ -498,6 +498,19 @@ const Navbar = () => {
 
         {/* Center: Menu Items (Visible on medium and larger screens) */}
         <nav className="hidden md:flex space-x-10 font-medium text-[16px] text-[#1e1e1e]">
+          <Link
+            to="/allcourses"
+            className="font-roboto font-[500] text-[18px] leading-[20px] text-[#000000]"
+          >
+            Courses
+          </Link>
+          <Link
+            to="/instructor"
+            className="font-roboto font-[500] text-[18px] leading-[20px] text-[#000000]"
+          >
+            Business
+          </Link>
+
           <div className="relative">
             <button
               onClick={() => setCoursesDropdownOpen(!coursesDropdownOpen)} // Toggle dropdown visibility on click
@@ -561,7 +574,8 @@ const Navbar = () => {
           >
             Login
           </Link>
-          <Link className="p-[10px] w-[150px] h-[45px] text-center text-[#ffffff] text-[18px] bg-[#047670] rounded-[16px] font-medium font-roboto">
+          <Link to="/instructor"
+          className="p-[10px] w-[150px] h-[45px] text-center text-[#ffffff] text-[18px] bg-[#047670] rounded-[16px] font-medium font-roboto">
             Instructor
           </Link>
         </div>
@@ -669,7 +683,8 @@ const Navbar = () => {
               >
                 Login
               </Link>
-              <Link className="w-full block text-center font-medium px-4 py-2 border text-[#ffffff] rounded-lg border-[#ffffff] bg-[#047670]">
+              <Link to="/instructor"
+              className="w-full block text-center font-medium px-4 py-2 border text-[#ffffff] rounded-lg border-[#ffffff] bg-[#047670]">
                 Instructor
               </Link>
             </div>

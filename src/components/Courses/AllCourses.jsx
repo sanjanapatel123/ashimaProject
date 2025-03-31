@@ -8,6 +8,7 @@ import trending1 from "../../assets/trending1.png";
 import COURSES from "../../assets/COURSE.png";
 import { CiFilter } from "react-icons/ci";
 import { HiDotsVertical } from "react-icons/hi";
+
 import { Link } from "react-router-dom";
 import ReviewCarrds from "../../components/Home/ReviewCards";
 import {
@@ -165,10 +166,11 @@ function AllCourses() {
       <Container fluid className="bg-[#ffffff]">
         {/* Top Navigation */}
         <Row className="bg-[#ffffff] uppercase">
+           <hr className="m-0 bg-[#047670] h-[2px] border-none" style={{ width: "100%" }} />
           <Col>
-            <hr style={{ margin: "0px" }} />
+         
             <div
-              className="d-flex align-items-center  overflow-auto px-2 justify-content-between font-roboto mt-40"
+              className="d-flex align-items-center   px-2 justify-content-between font-roboto"
               style={{
                 whiteSpace: "nowrap",
                 scrollBehavior: "smooth",
@@ -280,11 +282,11 @@ function AllCourses() {
                 Design & Development
               </span>
 
-              {/* <img src={dot} className="bg-[#FFFFFF]" /> */}
-              {/* <div
+             
+              <div
                 style={{
                   position: "relative",
-                  overflowY: "visible",
+                  overflow: "visible",
                   zIndex: 1,
                 }}
               >
@@ -323,9 +325,9 @@ function AllCourses() {
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
-              </div> */}
+              </div> 
             </div>
-            <hr style={{ margin: "0px" }} />
+            <hr className="m-0 bg-[#047670] h-[2px] border-none" />
           </Col>
         </Row>
 
