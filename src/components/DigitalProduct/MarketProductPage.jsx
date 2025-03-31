@@ -12,6 +12,7 @@ import StartLearning from "../Home/StartLearning";
 import reviewimage from "../../assets/reviewimage.jpg";
 import Nav_DigitalProduct from "./Nav_DigitalProduct";
 import Header from "../Courses/Header";
+import { useState } from "react";
 
 const MarketProduct = () => {
   const [openIndex, setOpenIndex] = useState(null); // Track the open question index

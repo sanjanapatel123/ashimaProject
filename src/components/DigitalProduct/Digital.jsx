@@ -10,6 +10,7 @@ import FAQSection from "../../components/Home/FAQSection";
 import Nav_DigitalProduct from "./Nav_DigitalProduct";
 import StartLearning from "../Home/StartLearning";
 import Header from "../Courses/Header";
+import Footer from "../Footer";
 
 function DigitalProductsSection() {
   const products = [
@@ -317,6 +318,7 @@ function DigitalProductsSection() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

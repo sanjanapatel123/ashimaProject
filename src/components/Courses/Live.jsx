@@ -25,6 +25,7 @@ import {
   FaHeart,
 } from "react-icons/fa";
 import FAQSection from "../Home/FAQSection";
+import Footer from "../Footer";
 
 const Live = () => {
   const recommendedCourses = [
@@ -634,6 +635,7 @@ const Live = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
