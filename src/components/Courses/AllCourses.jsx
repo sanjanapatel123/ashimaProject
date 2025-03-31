@@ -166,7 +166,7 @@ function AllCourses() {
       <Container fluid className="bg-[#ffffff]">
         {/* Top Navigation */}
         <Row className="bg-[#ffffff] uppercase">
-           <hr className="m-0 bg-[#047670] h-[2px] border-none" style={{ width: "100%" }} />
+           <hr className="m-28 bg-[#047670] h-[2px] border-none" style={{ width: "100%" }} />
           <Col>
          
             <div
@@ -333,12 +333,10 @@ function AllCourses() {
 
         {/* Page Content */}
 
-        {/* Filters & Sorting */}
-
         <Row className="mb-3 mt-5">
           <Col md={8}>
-            <h2 className="fw-bold">
-              All AI & ML <span className="text-success">Courses</span>
+            <h2 className="font-semibold font-jost text-[36px] ">
+              All AI & ML <span className="text-[#047670]">Courses</span>
             </h2>
           </Col>
         </Row>
@@ -395,7 +393,7 @@ function AllCourses() {
               </Dropdown.Menu>
             </Dropdown>
           </Col>
-          <Col md={9} className="text-end fw-bold text-muted start-end">
+          <Col md={9} className="text-end font-semibold text-muted font-roboto text-[24px] start-end">
             500 RESULTS
           </Col>
         </Row>
@@ -514,12 +512,12 @@ function AllCourses() {
                     <div style={{ paddingLeft: "46px" }} className="mt-2">
                       {" "}
                       {/* Padding added for spacing */}
-                      <h5 className="fw-bold ">{course.title}</h5>
+                      <h5 className="fw-bold text-[#1E1E1E]">{course.title}</h5>
                       <p
                         className="fw-400"
                         style={{
                           color: "#000000",
-                          size: "14px",
+                          size: "30px",
                           lineHeight: "20px",
                           letterSpacing: "2%",
                         }}
@@ -531,9 +529,9 @@ function AllCourses() {
                         <label
                           htmlFor=""
                           style={{
-                            color: "#047670",
+                            color: "#1E1E1E",
                             fontWeight: "500",
-                            size: "10px",
+                            size: "12px",
                             lineHeight: "15px",
                             letterSpacing: "2%",
                           }}
@@ -544,7 +542,7 @@ function AllCourses() {
                         <label
                           htmlFor=""
                           style={{
-                            color: "#000000",
+                            color: "#047670",
                             fontWeight: "500",
                             size: "10px",
                             lineHeight: "15px",
@@ -570,7 +568,7 @@ function AllCourses() {
                         <label
                           htmlFor=""
                           style={{
-                            color: "#000000",
+                            color: "#1E1E1E",
                             fontWeight: "500",
                             size: "10px",
                             lineHeight: "15px",
@@ -581,67 +579,12 @@ function AllCourses() {
                         </label>{" "}
                         {course.updated}
                       </p>
-                      <p>
+                      <p className="text-[10px] font-roboto  font-medium ">
                         RATING ⭐⭐⭐⭐ ({course.rating}) ({course.reviews}{" "}
                         reviews) &nbsp;
-                        {/* <Button
-                          size="sm"
-                          variant={
-                            course.mode === "VIDEO"
-                              ? "danger"
-                              : course.mode === "LIVE"
-                              ? "success"
-                              : course.mode === "HYBRID"
-                              ? "dark"
-                              : "success"
-                          }
-                        >
-                          {course.mode}
-                        </Button> */}
-                        {/* <Link to={`live/${course.id}`}>
-                          <Button
-                            size="sm"
-                            variant={
-                              course.mode === "VIDEO"
-                                ? "danger"
-                                : course.mode === "LIVE"
-                                ? "success"
-                                : course.mode === "HYBRID"
-                                ? "dark"
-                                : "success"
-                            }
-                          >
-                            {course.mode}
-                          </Button>
-                        </Link> */}
-                        {/* <Link
-                          to={
-                            course.mode === "LIVE"
-                              ? "/live"
-                              : course.mode === "VIDEO"
-                              ? "/video"
-                              : course.mode === "HYBRID"
-                              ? "/hybrid"
-                              : "/"
-                          }
-                        >
-                          <Button
-                            size="sm"
-                            variant={
-                              course.mode === "VIDEO"
-                                ? "danger"
-                                : course.mode === "LIVE"
-                                ? "success"
-                                : course.mode === "HYBRID"
-                                ? "dark"
-                                : "success"
-                            }
-                          >
-                            {course.mode}
-                          </Button>
-                        </Link> */}
+                       
                       </p>
-                      <h4 className="text-end fw-bold text-success">
+                      <h4 className="text-end fw-bold font-roboto text-[#09D0C6]">
                         {course.price}
                       </h4>
                     </div>
@@ -663,10 +606,10 @@ function AllCourses() {
           </Col>
         </Row>
 
-        <Row className="mb-3">
+        <Row className="mb-3 p-3">
           <Col>
-            <h1 className="fw-bold">AI AND ML COURSES</h1>
-            <p style={{ color: "#1E1E1E", fontWeight: "600", size: "36px" }}>
+            <h1 className="fw-normal text-[50px] text-[#000000] font-impact ">AI AND ML COURSES</h1>
+            <p style={{ color: "#1E1E1E", fontWeight: "600", size: "30px" }}>
               Courses to get you started
             </p>
             <p style={{ color: "#000000", fontWeight: "400", size: "18px" }}>
@@ -678,12 +621,12 @@ function AllCourses() {
         {/* Tabs for Most Popular / Trending */}
         <Nav variant="tabs" defaultActiveKey="popular" className="mb-3">
           <Nav.Item>
-            <Nav.Link eventKey="popular" className="fw-bold">
+            <Nav.Link eventKey="popular" className="fw-bold font-jost text-[#1E1E1E] text-[18px]">
               Most Popular
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="trending" className="fw-bold text-muted">
+            <Nav.Link eventKey="trending" className="fw-bold font-jost text-[#1E1E1E]">
               Trending
             </Nav.Link>
           </Nav.Item>
