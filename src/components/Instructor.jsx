@@ -9,6 +9,7 @@ import {
   Card,
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import { TfiLayoutSlider } from "react-icons/tfi";
 
