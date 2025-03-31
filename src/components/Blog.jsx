@@ -226,12 +226,12 @@ const Blog = () => {
                 <h3 className="text-[20px] font-impact font-normal text-[#000000] ">
                   {post.title}
                 </h3>
-              <p className="text-[12px] text-[#1E1E1E1]/80 font-normal mt-2 font-jost">
+              <p className="text-[12px] text-[#1E1E1E1]/80 font-normal font-jost">
                   {post.description}
                 </p>
                 <a
                   href={post.link}
-                  className="inline-block mt-4 bg-[#047670] text-white text-[14px] font-bold font-roboto py-2 px-4 rounded-md"
+                  className="inline-block  bg-[#047670] text-[#ffffff] w-[225px] h-[42px] text-[14px] font-bold font-roboto  rounded-[8px] border-[1px]"
                 >
                   Best Artificial Intelligence Blogs
                 </a>

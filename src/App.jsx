@@ -21,7 +21,11 @@ import "./App.css";
 import MarketProduct from "./components/DigitalProduct/MarketProductPage";
 import Hybrid from "./components/Courses/Hybrid";
 import Video from "./components/Courses/Video";
-import Live from "./components/Courses/Live";
+import Live from "./components/Courses/Live"
+
+  import AITeacherLanding from "./components/Instructor";
+import BlogsDetails from "./components/Blogs/BlogsDetails";
+
 import Blog from "./components/Blog"
 
 const App = () => {
@@ -52,6 +56,7 @@ const App = () => {
           }
         />
         <Route path="/allcourses" element={<Courses />} />
+        <Route path="/instructor" element={<AITeacherLanding/>}/>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/digital" element={<Digital />} />
@@ -59,6 +64,7 @@ const App = () => {
         <Route path="/live" element={<Live />} />
         <Route path="/hybrid" element={<Hybrid />} />
         <Route path="/video" element={<Video />} />
+        <Route path="/blogsDetail" element={<BlogsDetails/>}/>
         <Route path="/blog" element={<Blog/>} />
       </Routes>
     </div>
