@@ -11,6 +11,8 @@ import { HiDotsVertical } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import ReviewCarrds from "../../components/Home/ReviewCards";
 import Footer from "../Footer";
+// import React, { useRef } from "react";
+import { MoreVertical } from "lucide-react"; // optional icon package
 
 import {
   Container,
@@ -25,6 +27,20 @@ import {
 } from "react-bootstrap";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
+const categories = [
+  "AI & ML",
+  "Devops",
+  "NO CODE",
+  "CYBER SECURITY AND TESTING",
+  "DATA SCIENCE AND ENGINERRING",
+  "DESIGN AND DEVELOPMENT",
+  "FOUNDER CONNECT",
+  "GAMING AND NETWORK",
+  "PRODUCT",
+  "BUSINESS AND LEADERSHIP",
+  "MARKETING AND SALES",
+];
+
 function AllCourses() {
   const [sortOption, setSortOption] = useState("Most Popular");
 
@@ -32,10 +48,23 @@ function AllCourses() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // const scrollRef = useRef(null);
+
+  const handleScroll = () => {
+    const container = scrollRef.current;
+    if (container) {
+      container.scrollBy({
+        left: 200, // scroll amount
+        behavior: "smooth",
+      });
+    }
+  };
+
   const courses = [
     {
       title: "AI AND ML FOR BEGINNERS",
-      p: "Learn to program using the Ai & Ml. Master Ai & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
+      p:
+        "Learn to program using the Ai & Ml. Master Ai & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
       price: "$19.99",
       rating: 4.8,
       reviews: 87,
@@ -45,7 +74,8 @@ function AllCourses() {
     },
     {
       title: "AI AND ML FOR BEGINNERS",
-      p: "Learn to program using the Ai & Ml. Master Ai & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
+      p:
+        "Learn to program using the Ai & Ml. Master Ai & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
       price: "$19.99",
       rating: 4.8,
       reviews: 87,
@@ -56,7 +86,8 @@ function AllCourses() {
     {
       title: "AI AND ML FOR BEGINNERS",
       price: "$19.99",
-      p: "Learn to program using the Ai & Ml. Master Ai & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
+      p:
+        "Learn to program using the Ai & Ml. Master Ai & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
       rating: 4.8,
       reviews: 87,
       mode: "HYBRID",
@@ -66,7 +97,8 @@ function AllCourses() {
     {
       title: "AI AND ML FOR BEGINNERS",
       price: "$19.99",
-      p: "Learn to program using the Ai & Ml. Master Ai & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
+      p:
+        "Learn to program using the Ai & Ml. Master Ai & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
       rating: 4.8,
       reviews: 87,
       mode: "LIVE",
@@ -119,21 +151,23 @@ function AllCourses() {
 
   const featuredCourses = [
     {
+      id: 1,
+      image: courses1,
       title: "AI AND ML FOR BEGINNERS",
       description:
         "Learn to program using the AI & ML. Master AI & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
-      instructor: "Kapil Sharma",
-      updated: "4 March 2025",
-      hours: "16 Total Hours",
-      level: "All Levels",
-      lectures: "64 Lectures",
-      rating: 4.8,
-      reviews: 87,
+      author: "KAPIL SHARMA",
+      updated: "August 2025",
+      hours: "10 TOTAL HOURS",
+      level: "ALL LEVELS",
+      lectures: "45 LECTURES",
+      rating: "4.8",
+      reviews: 537,
+      badge: "VIDEO",
       price: "$19.99",
-      badge: "HIGH RATED",
-      image: COURSES,
     },
     {
+      id: 2,
       title: "Deep Learning with Python",
       description:
         "Master deep learning and neural networks with hands-on projects and real-world datasets.",
@@ -141,196 +175,83 @@ function AllCourses() {
       updated: "1 March 2025",
       hours: "20 Total Hours",
       level: "Advanced",
+      author: "KAPIL SHARMA",
       lectures: "50 Lectures",
       rating: 4.9,
       reviews: 120,
       price: "$24.99",
-      badge: "TOP RATED",
-      image: "https://source.unsplash.com/400x250/?ai,machinelearning",
+      badge: "HYBRID",
+      image: courses2,
+    },
+    {
+      id: 3,
+      title: "Deep Learning with Python",
+      description:
+        "Master deep learning and neural networks with hands-on projects and real-world datasets.",
+      instructor: "Sarah Johnson",
+      updated: "next batch start 1 March 2025",
+      hours: "20 Total Hours",
+      level: "Advanced",
+      author: "KAPIL SHARMA",
+      lectures: "50 Lectures",
+      rating: 4.9,
+      reviews: 120,
+      price: "$24.99",
+      badge: "VIDEO",
+      image: courses3,
+    },
+    {
+      id: 4,
+      title: "Deep Learning with Python",
+      description:
+        "Master deep learning and neural networks with hands-on projects and real-world datasets.",
+      instructor: "Sarah Johnson",
+      updated: "next batch start 1 March 2025",
+      hours: "20 Total Hours",
+      level: "Advanced",
+      author: "KAPIL SHARMA",
+      lectures: "50 Lectures",
+      rating: 4.9,
+      reviews: 120,
+      price: "$24.99",
+      badge: "LIVE",
+      image: courses4,
     },
   ];
 
-  // Scroll Functions
-  const nextCourse = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredCourses.length);
-  };
-
-  const prevCourse = () => {
-    setCurrentIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + featuredCourses.length) % featuredCourses.length
-    );
-  };
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <>
       <Container fluid className="bg-[#ffffff]">
         {/* Top Navigation */}
         <Row className="bg-[#ffffff] uppercase">
-          <hr
+          {/* <hr
             className="m-28 bg-[#047670] h-[2px] border-none"
             style={{ width: "100%" }}
-          />
-          <Col>
+          /> */}
+          <div className="flex items-center border border-blue-500 rounded-md overflow-hidden pt-24">
             <div
-              className="d-flex align-items-center   px-2 justify-content-between font-roboto"
-              style={{
-                whiteSpace: "nowrap",
-                scrollBehavior: "smooth",
-                border: "0px px 1px 0px  solid gray",
-              }}
+              ref={scrollRef}
+              className="flex overflow-x-auto scroll-smooth no-scrollbar"
+              style={{ scrollBehavior: "smooth", maxWidth: "100vw" }}
             >
-              <Button
-                variant="success"
-                style={{
-                  width: "73px",
-                  height: "44px",
-                  top: "142px",
-                  left: "42px",
-                  borderRadius: "12px",
-                  padding: "10px",
-                  gap: "10px",
-                  background: "#047670",
-                }}
-              >
-                AI & ML
-              </Button>
-
-              <img
-                src={arrow}
-                style={{
-                  width: "32px",
-                  height: "67px",
-                  top: "131px",
-                  opacity: "30%",
-                  color: "#706D6E",
-                }}
-              />
-
-              <span
-                className="text-uppercase fw-bold"
-                style={{
-                  fontFamily: "'Roboto Condensed', sans-serif",
-                  fontWeight: 500,
-                  fontSize: "16px",
-                  lineHeight: "24px",
-                  letterSpacing: "0.32px", // 2% of 16px
-                }}
-              >
-                DevOps
-              </span>
-
-              <span
-                className="text-uppercase fw-bold"
-                style={{
-                  fontFamily: "'Roboto Condensed', sans-serif",
-                  fontWeight: 500,
-                  fontSize: "16px",
-                  lineHeight: "24px",
-                  letterSpacing: "0.32px", // 2% of 16px
-                }}
-              >
-                No Code
-              </span>
-
-              <span
-                className="text-uppercase fw-bold"
-                style={{
-                  fontFamily: "'Roboto Condensed', sans-serif",
-                  fontWeight: 500,
-                  fontSize: "16px",
-                  lineHeight: "24px",
-                  letterSpacing: "0.32px", // 2% of 16px
-                }}
-              >
-                Cyber Security
-              </span>
-
-              <span
-                className="text-uppercase fw-bold"
-                style={{
-                  fontFamily: "'Roboto Condensed', sans-serif",
-                  fontWeight: 500,
-                  fontSize: "16px",
-                  lineHeight: "24px",
-                  letterSpacing: "0.32px", // 2% of 16px
-                }}
-              >
-                Data Science
-              </span>
-
-              <span
-                className="text-uppercase fw-bold"
-                style={{
-                  fontFamily: "'Roboto Condensed', sans-serif",
-                  fontWeight: 500,
-                  fontSize: "16px",
-                  lineHeight: "24px",
-                  letterSpacing: "0.32px", // 2% of 16px
-                }}
-              >
-                Gaming & Network
-              </span>
-
-              <span
-                className="text-uppercase fw-bold"
-                style={{
-                  fontFamily: "'Roboto Condensed', sans-serif",
-                  fontWeight: 500,
-                  fontSize: "16px",
-                  lineHeight: "24px",
-                  letterSpacing: "0.32px", // 2% of 16px
-                }}
-              >
-                Design & Development
-              </span>
-
-              <div
-                style={{
-                  position: "relative",
-                  overflow: "visible",
-                  zIndex: 1,
-                }}
-              >
-                <Dropdown align="end">
-                  <Dropdown.Toggle
-                    id="sort-dropdown"
-                    as="button"
-                    className="btn p-0 border-0 bg-transparent"
-                  >
-                    <HiDotsVertical size={20} color="#00796B" />
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu style={{ zIndex: 9999 }}>
-                    <Dropdown.Header className="fw-bold text-dark">
-                      Sort By
-                    </Dropdown.Header>
-                    <Dropdown.Item
-                      onClick={() => setSortOption("Most Popular")}
-                    >
-                      Most Popular
-                    </Dropdown.Item>
-                    <Dropdown.Item
-                      onClick={() => setSortOption("Highest to Lowest")}
-                    >
-                      Highest to Lowest
-                    </Dropdown.Item>
-                    <Dropdown.Item
-                      onClick={() => setSortOption("Lowest to Highest")}
-                    >
-                      Lowest to Highest
-                    </Dropdown.Item>
-                    <Dropdown.Item
-                      onClick={() => setSortOption("Latest First")}
-                    >
-                      Latest First
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </div>
+              {categories.map((category, index) => (
+                <div
+                  key={index}
+                  onClick={() => setActiveIndex(index)}
+                  className={`min-w-max cursor-pointer px-4 py-2 m-2 rounded-full text-sm font-semibold whitespace-nowrap border 
+              ${
+                activeIndex === index
+                  ? "bg-teal-700 text-white"
+                  : "bg-white text-black"
+              }`}
+                >
+                  {category}
+                </div>
+              ))}
             </div>
-            <hr className="m-0 bg-[#047670] h-[2px] border-none" />
-          </Col>
+          </div>
         </Row>
 
         {/* Page Content */}
@@ -499,141 +420,132 @@ function AllCourses() {
             </button>
           </Col>
 
-          {/* Course List */}
           <Col md={9}>
-            {courses.map((course, index) => (
-              <div key={index} className="mb-4">
-                <Row className="g-0 bg-[#background: #D9D9D9;]">
-                  <Col md={4}>
+            <div className="p-4">
+              {featuredCourses.map((course) => (
+                <Link
+                  key={course.id}
+                  to={`/${course.badge.toLowerCase()}`} // dynamic route based on badge
+                  className="block"
+                  // className="flex flex-col md:flex-row gap-4 border-b pb-4 mb-6"
+                >
+                  {" "}
+                  <div className="flex flex-col md:flex-row gap-4 border-b pb-4 mb-6 hover:bg-gray-50 transition">
+                    {/* ...rest of your card content... */}
                     <img
                       src={course.image}
-                      className="img-fluid"
-                      alt="Course Thumbnail"
+                      alt="Course"
+                      // className="w-full md:w-[365px] h-auto md:h-[214px] object-cover rounded-[4px]"
+                      className="w-full md:w-[365px] h-auto md:h-[214px] object-cover rounded-[4px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
                     />
-                  </Col>
-                  <Col md={8}>
-                    <div style={{ paddingLeft: "46px" }} className="mt-2">
-                      {" "}
-                      {/* Padding added for spacing */}
-                      <h5 className="fw-bold text-[#1E1E1E]">{course.title}</h5>
-                      <p
-                        className="fw-400"
-                        style={{
-                          color: "#000000",
-                          size: "30px",
-                          lineHeight: "20px",
-                          letterSpacing: "2%",
-                        }}
-                      >
-                        {course.p}
-                      </p>
-                      <p className="text-muted">
-                        {course.instructor} <br />
-                        <label
-                          htmlFor=""
-                          style={{
-                            color: "#1E1E1E",
-                            fontWeight: "500",
-                            size: "12px",
-                            lineHeight: "15px",
-                            letterSpacing: "2%",
-                          }}
-                        >
-                          UPDATED 4 MARCH 2025{" "}
-                        </label>{" "}
-                        &nbsp;
-                        <label
-                          htmlFor=""
-                          style={{
-                            color: "#047670",
-                            fontWeight: "500",
-                            size: "10px",
-                            lineHeight: "15px",
-                            letterSpacing: "2%",
-                          }}
-                        >
-                          16 TOTAL HOURS
-                        </label>{" "}
-                        &nbsp;
-                        <label
-                          htmlFor=""
-                          style={{
-                            color: "#047670",
-                            fontWeight: "500",
-                            size: "10px",
-                            lineHeight: "15px",
-                            letterSpacing: "2%",
-                          }}
-                        >
-                          All LEVELS{" "}
-                        </label>{" "}
-                        &nbsp;
-                        <label
-                          htmlFor=""
-                          style={{
-                            color: "#1E1E1E",
-                            fontWeight: "500",
-                            size: "10px",
-                            lineHeight: "15px",
-                            letterSpacing: "2%",
-                          }}
-                        >
-                          64 lECTURES
-                        </label>{" "}
-                        {course.updated}
-                      </p>
-                      <p className="text-[10px] font-roboto  font-medium ">
-                        RATING ⭐⭐⭐⭐ ({course.rating}) ({course.reviews}{" "}
-                        reviews) &nbsp;
-                      </p>
-                      <h4 className="text-end fw-bold font-roboto text-[#09D0C6]">
-                        {course.price}
-                      </h4>
-                    </div>
-                  </Col>
-                </Row>
-              </div>
-            ))}
 
-            {/* Pagination */}
-            <Pagination className="justify-content-center">
-              <Pagination.Prev />
-              <Pagination.Item active>{1}</Pagination.Item>
-              <Pagination.Item>{2}</Pagination.Item>
-              <Pagination.Item>{3}</Pagination.Item>
-              <Pagination.Ellipsis />
-              <Pagination.Item>{67}</Pagination.Item>
-              <Pagination.Next />
-            </Pagination>
+                    <div className="flex-1">
+                      <div className="flex flex-col sm:flex-row justify-between items-start text-[#1e1e1e] gap-2">
+                        <h2 className="text-[24px] md:text-[30px] font-[700] uppercase leading-[24px] tracking-[2%] font-roboto">
+                          {course.title}
+                        </h2>
+                        <span className="text-[24px] md:text-[30px] font-[700] leading-[24px] tracking-[2%] text-right font-roboto">
+                          {course.price}
+                        </span>
+                      </div>
+
+                      <p className="text-[14px] leading-[16px] tracking-[2%] text-black mt-1 font-roboto font-[400]">
+                        {course.description}
+                      </p>
+
+                      <div className="">
+                        <span className="font-[700] font-roboto text-[12px] leading-[14px] tracking-[2%] uppercase text-black">
+                          BY {course.author}
+                        </span>
+
+                        <p className="font-roboto font-[500] text-[12px] leading-[10px] tracking-[2%] mt-2 uppercase text-black">
+                          {course.updated} • {course.hours} • {course.lectures}
+                        </p>
+
+                        <div className="flex flex-wrap items-center gap-2 mt-2">
+                          <span className="font-roboto font-[500] text-[#1e1e1e] text-[10px] leading-[12px] tracking-[2%]">
+                            RATING {course.rating}
+                          </span>
+                          <div className="flex text-yellow-400">⭐⭐⭐⭐⭐</div>
+                          <span className="text-[#047670] font-[500] text-[10px] leading-[15px] tracking-[2%]">
+                            ({course.reviews})
+                          </span>
+                          <span
+                            className={`text-white w-[101px] h-[21px] text-[10px] px-4 py-1 rounded-[4px] uppercase font-roboto text-center
+                  ${
+                    course.badge === "VIDEO"
+                      ? "bg-[#ff757a]"
+                      : course.badge === "LIVE"
+                      ? "bg-[#09d0c6]"
+                      : course.badge === "HYBRID"
+                      ? "bg-black text-white"
+                      : "bg-gray-400"
+                  }`}
+                          >
+                            {course.badge}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+
+              {/* Pagination */}
+              <div className="flex flex-wrap justify-center items-center gap-2 text-sm mt-4">
+                <button className="text-gray-500 hover:text-black">
+                  &larr; Previous
+                </button>
+                <button className="px-2 py-1 bg-teal-500 text-white rounded">
+                  1
+                </button>
+                <button className="hover:underline">2</button>
+                <button className="hover:underline">3</button>
+                <span>...</span>
+                <button className="hover:underline">67</button>
+                <button className="text-gray-500 hover:text-black">
+                  Next &rarr;
+                </button>
+              </div>
+            </div>
           </Col>
         </Row>
 
-        <Row className="mb-3 p-3">
+        <Row className="mb-3 px-4 md:px-8 pt-4">
           <Col>
-            <h1 className="fw-normal text-[50px] text-[#000000] font-impact ">
+            <h1 className="text-[50px] md:text-[50px] text-black font-[400] font-impact leading-tight mb-2">
               AI AND ML COURSES
             </h1>
-            <p style={{ color: "#1E1E1E", fontWeight: "600", size: "30px" }}>
+
+            <p className="text-[36px] md:text-[24px] font-semibold font-jost text-[#1E1E1E] mb-1 leading-[40px] tracking-[0.5%]">
               Courses to get you started
             </p>
-            <p style={{ color: "#000000", fontWeight: "400", size: "18px" }}>
+
+            <p className="text-[18px] md:text-[18px] font-jost text-black font-[400]">
               Explore courses from experienced, real-world experts.
             </p>
           </Col>
         </Row>
 
-        {/* Tabs for Most Popular / Trending */}
-        <Nav variant="tabs" defaultActiveKey="popular" className="mb-3">
+        {/* Tabs */}
+        <Nav
+          variant="tabs"
+          defaultActiveKey="popular"
+          className="mb-3 px-4 md:px-8"
+        >
           <Nav.Item>
             <Nav.Link
               eventKey="popular"
-              className="fw-bold font-jost text-[#1E1E1E] text-[18px]"
+              className="fw-bold font-jost text-[#1E1E1E] text-[16px] md:text-[18px] border-b-2 border-black rounded-0"
             >
               Most Popular
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="trending" className="fw-bold  text-[#1E1E1E]">
+            <Nav.Link
+              eventKey="trending"
+              className="fw-bold font-jost text-[#1E1E1E] text-[16px] md:text-[18px] rounded-0"
+            >
               Trending
             </Nav.Link>
           </Nav.Item>
@@ -651,7 +563,7 @@ function AllCourses() {
 
           <div
             ref={scrollRef}
-            className="d-flex overflow-auto pb-3 px-2 px-md-4"
+            className="d-flex overflow-auto pb-3"
             style={{
               scrollBehavior: "smooth",
               marginLeft: "0",
@@ -659,56 +571,70 @@ function AllCourses() {
             }}
           >
             {coursess.map((course, index) => (
-              <Card
+              <Link
                 key={index}
-                className="flex-shrink-0"
-                style={{
-                  minWidth: "250px",
-                  width: "100%",
-                  maxWidth: "280px",
-                  marginLeft: "21px",
-                }}
+                to={
+                  course.mode === "VIDEO"
+                    ? "/video"
+                    : course.mode === "LIVE"
+                    ? "/live"
+                    : "/hybrid"
+                }
+                className="text-decoration-none"
               >
-                <Card.Img variant="top" src={course.image} />
-                <Card.Body>
-                  <h6 className="fw-bold font-roboto text-[20px] uppercase text-[#1E1E1E]">
-                    {course.title}
-                  </h6>
-                  <p className="text-[#1E1E1E] text-roboto font-bold uppercase text-[12px] mb-1">
-                    BY {course.instructor}
-                  </p>
-                  <p className="mb-1 font-roboto text-[10px] uppercase">
-                    RATING {course.rating} ⭐⭐⭐⭐⭐
-                  </p>
-                  <h5 className="fw-bold font-roboto text-[20px] text-[#1E1E1E]">
-                    {course.price}
-                  </h5>
+                <Card
+                  // className="flex-shrink-0 transition-transform duration-100 transform hover:scale-105 shadow-sm hover:shadow-lg"
+                  style={{
+                    minWidth: "250px",
+                    width: "100%",
+                    maxWidth: "280px",
+                    marginLeft: "21px",
+                    cursor: "pointer",
+                    overflow: "visible",
+                  }}
+                >
+                  <div className="overflow-hidden rounded-[6px]">
+                    <img
+                      src={course.image}
+                      className="transition-transform duration-300 hover:scale-105 w-full h-auto object-cover"
+                    />
+                  </div>
 
-                  {/* Link buttons for different modes */}
-                  <Link
-                    to={
-                      course.mode === "VIDEO"
-                        ? "/video"
-                        : course.mode === "LIVE"
-                        ? "/live"
-                        : "/hybrid"
-                    }
-                  >
-                    <Button
-                      variant={
-                        course.mode === "VIDEO"
-                          ? "danger"
-                          : course.mode === "LIVE"
-                          ? "success"
-                          : "warning"
-                      }
-                      size="sm"
+                  <Card.Body className="p-3">
+                    <h6 className="fw-bold font-roboto text-[18px] uppercase text-[#1E1E1E] mb-1 leading-[20px]">
+                      {course.title}
+                    </h6>
+
+                    <p className="text-[#1E1E1E] text-roboto font-bold uppercase text-[12px] mb-1">
+                      BY {course.instructor}
+                    </p>
+
+                    <p className="font-roboto text-[10px] uppercase flex items-center gap-1 mb-2">
+                      RATING {course.rating}{" "}
+                      <span className="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                    </p>
+
+                    <h5 className="fw-bold font-roboto text-[18px] text-[#1E1E1E] mb-2">
+                      {course.price}
+                    </h5>
+
+                    <span
+                      className={`text-white text-[10px] px-4 py-1 rounded-full font-roboto uppercase font-semibold inline-block w-[80px] text-center
+                  ${
+                    course.mode === "VIDEO"
+                      ? "bg-[#ff757a]"
+                      : course.mode === "LIVE"
+                      ? "bg-[#09d0c6]"
+                      : course.mode === "HYBRID"
+                      ? "bg-[#1e1e1e]"
+                      : "bg-gray-400"
+                  }`}
                     >
                       {course.mode}
-                    </Button>
-                  </Link>
-                </Card.Body>
-              </Card>
+                    </span>
+                  </Card.Body>
+                </Card>
+              </Link>
             ))}
           </div>
 
@@ -724,7 +650,7 @@ function AllCourses() {
         <Row className="mb-3 p-5">
           <Col>
             <h2 className="font-semibold font-jost text-[36px] text-[#1E1E1E]">
-              Featured{" "}
+              Featured
               <span className="font-semibold font-jost text-[36px] text-[#047670]">
                 Courses
               </span>
