@@ -6,7 +6,7 @@ import digitalproduct1 from "../../assets/digitalproduct1.png";
 import digitalproduct4 from "../../assets/digitalproduct4.png";
 import { Link } from "react-router-dom";
 import reviewimage from "../../assets/reviewimage.jpg";
-import FAQSection from "../../components/Home/FAQSection";
+import FAQSection from "../../components/Home/FAQSection"
 import Nav_DigitalProduct from "./Nav_DigitalProduct";
 import StartLearning from "../Home/StartLearning";
 import Header from "../Courses/Header";

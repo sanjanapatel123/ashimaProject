@@ -13,6 +13,7 @@ import reviewimage from "../../assets/reviewimage.jpg";
 import Nav_DigitalProduct from "./Nav_DigitalProduct";
 import Header from "../Courses/Header";
 import { useState } from "react";
+import Footer from "../Footer";
 
 const MarketProduct = () => {
   const [openIndex, setOpenIndex] = useState(null); // Track the open question index
@@ -250,6 +251,84 @@ const MarketProduct = () => {
       </div>
 
       <StartLearning />
+           <div className="w-full px-4 sm:px-6 lg:px-8 py-8">
+              {/* Heading */}
+              <h2 className="text-[36px] font-roboto mb-6 ml-0 sm:ml-36">
+                FEATURED REVIEWS:
+              </h2>
+      
+              {/* Scrollable Card Section */}
+              <div className="w-full overflow-x-auto mt-10 ml-0 sm:ml-36">
+                <div className="min-w-[1024px] flex gap-10 px-6 py-2 rounded-[8px]">
+                  {/* Card 1 */}
+                  <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
+                    <div className="flex  mb-4">
+                      <img
+                        src={reviewimage}
+                        alt="Neha Sharma"
+                        className="w-[91px] h-[91px] rounded-full "
+                      />
+                      <h3 className="font-['Roboto_Condensed'] font-bold text-[25px] leading-[24px] tracking-[0.02em] uppercase">
+                        NEHA SHARMA
+                      </h3>
+                    </div>
+                    <p className="font-['Roboto_Condensed'] font-medium text-[16px] leading-[22px] tracking-[0.02em] uppercase mb-4">
+                      LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO
+                      EUSMOD TEMPOR
+                    </p>
+                    <div className="text-[14px] font-['Roboto_Condensed'] flex items-center gap-2">
+                      RATING 4.8
+                      <span className="text-[#FBBC09] flex">★ ★ ★ ★ ☆</span>
+                    </div>
+                  </div>
+      
+                  {/* Card 2 */}
+                  <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
+                    <div className="flex items-center  mb-4">
+                      <img
+                        src={reviewimage}
+                        alt="Neha Sharma"
+                        className="w-[91px] h-[91px] rounded-full "
+                      />
+                      <h3 className="font-['Roboto_Condensed'] font-bold text-[25px] leading-[24px] tracking-[0.02em] uppercase">
+                        NEHA SHARMA
+                      </h3>
+                    </div>
+                    <p className="font-['Roboto_Condensed'] font-medium text-[16px] leading-[22px] tracking-[0.02em] uppercase mb-4">
+                      LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO
+                      EUSMOD TEMPOR
+                    </p>
+                    <div className="text-[14px] font-['Roboto_Condensed'] flex items-center gap-2">
+                      RATING 4.8
+                      <span className="text-[#FBBC09] flex">★ ★ ★ ★ ☆</span>
+                    </div>
+                  </div>
+      
+                  {/* Card 3 */}
+                  <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
+                    <div className="flex items-center  mb-4">
+                      <img
+                        src={reviewimage}
+                        alt="Neha Sharma"
+                        className="w-[91px] h-[91px] rounded-full "
+                      />
+                      <h3 className="font-['Roboto_Condensed'] font-bold text-[25px] leading-[24px] tracking-[0.02em] uppercase">
+                        NEHA SHARMA
+                      </h3>
+                    </div>
+                    <p className="font-['Roboto_Condensed'] font-medium text-[16px] leading-[22px] tracking-[0.02em] uppercase mb-4">
+                      LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO
+                      EUSMOD TEMPOR
+                    </p>
+                    <div className="text-[14px] font-['Roboto_Condensed'] flex items-center gap-2">
+                      RATING 4.8
+                      <span className="text-[#FBBC09] flex">★ ★ ★ ★ ☆</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <Footer/>
     </>
   );
 };

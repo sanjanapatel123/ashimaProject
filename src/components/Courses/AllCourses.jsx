@@ -8,9 +8,10 @@ import trending1 from "../../assets/trending1.png";
 import COURSES from "../../assets/COURSE.png";
 import { CiFilter } from "react-icons/ci";
 import { HiDotsVertical } from "react-icons/hi";
-
 import { Link } from "react-router-dom";
 import ReviewCarrds from "../../components/Home/ReviewCards";
+import Footer from "../Footer";
+
 import {
   Container,
   Row,
@@ -166,9 +167,11 @@ function AllCourses() {
       <Container fluid className="bg-[#ffffff]">
         {/* Top Navigation */}
         <Row className="bg-[#ffffff] uppercase">
-           <hr className="m-28 bg-[#047670] h-[2px] border-none" style={{ width: "100%" }} />
+          <hr
+            className="m-28 bg-[#047670] h-[2px] border-none"
+            style={{ width: "100%" }}
+          />
           <Col>
-         
             <div
               className="d-flex align-items-center   px-2 justify-content-between font-roboto"
               style={{
@@ -282,7 +285,6 @@ function AllCourses() {
                 Design & Development
               </span>
 
-             
               <div
                 style={{
                   position: "relative",
@@ -325,7 +327,7 @@ function AllCourses() {
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
-              </div> 
+              </div>
             </div>
             <hr className="m-0 bg-[#047670] h-[2px] border-none" />
           </Col>
@@ -393,7 +395,10 @@ function AllCourses() {
               </Dropdown.Menu>
             </Dropdown>
           </Col>
-          <Col md={9} className="text-end font-semibold text-muted font-roboto text-[24px] start-end">
+          <Col
+            md={9}
+            className="text-end font-semibold text-muted font-roboto text-[24px] start-end"
+          >
             500 RESULTS
           </Col>
         </Row>
@@ -450,7 +455,7 @@ function AllCourses() {
             <hr />
 
             <h5 className="fw-bold">New Courses</h5>
-            {/* <Form.Check type="checkbox" label="Latest First" /> */}
+
             <div className="d-flex">
               <Form.Check type="checkbox" />
               <label htmlFor="" className="ms-4">
@@ -489,7 +494,7 @@ function AllCourses() {
                 <Form.Check type="checkbox" />
                 <label htmlFor="" className="ms-4">
                   Video
-                </label>    
+                </label>
               </div>
             </button>
           </Col>
@@ -498,9 +503,7 @@ function AllCourses() {
           <Col md={9}>
             {courses.map((course, index) => (
               <div key={index} className="mb-4">
-                <Row
-                  className="g-0 bg-[#background: #D9D9D9;]"
-                >
+                <Row className="g-0 bg-[#background: #D9D9D9;]">
                   <Col md={4}>
                     <img
                       src={course.image}
@@ -582,7 +585,6 @@ function AllCourses() {
                       <p className="text-[10px] font-roboto  font-medium ">
                         RATING ⭐⭐⭐⭐ ({course.rating}) ({course.reviews}{" "}
                         reviews) &nbsp;
-                       
                       </p>
                       <h4 className="text-end fw-bold font-roboto text-[#09D0C6]">
                         {course.price}
@@ -608,7 +610,9 @@ function AllCourses() {
 
         <Row className="mb-3 p-3">
           <Col>
-            <h1 className="fw-normal text-[50px] text-[#000000] font-impact ">AI AND ML COURSES</h1>
+            <h1 className="fw-normal text-[50px] text-[#000000] font-impact ">
+              AI AND ML COURSES
+            </h1>
             <p style={{ color: "#1E1E1E", fontWeight: "600", size: "30px" }}>
               Courses to get you started
             </p>
@@ -621,12 +625,15 @@ function AllCourses() {
         {/* Tabs for Most Popular / Trending */}
         <Nav variant="tabs" defaultActiveKey="popular" className="mb-3">
           <Nav.Item>
-            <Nav.Link eventKey="popular" className="fw-bold font-jost text-[#1E1E1E] text-[18px]">
+            <Nav.Link
+              eventKey="popular"
+              className="fw-bold font-jost text-[#1E1E1E] text-[18px]"
+            >
               Most Popular
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="trending" className="fw-bold font-jost text-[#1E1E1E]">
+            <Nav.Link eventKey="trending" className="fw-bold  text-[#1E1E1E]">
               Trending
             </Nav.Link>
           </Nav.Item>
@@ -664,10 +671,18 @@ function AllCourses() {
               >
                 <Card.Img variant="top" src={course.image} />
                 <Card.Body>
-                  <h6 className="fw-bold">{course.title}</h6>
-                  <p className="text-muted mb-1">BY {course.instructor}</p>
-                  <p className="mb-1">RATING {course.rating} ⭐⭐⭐⭐⭐</p>
-                  <h5 className="fw-bold">{course.price}</h5>
+                  <h6 className="fw-bold font-roboto text-[20px] uppercase text-[#1E1E1E]">
+                    {course.title}
+                  </h6>
+                  <p className="text-[#1E1E1E] text-roboto font-bold uppercase text-[12px] mb-1">
+                    BY {course.instructor}
+                  </p>
+                  <p className="mb-1 font-roboto text-[10px] uppercase">
+                    RATING {course.rating} ⭐⭐⭐⭐⭐
+                  </p>
+                  <h5 className="fw-bold font-roboto text-[20px] text-[#1E1E1E]">
+                    {course.price}
+                  </h5>
 
                   {/* Link buttons for different modes */}
                   <Link
@@ -708,10 +723,13 @@ function AllCourses() {
 
         <Row className="mb-3 p-5">
           <Col>
-            <h2 className="fw-bold">
-              Featured <span className="text-success">Courses</span>
+            <h2 className="font-semibold font-jost text-[36px] text-[#1E1E1E]">
+              Featured{" "}
+              <span className="font-semibold font-jost text-[36px] text-[#047670]">
+                Courses
+              </span>
             </h2>
-            <p className="text-muted">
+            <p className="font-normal font-jost text-[18px] text-[#000000]">
               Explore courses from experienced, real-world experts.
             </p>
           </Col>
@@ -727,13 +745,13 @@ function AllCourses() {
                 </Col>
                 <Col md={7}>
                   <Card.Body>
-                    <h4 className="fw-bold">
+                    <h4 className="font-bold font-roboto text-[30px] text-[#1E1E1E] uppercase">
                       {featuredCourses[currentIndex].title}
                     </h4>
-                    <p className="text-muted">
+                    <p className="font-normal font-roboto text-[14px] text-[#000000] uppercase">
                       {featuredCourses[currentIndex].description}
                     </p>
-                    <p>
+                    <p className="font-bold font-roboto text-[10px] uppercase text-[#1E1E1E]">
                       <strong>
                         BY {featuredCourses[currentIndex].instructor}
                       </strong>{" "}
@@ -744,14 +762,14 @@ function AllCourses() {
                       {featuredCourses[currentIndex].level} |{" "}
                       {featuredCourses[currentIndex].lectures}
                     </p>
-                    <p>
+                    <p className="font-semibold font-roboto text-[10px] uppercase text-[#1E1E1E]">
                       Rating: ⭐ {featuredCourses[currentIndex].rating} (
                       {featuredCourses[currentIndex].reviews} reviews)
-                      <Button size="sm" variant="danger" className="ms-2">
+                      <Button className="ms-2 font-roboto font-semibold  bg-[#FF757A] text-[10px] text-[#1E1E1E] uppercase">
                         {featuredCourses[currentIndex].badge}
                       </Button>
                     </p>
-                    <h4 className="fw-bold text-success">
+                    <h4 className="fw-bold font-roboto text-[30px] text-[#000000]">
                       {featuredCourses[currentIndex].price}
                     </h4>
                   </Card.Body>
@@ -833,6 +851,7 @@ function AllCourses() {
           </Row>
         </Row>
         <ReviewCarrds />
+        <Footer />
       </Container>
     </>
   );

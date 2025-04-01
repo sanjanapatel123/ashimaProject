@@ -15,8 +15,15 @@ const Login = () => {
         style={{ width: "480px", borderRadius: "8px" }}
       >
         <h3
-          className="text-center mb-4"
-          style={{ fontSize: "36px", fontFamily: "Impact", color: "#047670", width:"400", lineHeight:"20px", letterSpacing:"0%", }}
+          className="text-center mb-4 font-normal"
+          style={{
+            fontSize: "36px",
+            fontFamily: "Impact",
+            color: "#047670",
+            width: "400",
+            lineHeight: "20px",
+            letterSpacing: "0%",
+          }}
         >
           LOG IN TO YOUR ACCOUNT
         </h3>
@@ -24,7 +31,7 @@ const Login = () => {
         {/* Social Login Buttons */}
         <Button
           variant="light"
-          className="d-flex align-items-center justify-content-center mb-3 w-100 border"
+          className="d-flex align-items-center justify-content-center mb-3 w-100 border text-[24px] font-roboto font-normal"
         >
           <FaLinkedin className="me-2" size={18} color="#0A66C2" />
           LOGIN WITH LINKEDIN
@@ -32,7 +39,7 @@ const Login = () => {
 
         <Button
           variant="light"
-          className="d-flex align-items-center justify-content-center mb-3 w-100 border"
+          className="d-flex align-items-center justify-content-center mb-3 w-100 border text-[24px] font-roboto font-normal"
         >
           <FaGoogle className="me-2" size={18} color="#DB4437" />
           LOGIN WITH GOOGLE
@@ -50,22 +57,22 @@ const Login = () => {
         {/* Login Form */}
         <Form>
           <Form.Group className="mb-3">
-            <Form.Label style={{ fontSize: "14px", fontWeight: "bold" }}>
+            <Form.Label style={{ fontSize: "20px", fontWeight: "normal" }} className="font-roboto">
               EMAIL
             </Form.Label>
             <Form.Control type="email" />
           </Form.Group>
 
           <Form.Group className="mb-4">
-            <Form.Label style={{ fontSize: "14px", fontWeight: "bold" }}>
+            <Form.Label style={{ fontSize: "20px", fontWeight: "normal" }} className="font-roboto">
               PASSWORD
             </Form.Label>
             <Form.Control type="password" />
           </Form.Group>
 
           <Button
-            style={{ backgroundColor: "#A8A8A8", border: "none" }}
-            className="w-100 mb-2"
+            
+            className="w-100 mb-2 rounded-[4px] bg-[#706D6E] border-[1px]"
             disabled
           >
             LOGIN

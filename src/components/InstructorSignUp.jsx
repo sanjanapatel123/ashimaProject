@@ -1,75 +1,94 @@
 import React from "react";
+import { Container, Card, Form, Button,  } from "react-bootstrap";
+import { FaLinkedin, FaGoogle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-function InstructorSignUp() {
+function Signup() {
   return (
-    <div>
-      <div className="container">
-        <div className="form-signup">
-          <h3 className="text-center mb-4" style={{ color: "#047670" }}>
-            Sign Up As Instructor
-          </h3>
+    <Container
+      className="d-flex justify-content-center align-items-center vh-100"
+      style={{ padding: "30px", backgroundColor: "#F9F9F9" }}
+    >
+      <Card
+        className="shadow-sm border-0"
+        style={{ width: "480px", borderRadius: "8px", padding:"25px" }}
+      >
+        <h3
+          className="text-center mb-4 "
+          style={{ fontSize: "36px", fontFamily: "Impact", color: "#047670", width:"400", lineHeight:"20px", letterSpacing:"0%", }}
+        >
+         SIGN UP AS INSTRUCTOR
+        </h3>
 
-          <div className="social-buttons">
-            <button
-              className="btn btn-outline-primary mb-2"
-              style={{ width: "100%" }}
-            >
-              <i className="fa-brands fa-linkedin"></i> Sign Up with LinkedIn
-            </button>
-            <button
-              className="btn btn-outline-danger mb-2"
-              style={{ width: "100%" }}
-            >
-              <img src="https://i.ibb.co/zhdcWpL0/google-logo-search-new-svgrepo-com.png" />{" "}
-              Sign Up with Google
-            </button>
-            <p className="text-center">Or Use Email</p>
+        {/* Social Signup Buttons */}
+        <Button
+          variant="light"
+          className="d-flex align-items-center justify-content-center mb-3 w-100 border"
+        >
+          <FaLinkedin className="me-2" size={18} color="#0A66C2" />
+          SIGN UP WITH LINKEDIN
+        </Button>
+
+        <Button
+          variant="light"
+          className="d-flex align-items-center justify-content-center mb-3 w-100 border"
+        >
+          <FaGoogle className="me-2" size={18} color="#DB4437" />
+          SIGN UP WITH GOOGLE
+        </Button>
+
+        {/* Divider */}
+        <div className="d-flex align-items-center text-muted mb-3">
+          <hr className="flex-grow-1" />
+          <span className="mx-2" style={{ fontSize: "14px", color: "#777" }}>
+            Or Use Email
+          </span>
+          <hr className="flex-grow-1" />
+        </div>
+
+        {/* Signup Form */}
+        <Form>
+          <Form.Group className="mb-3">
+            <Form.Label style={{ fontSize: "14px", fontWeight: "bold" }}>
+              EMAIL
+            </Form.Label>
+            <Form.Control type="email" />
+          </Form.Group>
+
+          <Form.Group className="mb-4">
+            <Form.Label style={{ fontSize: "14px", fontWeight: "bold" }}>
+              PASSWORD
+            </Form.Label>
+            <Form.Control type="password" />
+          </Form.Group>
+
+          <Button
+            style={{ backgroundColor: "#A8A8A8", border: "none" }}
+            className="w-100 mb-2"
+            disabled
+          >
+            SIGN UP
+          </Button>
+
+          <div
+            className="text-center"
+            style={{ fontSize: "12px", color: "#02756A" }}
+          >
+            By Continuing, You Agree To Ai Skills Terms And Privacy Policy.
           </div>
 
-          <form>
-            <div className="mb-3">
-              <input
-                type="email"
-                className="form-control"
-                id="email"
-                placeholder="Email"
-                required
-              />
-            </div>
-            <div className="mb-3">
-              <input
-                type="password"
-                className="form-control"
-                id="password"
-                placeholder="Password"
-                required
-              />
-            </div>
-            <div className="d-grid">
-              <button
-                className="btn btn-custom"
-                type="submit"
-                style={{ backgroundColor: "#706D6E5E" }}
-              >
-                Sign Up
-              </button>
-            </div>
-          </form>
-
-          <p
-            className="text-center form-text"
-            style={{ backgroundColor: "#047670" }}
-          >
-            By continuing, you agree to our <a href="#">Terms</a> and{" "}
-            <a href="#">Privacy Policy</a>.
-          </p>
-          <p className="text-center">
-            Already have an account? <a href="#">Log In</a>
-          </p>
-        </div>
-      </div>
-    </div>
+          <div className="text-center mt-4">
+            <span style={{ fontSize: "12px", color: "#333" }}>
+              Already Have An Account?{" "}
+              <Link to="/login"  style={{ fontSize: "12px", color: "#02756A" }}>
+                Log In
+              </Link>
+            </span>
+          </div>
+        </Form>
+      </Card>
+    </Container>
   );
 }
 
-export default InstructorSignUp;
+export default Signup;
