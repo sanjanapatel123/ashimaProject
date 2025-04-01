@@ -1,10 +1,12 @@
 
 
+
+
 // import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 // import { useRef } from "react";
-// import letstart1 from "../assets/letstart1.png";
-// import letstart2 from "../assets/letstart2.png";
-// import letstart3 from "../assets/letstart3.png";
+// import letstart1 from "../../assets/letstart1.png";
+// import letstart2 from "../../assets/letstart2.png";
+// import letstart3 from "../../assets/letstart3.png";
 
 // const MakeLearningBetter = () => {
 //   const sliderRef = useRef(null);
@@ -34,7 +36,7 @@
 
 //         {/* Right CTA */}
 //         <div className="w-full lg:w-1/2 flex flex-col items-start text-start  lg:ml-20">
-//           <p className="text-[16px] sm:text-sm font-Roboto Condensed text-[#000000] uppercase tracking-[0.2em] leading-[25px] mb-4">
+//           <p className="text-[16px] sm:text-sm font-roboto text-[#000000] uppercase tracking-[0.2em] leading-[25px] mb-4">
 //             Become a Pro with us through industry-relevant <br /> skills
 //           </p>
 //           <button className="px-[16px] w-[220px] h-[54px] py-[12px] bg-[#FF757A] text-black  font-Roboto Condensed rounded-[16px] hover:bg-[#ff5c62] transition">
@@ -47,7 +49,7 @@
 //       <div className="px-4 sm:px-6 lg:px-8 py-10 bg-[#f4f3f3]">
 //         <div
 //           ref={sliderRef}
-//           className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide"
+//           className="flex gap-4 "
 //         >
 //           {[
 //             {
@@ -161,10 +163,37 @@ const MakeLearningBetter = () => {
     }
   };
 
+  const cards = [
+    {
+      image: letstart1,
+      title: "INDUSTRY-RELEVANT SKILLS",
+      description:
+        "STAY AHEAD IN YOUR FIELD BY MASTERING HIGH-DEMAND SKILLS THROUGH OUR ONLINE SESSIONS",
+    },
+    {
+      image: letstart2,
+      title: "HYBRID LEARNING PLATFORM",
+      description:
+        "WORK EXPERIENCE CERTIFICATES FOR REAL PROJECTS AND COHORT LEARNING",
+    },
+    {
+      image: letstart3,
+      title: "CAREER NETWORKING",
+      description:
+        "STAY AHEAD IN YOUR FIELD BY MASTERING HIGH-DEMAND SKILLS THROUGH OUR ONLINE SESSIONS",
+    },
+    {
+      image: letstart3,
+      title: "CAREER NETWORKING",
+      description:
+        "STAY AHEAD IN YOUR FIELD BY MASTERING HIGH-DEMAND SKILLS THROUGH OUR ONLINE SESSIONS",
+    },
+  ];
+
   return (
     <div className="bg-[#FAFAF8] relative py-14">
       {/* Top Section */}
-      <div className=" flex flex-col lg:flex-row justify- items-center ml-10  mb-12 lg:mt-8">
+      <div className="flex flex-col lg:flex-row items-center ml-10 mb-12 lg:mt-8">
         {/* Left Heading */}
         <div className="lg:w-1/2 mb-6 lg:mb-0">
           <h2 className="text-[55px] text-[#000000] sm:text-[50px] lg:text-[55px] font-impact tracking-wide uppercase leading-[65px]">
@@ -173,48 +202,23 @@ const MakeLearningBetter = () => {
         </div>
 
         {/* Right CTA */}
-        <div className="w-full lg:w-1/2 flex flex-col items-start text-start  lg:ml-20">
+        <div className="w-full lg:w-1/2 flex flex-col items-start text-start lg:ml-20">
           <p className="text-[16px] sm:text-sm font-roboto text-[#000000] uppercase tracking-[0.2em] leading-[25px] mb-4">
             Become a Pro with us through industry-relevant <br /> skills
           </p>
-          <button className="px-[16px] w-[220px] h-[54px] py-[12px] bg-[#FF757A] text-black  font-Roboto Condensed rounded-[16px] hover:bg-[#ff5c62] transition">
+          <button className="px-[16px] w-[220px] h-[54px] py-[12px] bg-[#FF757A] text-black font-Roboto Condensed rounded-[16px] hover:bg-[#ff5c62] transition">
             Sign Up
           </button>
         </div>
       </div>
 
-      {/* Cards Section + Arrows */}
+      {/* Cards Section */}
       <div className="px-4 sm:px-6 lg:px-8 py-10 bg-[#f4f3f3]">
         <div
           ref={sliderRef}
-          className="flex gap-4 "
+          className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide"
         >
-          {[
-            {
-              image: letstart1,
-              title: "INDUSTRY-RELEVANT SKILLS",
-              description:
-                "STAY AHEAD IN YOUR FIELD BY MASTERING HIGH-DEMAND SKILLS THROUGH OUR ONLINE SESSIONS",
-            },
-            {
-              image: letstart2,
-              title: "HYBRID LEARNING PLATFORM",
-              description:
-                "WORK EXPERIENCE CERTIFICATES FOR REAL PROJECTS AND COHORT LEARNING",
-            },
-            {
-              image: letstart3,
-              title: "CAREER NETWORKING",
-              description:
-                "STAY AHEAD IN YOUR FIELD BY MASTERING HIGH-DEMAND SKILLS THROUGH OUR ONLINE SESSIONS",
-            },
-            {
-              image: letstart3,
-              title: "CAREER NETWORKING",
-              description:
-                "STAY AHEAD IN YOUR FIELD BY MASTERING HIGH-DEMAND SKILLS THROUGH OUR ONLINE SESSIONS",
-            },
-          ].map((card, index) => (
+          {cards.map((card, index) => (
             <div
               key={index}
               className="relative bg-white rounded-lg overflow-hidden min-w-[300px] sm:min-w-[380px] md:min-w-[420px] lg:min-w-[448px] h-[497px] flex-shrink-0 border border-gray-200 shadow-md"
@@ -242,8 +246,11 @@ const MakeLearningBetter = () => {
           ))}
         </div>
       </div>
+
+      {/* Navigation Arrows & Dots */}
       <div className="flex items-center justify-between w-full max-w-[1380px] mx-auto mt-10">
-        <div className="">
+        {/* Left Arrow */}
+        <div>
           <button
             onClick={scrollLeft}
             className="bg-[#00E0C6] text-black p-2 rounded-full hover:bg-[#00c5b0] transition"
@@ -252,6 +259,7 @@ const MakeLearningBetter = () => {
           </button>
         </div>
 
+        {/* Dots */}
         <div className="flex justify-center space-x-2">
           {[...Array(4)].map((_, i) => (
             <div
@@ -263,7 +271,8 @@ const MakeLearningBetter = () => {
           ))}
         </div>
 
-        <div className="">
+        {/* Right Arrow */}
+        <div>
           <button
             onClick={scrollRight}
             className="bg-[#00E0C6] text-[#000000] p-2 rounded-full hover:bg-[#00c5b0] transition"

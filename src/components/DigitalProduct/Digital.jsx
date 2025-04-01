@@ -81,19 +81,19 @@ function DigitalProductsSection() {
       </div>
 
       {/* PRODUCT COUNT */}
-      <p className="mt-5 ml-4 md:ml-[44px] font-jost text-[18px] leading-[22px] text-[#000000]">
+      <p className="mt-5  md:ml-[40px] font-jost text-[18px] leading-[22px] text-[#000000]">
         1070 products
       </p>
 
       {/* FILTER SECTION */}
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between px-4 md:px-6 py-4 gap-4">
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between  md:px-6 py-4 gap-2">
         {/* Left Title */}
-        <h2 className="text-[28px] md:text-[40px] font-impact uppercase text-[#000000] leading-[45px]">
+        <h2 className="text-[28px] ml-5 md:text-[40px] font-impact uppercase text-[#000000]">
           All Digital Products
         </h2>
 
         {/* Right Filters */}
-        <div className="flex flex-wrap  font-inter">
+        <div className="flex flex-wrap font-inter">
           <select className="border rounded px-4 py-2 text-[14px]">
             <option>Price Range</option>
           </select>
