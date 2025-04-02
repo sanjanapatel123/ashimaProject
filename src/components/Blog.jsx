@@ -170,34 +170,40 @@ const Blog = () => {
         </div>
       </section>
       {/* Blog Categories */}
-      <div className="flex flex-col gap-3 mt-10">
-        {[0, 5, 9].map((startIndex, rowIndex) => (
-          <div
-            key={rowIndex}
-            className="flex flex-wrap justify-center gap-4 sm:gap-4 "
-          >
-            {trendingCourses
-              .slice(startIndex, startIndex + [5, 4, 2][rowIndex])
-              .map((label) => {
-                const isSelected = selectedCourse === label;
-                return (
-                  <button
-                    key={label}
-                    onClick={() => handleCourseClick(label)}
-                    className={`px-2 py-2 rounded-full text-[16px] font-Roboto Condensed fw-bold uppercase border transition-all
+      <section className="bg-white py-8 px-10">
+        <h2 className="text-[50px] font-impact font-normal text-[#000000] mb-12">
+          <span className="text-[#000000">TRENDING </span>
+          <span className="text-[#047670]">NEWSLETTER</span>
+        </h2>
+        <div className="flex flex-col gap-3">
+          {[0, 5, 9].map((startIndex, rowIndex) => (
+            <div
+              key={rowIndex}
+              className="flex flex-wrap justify-center gap-4 sm:gap-4 "
+            >
+              {trendingCourses
+                .slice(startIndex, startIndex + [5, 4, 2][rowIndex])
+                .map((label) => {
+                  const isSelected = selectedCourse === label;
+                  return (
+                    <button
+                      key={label}
+                      onClick={() => handleCourseClick(label)}
+                      className={`px-2 py-2 rounded-full text-[16px] font-Roboto Condensed fw-bold uppercase border transition-all
                 ${
                   isSelected
                     ? "bg-[#047670] text-[#fff] border-[#002726]"
                     : "bg-[#f4F3F3] text-gray-800 border-[#000000] hover:bg-[#fffaf1] hover:text-[#000000]"
                 }`}
-                  >
-                    {label}
-                  </button>
-                );
-              })}
-          </div>
-        ))}
-      </div>
+                    >
+                      {label}
+                    </button>
+                  );
+                })}
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section className="blog-posts px-10 sm:px-6 md:px-10 mt-16 ">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 auto-rows-auto">
@@ -244,7 +250,7 @@ const Blog = () => {
           {/* Page 1 (active) */}
           <a
             href="#"
-            className="px-3 py-1 bg-[#047670] text-[#000000] rounded-md font-bold border border-[#047670]"
+            className="px-3 py-1 bg-[#047670] text-[#fff] rounded-md font-bold border border-[#047670]"
           >
             1
           </a>

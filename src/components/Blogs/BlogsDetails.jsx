@@ -1,83 +1,90 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Header from "../Courses/Header";
 import Footer from "../Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { FaAngleRight } from "react-icons/fa";
 
 function BlogsDetails() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <div>
-      <Header/>
+      <Header />
       <div className=" bg-light ">
-    
-
         {/* Hero Section */}
         <section className="bg-[#0E7C74] text-[#ffffff] py-10 px-6 pt-32">
           {/* Breadcrumb */}
-          <div className="text-sm flex items-center space-x-2 text-[#ffffff]">
-            <span>📖 BLOG</span>
-            <span>›</span>
-            <a href="#" className="text-[#FFFFFF] font-[jost] font-[20px] ">
+          <div className="text-sm flex flex-wrap items-center gap-2 text-[#ffffff]">
+            <span className="font-jost font-[600] text-[16px]">📖 BLOG</span>
+            <FaAngleRight />
+            <a
+              href="#"
+              className="text-[#FFFFFF] font-jost font-[600] text-[16px]"
+            >
               Best Artificial Intelligence Blogs
             </a>
-            <span>›</span>
-            <a href="#" className="text-[#ffffff] font-[jost] font-[20px] ">
+            <FaAngleRight />
+            <a
+              href="#"
+              className="text-[#ffffff] font-jost font-[600] text-[16px] "
+            >
               How to Prepare for an Interview
             </a>
           </div>
 
-<div className="row ">
-          <div className=" col-md-7 gap-2 items-center mt-4">
-            {/* Left Content */}
-            <div>
-              <h1 className="text-3xl md:text-4xl font-normal font-[impact] text-[36px] leading-tight">
-                How To Prepare For An AI Interview?
-              </h1>
-              <p
-                className="text-gray-200 mt-3"
-                style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
-              >
-                Learn How To Prepare For An AI Interview With Expert Tips,
-                Real-World <br/>Projects, And ProjectPro’s AI-Powered Interview Coach
-                To Build Your <br/>Confidence.
-              </p>
-              {/* Buttons */}
-              <div className="mt-6 flex space-x-4">
-                <a
-                  href="#"
-                  className="bg-[#ffffff] text-[#000000] font-semibold px-4 py-2 rounded-md shadow-md hover:bg-gray-100 "
-                  style={{ color: "#047670" }}
-                >
-                  Best Artificial Intelligence Blogs
-                </a>
-                <a
-                  href="#"
-                  className="border border-[#fffffff] px-4 py-2 rounded-md font-semibold  text-white transition"
-                >
-                  View All Artificial Intelligence Blogs
-                </a>
+          {/* Responsive Flex Row */}
+          <div className="flex flex-col lg:flex-row items-start gap-8 mt-6">
+            {/* Left Column */}
+            <div className="w-full lg:w-7/12">
+              <div>
+                <h1 className="text-[36px] md:text-4xl font-[400] font-impact leading-[36px]">
+                  How To Prepare For An AI Interview?
+                </h1>
+                <p className="text-gray-200 mt-3 font-jost font-[500] text-[16px] leading-[26px]">
+                  Learn How To Prepare For An AI Interview With Expert Tips,
+                  Real-World <br />
+                  Projects, And ProjectPro’s AI-Powered Interview Coach To Build
+                  Your <br />
+                  Confidence.
+                </p>
+
+                {/* Buttons */}
+                <div className="mt-6 flex flex-wrap gap-4">
+                  <a
+                    href="#"
+                    className="bg-[#ffffff] text-[#000000] font-semibold px-4 py-2 rounded-md shadow-md hover:bg-gray-100 font-roboto"
+                    style={{ color: "#047670" }}
+                  >
+                    Best Artificial Intelligence Blogs
+                  </a>
+                  <a
+                    href="#"
+                    className="border border-[#ffffff] px-4 py-2 rounded-md font-semibold text-white transition font-roboto"
+                  >
+                    View All Artificial Intelligence Blogs
+                  </a>
+                </div>
+
+                {/* Last Updated */}
+                <p className="text-[#ffffff] text-[18px] font-roboto mt-4 leading-[35px]">
+                  Last Updated: 28 Feb 2025 |
+                </p>
               </div>
-              {/* Last Updated */}
-              <p className="text-[#ffffff] text-sm mt-4">
-                Last Updated: 28 Feb 2025 |
-              </p>
             </div>
- </div>
- 
-            {/* Right Image */}
-          
-            <div className="col-md-5 relative">
+
+            {/* Right Column Image */}
+            <div className="w-full lg:w-6/12">
               <img
                 src="https://i.ibb.co/nN999x2Y/Rectangle-65.png"
                 alt="AI Interview"
-                className="rounded-md border border-blue-300 shadow-lg  h-56 object-cover md:w-[600px] md:h-[350px]"
+                className="rounded-md border border-blue-300 shadow-lg w-full h-auto max-w-[600px] object-cover"
               />
             </div>
           </div>
         </section>
 
         {/* Content Section */}
-        <section className="container-fluid ">
+        <section className="container-fluid">
           {/* Left Content */}
           <div className="">
             <div className="row mt-5 bg-light p-3">
@@ -87,29 +94,22 @@ function BlogsDetails() {
                   style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
                 >
                   Want a job that pays six figures and is nearly
-                  recession-proof? Companies are in an AI talent war for AI
-                  engineers and machine learning experts. AI job postings have
-                  surged 450% in the last seven years. Top AI engineers at
-                  companies like OpenAI and Google DeepMind earn over $500,000+
-                  in compensation with stock options.
+                  recession-proof? Companies are in an all-out talent war for AI
+                  engineers and machine learning experts. AI job postings have
+                  surged 450% in the last seven years. Top AI engineers at
+                  companies like OpenAI and Google DeepMind earn over
+                  $300,000—sometimes millions with stock options. Meanwhile,
+                  a McKinsey report found that companies integrating AI expect
+                  workforce demand to shift, with AI-related roles growing by up
+                  to 25% annually. AI hiring is booming—but landing these roles
+                  is no easy feat. AI and machine learning interviews require
+                  candidates to tackle complex algorithmic challenges, deep
+                  learning architecture discussions, and applied problem-solving
+                  in real-world AI scenarios. So, how do you prepare for an AI
+                  interview then? What’s the structure of these AI job
+                  interviews? Which interview skills should you master? Are AI
+                  interviews similar to software engineering ones? 
                 </p>
-                <p
-                  className="font-[20px] font-narmal"
-                  style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
-                >
-                  Meanwhile, a{" "}
-                  <a
-                    href="#"
-                    className="text-[#000000] font-semibold hover:underline"
-                  >
-                    McKinsey report
-                  </a>{" "}
-                  found that companies integrating AI agent workflows outperform
-                  non-adopters. AI value is growing by up to 25% annually. And
-                  AI hiring is booming—but hiring the right talent is twice as
-                  fast.
-                </p>
-
                 {/* Featured Project */}
                 <div className="bg-[#ffffff] p-6 rounded-lg shadow-md max-w-4xl mx-auto flex flex-col md:flex-row items-center">
                   {/* Image Section */}
@@ -144,60 +144,108 @@ function BlogsDetails() {
                 </div>
               </div>
               <div className="col-md-3">
-              <div className="card shadow-lg p-4" style={{ width: '100%', maxWidth: '400px', borderRadius: '10px',  }}>
-        <h2 className="text-center mb-3 font-weight-bold">Start Learning Now</h2>
-        <p className="text-center mb-3">Learn By Doing</p>
-        
-        {/* Sign up buttons for LinkedIn and Google */}
-        <div className="d-grid gap-2 mb-3">
-          <button className="btn shadow-sm d-flex align-items-center justify-content-center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" style={{ width: '24px', height: '24px', marginRight: '8px' }} />
-            Sign Up with LinkedIn
-          </button>
-          <button className="btn shadow-sm d-flex align-items-center justify-content-center">
-            <img src="https://i.ibb.co/LDvMCxW9/google.jpg" alt="Google" style={{ width: '24px', height: '24px', marginRight: '8px' }} />
-            Sign Up with Google
-          </button>
-        </div>
-        
-        {/* Separator */}
-        <div className="text-center mb-3">Or Use Email</div>
-        
-        {/* Email and Password Inputs */}
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">Email</label>
-          <input
-            type="email"
-            id="email"
-            className="form-control"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        
-        <div className="mb-3">
-          <label htmlFor="password" className="form-label">Password</label>
-          <input
-            type="password"
-            id="password"
-            className="form-control"
-            placeholder="Enter your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        
-        {/* Sign Up Button */}
-        <button className="btn  w-100 mb-3" style={{backgroundColor:"#1E1E1E1A",color:"#1E1E1E80", fontSize:"18px", fontFamily:"Roboto Condensed" ,fontWeight:"semibold"}}>Sign Up</button>
-        
-        {/* Privacy and Terms */}
-        <div className="text-center">
-          <small>
-            By Continuing, You Agree To <a href="#" className="text-decoration-none">A-Skills Terms</a> And <a href="#" className="text-decoration-none">Privacy Policy</a>.
-          </small>
-        </div>
-      </div>
+                <div
+                  className="card shadow-lg p-4"
+                  style={{
+                    width: "100%",
+                    maxWidth: "400px",
+                    borderRadius: "10px",
+                  }}
+                >
+                  <h2 className="text-center mb-3 font-weight-bold">
+                    Start Learning Now
+                  </h2>
+                  <p className="text-center mb-3">Learn By Doing</p>
+
+                  {/* Sign up buttons for LinkedIn and Google */}
+                  <div className="d-grid gap-2 mb-3">
+                    <button className="btn shadow-sm d-flex align-items-center justify-content-center">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                        alt="LinkedIn"
+                        style={{
+                          width: "24px",
+                          height: "24px",
+                          marginRight: "8px",
+                        }}
+                      />
+                      Sign Up with LinkedIn
+                    </button>
+                    <button className="btn shadow-sm d-flex align-items-center justify-content-center">
+                      <img
+                        src="https://i.ibb.co/LDvMCxW9/google.jpg"
+                        alt="Google"
+                        style={{
+                          width: "24px",
+                          height: "24px",
+                          marginRight: "8px",
+                        }}
+                      />
+                      Sign Up with Google
+                    </button>
+                  </div>
+
+                  {/* Separator */}
+                  <div className="text-center mb-3">Or Use Email</div>
+
+                  {/* Email and Password Inputs */}
+                  <div className="mb-3">
+                    <label htmlFor="email" className="form-label">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      className="form-control"
+                      placeholder="Enter your email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </div>
+
+                  <div className="mb-3">
+                    <label htmlFor="password" className="form-label">
+                      Password
+                    </label>
+                    <input
+                      type="password"
+                      id="password"
+                      className="form-control"
+                      placeholder="Enter your password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                  </div>
+
+                  {/* Sign Up Button */}
+                  <button
+                    className="btn  w-100 mb-3"
+                    style={{
+                      backgroundColor: "#1E1E1E1A",
+                      color: "#1E1E1E80",
+                      fontSize: "18px",
+                      fontFamily: "Roboto Condensed",
+                      fontWeight: "semibold",
+                    }}
+                  >
+                    Sign Up
+                  </button>
+
+                  {/* Privacy and Terms */}
+                  <div className="text-center">
+                    <small>
+                      By Continuing, You Agree To{" "}
+                      <a href="#" className="text-decoration-none">
+                        A-Skills Terms
+                      </a>{" "}
+                      And{" "}
+                      <a href="#" className="text-decoration-none">
+                        Privacy Policy
+                      </a>
+                      .
+                    </small>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -632,19 +680,27 @@ function BlogsDetails() {
               </ul>
             </div>
           </div>
-
-      
         </section>
 
         <section className="p-3">
           <h2 className="text-[#047670] font-[impact] text-[50px] font-normal">
-          5. Keep Up with AI Advancements for Job Interview Success
+            5. Keep Up with AI Advancements for Job Interview Success
           </h2>
 
           <div className="row">
             <div className="col-md-9 mt-3">
               <p className=" font-[Roboto Condensed] text-[20px] font-normal">
-              It is essential to stay informed and updated about the latest AI breakthroughs, emerging research, new models, and tools. This will sharpen your knowledge and help you confidently appear for the interview. Read research papers on platforms like ArXiv to understand new architectures, techniques, and improvements in transformers and diffusion models. Learning from real-world success stories is the best way to improve your AI interviewing skills. Listening to various AI podcasts like the AI Monetization Podcast, you can better understand AI's ROI value, practical applications, and new trends, which can help you in interviews.
+                It is essential to stay informed and updated about the latest AI
+                breakthroughs, emerging research, new models, and tools. This
+                will sharpen your knowledge and help you confidently appear for
+                the interview. Read research papers on platforms like ArXiv to
+                understand new architectures, techniques, and improvements
+                in transformers and diffusion models. Learning from real-world
+                success stories is the best way to improve your AI interviewing
+                skills. Listening to various AI podcasts like the AI
+                Monetization Podcast, you can better understand AI's ROI value,
+                practical applications, and new trends, which can help you in
+                interviews.
               </p>
             </div>
           </div>
@@ -658,30 +714,32 @@ function BlogsDetails() {
           <div className="row">
             <div className="col-md-7 p-3">
               {/* Article Description */}
-             
 
               {/* Bullet Points */}
               <ul
                 className="list-disc list-inside text-[#000000] mb-6 font-normal text-[20px]"
                 style={{ fontFamily: "Roboto Condensed" }}
               >
+                <li>What real-world challenges did your project address?</li>
                 <li>
-                What real-world challenges did your project address?
+                  What kind of data did you use, how did you source it, and what
+                  pre-processing steps were required?
                 </li>
                 <li>
-                What kind of data did you use, how did you source it, and what pre-processing steps were required?
+                  Why did you choose specific LLM models, AI tools, or
+                  frameworks?
                 </li>
                 <li>
-                Why did you choose specific LLM models, AI tools, or frameworks?
+                  What challenges did you encounter, and how did you overcome
+                  them?
                 </li>
                 <li>
-                What challenges did you encounter, and how did you overcome them?
+                  What impact did your project have, and what did you learn?
                 </li>
                 <li>
-                What impact did your project have, and what did you learn?
-                </li>
-                <li>
-                A detailed explanation of your personal projects is highly important, especially if you are a recent graduate and lack work experience.
+                  A detailed explanation of your personal projects is highly
+                  important, especially if you are a recent graduate and lack
+                  work experience.
                 </li>
               </ul>
             </div>
@@ -689,55 +747,123 @@ function BlogsDetails() {
         </section>
 
         <section className="p-3">
-        <h2 className="text-[#047670] font-[impact] text-[50px] font-normal">
-        6. Brush Up and Strengthen Your Math Foundation
+          <h2 className="text-[#047670] font-[impact] text-[50px] font-normal">
+            6. Brush Up and Strengthen Your Math Foundation
           </h2>
 
           <div className="row p-3">
             <div className="col-md-9 mt-3">
               <p className=" font-[Roboto Condensed] text-[20px] font-normal">
-              It is essential to stay informed and updated about the latest AI breakthroughs, emerging research, new models, and tools. This will sharpen your knowledge and help you confidently appear for the interview. Read research papers on platforms like ArXiv to understand new architectures, techniques, and improvements in transformers and diffusion models. Learning from real-world success stories is the best way to improve your AI interviewing skills. Listening to various AI podcasts like theMath is the foundation of machine learning and deep learning models, and having a strong mathematical understanding is essential for interview success. Interviewers frequently assess knowledge of probability and statistics (Bayesian probability, distributions, hypothesis testing) for model evaluation and uncertainty estimation, linear algebra (vectors, matrices, eigenvalues, SVD) for neural network computations, and calculus (derivatives, gradients, chain rule) for optimization techniques like backpropagation. Knowing how to apply these ideas to real-world AI projects rather than memorizing formulas will help you ace technical questions and show off your problem-solving abilities in real-world situations., you can better understand AI's ROI value, practical applications, and new trends, which can help you in interviews.
+                It is essential to stay informed and updated about the latest AI
+                breakthroughs, emerging research, new models, and tools. This
+                will sharpen your knowledge and help you confidently appear for
+                the interview. Read research papers on platforms like ArXiv to
+                understand new architectures, techniques, and improvements
+                in transformers and diffusion models. Learning from real-world
+                success stories is the best way to improve your AI interviewing
+                skills. Listening to various AI podcasts like theMath is the
+                foundation of machine learning and deep learning models, and
+                having a strong mathematical understanding is essential for
+                interview success. Interviewers frequently assess knowledge of
+                probability and statistics (Bayesian probability, distributions,
+                hypothesis testing) for model evaluation and uncertainty
+                estimation, linear algebra (vectors, matrices, eigenvalues, SVD)
+                for neural network computations, and calculus (derivatives,
+                gradients, chain rule) for optimization techniques
+                like backpropagation. Knowing how to apply these ideas
+                to real-world AI projects rather than memorizing formulas will
+                help you ace technical questions and show off your
+                problem-solving abilities in real-world situations., you can
+                better understand AI's ROI value, practical applications, and
+                new trends, which can help you in interviews.
               </p>
             </div>
           </div>
-
         </section>
 
         <section className="p-3">
-        <h2 className="text-[#047670] font-[impact] text-[50px] font-normal">
-        7. Prepare for Open-ended Questions
+          <h2 className="text-[#047670] font-[impact] text-[50px] font-normal">
+            7. Prepare for Open-ended Questions
           </h2>
 
           <div className="row p-3">
             <div className="col-md-9 mt-3">
               <p className=" font-[Roboto Condensed] text-[20px] font-normal">
-              Open-ended questions are among the most commonly asked in the hiring process to gauge your aptitude for building, fine-tuning, and implementing AI solutions in enterprise settings. These questions help the hiring managers assess your ability to deconstruct complicated issues, defend model choices, and modify tactics in light of restrictions such as computational efficiency or data limitations. 
-              In domains like model selection (e.g., when to employ transformers vs. traditional machine learning models), managing bias in datasets, and optimizing large-scale AI systems, interviewers look for systematic reasoning from the job seekers vs a definite answer to the question. Just like how strong communication skills help AI engineers convey their strategies to stakeholders and ensure solutions align with business goals, clearly explaining technical decisions, trade-offs, and model performance to hiring managers helps them assess your problem-solving approach, reasoning, and ability to translate AI concepts into real-world impact. You must always use a structured approach like the STAR (Situation, Task, Action, Result) method when answering. Here are some examples of open-ended questions -
+                Open-ended questions are among the most commonly asked in the
+                hiring process to gauge your aptitude for building, fine-tuning,
+                and implementing AI solutions in enterprise settings. These
+                questions help the hiring managers assess your ability to
+                deconstruct complicated issues, defend model choices, and modify
+                tactics in light of restrictions such as computational
+                efficiency or data limitations.  In domains like model
+                selection (e.g., when to employ transformers vs. traditional
+                machine learning models), managing bias in datasets, and
+                optimizing large-scale AI systems, interviewers look for
+                systematic reasoning from the job seekers vs a definite answer
+                to the question. Just like how strong communication skills help
+                AI engineers convey their strategies to stakeholders and ensure
+                solutions align with business goals, clearly explaining
+                technical decisions, trade-offs, and model performance to hiring
+                managers helps them assess your problem-solving approach,
+                reasoning, and ability to translate AI concepts into real-world
+                impact. You must always use a structured approach like the STAR
+                (Situation, Task, Action, Result) method when answering. Here
+                are some examples of open-ended questions -
               </p>
-              <ul  className="list-disc list-inside text-gray-800  mb-6 font-normal text-[20px]"
-                style={{ fontFamily: "Roboto Condensed" }}>
-             <li>You need to deploy a deep learning model in a resource-constrained environment (e.g., edge devices). How would you optimize it?</li>
-             <li>How would you decide whether to retrain an existing model or develop a new one from scratch?</li>
-             <li>What techniques would you use to improve the inference speed of a large language model without sacrificing accuracy?</li>
-            
+              <ul
+                className="list-disc list-inside text-gray-800  mb-6 font-normal text-[20px]"
+                style={{ fontFamily: "Roboto Condensed" }}
+              >
+                <li>
+                  You need to deploy a deep learning model in a
+                  resource-constrained environment (e.g., edge devices). How
+                  would you optimize it?
+                </li>
+                <li>
+                  How would you decide whether to retrain an existing model or
+                  develop a new one from scratch?
+                </li>
+                <li>
+                  What techniques would you use to improve the inference speed
+                  of a large language model without sacrificing accuracy?
+                </li>
               </ul>
               <p>
-              Following these tips will give you a strong foundation and is just half the battle won, but given the AI-powered hiring landscape, technical knowledge and skills alone are not enough. Many companies now use AI-powered video interviews to screen candidates before a human interviewer enters. To be prepared, you need to understand how these systems work and how to present yourself effectively.
+                Following these tips will give you a strong foundation and is
+                just half the battle won, but given the AI-powered hiring
+                landscape, technical knowledge and skills alone are not enough.
+                Many companies now use AI-powered video interviews to screen
+                candidates before a human interviewer enters. To be prepared,
+                you need to understand how these systems work and how to present
+                yourself effectively.
               </p>
             </div>
           </div>
-
         </section>
 
         <section className="p-3">
-        <h2 className="text-[#047670] font-[impact] text-[50px] font-normal">
-        AI Mock Interview: Your Secret Weapon to Interview Success
+          <h2 className="text-[#047670] font-[impact] text-[50px] font-normal">
+            AI Mock Interview: Your Secret Weapon to Interview Success
           </h2>
 
           <div className="row p-3">
             <div className="col-md-9 mt-3">
               <p className=" font-[Roboto Condensed] text-[20px] font-normal">
-              You're gearing up for an AI job interview, but interview anxiety is creeping in? What if you had an AI-powered interview coach that helps you take practice interviews, refine your answers, and provide instant feedback to make sure you're fully prepared? AI Mock Interviews do just that—helping job seekers sharpen responses, refine resumes, and practice solving AI-related problems under pressure. Practicing with AI mock interviews can be the secret weapon that gives you a competitive edge over other top candidates. AI-powered mock interviews simulate realistic scenarios using the latest AI models to assess your technical and behavioral skills by providing actionable feedback that helps you improve. AI interview tools have become an integral part of the hiring process, and understanding how these AI mock interviews work and how to perform well in them can play a vital role in your interview success.
+                You're gearing up for an AI job interview, but interview anxiety
+                is creeping in? What if you had an AI-powered interview coach
+                that helps you take practice interviews, refine your answers,
+                and provide instant feedback to make sure you're fully prepared?
+                AI Mock Interviews do just that—helping job seekers sharpen
+                responses, refine resumes, and practice solving AI-related
+                problems under pressure. Practicing with AI mock interviews can
+                be the secret weapon that gives you a competitive edge over
+                other top candidates. AI-powered mock interviews simulate
+                realistic scenarios using the latest AI models to assess your
+                technical and behavioral skills by providing actionable feedback
+                that helps you improve. AI interview tools have become an
+                integral part of the hiring process, and understanding how these
+                AI mock interviews work and how to perform well in them can play
+                a vital role in your interview success.
               </p>
             </div>
           </div>
@@ -747,28 +873,43 @@ function BlogsDetails() {
               <img src="https://i.ibb.co/TxtjsQkj/Rectangle-70.png" />
             </div>
           </div>
-
         </section>
 
         <section className="p-3">
-        <h2 className="text-[#047670] font-[impact] text-[50px] font-normal">
-        What Are AI Mock Interviews?
+          <h2 className="text-[#047670] font-[impact] text-[50px] font-normal">
+            What Are AI Mock Interviews?
           </h2>
 
           <div className="row p-3">
             <div className="col-md-9 mt-3">
-             <ul className="list-disc list-inside text-[#000000]  mb-6 font-normal text-[20px]"
-                style={{ fontFamily: "Roboto Condensed" }}>
-              <li>These interviews provide a structured approach to solving potential interview questions commonly asked in top companies to help you practice answering tough questions with clarity and confidence. Some AI mock interview platforms even use an AI interview copilot to assess facial expressions, voice modulation, and keyword relevance.</li>
-              <li>â€‹â€‹With instant feedback based on your answers, you know where you need to improve so you can refine your answers to match the expectations of hiring managers.</li>
-              <li>AI mock interviews allow you to save time while receiving expert guidance so you feel fully prepared and confident when facing a real interview panel.</li>
-              
-             </ul>
+              <ul
+                className="list-disc list-inside text-[#000000]  mb-6 font-normal text-[20px]"
+                style={{ fontFamily: "Roboto Condensed" }}
+              >
+                <li>
+                  These interviews provide a structured approach to solving
+                  potential interview questions commonly asked in top companies
+                  to help you practice answering tough questions with clarity
+                  and confidence. Some AI mock interview platforms even use an
+                  AI interview copilot to assess facial expressions, voice
+                  modulation, and keyword relevance.
+                </li>
+                <li>
+                  â€‹â€‹With instant feedback based on your answers, you know
+                  where you need to improve so you can refine your answers to
+                  match the expectations of hiring managers.
+                </li>
+                <li>
+                  AI mock interviews allow you to save time while receiving
+                  expert guidance so you feel fully prepared and confident when
+                  facing a real interview panel.
+                </li>
+              </ul>
             </div>
           </div>
-          </section>
+        </section>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

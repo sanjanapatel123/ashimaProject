@@ -80,10 +80,6 @@
 
 // export default App;
 
-
-
-
-
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Home/Hero";
