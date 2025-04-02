@@ -26,6 +26,7 @@ import {
   Nav,
 } from "react-bootstrap";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import Header from "./Header";
 
 const categories = [
   "AI & ML",
@@ -228,6 +229,7 @@ function AllCourses() {
 
   return (
     <>
+    <Header/>
       <Container fluid className="bg-[#ffffff]">
         {/* Top Navigation */}
         <Row className="bg-[#ffffff] uppercase">

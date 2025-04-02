@@ -4,14 +4,27 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-
-// import dropdown from "";
 import { RiArrowDropDownLine } from "react-icons/ri";
+
+
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [coursesDropdownOpen, setCoursesDropdownOpen] = useState(false); // To control Courses dropdown visibility
 
+  const trendingCourses = [
+    "AI & ML",
+    "DEVOPS",
+    "NO CODE",
+    "CYBERSECURITY & TESTING",
+    "DATA SCIENCE AND ENGINERRING",
+    "DESIGN AND DEVLOPMENT",
+    "FOUNDER CONNECT ",
+    "GAMING & NETWORK",
+    "PRODUCT",
+    "BUSSINESS AND LEADERSHIP",
+    "MARKETING & SALES",
+  ];
   return (
     <header className="fixed z-50 w-full">
       <div className="bg-[#ffffff] shadow-md w-full mx-auto h-[80px] px-3 flex items-center justify-between">
@@ -50,7 +63,7 @@ const Header = () => {
 
           {/* Navigation Menu */}
           <nav className="flex-nowrap whitespace-nowrap flex items-center gap-8 font-medium text-[16px] text-[#1e1e1e]">
-            <div className="relative">
+            <div className="relative inline-block">
               <button
                 onClick={() => setCoursesDropdownOpen(!coursesDropdownOpen)}
                 className="font-roboto font-medium text-[18px] leading-[20px] text-[#000000] flex items-center"
@@ -58,26 +71,19 @@ const Header = () => {
                 Courses
                 <RiArrowDropDownLine className="w-[28px] h-[28px]" />
               </button>
+
               {coursesDropdownOpen && (
-                <div className="absolute left-0 w-[200px] bg-[#ffffff] shadow-md rounded-md mt-2">
-                  <Link
-                    to="/allcourses"
-                    className="block px-3 py-2 font-roboto font-medium text-[16px] text-[#000000] hover:bg-[#f0f0f0]"
-                  >
-                    All Courses
-                  </Link>
-                  <Link
-                    to="/SomeOtherCourse"
-                    className="block px-3 py-2 font-roboto font-medium text-[16px] text-[#000000] hover:bg-[#f0f0f0]"
-                  >
-                    Some Other Course
-                  </Link>
-                  <Link
-                    to="/MoreCourses"
-                    className="block px-3 py-2 font-roboto font-medium text-[16px] text-[#000000] hover:bg-[#f0f0f0]"
-                  >
-                    More Courses
-                  </Link>
+                <div className="absolute left-0 w-[260px] bg-white shadow-md rounded-md mt-2 z-50 max-h-[300px] overflow-y-auto">
+                  {trendingCourses.map((course, idx) => (
+                    <Link
+                      key={idx}
+                      to="/courses" // ✅ Make sure this matches the route
+                      className="block px-4 py-2 font-roboto font-medium text-[16px] text-black hover:bg-[#f0f0f0]"
+                      onClick={() => setCoursesDropdownOpen(false)} // Close dropdown on click
+                    >
+                      {course}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>

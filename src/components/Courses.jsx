@@ -5,7 +5,7 @@ import AllCourses from "./Courses/AllCourses";
 const Courses = () => {
   return (
     <div>
-      <Header></Header>
+    <Header/>
       <AllCourses></AllCourses>
     </div>
   );

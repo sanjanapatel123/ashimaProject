@@ -1,102 +1,95 @@
-import React from "react";
-import { Container, Card, Form, Button } from "react-bootstrap";
-import { FaLinkedin, FaGoogle } from "react-icons/fa";
- import "bootstrap/dist/css/bootstrap.min.css";
- import { Link } from "react-router-dom";
+
+import { FaGoogle, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <Container
-      className="d-flex justify-content-center align-items-center vh-100"
-      style={{ padding: "30px", backgroundColor: "#F9F9F9" }}
-    >
-      <Card
-        className="p-4 shadow-sm border-0"
-        style={{ width: "480px", borderRadius: "8px" }}
-      >
-        <h3
-          className="text-center mb-4 font-normal"
-          style={{
-            fontSize: "36px",
-            fontFamily: "Impact",
-            color: "#047670",
-            width: "400",
-            lineHeight: "20px",
-            letterSpacing: "0%",
-          }}
-        >
+    <div className="flex items-center justify-center min-h-screen bg-[#FAF9F7] px-4">
+      <div className="w-full max-w-lg bg-[#FFFFFF] rounded-lg shadow border border-[#1E1E1E]/10 p-6 sm:p-8">
+        <h3 className="text-center text-[24px] sm:text-[28px] md:text-[30px] font-impact text-[#047670] mb-6 font-normal uppercase">
           LOG IN TO YOUR ACCOUNT
         </h3>
 
         {/* Social Login Buttons */}
-        <Button
-          variant="light"
-          className="d-flex align-items-center justify-content-center mb-3 w-100 border text-[24px] font-roboto font-normal"
-        >
-          <FaLinkedin className="me-2" size={18} color="#0A66C2" />
+        <button className="flex items-center justify-center w-full border border-[#1E1E1E]/10 text-[#000000] font-medium text-[24px] sm:text-[18px] py-2 mb-3 rounded hover:bg-gray-100 transition">
+          <FaLinkedin className="mr-2 text-[#047670]" />
           LOGIN WITH LINKEDIN
-        </Button>
+        </button>
 
-        <Button
-          variant="light"
-          className="d-flex align-items-center justify-content-center mb-3 w-100 border text-[24px] font-roboto font-normal"
-        >
-          <FaGoogle className="me-2" size={18} color="#DB4437" />
+        <button className="flex items-center justify-center w-full border border-[#1E1E1E]/10 text-[#000000] font-medium text-[24px] sm:text-[18px] py-2 mb-6 rounded hover:bg-gray-100 transition">
+          <FaGoogle className="mr-2 text-[#DB4437]" />
           LOGIN WITH GOOGLE
-        </Button>
+        </button>
 
         {/* Divider */}
-        <div className="d-flex align-items-center text-muted mb-3">
-          <hr className="flex-grow-1" />
-          <span className="mx-2" style={{ fontSize: "14px", color: "#777" }}>
+        <div className="flex items-center text-[#000000] text-[20px] mb-6">
+          <hr className="flex-grow border-t border-[#1E1E1E]/70" />
+          <span className="mx-3 text-[14px] text-[#1E1E1E]/70">
             Or Use Email
           </span>
-          <hr className="flex-grow-1" />
+          <hr className="flex-grow border-t border-[#1E1E1E]/70" />
         </div>
 
-        {/* Login Form */}
-        <Form>
-          <Form.Group className="mb-3">
-            <Form.Label style={{ fontSize: "20px", fontWeight: "normal" }} className="font-roboto">
-              EMAIL
-            </Form.Label>
-            <Form.Control type="email" />
-          </Form.Group>
-
-          <Form.Group className="mb-4">
-            <Form.Label style={{ fontSize: "20px", fontWeight: "normal" }} className="font-roboto">
-              PASSWORD
-            </Form.Label>
-            <Form.Control type="password" />
-          </Form.Group>
-
-          <Button
-            
-            className="w-100 mb-2 rounded-[4px] bg-[#706D6E] border-[1px]"
-            disabled
+        {/* Email Input */}
+        <div className="mb-4">
+          <label
+            htmlFor="email"
+            className="block text-[14px] font-semibold mb-1"
           >
-            LOGIN
-          </Button>
+            EMAIL
+          </label>
+          <input
+            type="email"
+            id="email"
+            className="w-full px-3 py-2 border border-[#1E1E1E]/10 rounded text-[14px] focus:outline-none focus:ring-2 focus:ring-[#047670]"
+          />
+        </div>
 
-          <div className="text-start">
-            <a href="#" style={{ fontSize: "12px", color: "#02756A" }}>
-              Forget Password?
-            </a>
-          </div>
+        {/* Password Input */}
+        <div className="mb-4">
+          <label
+            htmlFor="password"
+            className="block text-[14px] font-semibold mb-1"
+          >
+            PASSWORD
+          </label>
+          <input
+            type="password"
+            id="password"
+            className="w-full px-3 py-2 border border-[#1E1E1E]/10 rounded text-[14px] focus:outline-none focus:ring-2 focus:ring-[#047670]"
+          />
+        </div>
 
-          <div className="text-center mt-4">
-            <span style={{ fontSize: "12px", color: "#333" }}>
-              Don't Have An Account?{" "}
-              <Link to="/signup" style={{ fontSize: "12px", color: "#02756A" }}>
-                Sign Up
-              </Link>
-            </span>
-          </div>
-        </Form>
-      </Card>
-    </Container>
+        {/* Login Button */}
+        <button
+          className="w-full bg-gray-300 text-[#1E1E1E]/50 py-2 rounded text-[16px] font-medium cursor-not-allowed"
+          disabled
+        >
+          LOGIN
+        </button>
+
+        {/* Bottom Section */}
+        <div className="flex justify-between items-center mt-4 text-[12px]">
+          <Link
+            to="/forgot-password"
+            className="text-[#047670] hover:underline"
+          >
+            Forget Password?
+          </Link>
+        </div>
+
+        <p className="text-center mt-6 text-[12px] text-[#000000]">
+          Don’t Have An Account?{" "}
+          <Link
+            to="/signup"
+            className="text-[#047670] font-semibold hover:underline"
+          >
+            Sign Up
+          </Link>
+        </p>
+      </div>
+    </div>
   );
 };
 
 export default Login;
-
