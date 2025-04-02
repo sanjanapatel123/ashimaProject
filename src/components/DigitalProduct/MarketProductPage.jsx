@@ -72,7 +72,7 @@ const MarketProduct = () => {
       <Header />
       <div className=" pt-9 flex flex-col lg:flex-row bg-[#047670] lg:h-[652px] px-4 lg:pt-14">
         {/* Left Image Section */}
-        <div className="flex w-full lg:w-1/2 items-center justify-center lg:justify-start p-6 lg:pl-20">
+        <div className="flex w-full lg:w-1/2 items-center justify-center lg:justify-start p-6 lg:pl-20 ">
           <img
             src={digitalproduct1}
             alt="Lost Connections Book"
@@ -141,7 +141,7 @@ const MarketProduct = () => {
         <div className="lg:w-[900px] bg-[#ffffff] rounded-md text-[#1E1E1E] mt-8 lg:mt-20 lg:ml-20">
           {/* Header Section */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4">
-            <h2 className="text-[#047670] text-[26px] font-impact leading-[20px]">
+            <h2 className="text-[#047670] text-[30px] font-impact leading-[20px]">
               Related Images
             </h2>
             <div className="flex items-center gap-2 text-[#1E1E1ECC] font-jost text-[20px] mt-2 sm:mt-0 ">

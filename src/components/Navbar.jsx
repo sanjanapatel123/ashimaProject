@@ -693,6 +693,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
+
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [coursesDropdownOpen, setCoursesDropdownOpen] = useState(false);
@@ -721,7 +722,7 @@ const Navbar = () => {
         </Link>
 
         <nav className="hidden md:flex space-x-10 font-medium text-[16px] text-[#1e1e1e]">
-          <div className="relative">
+          <div className="relative inline-block">
             <button
               onClick={() => setCoursesDropdownOpen(!coursesDropdownOpen)}
               className="font-roboto font-medium text-[18px] leading-[20px] text-[#000000] flex items-center"
@@ -729,13 +730,15 @@ const Navbar = () => {
               Courses
               <RiArrowDropDownLine className="w-[28px] h-[28px]" />
             </button>
+
             {coursesDropdownOpen && (
-              <div className="absolute left-0 w-[260px] bg-[#ffffff] shadow-md rounded-md mt-2 z-50 max-h-[300px] overflow-y-auto">
+              <div className="absolute left-0 w-[260px] bg-white shadow-md rounded-md mt-2 z-50 max-h-[300px] overflow-y-auto">
                 {trendingCourses.map((course, idx) => (
                   <Link
                     key={idx}
-                    to="/courses"
-                    className="block px-4 py-2 font-roboto font-medium text-[16px] text-[#000000] hover:bg-[#f0f0f0]"
+                    to="/courses" // ✅ Make sure this matches the route
+                    className="block px-4 py-2 font-roboto font-medium text-[16px] text-black hover:bg-[#f0f0f0]"
+                    onClick={() => setCoursesDropdownOpen(false)} // Close dropdown on click
                   >
                     {course}
                   </Link>
@@ -743,7 +746,6 @@ const Navbar = () => {
               </div>
             )}
           </div>
-
           <a
             href="#"
             className="font-roboto font-medium text-[18px] text-[#000000]"
@@ -787,7 +789,7 @@ const Navbar = () => {
                 {trendingCourses.map((course, idx) => (
                   <Link
                     key={idx}
-                    to="/Allcourses"
+                    to="/allcourses"
                     className="block px-4 py-2 font-roboto font-medium text-[16px] text-[#000000] hover:bg-[#f0f0f0]"
                   >
                     {course}
@@ -838,12 +840,12 @@ const Navbar = () => {
             >
               Digital Product
             </Link>
-            <a
-              href="#"
+            <Link
+              to={'/blog'}
               className="font-roboto px-4 py-2 block font-medium text-[18px] text-[#000000]"
             >
               Newsletter
-            </a>
+            </Link>
             <div className="mt-4 space-y-2">
               <Link
                 to="/login"

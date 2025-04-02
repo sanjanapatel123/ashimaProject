@@ -67,7 +67,7 @@ const Blog = () => {
     <>
       <Header />
       {/* Hero Section */}
-      <section className="hero bg-[#047670] py-24 sm:px-6 md:px-10  flex flex-col lg:flex-row justify-around gap-10 flex-wrap pt-28">
+      <section className="hero bg-[#047670] py-24 sm:px-6 md:px-10  flex flex-col lg:flex-row justify-around gap-10 flex-wrap pt-32">
         <div className="bg-[#ffffff] rounded-lg shadow-md p-3 w-full lg:w-[670px] h-auto">
           <img
             src={blog1}
@@ -170,7 +170,7 @@ const Blog = () => {
         </div>
       </section>
       {/* Blog Categories */}
-      <div className="flex flex-col gap-3 mt-5 ">
+      <div className="flex flex-col gap-3 mt-10">
         {[0, 5, 9].map((startIndex, rowIndex) => (
           <div
             key={rowIndex}
