@@ -139,7 +139,7 @@ const App = () => {
             </div>
           }
         />
-        <Route path="/courses" element={<Courses />} /> {/* Fixed route */}
+        <Route path="/courses" element={<Courses />} />  {/* Fixed route */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/digital" element={<MyDigital />} />
@@ -148,9 +148,15 @@ const App = () => {
         <Route path="/hybrid" element={<Hybrid />} />
         <Route path="/video" element={<Video />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blogsDetail" element={<BlogDeatils />} />
+        <Route
+          path="/blogsDetail"
+          element={<BlogDeatils />}
+        />
         <Route path="/instructor" element={<Instructor />} />
-        <Route path="/instructorSignup" element={<InstructorSignup />} />
+        <Route
+          path="/instructorSignup"
+          element={<InstructorSignup />}
+        />
       </Routes>
     </div>
   );

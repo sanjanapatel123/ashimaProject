@@ -1,94 +1,99 @@
+
+
+
+
+
+
 import React from "react";
-import { Container, Card, Form, Button,  } from "react-bootstrap";
 import { FaLinkedin, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-function Signup() {
+const Signup = () => {
   return (
-    <Container
-      className="d-flex justify-content-center align-items-center vh-100"
-      style={{ padding: "30px", backgroundColor: "#F9F9F9" }}
-    >
-      <Card
-        className="shadow-sm border-0"
-        style={{ width: "480px", borderRadius: "8px", padding:"25px" }}
-      >
-        <h3
-          className="text-center mb-4 "
-          style={{ fontSize: "36px", fontFamily: "Impact", color: "#047670", width:"400", lineHeight:"20px", letterSpacing:"0%", }}
-        >
-         SIGN UP AS INSTRUCTOR
+    <div className="flex items-center justify-center min-h-screen bg-[#FAF9F7] px-4 sm:px-6 py-8">
+      <div className="w-full max-w-lg bg-[#FFFFFF] rounded-lg shadow border border-[#1E1E1E]/10 p-5 sm:p-8">
+        <h3 className="text-center text-[36px] sm:text-[28px] md:text-[30px] font-impact text-[#047670] mb-6 font-normal uppercase">
+          sign up as instructor
         </h3>
 
         {/* Social Signup Buttons */}
-        <Button
-          variant="light"
-          className="d-flex align-items-center justify-content-center mb-3 w-100 border"
-        >
-          <FaLinkedin className="me-2" size={18} color="#0A66C2" />
-          SIGN UP WITH LINKEDIN
-        </Button>
 
-        <Button
-          variant="light"
-          className="d-flex align-items-center justify-content-center mb-3 w-100 border"
-        >
-          <FaGoogle className="me-2" size={18} color="#DB4437" />
-          SIGN UP WITH GOOGLE
-        </Button>
+        <div className="space-y-3 mb-6">
+          <button className="flex items-center justify-center w-full border border-[#1E1E1E]/10 text-[#000000] font-medium text-[18px] sm:text-[20px] py-2 rounded hover:bg-gray-100 transition">
+            <FaLinkedin className="mr-2 text-[#047670]" />
+            SIGN UP WITH LINKEDIN
+          </button>
 
-        {/* Divider */}
-        <div className="d-flex align-items-center text-muted mb-3">
-          <hr className="flex-grow-1" />
-          <span className="mx-2" style={{ fontSize: "14px", color: "#777" }}>
-            Or Use Email
-          </span>
-          <hr className="flex-grow-1" />
+          <button className="flex items-center justify-center w-full border border-[#1E1E1E]/10 text-[#000000] font-medium text-[18px] sm:text-[20px] py-2 rounded hover:bg-gray-100 transition">
+            <FaGoogle className="mr-2 text-[#DB4437]" />
+            SIGN UP WITH GOOGLE
+          </button>
         </div>
 
-        {/* Signup Form */}
-        <Form>
-          <Form.Group className="mb-3">
-            <Form.Label style={{ fontSize: "14px", fontWeight: "bold" }}>
-              EMAIL
-            </Form.Label>
-            <Form.Control type="email" />
-          </Form.Group>
+        {/* Divider */}
+        <div className="flex items-center text-[#000000] text-[20px] mb-6">
+          <hr className="flex-grow border-t border-[#1E1E1E]/70" />
+          <span className="mx-3 text-[14px] text-[#1E1E1E]/70">
+            Or Use Email
+          </span>
+          <hr className="flex-grow border-t border-[#1E1E1E]/70" />
+        </div>
 
-          <Form.Group className="mb-4">
-            <Form.Label style={{ fontSize: "14px", fontWeight: "bold" }}>
-              PASSWORD
-            </Form.Label>
-            <Form.Control type="password" />
-          </Form.Group>
-
-          <Button
-            style={{ backgroundColor: "#A8A8A8", border: "none" }}
-            className="w-100 mb-2"
-            disabled
+        {/* Email Input */}
+        <div className="mb-4">
+          <label
+            htmlFor="email"
+            className="block text-[14px] font-semibold mb-1"
           >
-            SIGN UP
-          </Button>
+            EMAIL
+          </label>
+          <input
+            type="email"
+            id="email"
+            className="w-full px-3 py-2 border border-[#1E1E1E]/10 rounded text-[14px] focus:outline-none focus:ring-2 focus:ring-[#047670]"
+          />
+        </div>
 
-          <div
-            className="text-center"
-            style={{ fontSize: "12px", color: "#02756A" }}
+        {/* Password Input */}
+        <div className="mb-4">
+          <label
+            htmlFor="password"
+            className="block text-[14px] font-semibold mb-1"
           >
-            By Continuing, You Agree To Ai Skills Terms And Privacy Policy.
-          </div>
+            PASSWORD
+          </label>
+          <input
+            type="password"
+            id="password"
+            className="w-full px-3 py-2 border border-[#1E1E1E]/10 rounded text-[14px] focus:outline-none focus:ring-2 focus:ring-[#047670]"
+          />
+        </div>
 
-          <div className="text-center mt-4">
-            <span style={{ fontSize: "12px", color: "#333" }}>
-              Already Have An Account?{" "}
-              <Link to="/login"  style={{ fontSize: "12px", color: "#02756A" }}>
-                Log In
-              </Link>
-            </span>
-          </div>
-        </Form>
-      </Card>
-    </Container>
+        {/* Signup Button */}
+        <button
+          className="w-full bg-gray-300 text-[#1E1E1E]/50 py-2 rounded text-[16px] font-medium cursor-not-allowed"
+          disabled
+        >
+          SIGN UP
+        </button>
+
+        {/* Bottom Info */}
+        <p className="text-center mt-4 text-[11px] text-[#02756A] px-2">
+          By Continuing, You Agree To Ai Skills Terms And Privacy Policy.
+        </p>
+
+        <div className="text-center mt-4 text-[12px] text-[#000000]">
+          Already Have An Account?{" "}
+          <Link
+            to="/login"
+            className="text-[#02756A] hover:underline font-semibold"
+          >
+            Log In
+          </Link>
+        </div>
+      </div>
+    </div>
   );
-}
+};
 
 export default Signup;
