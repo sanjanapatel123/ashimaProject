@@ -17,14 +17,12 @@ import { FaPlus, FaMinus } from "react-icons/fa";
 import REviewCarrds from "../Home/ReviewCards";
 
 const MarketProduct = () => {
- const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null);
 
- const toggleFAQ = (index) => {
-   setOpenIndex(openIndex === index ? null : index);
- };
-  
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
-  
   const faqData = [
     {
       question: "WHAT TYPES OF DIGITAL PRODUCTS ARE AVAILABLE ON AISKILLS?",
@@ -72,7 +70,7 @@ const MarketProduct = () => {
   return (
     <>
       <Header />
-      <div className="flex flex-col lg:flex-row bg-[#047670] lg:h-[652px] p-4 lg:p-0 pt-4">
+      <div className=" pt-9 flex flex-col lg:flex-row bg-[#047670] lg:h-[652px] px-4 lg:pt-14">
         {/* Left Image Section */}
         <div className="flex w-full lg:w-1/2 items-center justify-center lg:justify-start p-6 lg:pl-20">
           <img
@@ -267,7 +265,7 @@ const MarketProduct = () => {
 
       <StartLearning />
 
-    <REviewCarrds/>
+      <REviewCarrds />
 
       <Footer />
     </>

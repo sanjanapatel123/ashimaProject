@@ -11,7 +11,6 @@ import Reviewcarrd from "../Home/ReviewCards";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 
-
 function DigitalProductsSection() {
   const productSectionRef = useRef(null);
 
@@ -19,59 +18,57 @@ function DigitalProductsSection() {
     if (productSectionRef.current) {
       productSectionRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
   const [openIndex, setOpenIndex] = useState(null);
-  
-   const toggleFAQ = (index) => {
-     setOpenIndex(openIndex === index ? null : index);
-   };
-    
-  
-    
-    const faqData = [
-      {
-        question: "WHAT TYPES OF DIGITAL PRODUCTS ARE AVAILABLE ON AISKILLS?",
-        answer:
-          "AISKILLS offers a wide range of digital products including eBooks, online courses, software tools, templates, and more.",
-      },
-      {
-        question: "ARE THE DIGITAL PRODUCTS ON AISKILLS BEGINNER-FRIENDLY?",
-        answer:
-          "Yes, most of our digital products are beginner-friendly, with easy-to-follow instructions and tutorials.",
-      },
-      {
-        question: "HOW DO I ACCESS MY PURCHASED DIGITAL PRODUCTS?",
-        answer:
-          "After purchase, you will receive an email with a download link or access instructions. You can also find your products in your account under 'My Purchases'.",
-      },
-      {
-        question:
-          "CAN I GET A REFUND IF I'M NOT SATISFIED WITH A DIGITAL PRODUCT?",
-        answer:
-          "Refunds are available within 30 days of purchase. Please contact customer support for assistance.",
-      },
-      {
-        question: "CAN INSTRUCTORS SELL THEIR OWN DIGITAL PRODUCTS ON AISKILLS?",
-        answer:
-          "Yes, instructors can sell their digital products on AISKILLS. You can sign up as a seller and upload your products for sale.",
-      },
-      {
-        question: "ARE THERE ANY FREE DIGITAL PRODUCTS AVAILABLE?",
-        answer:
-          "Yes, AISKILLS offers several free digital products, including free courses, templates, and resources.",
-      },
-      {
-        question: "CAN I USE AISKILLS DIGITAL PRODUCTS FOR COMMERCIAL PROJECTS?",
-        answer:
-          "Some digital products are licensed for commercial use, but please review the license terms of each product before using them in commercial projects.",
-      },
-      {
-        question: "DO I NEED SPECIAL SOFTWARE TO USE THE DIGITAL PRODUCTS?",
-        answer:
-          "In most cases, you don't need special software, but some products may require specific software like PDF readers or course platforms.",
-      },
-    ];
-  
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const faqData = [
+    {
+      question: "WHAT TYPES OF DIGITAL PRODUCTS ARE AVAILABLE ON AISKILLS?",
+      answer:
+        "AISKILLS offers a wide range of digital products including eBooks, online courses, software tools, templates, and more.",
+    },
+    {
+      question: "ARE THE DIGITAL PRODUCTS ON AISKILLS BEGINNER-FRIENDLY?",
+      answer:
+        "Yes, most of our digital products are beginner-friendly, with easy-to-follow instructions and tutorials.",
+    },
+    {
+      question: "HOW DO I ACCESS MY PURCHASED DIGITAL PRODUCTS?",
+      answer:
+        "After purchase, you will receive an email with a download link or access instructions. You can also find your products in your account under 'My Purchases'.",
+    },
+    {
+      question:
+        "CAN I GET A REFUND IF I'M NOT SATISFIED WITH A DIGITAL PRODUCT?",
+      answer:
+        "Refunds are available within 30 days of purchase. Please contact customer support for assistance.",
+    },
+    {
+      question: "CAN INSTRUCTORS SELL THEIR OWN DIGITAL PRODUCTS ON AISKILLS?",
+      answer:
+        "Yes, instructors can sell their digital products on AISKILLS. You can sign up as a seller and upload your products for sale.",
+    },
+    {
+      question: "ARE THERE ANY FREE DIGITAL PRODUCTS AVAILABLE?",
+      answer:
+        "Yes, AISKILLS offers several free digital products, including free courses, templates, and resources.",
+    },
+    {
+      question: "CAN I USE AISKILLS DIGITAL PRODUCTS FOR COMMERCIAL PROJECTS?",
+      answer:
+        "Some digital products are licensed for commercial use, but please review the license terms of each product before using them in commercial projects.",
+    },
+    {
+      question: "DO I NEED SPECIAL SOFTWARE TO USE THE DIGITAL PRODUCTS?",
+      answer:
+        "In most cases, you don't need special software, but some products may require specific software like PDF readers or course platforms.",
+    },
+  ];
+
   const products = [
     {
       img: digitalproduct1,
@@ -101,13 +98,97 @@ function DigitalProductsSection() {
       price: "Try 129",
       fileCount: "1 File",
     },
+    {
+      img: digitalproduct4,
+      title: "Premium Glow Up Akademi Metodu (%50 Özel İndirim)",
+      author: "Glow Up Academy",
+      price: "Try 129",
+      fileCount: "1 File",
+    },
+    {
+      img: digitalproduct1,
+      title: "Premium Glow Up Akademi Metodu (%50 Özel İndirim)",
+      author: "Glow Up Academy",
+      price: "Try 129",
+      fileCount: "1 File",
+    },
+    {
+      img: digitalproduct2,
+      title: "Premium Glow Up Akademi Metodu (%50 Özel İndirim)",
+      author: "Glow Up Academy",
+      price: "Try 129",
+      fileCount: "1 File",
+    },
+    {
+      img: digitalproduct3,
+      title: "Premium Glow Up Akademi Metodu (%50 Özel İndirim)",
+      author: "Glow Up Academy",
+      price: "Try 129",
+      fileCount: "1 File",
+    },
+    {
+      img: digitalproduct4,
+      title: "Premium Glow Up Akademi Metodu (%50 Özel İndirim)",
+      author: "Glow Up Academy",
+      price: "Try 129",
+      fileCount: "1 File",
+    },
+    {
+      img: digitalproduct4,
+      title: "Premium Glow Up Akademi Metodu (%50 Özel İndirim)",
+      author: "Glow Up Academy",
+      price: "Try 129",
+      fileCount: "1 File",
+    },
+    {
+      img: digitalproduct1,
+      title: "Premium Glow Up Akademi Metodu (%50 Özel İndirim)",
+      author: "Glow Up Academy",
+      price: "Try 129",
+      fileCount: "1 File",
+    },
+    {
+      img: digitalproduct2,
+      title: "Premium Glow Up Akademi Metodu (%50 Özel İndirim)",
+      author: "Glow Up Academy",
+      price: "Try 129",
+      fileCount: "1 File",
+    },
+    {
+      img: digitalproduct3,
+      title: "Premium Glow Up Akademi Metodu (%50 Özel İndirim)",
+      author: "Glow Up Academy",
+      price: "Try 129",
+      fileCount: "1 File",
+    },
+    {
+      img: digitalproduct4,
+      title: "Premium Glow Up Akademi Metodu (%50 Özel İndirim)",
+      author: "Glow Up Academy",
+      price: "Try 129",
+      fileCount: "1 File",
+    },
+    {
+      img: digitalproduct4,
+      title: "Premium Glow Up Akademi Metodu (%50 Özel İndirim)",
+      author: "Glow Up Academy",
+      price: "Try 129",
+      fileCount: "1 File",
+    },
+    {
+      img: digitalproduct4,
+      title: "Premium Glow Up Akademi Metodu (%50 Özel İndirim)",
+      author: "Glow Up Academy",
+      price: "Try 129",
+      fileCount: "1 File",
+    },
   ];
 
   return (
     <>
       {/* HERO SECTION */}
       <div className="pt-20">
-        <div className="h-auto bg-[#0E7369] flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 py-10 gap-6">
+        <div className="h-auto bg-[#0E7369] flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 py-12 gap-6">
           {/* Left Side Content */}
           <div className="text-[#ffffff] w-full lg:w-[475px]">
             <h2 className="text-[32px] md:text-[40px] font-impact uppercase">
@@ -173,7 +254,7 @@ function DigitalProductsSection() {
       </div>
 
       {/* PRODUCT GRID RESPONSIVE */}
-      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 px-4 md:px-10">
+      {/* <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 px-4 md:px-10">
         {products.map((item, index) => (
           <div
             key={index}
@@ -205,146 +286,90 @@ function DigitalProductsSection() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
 
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 px-4 md:px-10">
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 px-4 md:px-10">
         {products.map((item, index) => (
-          <div
+          <Link
+            to="/marketProduct"
             key={index}
-            className="border w-full max-w-[350px] h-[425px] rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition mx-auto"
+            className="block group relative"
           >
-            <img
-              src={item.img}
-              alt="Product Cover"
-              className="object-cover shraddha w-[310px] h-[234px] mx-auto"
-            />
-            <div className="p-3">
-              <p className="text-[14px] text-[#000000] w-[45px] h-[20px]">
-                e Book
-              </p>
+            <div className="border w-full max-w-[350px] h-[425px] rounded-lg shadow-sm overflow-hidden transition-all duration-300 mx-auto bg-white group-hover:bg-[#fffaf1] group-hover:shadow-lg">
+              <div className="overflow-hidden">
+                <img
+                  src={item.img}
+                  alt="Product Cover"
+                  className="object-cover w-[310px] h-[234px] mx-auto transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
 
-              <h3 className="font-impact text-[20px] leading-[25px] w-[272px] h-[50px]">
-                {item.title}
-              </h3>
-              <p className="text-[12px] text-[#1E1E1E] w-[123px] h-[14px] font-jost">
-                By {item.author}
-              </p>
-              <div className="flex items-center gap-2 mt-1">
-                <p className="text-[#047670] font-impact text-[22px] leading-[25px]">
-                  {item.price}
+              <div className="p-3">
+                <p className="text-[15px] text-[#000000] w-[45px] h-[20px]">
+                  eBook
                 </p>
-                <p className="text-[#1e1e1e] text-[14px]">{item.fileCount}</p>
+
+                <h3 className="font-impact text-[20px] leading-[25px] w-[272px] h-[50px] text-black">
+                  {item.title}
+                </h3>
+
+                <p className="text-[13px] text-[#1E1E1E] w-[123px] h-[14px] font-jost">
+                  By {item.author}
+                </p>
+
+                <div className="flex items-center gap-2 mt-1">
+                  <p className="text-[#047670] font-impact text-[22px] leading-[25px]">
+                    {item.price}
+                  </p>
+                  <p className="text-[#1e1e1e] text-[14px]">{item.fileCount}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 px-4 md:px-10">
-        {products.map((item, index) => (
-          <div
-            key={index}
-            className="border w-full max-w-[350px] h-[425px] rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition mx-auto"
-          >
-            <img
-              src={item.img}
-              alt="Product Cover"
-              className="object-cover shraddha w-[300px] h-[234px] mx-auto"
-            />
-            <div className="p-3">
-              <p className="text-[14px] text-[#000000] w-[45px] h-[20px]">
-                e Book
-              </p>
-              <h3 className="font-impact text-[20px] leading-[25px] w-[272px] h-[50px]">
-                {item.title}
-              </h3>
-              <p className="text-[12px] text-[#1E1E1E] w-[123px] h-[14px] font-jost">
-                By {item.author}
-              </p>
-              <div className="flex items-center gap-2 mt-1">
-                <p className="text-[#047670] font-impact text-[22px] leading-[25px]">
-                  {item.price}
-                </p>
-                <p className="text-[#1e1e1e] text-[14px]">{item.fileCount}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 px-4 md:px-10">
-        {products.map((item, index) => (
-          <div
-            key={index}
-            className="border w-full max-w-[350px] h-[425px] rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition mx-auto"
-          >
-            <img
-              src={item.img}
-              alt="Product Cover"
-              className="object-cover shraddha w-[300px] h-[234px] mx-auto"
-            />
-            <div className="p-3">
-              <p className="text-[14px] text-[#000000] w-[45px] h-[20px]">
-                e Book
-              </p>
-              <h3 className="font-impact text-[20px] leading-[25px] w-[272px] h-[50px]">
-                {item.title}
-              </h3>
-              <p className="text-[12px] text-[#1E1E1E] w-[123px] h-[14px] font-jost">
-                By {item.author}
-              </p>
-              <div className="flex items-center gap-2 mt-1">
-                <p className="text-[#047670] font-impact text-[22px] leading-[25px]">
-                  {item.price}
-                </p>
-                <p className="text-[#1e1e1e] text-[14px]">{item.fileCount}</p>
-              </div>
-            </div>
-          </div>
+          </Link>
         ))}
       </div>
 
       {/* FAQ AND REVIEWS */}
-     <div className="bg-[#000000] py-20 px-6 md:px-12 mt-5">
-            <div className="mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
-              <div className="text-[#ffffff] flex flex-col gap-4 text-start pr-20 sm:pr-20 lg:pr-40">
-                <h2 className="font-impact text-[55px] md:text-5xl uppercase">
-                  Frequently Asked <br /> Questions
-                </h2>
-                <p className="text-[16px] text-[#ffffff] font-roboto leading-snug">
-                  ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS FROM INSTANT
-                  REAL-WORLD PROJECTS TO PROMPTS.
-                </p>
-              </div>
-    
-              {/* Right Section - FAQ List */}
-              <div className="w-full">
-                {faqData.map((faq, index) => (
-                  <div
-                    key={index}
-                    className="border-b border-[#ffffff] py-4 hover:cursor-pointer font-roboto transition-all duration-300"
-                    onClick={() => toggleFAQ(index)}
-                  >
-                    <div className="flex justify-between items-center text-[#ffffff] font-roboto text-[24px]">
-                      <span>{faq.question}</span>
-                      {openIndex === index ? (
-                        <FaMinus className="text-[#00E0C6]" />
-                      ) : (
-                        <FaPlus className="text-gray-400" />
-                      )}
-                    </div>
-                    {openIndex === index && (
-                      <p className="text-gray-400 text-md mt-3 transition-opacity duration-300">
-                        {faq.answer}
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
+      <div className="bg-[#000000] py-20 px-6 md:px-12 mt-5">
+        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
+          <div className="text-[#ffffff] flex flex-col gap-4 text-start pr-20 sm:pr-20 lg:pr-40">
+            <h2 className="font-impact text-[55px] md:text-5xl uppercase">
+              Frequently Asked <br /> Questions
+            </h2>
+            <p className="text-[16px] text-[#ffffff] font-roboto leading-snug">
+              ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS FROM INSTANT
+              REAL-WORLD PROJECTS TO PROMPTS.
+            </p>
           </div>
+
+          {/* Right Section - FAQ List */}
+          <div className="w-full">
+            {faqData.map((faq, index) => (
+              <div
+                key={index}
+                className="border-b border-[#ffffff] py-4 hover:cursor-pointer font-roboto transition-all duration-300"
+                onClick={() => toggleFAQ(index)}
+              >
+                <div className="flex justify-between items-center text-[#ffffff] font-roboto text-[24px]">
+                  <span>{faq.question}</span>
+                  {openIndex === index ? (
+                    <FaMinus className="text-[#00E0C6]" />
+                  ) : (
+                    <FaPlus className="text-gray-400" />
+                  )}
+                </div>
+                {openIndex === index && (
+                  <p className="text-gray-400 text-md mt-3 transition-opacity duration-300">
+                    {faq.answer}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
       <StartLearning />
-      <Reviewcarrd/>
+      <Reviewcarrd />
       <Footer />
     </>
   );
