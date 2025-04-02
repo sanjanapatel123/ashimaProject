@@ -10,7 +10,6 @@ import marketproduct8 from "../../assets/marketproduct8.png";
 import digitalproduct1 from "../../assets/digitalproduct1.png";
 import StartLearning from "../Home/StartLearning";
 import reviewimage from "../../assets/reviewimage.jpg";
-import Nav_DigitalProduct from "./Nav_DigitalProduct";
 import Header from "../Courses/Header";
 import { useState } from "react";
 import Footer from "../Footer";
@@ -81,14 +80,14 @@ const MarketProduct = () => {
         </div>
 
         {/* Right Content Section */}
-        <div className="relative w-full lg:absolute lg:w-[460px] bg-[#ffffff] rounded-md p-6 mt-6 lg:mt-40 lg:left-[50%] xl:left-[931px]">
+        <div className="relative w-full lg:absolute lg:w-[460px] bg-[#ffffff] rounded-md p-6 lg:mt-20 lg:left-[50%] xl:left-[931px] border-2 border-[#047670]">
           {/* eBook Tag */}
           <div className="text-[13px] font-roboto text-[#000000] mt-4">
             e Book
           </div>
 
           {/* Title */}
-          <div className="w-full text-2xl lg:text-[30px] tracking-[0.02em] capitalize font-impact mt-2">
+          <div className="w-full text-[30px] lg:text-[30px] tracking-[0.02em] capitalize font-impact mt-2">
             Premium Glow Up Akademi <br />
             Metodu (% 50 Ozel Indirim)
             {/* Author */}
