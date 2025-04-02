@@ -1,18 +1,77 @@
-import React from "react";
+import React, { useRef } from "react";
 import digitalproductsection from "../../assets/digitalproductsection.png";
 import digitalproduct2 from "../../assets/digitalproduct2.png";
 import digitalproduct3 from "../../assets/digitalproduct3.png";
 import digitalproduct1 from "../../assets/digitalproduct1.png";
 import digitalproduct4 from "../../assets/digitalproduct4.png";
 import { Link } from "react-router-dom";
-import reviewimage from "../../assets/reviewimage.jpg";
-import FAQSection from "../../components/Home/FAQSection"
-import Nav_DigitalProduct from "./Nav_DigitalProduct";
 import StartLearning from "../Home/StartLearning";
-import Header from "../Courses/Header";
 import Footer from "../Footer";
+import Reviewcarrd from "../Home/ReviewCards";
+import { useState } from "react";
+import { FaPlus, FaMinus } from "react-icons/fa";
+
 
 function DigitalProductsSection() {
+  const productSectionRef = useRef(null);
+
+  const scrollToProducts = () => {
+    if (productSectionRef.current) {
+      productSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+  const [openIndex, setOpenIndex] = useState(null);
+  
+   const toggleFAQ = (index) => {
+     setOpenIndex(openIndex === index ? null : index);
+   };
+    
+  
+    
+    const faqData = [
+      {
+        question: "WHAT TYPES OF DIGITAL PRODUCTS ARE AVAILABLE ON AISKILLS?",
+        answer:
+          "AISKILLS offers a wide range of digital products including eBooks, online courses, software tools, templates, and more.",
+      },
+      {
+        question: "ARE THE DIGITAL PRODUCTS ON AISKILLS BEGINNER-FRIENDLY?",
+        answer:
+          "Yes, most of our digital products are beginner-friendly, with easy-to-follow instructions and tutorials.",
+      },
+      {
+        question: "HOW DO I ACCESS MY PURCHASED DIGITAL PRODUCTS?",
+        answer:
+          "After purchase, you will receive an email with a download link or access instructions. You can also find your products in your account under 'My Purchases'.",
+      },
+      {
+        question:
+          "CAN I GET A REFUND IF I'M NOT SATISFIED WITH A DIGITAL PRODUCT?",
+        answer:
+          "Refunds are available within 30 days of purchase. Please contact customer support for assistance.",
+      },
+      {
+        question: "CAN INSTRUCTORS SELL THEIR OWN DIGITAL PRODUCTS ON AISKILLS?",
+        answer:
+          "Yes, instructors can sell their digital products on AISKILLS. You can sign up as a seller and upload your products for sale.",
+      },
+      {
+        question: "ARE THERE ANY FREE DIGITAL PRODUCTS AVAILABLE?",
+        answer:
+          "Yes, AISKILLS offers several free digital products, including free courses, templates, and resources.",
+      },
+      {
+        question: "CAN I USE AISKILLS DIGITAL PRODUCTS FOR COMMERCIAL PROJECTS?",
+        answer:
+          "Some digital products are licensed for commercial use, but please review the license terms of each product before using them in commercial projects.",
+      },
+      {
+        question: "DO I NEED SPECIAL SOFTWARE TO USE THE DIGITAL PRODUCTS?",
+        answer:
+          "In most cases, you don't need special software, but some products may require specific software like PDF readers or course platforms.",
+      },
+    ];
+  
   const products = [
     {
       img: digitalproduct1,
@@ -60,12 +119,12 @@ function DigitalProductsSection() {
             </p>
 
             <div className="flex justify-center lg:justify-start">
-              <Link
-                to="/marketProduct"
-                className="inline-block mt-4 h-[50px] w-[162px] bg-[#FF757A] text-[#ffffff] px-6 py-2 rounded-[12px] shadow-lg font-roboto text-[18px] text-center"
+              <button
+                onClick={scrollToProducts}
+                className="inline-block mt-4 h-[50px] w-[162px] bg-[#FF757A] text-white px-6 py-2 rounded-[12px] shadow-lg font-roboto text-[18px] text-center"
               >
                 Shop Now
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -81,47 +140,118 @@ function DigitalProductsSection() {
       </div>
 
       {/* PRODUCT COUNT */}
-      <p className="mt-5  md:ml-[40px] font-jost text-[18px] leading-[22px] text-[#000000]">
-        1070 products
-      </p>
+      {/* Top Text Row */}
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between px-4 md:px-10 pt-8 pb-4 gap-2">
+        {/* Left Side Text */}
+        <div>
+          <p className="text-[14px] text-[#000000] font-medium mb-1">
+            1070 PRODUCTS
+          </p>
+          <h2
+            ref={productSectionRef}
+            className="text-[28px] md:text-[32px] font-impact uppercase text-[#000000] mt-4"
+          >
+            All Digital Products
+          </h2>
+        </div>
 
-      {/* FILTER SECTION */}
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between  md:px-6 py-4 gap-2">
-        {/* Left Title */}
-        <h2 className="text-[28px] ml-5 md:text-[40px] font-impact uppercase text-[#000000]">
-          All Digital Products
-        </h2>
-
-        {/* Right Filters */}
-        <div className="flex flex-wrap font-inter">
-          <select className="border rounded px-4 py-2 text-[14px]">
+        {/* Right Side Filters */}
+        <div className="flex flex-wrap items-center gap-2 font-inter mt-4">
+          <select className="border border-gray-300 rounded-full px-4 py-2 text-[14px] bg-white focus:outline-none">
             <option>Price Range</option>
           </select>
-          <select className="border rounded px-4 py-2 text-[14px]">
+          <select className="border border-gray-300 rounded-full px-4 py-2 text-[14px] bg-white focus:outline-none">
             <option>File Type</option>
           </select>
-          <select className="border rounded px-4 py-2 text-[14px]">
+          <select className="border border-gray-300 rounded-full px-4 py-2 text-[14px] bg-white focus:outline-none">
             <option>Sort By : Most Popular</option>
           </select>
-          <select className="border rounded px-4 py-2 text-[14px]">
+          <select className="border border-gray-300 rounded-full px-4 py-2 text-[14px] bg-white focus:outline-none">
             <option>Date Added</option>
           </select>
         </div>
       </div>
 
       {/* PRODUCT GRID RESPONSIVE */}
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 px-4 md:px-10">
+        {products.map((item, index) => (
+          <div
+            key={index}
+            className="border w-full max-w-[350px] h-[425px] rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition mx-auto"
+          >
+            <img
+              src={item.img}
+              alt="Product Cover"
+              className="object-cover shraddha w-[310px] h-[234px] mx-auto"
+            />
+            <div className="p-3">
+              <Link to="/marketProduct">
+                <p className="text-[14px] text-[#000000] w-[45px] h-[20px]">
+                  e Book
+                </p>
+              </Link>
+              <h3 className="font-impact text-[20px] leading-[25px] w-[272px] h-[50px]">
+                {item.title}
+              </h3>
+              <p className="text-[12px] text-[#1E1E1E] w-[123px] h-[14px] font-jost">
+                By {item.author}
+              </p>
+              <div className="flex items-center gap-2 mt-1">
+                <p className="text-[#047670] font-impact text-[22px] leading-[25px]">
+                  {item.price}
+                </p>
+                <p className="text-[#1e1e1e] text-[14px]">{item.fileCount}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 px-4 md:px-10">
         {products.map((item, index) => (
           <div
             key={index}
-            className="border w-full max-w-[335px] h-[425px] rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition mx-auto"
+            className="border w-full max-w-[350px] h-[425px] rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition mx-auto"
+          >
+            <img
+              src={item.img}
+              alt="Product Cover"
+              className="object-cover shraddha w-[310px] h-[234px] mx-auto"
+            />
+            <div className="p-3">
+              <p className="text-[14px] text-[#000000] w-[45px] h-[20px]">
+                e Book
+              </p>
+
+              <h3 className="font-impact text-[20px] leading-[25px] w-[272px] h-[50px]">
+                {item.title}
+              </h3>
+              <p className="text-[12px] text-[#1E1E1E] w-[123px] h-[14px] font-jost">
+                By {item.author}
+              </p>
+              <div className="flex items-center gap-2 mt-1">
+                <p className="text-[#047670] font-impact text-[22px] leading-[25px]">
+                  {item.price}
+                </p>
+                <p className="text-[#1e1e1e] text-[14px]">{item.fileCount}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 px-4 md:px-10">
+        {products.map((item, index) => (
+          <div
+            key={index}
+            className="border w-full max-w-[350px] h-[425px] rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition mx-auto"
           >
             <img
               src={item.img}
               alt="Product Cover"
               className="object-cover shraddha w-[300px] h-[234px] mx-auto"
             />
-            <div className="p-4">
+            <div className="p-3">
               <p className="text-[14px] text-[#000000] w-[45px] h-[20px]">
                 e Book
               </p>
@@ -146,78 +276,14 @@ function DigitalProductsSection() {
         {products.map((item, index) => (
           <div
             key={index}
-            className="border w-full max-w-[335px] h-[425px] rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition mx-auto"
+            className="border w-full max-w-[350px] h-[425px] rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition mx-auto"
           >
             <img
               src={item.img}
               alt="Product Cover"
               className="object-cover shraddha w-[300px] h-[234px] mx-auto"
             />
-            <div className="p-4">
-              <p className="text-[14px] text-[#000000] w-[45px] h-[20px]">
-                e Book
-              </p>
-              <h3 className="font-impact text-[20px] leading-[25px] w-[272px] h-[50px]">
-                {item.title}
-              </h3>
-              <p className="text-[12px] text-[#1E1E1E] w-[123px] h-[14px] font-jost">
-                By {item.author}
-              </p>
-              <div className="flex items-center gap-2 mt-1">
-                <p className="text-[#047670] font-impact text-[22px] leading-[25px]">
-                  {item.price}
-                </p>
-                <p className="text-[#1e1e1e] text-[14px]">{item.fileCount}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 px-4 md:px-10">
-        {products.map((item, index) => (
-          <div
-            key={index}
-            className="border w-full max-w-[335px] h-[425px] rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition mx-auto"
-          >
-            <img
-              src={item.img}
-              alt="Product Cover"
-              className="object-cover shraddha w-[300px] h-[234px] mx-auto"
-            />
-            <div className="p-4">
-              <p className="text-[14px] text-[#000000] w-[45px] h-[20px]">
-                e Book
-              </p>
-              <h3 className="font-impact text-[20px] leading-[25px] w-[272px] h-[50px]">
-                {item.title}
-              </h3>
-              <p className="text-[12px] text-[#1E1E1E] w-[123px] h-[14px] font-jost">
-                By {item.author}
-              </p>
-              <div className="flex items-center gap-2 mt-1">
-                <p className="text-[#047670] font-impact text-[22px] leading-[25px]">
-                  {item.price}
-                </p>
-                <p className="text-[#1e1e1e] text-[14px]">{item.fileCount}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 px-4 md:px-10">
-        {products.map((item, index) => (
-          <div
-            key={index}
-            className="border w-full max-w-[335px] h-[425px] rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition mx-auto"
-          >
-            <img
-              src={item.img}
-              alt="Product Cover"
-              className="object-cover shraddha w-[300px] h-[234px] mx-auto"
-            />
-            <div className="p-4">
+            <div className="p-3">
               <p className="text-[14px] text-[#000000] w-[45px] h-[20px]">
                 e Book
               </p>
@@ -239,85 +305,46 @@ function DigitalProductsSection() {
       </div>
 
       {/* FAQ AND REVIEWS */}
-      <FAQSection />
-      <StartLearning />
-      <div className="w-full px-4 sm:px-6 lg:px-8 py-8">
-        {/* Heading */}
-        <h2 className="text-[36px] font-roboto mb-6 ml-0 sm:ml-36">
-          FEATURED REVIEWS:
-        </h2>
-
-        {/* Scrollable Card Section */}
-        <div className="w-full overflow-x-auto mt-10 ml-0 sm:ml-36">
-          <div className="min-w-[1024px] flex gap-10 px-6 py-2 rounded-[8px]">
-            {/* Card 1 */}
-            <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-              <div className="flex  mb-4">
-                <img
-                  src={reviewimage}
-                  alt="Neha Sharma"
-                  className="w-[91px] h-[91px] rounded-full "
-                />
-                <h3 className="font-['Roboto_Condensed'] font-bold text-[25px] leading-[24px] tracking-[0.02em] uppercase">
-                  NEHA SHARMA
-                </h3>
+     <div className="bg-[#000000] py-20 px-6 md:px-12 mt-5">
+            <div className="mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
+              <div className="text-[#ffffff] flex flex-col gap-4 text-start pr-20 sm:pr-20 lg:pr-40">
+                <h2 className="font-impact text-[55px] md:text-5xl uppercase">
+                  Frequently Asked <br /> Questions
+                </h2>
+                <p className="text-[16px] text-[#ffffff] font-roboto leading-snug">
+                  ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS FROM INSTANT
+                  REAL-WORLD PROJECTS TO PROMPTS.
+                </p>
               </div>
-              <p className="font-['Roboto_Condensed'] font-medium text-[16px] leading-[22px] tracking-[0.02em] uppercase mb-4">
-                LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO
-                EUSMOD TEMPOR
-              </p>
-              <div className="text-[14px] font-['Roboto_Condensed'] flex items-center gap-2">
-                RATING 4.8
-                <span className="text-[#FBBC09] flex">★ ★ ★ ★ ☆</span>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-              <div className="flex items-center  mb-4">
-                <img
-                  src={reviewimage}
-                  alt="Neha Sharma"
-                  className="w-[91px] h-[91px] rounded-full "
-                />
-                <h3 className="font-['Roboto_Condensed'] font-bold text-[25px] leading-[24px] tracking-[0.02em] uppercase">
-                  NEHA SHARMA
-                </h3>
-              </div>
-              <p className="font-['Roboto_Condensed'] font-medium text-[16px] leading-[22px] tracking-[0.02em] uppercase mb-4">
-                LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO
-                EUSMOD TEMPOR
-              </p>
-              <div className="text-[14px] font-['Roboto_Condensed'] flex items-center gap-2">
-                RATING 4.8
-                <span className="text-[#FBBC09] flex">★ ★ ★ ★ ☆</span>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-              <div className="flex items-center  mb-4">
-                <img
-                  src={reviewimage}
-                  alt="Neha Sharma"
-                  className="w-[91px] h-[91px] rounded-full "
-                />
-                <h3 className="font-['Roboto_Condensed'] font-bold text-[25px] leading-[24px] tracking-[0.02em] uppercase">
-                  NEHA SHARMA
-                </h3>
-              </div>
-              <p className="font-['Roboto_Condensed'] font-medium text-[16px] leading-[22px] tracking-[0.02em] uppercase mb-4">
-                LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO
-                EUSMOD TEMPOR
-              </p>
-              <div className="text-[14px] font-['Roboto_Condensed'] flex items-center gap-2">
-                RATING 4.8
-                <span className="text-[#FBBC09] flex">★ ★ ★ ★ ☆</span>
+    
+              {/* Right Section - FAQ List */}
+              <div className="w-full">
+                {faqData.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="border-b border-[#ffffff] py-4 hover:cursor-pointer font-roboto transition-all duration-300"
+                    onClick={() => toggleFAQ(index)}
+                  >
+                    <div className="flex justify-between items-center text-[#ffffff] font-roboto text-[24px]">
+                      <span>{faq.question}</span>
+                      {openIndex === index ? (
+                        <FaMinus className="text-[#00E0C6]" />
+                      ) : (
+                        <FaPlus className="text-gray-400" />
+                      )}
+                    </div>
+                    {openIndex === index && (
+                      <p className="text-gray-400 text-md mt-3 transition-opacity duration-300">
+                        {faq.answer}
+                      </p>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-        </div>
-      </div>
+      <StartLearning />
+      <Reviewcarrd/>
       <Footer />
     </>
   );

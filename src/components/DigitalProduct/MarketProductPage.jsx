@@ -13,15 +13,18 @@ import reviewimage from "../../assets/reviewimage.jpg";
 import Header from "../Courses/Header";
 import { useState } from "react";
 import Footer from "../Footer";
+import { FaPlus, FaMinus } from "react-icons/fa";
+import REviewCarrds from "../Home/ReviewCards";
 
 const MarketProduct = () => {
-  const [openIndex, setOpenIndex] = useState(null); // Track the open question index
+ const [openIndex, setOpenIndex] = useState(null);
 
-  const handleToggle = (index) => {
-    // Toggle the clicked question's visibility
-    setOpenIndex(openIndex === index ? null : index);
-  };
+ const toggleFAQ = (index) => {
+   setOpenIndex(openIndex === index ? null : index);
+ };
+  
 
+  
   const faqData = [
     {
       question: "WHAT TYPES OF DIGITAL PRODUCTS ARE AVAILABLE ON AISKILLS?",
@@ -82,6 +85,7 @@ const MarketProduct = () => {
         {/* Right Content Section */}
         <div className="relative w-full lg:absolute lg:w-[460px] bg-[#ffffff] rounded-md p-6 lg:mt-20 lg:left-[50%] xl:left-[931px] border-2 border-[#047670]">
           {/* eBook Tag */}
+
           <div className="text-[13px] font-roboto text-[#000000] mt-4">
             e Book
           </div>
@@ -106,9 +110,9 @@ const MarketProduct = () => {
 
           {/* Buy Now Button */}
           <Link to="/blog">
-          <button className="w-full bg-[#047670] hover:bg-[#005b4f] text-white border border-[#047670] rounded-[12px] px-px py-[10px] flex items-center justify-center gap-[10px] text-lg lg:text-[22px] mt-3">
-            Buy Now
-          </button>
+            <button className="w-full bg-[#047670] hover:bg-[#005b4f] text-white border border-[#047670] rounded-[12px] px-px py-[10px] flex items-center justify-center gap-[10px] text-lg lg:text-[22px] mt-3">
+              Buy Now
+            </button>
           </Link>
 
           {/* Unlock and Access Button */}
@@ -136,13 +140,13 @@ const MarketProduct = () => {
       </div>
 
       <div className="w-full px-4 sm:px-8 mt-10">
-        <div className="lg:w-[850px] bg-[#ffffff] rounded-md text-[#1E1E1E] mt-8 lg:mt-20 lg:ml-20">
+        <div className="lg:w-[900px] bg-[#ffffff] rounded-md text-[#1E1E1E] mt-8 lg:mt-20 lg:ml-20">
           {/* Header Section */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4">
             <h2 className="text-[#047670] text-[26px] font-impact leading-[20px]">
               Related Images
             </h2>
-            <div className="flex items-center gap-2 text-[#1E1E1ECC] font-jost text-[18px] mt-2 sm:mt-0">
+            <div className="flex items-center gap-2 text-[#1E1E1ECC] font-jost text-[20px] mt-2 sm:mt-0 ">
               Download
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -162,26 +166,26 @@ const MarketProduct = () => {
           </div>
 
           {/* Images Row with fixed min-width */}
-          <div className="flex gap-4 min-w-[850px] mt-2">
+          <div className="flex gap-4 min-w-[850px] mt-5">
             <img
               src={marketproduct3}
               alt="img1"
-              className="w-[190px] h-[120px] object-cover rounded-md"
+              className="w-[210px] h-[140px] object-cover rounded-md"
             />
             <img
               src={marketproduct4}
               alt="img2"
-              className="w-[190px] h-[120px] object-cover rounded-md"
+              className="w-[210px] h-[140px] object-cover rounded-md"
             />
             <img
               src={marketproduct5}
               alt="img3"
-              className="w-[190px] h-[120px] object-cover rounded-md"
+              className="w-[210px] h-[140px] object-cover rounded-md"
             />
             <img
               src={marketproduct6}
               alt="img4"
-              className="w-[190px] h-[120px] object-cover rounded-md"
+              className="w-[210px] h-[140px] object-cover rounded-md"
             />
           </div>
         </div>
@@ -222,112 +226,50 @@ const MarketProduct = () => {
         </p>
       </div>
 
-      {/* FAQ Section */}
-      <div className="w-full lg:w-[870px] bg-black text-[#ffffff] px-6 py-8 lg:py-16 mt-8 lg:mt-20 ">
-        <div className="w-full lg:w-[738px] h-auto bg-black text-white p-4 lg:p-6 lg:ml-10">
-          <div className="flex flex-col gap-6 lg:gap-[36px]">
-            {faqData.map((item, index) => (
+      <div className="bg-[#000000] py-20 px-6 md:px-12 mt-5">
+        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
+          <div className="text-[#ffffff] flex flex-col gap-4 text-start pr-20 sm:pr-20 lg:pr-40">
+            <h2 className="font-impact text-[55px] md:text-5xl uppercase">
+              Frequently Asked <br /> Questions
+            </h2>
+            <p className="text-[16px] text-[#ffffff] font-roboto leading-snug">
+              ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS FROM INSTANT
+              REAL-WORLD PROJECTS TO PROMPTS.
+            </p>
+          </div>
+
+          {/* Right Section - FAQ List */}
+          <div className="w-full">
+            {faqData.map((faq, index) => (
               <div
                 key={index}
-                className="border-b border-white pb-2 flex justify-between items-center text-sm lg:text-[16px] font-roboto cursor-pointer"
-                onClick={() => handleToggle(index)} // Toggle question on click
+                className="border-b border-[#ffffff] py-4 hover:cursor-pointer font-roboto transition-all duration-300"
+                onClick={() => toggleFAQ(index)}
               >
-                {item.question}
-                <span className="text-lg lg:text-[24px] font-roboto">
-                  {openIndex === index ? "-" : "+"}
-                </span>
+                <div className="flex justify-between items-center text-[#ffffff] font-roboto text-[24px]">
+                  <span>{faq.question}</span>
+                  {openIndex === index ? (
+                    <FaMinus className="text-[#00E0C6]" />
+                  ) : (
+                    <FaPlus className="text-gray-400" />
+                  )}
+                </div>
+                {openIndex === index && (
+                  <p className="text-gray-400 text-md mt-3 transition-opacity duration-300">
+                    {faq.answer}
+                  </p>
+                )}
               </div>
             ))}
-
-            {/* Display the answer of the clicked question */}
-            {openIndex !== null && (
-              <div className="text-sm lg:text-[16px] font-roboto text-white pt-2">
-                <p>{faqData[openIndex].answer}</p>
-              </div>
-            )}
           </div>
         </div>
       </div>
 
       <StartLearning />
-           <div className="w-full px-4 sm:px-6 lg:px-8 py-8">
-              {/* Heading */}
-              <h2 className="text-[36px] font-roboto mb-6 ml-0 sm:ml-36">
-                FEATURED REVIEWS:
-              </h2>
-      
-              {/* Scrollable Card Section */}
-              <div className="w-full overflow-x-auto mt-10 ml-0 sm:ml-36">
-                <div className="min-w-[1024px] flex gap-10 px-6 py-2 rounded-[8px]">
-                  {/* Card 1 */}
-                  <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-                    <div className="flex  mb-4">
-                      <img
-                        src={reviewimage}
-                        alt="Neha Sharma"
-                        className="w-[91px] h-[91px] rounded-full "
-                      />
-                      <h3 className="font-['Roboto_Condensed'] font-bold text-[25px] leading-[24px] tracking-[0.02em] uppercase">
-                        NEHA SHARMA
-                      </h3>
-                    </div>
-                    <p className="font-['Roboto_Condensed'] font-medium text-[16px] leading-[22px] tracking-[0.02em] uppercase mb-4">
-                      LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO
-                      EUSMOD TEMPOR
-                    </p>
-                    <div className="text-[14px] font-['Roboto_Condensed'] flex items-center gap-2">
-                      RATING 4.8
-                      <span className="text-[#FBBC09] flex">★ ★ ★ ★ ☆</span>
-                    </div>
-                  </div>
-      
-                  {/* Card 2 */}
-                  <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-                    <div className="flex items-center  mb-4">
-                      <img
-                        src={reviewimage}
-                        alt="Neha Sharma"
-                        className="w-[91px] h-[91px] rounded-full "
-                      />
-                      <h3 className="font-['Roboto_Condensed'] font-bold text-[25px] leading-[24px] tracking-[0.02em] uppercase">
-                        NEHA SHARMA
-                      </h3>
-                    </div>
-                    <p className="font-['Roboto_Condensed'] font-medium text-[16px] leading-[22px] tracking-[0.02em] uppercase mb-4">
-                      LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO
-                      EUSMOD TEMPOR
-                    </p>
-                    <div className="text-[14px] font-['Roboto_Condensed'] flex items-center gap-2">
-                      RATING 4.8
-                      <span className="text-[#FBBC09] flex">★ ★ ★ ★ ☆</span>
-                    </div>
-                  </div>
-      
-                  {/* Card 3 */}
-                  <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-                    <div className="flex items-center  mb-4">
-                      <img
-                        src={reviewimage}
-                        alt="Neha Sharma"
-                        className="w-[91px] h-[91px] rounded-full "
-                      />
-                      <h3 className="font-['Roboto_Condensed'] font-bold text-[25px] leading-[24px] tracking-[0.02em] uppercase">
-                        NEHA SHARMA
-                      </h3>
-                    </div>
-                    <p className="font-['Roboto_Condensed'] font-medium text-[16px] leading-[22px] tracking-[0.02em] uppercase mb-4">
-                      LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO
-                      EUSMOD TEMPOR
-                    </p>
-                    <div className="text-[14px] font-['Roboto_Condensed'] flex items-center gap-2">
-                      RATING 4.8
-                      <span className="text-[#FBBC09] flex">★ ★ ★ ★ ☆</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <Footer/>
+
+    <REviewCarrds/>
+
+      <Footer />
     </>
   );
 };
