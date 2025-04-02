@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import digitalproductsection from "../../assets/digitalproductsection.png";
 import digitalproduct2 from "../../assets/digitalproduct2.png";
 import digitalproduct3 from "../../assets/digitalproduct3.png";
@@ -6,13 +6,20 @@ import digitalproduct1 from "../../assets/digitalproduct1.png";
 import digitalproduct4 from "../../assets/digitalproduct4.png";
 import { Link } from "react-router-dom";
 import reviewimage from "../../assets/reviewimage.jpg";
-import FAQSection from "../../components/Home/FAQSection"
+import FAQSection from "../../components/Home/FAQSection";
 import Nav_DigitalProduct from "./Nav_DigitalProduct";
 import StartLearning from "../Home/StartLearning";
 import Header from "../Courses/Header";
 import Footer from "../Footer";
 
 function DigitalProductsSection() {
+  const productSectionRef = useRef(null);
+
+  const scrollToProducts = () => {
+    if (productSectionRef.current) {
+      productSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const products = [
     {
       img: digitalproduct1,
@@ -60,12 +67,12 @@ function DigitalProductsSection() {
             </p>
 
             <div className="flex justify-center lg:justify-start">
-              <Link
-                to="/marketProduct"
-                className="inline-block mt-4 h-[50px] w-[162px] bg-[#FF757A] text-[#ffffff] px-6 py-2 rounded-[12px] shadow-lg font-roboto text-[18px] text-center"
+              <button
+                onClick={scrollToProducts}
+                className="inline-block mt-4 h-[50px] w-[162px] bg-[#FF757A] text-white px-6 py-2 rounded-[12px] shadow-lg font-roboto text-[18px] text-center"
               >
                 Shop Now
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -81,33 +88,36 @@ function DigitalProductsSection() {
       </div>
 
       {/* PRODUCT COUNT */}
-      <p className="mt-5  md:ml-[40px] font-jost text-[18px] leading-[22px] text-[#000000]">
-        1070 products
-      </p>
+    {/* Top Text Row */}
+<div className="flex flex-col md:flex-row items-start md:items-center justify-between px-4 md:px-10 pt-8 pb-4 gap-2">
+  {/* Left Side Text */}
+  <div>
+    <p className="text-[14px] text-black font-medium mb-1">1070 PRODUCTS</p>
+    <h2
+      ref={productSectionRef}
+      className="text-[28px] md:text-[32px] font-impact uppercase text-[#000000]"
+    >
+      All Digital Products
+    </h2>
+  </div>
 
-      {/* FILTER SECTION */}
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between  md:px-6 py-4 gap-2">
-        {/* Left Title */}
-        <h2 className="text-[28px] ml-5 md:text-[40px] font-impact uppercase text-[#000000]">
-          All Digital Products
-        </h2>
+  {/* Right Side Filters */}
+  <div className="flex flex-wrap items-center gap-2 font-inter">
+    <select className="border border-gray-300 rounded-full px-4 py-2 text-[14px] bg-white focus:outline-none">
+      <option>Price Range</option>
+    </select>
+    <select className="border border-gray-300 rounded-full px-4 py-2 text-[14px] bg-white focus:outline-none">
+      <option>File Type</option>
+    </select>
+    <select className="border border-gray-300 rounded-full px-4 py-2 text-[14px] bg-white focus:outline-none">
+      <option>Sort By : Most Popular</option>
+    </select>
+    <select className="border border-gray-300 rounded-full px-4 py-2 text-[14px] bg-white focus:outline-none">
+      <option>Date Added</option>
+    </select>
+  </div>
+</div>
 
-        {/* Right Filters */}
-        <div className="flex flex-wrap font-inter">
-          <select className="border rounded px-4 py-2 text-[14px]">
-            <option>Price Range</option>
-          </select>
-          <select className="border rounded px-4 py-2 text-[14px]">
-            <option>File Type</option>
-          </select>
-          <select className="border rounded px-4 py-2 text-[14px]">
-            <option>Sort By : Most Popular</option>
-          </select>
-          <select className="border rounded px-4 py-2 text-[14px]">
-            <option>Date Added</option>
-          </select>
-        </div>
-      </div>
 
       {/* PRODUCT GRID RESPONSIVE */}
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 px-4 md:px-10">
