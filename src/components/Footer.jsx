@@ -184,7 +184,7 @@ const Footer = () => {
               <h3 className="font-Roboto Condensed text-[#ffffff] mb-4">
                 Legal
               </h3>
-              <ul className="space-y-2 text-gray-400 text-sm leading-relaxed">
+              <ul className="space-y-2 text-[#DBDAD8] text-sm leading-relaxed">
                 <li>Cookies Policy</li>
                 <li>Privacy And Terms</li>
               </ul>

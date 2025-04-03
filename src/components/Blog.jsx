@@ -1,5 +1,5 @@
-import React from "react";
-import blog1 from "../assets/blog1.png"
+import React, { useState, useRef } from "react";
+import blog1 from "../assets/blog1.png";
 import blog2 from "../assets/blog2.png";
 import blog3 from "../assets/blog3.png";
 import blog4 from "../assets/blog4.png";
@@ -8,46 +8,66 @@ import Header from "./Courses/Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 const Blog = () => {
-    const blogPosts = [
-      {
-        imageUrl: blog2,
-        meta: "25.march.2025",
-        title: "LangGraph Tutorial for Beginners to Build AI Agents",
-        description:
-          "A step-by-step, hands-on Langgraph tutorial that takes you from the basics to advanced concepts, helping you quickly.",
-        link: "#",
-      },
-      {
-        imageUrl: blog3,
-        meta: "25.march.2025",
-        title: "LangGraph Tutorial for Beginners to Build AI Agents",
-        description:
-          "A step-by-step, hands-on Langgraph tutorial that takes you from the basics to advanced concepts, helping you quickly.",
-        link: "#",
-      },
-      {
-        imageUrl: blog4,
-        meta: "25.march.2025",
-        title: "LangGraph Tutorial for Beginners to Build AI Agents",
-        description:
-          "A step-by-step, hands-on Langgraph tutorial that takes you from the basics to advanced concepts, helping you quickly.",
-        link: "#",
-      },
-      {
-        imageUrl: blog5,
-        meta: "25.march.2025",
-        title: "LangGraph Tutorial for Beginners to Build AI Agents",
-        description:
-          "A step-by-step, hands-on Langgraph tutorial that takes you from the basics to advanced concepts, helping you quickly.",
-        link: "#",
-      },
-      // Add more blog post objects as needed
-    ];
+  const trendingCourses = [
+    "All Blogs",
+    "AI & ML",
+    "DEVOPS",
+    "NO CODE",
+    "Cybersecurity & Testing",
+    "DATA SCIENCE AND ENGINERRING",
+    "DESIGN AND DEVLOPMENT",
+    "Founder Connect",
+    "Gaming & Network",
+    "Product",
+    "bussiness and leadership",
+    "Marketing & Sales",
+  ];
+
+  const [selectedCourse, setSelectedCourse] = useState("");
+  const handleCourseClick = (course) => {
+    setSelectedCourse(course);
+  };
+
+  const blogPosts = [
+    {
+      imageUrl: blog2,
+      meta: "25.march.2025",
+      title: "LangGraph Tutorial for Beginners to Build AI Agents",
+      description:
+        "A step-by-step, hands-on Langgraph tutorial that takes you from the basics to advanced concepts, helping you quickly.",
+      link: "#",
+    },
+    {
+      imageUrl: blog3,
+      meta: "25.march.2025",
+      title: "LangGraph Tutorial for Beginners to Build AI Agents",
+      description:
+        "A step-by-step, hands-on Langgraph tutorial that takes you from the basics to advanced concepts, helping you quickly.",
+      link: "#",
+    },
+    {
+      imageUrl: blog4,
+      meta: "25.march.2025",
+      title: "LangGraph Tutorial for Beginners to Build AI Agents",
+      description:
+        "A step-by-step, hands-on Langgraph tutorial that takes you from the basics to advanced concepts, helping you quickly.",
+      link: "#",
+    },
+    {
+      imageUrl: blog5,
+      meta: "25.march.2025",
+      title: "LangGraph Tutorial for Beginners to Build AI Agents",
+      description:
+        "A step-by-step, hands-on Langgraph tutorial that takes you from the basics to advanced concepts, helping you quickly.",
+      link: "#",
+    },
+    // Add more blog post objects as needed
+  ];
   return (
     <>
-    <Header/>
+      <Header />
       {/* Hero Section */}
-      <section className="hero bg-[#047670] py-24 sm:px-6 md:px-10  flex flex-col lg:flex-row justify-around gap-10 flex-wrap pt-28">
+      <section className="hero bg-[#047670] py-24 sm:px-6 md:px-10  flex flex-col lg:flex-row justify-around gap-10 flex-wrap pt-32">
         <div className="bg-[#ffffff] rounded-lg shadow-md p-3 w-full lg:w-[670px] h-auto">
           <img
             src={blog1}
@@ -140,8 +160,8 @@ const Blog = () => {
             By continuing, you agree to AI Skills{" "}
             <a href="#" className="text-blue-600">
               Terms
-            </a>{" "}
-            and{" "}
+            </a>
+            and
             <a href="#" className="text-blue-600">
               Privacy Policy
             </a>
@@ -150,75 +170,51 @@ const Blog = () => {
         </div>
       </section>
       {/* Blog Categories */}
-      <section className="px-10 sm:px-6 md:px-10 mt-12">
-        <h2 className="text-[50px] font-normal font-impact text-[#000000] mb-10 text-start">
-          Blog Categories
+      <section className="bg-white py-8 px-10">
+        <h2 className="text-[50px] font-impact font-normal text-[#000000] mb-12">
+          <span className="text-[#000000">TRENDING </span>
+          <span className="text-[#047670]">NEWSLETTER</span>
         </h2>
-
-        <div className="flex flex-wrap justify-center items-center gap-3 max-w-[1200px] mx-auto">
-          {/* First Row - 5 */}
-          {[
-            "AI & ML",
-            "Devops",
-            "NO CODE",
-            "CYBER SECURITY AND TESTING",
-            "DATA SCIENCE AND ENGINEERING",
-          ].map((category, index) => (
-            <span
-              key={index}
-              className="px-4 py-1 border-[1px] border-[#1E1E1E] rounded-[16px] font-roboto text-[16px] font-bold text-[#1E1E1E] whitespace-nowrap"
+        <div className="flex flex-col gap-3">
+          {[0, 5, 9].map((startIndex, rowIndex) => (
+            <div
+              key={rowIndex}
+              className="flex flex-wrap justify-center gap-4 sm:gap-4 "
             >
-              {category}
-            </span>
+              {trendingCourses
+                .slice(startIndex, startIndex + [5, 4, 2][rowIndex])
+                .map((label) => {
+                  const isSelected = selectedCourse === label;
+                  return (
+                    <button
+                      key={label}
+                      onClick={() => handleCourseClick(label)}
+                      className={`px-2 py-2 rounded-full text-[16px] font-Roboto Condensed fw-bold uppercase border transition-all
+                ${
+                  isSelected
+                    ? "bg-[#047670] text-[#fff] border-[#002726]"
+                    : "bg-[#f4F3F3] text-gray-800 border-[#000000] hover:bg-[#fffaf1] hover:text-[#000000]"
+                }`}
+                    >
+                      {label}
+                    </button>
+                  );
+                })}
+            </div>
           ))}
-
-          <div className="w-full h-0" />
-
-          {/* Second Row - 4 */}
-          {[
-            "DESIGN AND DEVELOPMENT",
-            "FOUNDER CONNECT",
-            "GAMING AND NETWORK",
-            "PRODUCT",
-          ].map((category, index) => (
-            <span
-              key={index + 5}
-              className="px-4 py-1 border-[1px] border-[#1E1E1E] rounded-[16px] font-roboto text-[16px] font-bold text-[#1E1E1E] whitespace-nowrap"
-            >
-              {category}
-            </span>
-          ))}
-
-          <div className="w-full h-0" />
-
-          {/* Third Row - 2 */}
-          {["BUSINESS AND LEADERSHIP", "MARKETING AND SALES"].map(
-            (category, index) => (
-              <span
-                key={index + 9}
-                className="px-4 py-1 border-[1px] border-[#1E1E1E] rounded-[16px] font-roboto text-[16px] font-bold text-[#1E1E1E] whitespace-nowrap"
-              >
-                {category}
-              </span>
-            )
-          )}
         </div>
       </section>
 
       <section className="blog-posts px-10 sm:px-6 md:px-10 mt-16 ">
-        <h2 className="text-[50px] font-impact font-normal text-[#000000] mb-20 p-3">
-          <span className="text-[#000000]">All </span>
-          <span className="text-[#047670]">Blogs</span>
-        </h2>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 auto-rows-auto">
           {blogPosts.map((post, index) => (
-            <div
+            <Link
+              to="/blogsDetail"
               key={index}
-              className="bg-[#ffffff] rounded-lg shadow-md overflow-hidden"
+              className="bg-[#ffffff] rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:bg-[#fffaf1]"
             >
               <div
-                className="h-[235px] bg-cover bg-center"
+                className="h-[235px] bg-cover bg-center transition-transform duration-300 hover:scale-105"
                 style={{ backgroundImage: `url(${post.imageUrl})` }}
               ></div>
               <div className="p-3">
@@ -232,110 +228,11 @@ const Blog = () => {
                   {post.description}
                 </p>
 
-                <Link
-                  to={'/blogsDetail'}
-                  className="inline-flex justify-center items-center bg-[#047670] text-white w-[225px] h-[42px] text-[14px] font-bold font-roboto rounded-[8px] border-[1px]"
-                >
+                <div className="inline-flex justify-center items-center bg-[#047670] text-white w-[225px] h-[42px] text-[14px] font-bold font-roboto rounded-[8px] border-[1px] mt-2">
                   Best Artificial Intelligence Blogs
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 auto-rows-auto mt-5">
-          {blogPosts.map((post, index) => (
-            <div
-              key={index}
-              className="bg-[#ffffff] rounded-lg shadow-md overflow-hidden"
-            >
-              <div
-                className="h-[235px] bg-cover bg-center"
-                style={{ backgroundImage: `url(${post.imageUrl})` }}
-              ></div>
-              <div className="p-3">
-                <div className="font-jost font-normal text-[12px] text-[#000000]">
-                  {post.meta}
                 </div>
-                <h3 className="text-[20px] font-impact font-normal text-[#000000] ">
-                  {post.title}
-                </h3>
-                <p className="text-[12px] text-[#1E1E1E1]/80 font-normal font-jost">
-                  {post.description}
-                </p>
-
-                <a
-                  href={post.link}
-                  className="inline-flex justify-center items-center bg-[#047670] text-white w-[225px] h-[42px] text-[14px] font-bold font-roboto rounded-[8px] border-[1px]"
-                >
-                  Best Artificial Intelligence Blogs
-                </a>
               </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 auto-rows-auto mt-5">
-          {blogPosts.map((post, index) => (
-            <div
-              key={index}
-              className="bg-[#ffffff] rounded-lg shadow-md overflow-hidden"
-            >
-              <div
-                className="h-[235px] bg-cover bg-center"
-                style={{ backgroundImage: `url(${post.imageUrl})` }}
-              ></div>
-              <div className="p-3">
-                <div className="font-jost font-normal text-[12px] text-[#000000]">
-                  {post.meta}
-                </div>
-                <h3 className="text-[20px] font-impact font-normal text-[#000000] ">
-                  {post.title}
-                </h3>
-                <p className="text-[12px] text-[#1E1E1E1]/80 font-normal font-jost">
-                  {post.description}
-                </p>
-
-                <a
-                  href={post.link}
-                  className="inline-flex justify-center items-center bg-[#047670] text-white w-[225px] h-[42px] text-[14px] font-bold font-roboto rounded-[8px] border-[1px]"
-                >
-                  Best Artificial Intelligence Blogs
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 auto-rows-auto mt-5">
-          {blogPosts.map((post, index) => (
-            <div
-              key={index}
-              className="bg-[#ffffff] rounded-lg shadow-md overflow-hidden"
-            >
-              <div
-                className="h-[235px] bg-cover bg-center"
-                style={{ backgroundImage: `url(${post.imageUrl})` }}
-              ></div>
-              <div className="p-3">
-                <div className="font-jost font-normal text-[12px] text-[#000000]">
-                  {post.meta}
-                </div>
-                <h3 className="text-[20px] font-impact font-normal text-[#000000] ">
-                  {post.title}
-                </h3>
-                <p className="text-[12px] text-[#1E1E1E1]/80 font-normal font-jost">
-                  {post.description}
-                </p>
-
-                <a
-                  href={post.link}
-                  className="inline-flex justify-center items-center bg-[#047670] text-white w-[225px] h-[42px] text-[14px] font-bold font-roboto rounded-[8px] border-[1px]"
-                >
-                  Best Artificial Intelligence Blogs
-                </a>
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -353,7 +250,7 @@ const Blog = () => {
           {/* Page 1 (active) */}
           <a
             href="#"
-            className="px-3 py-1 bg-[#047670] text-[#000000] rounded-md font-bold border border-[#047670]"
+            className="px-3 py-1 bg-[#047670] text-[#fff] rounded-md font-bold border border-[#047670]"
           >
             1
           </a>
@@ -463,7 +360,7 @@ const Blog = () => {
           })}
         </div>
       </section>
-     <Footer/>
+      <Footer />
     </>
   );
 };

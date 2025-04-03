@@ -80,10 +80,6 @@
 
 // export default App;
 
-
-
-
-
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Home/Hero";
@@ -112,8 +108,7 @@ import Video from "./components/Courses/Video";
 import Live from "./components/Courses/Live";
 import Blog from "./components/Blog";
 import MyDigital from "./components/DigitalProduct/MyDigital";
-import InstructorSignup from "./components/InstructorSignup";
-
+import InstructorSignup from "./components/Instructor";
 const App = () => {
   return (
     <div>
