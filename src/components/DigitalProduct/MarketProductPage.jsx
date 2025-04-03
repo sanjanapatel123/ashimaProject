@@ -72,6 +72,13 @@ const MarketProduct = () => {
       <Header />
       <div className=" pt-9 flex flex-col lg:flex-row bg-[#047670] lg:h-[652px] px-4 lg:pt-14">
         {/* Left Image Section */}
+        <button
+          onClick={() => window.history.back()}
+          className="absolute top-28 left-4 text-white text-2xl bg-[#047670] rounded-full p-2"
+        >
+          ←
+        </button>
+
         <div className="flex w-full lg:w-1/2 items-center justify-center lg:justify-start p-6 lg:pl-20 ">
           <img
             src={digitalproduct1}

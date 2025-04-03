@@ -80,7 +80,8 @@
 
 // export default App;
 
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Home/Hero";
 import Explore from "./components/Home/Explore";
@@ -112,7 +113,8 @@ import InstructorSignup from "./components/InstructorSignup";
 
 const App = () => {
   return (
-    <div>
+    <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"
@@ -148,7 +150,7 @@ const App = () => {
         <Route path="/instructor" element={<Instructor />} />
         <Route path="/instructorSignup" element={<InstructorSignup />} />
       </Routes>
-    </div>
+    </BrowserRouter>
   );
 };
 

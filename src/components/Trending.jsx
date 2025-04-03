@@ -86,12 +86,12 @@ const TrendingWithCards = () => {
                   <button
                     key={label}
                     onClick={() => handleCourseClick(label)}
-                    className={`px-2 py-2 rounded-full text-[16px] font-Roboto Condensed uppercase border transition-all
-                ${
-                  isSelected
-                    ? "bg-[#002726] text-white border-[#002726]"
-                    : "bg-[#f4F3F3] text-gray-800 border-black hover:text-black"
-                }`}
+                    className={`px-4 py-2 rounded-full text-[16px] font-['Roboto_Condensed'] uppercase transition-all border-2
+    ${
+      isSelected
+        ? "bg-[#002726] text-white border-[#002726]"
+        : "bg-[#f4f3f3] text-gray-800 border-black hover:text-black"
+    }`}
                   >
                     {label}
                   </button>

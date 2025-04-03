@@ -1,4 +1,3 @@
-
 import { FaGoogle, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -6,6 +5,12 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-[#FAF9F7] px-4">
       <div className="w-full max-w-lg bg-[#FFFFFF] rounded-lg shadow border border-[#1E1E1E]/10 p-6 sm:p-8">
+        <button
+          onClick={() => window.history.back()}
+          className="text-[#047670] text-2xl mr-3"
+        >
+          ←
+        </button>
         <h3 className="text-center text-[24px] sm:text-[28px] md:text-[30px] font-impact text-[#047670] mb-6 font-normal uppercase">
           LOG IN TO YOUR ACCOUNT
         </h3>

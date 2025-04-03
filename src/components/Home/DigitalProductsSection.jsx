@@ -278,7 +278,7 @@ const DigitalProducts = () => {
       </div>
 
       {/* Responsive Wrapper Added */}
-      <div className="w-full mt-16 px-4 ">
+      <div className="w-full mt-16 px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {products.map((product) => (
             <div
@@ -288,7 +288,7 @@ const DigitalProducts = () => {
               <img
                 src={product.image}
                 alt={product.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />
               <div className="absolute top-4 left-4 bg-[rgba(255,255,255,0.4)] text-white text-sm font-bold py-2 px-3 rounded-4 font-Roboto Condensed uppercase tracking-wide">
                 {product.tag}

@@ -86,7 +86,6 @@
 
 //       {/* Cards + Arrows wrapper */}
 
-
 //       <div className="relativemt-20">
 //         <div className="w-full px-10">
 //           <div
@@ -118,7 +117,6 @@
 //         </div>
 //       </div>
 
-     
 //       {/* Navigation Dots & Arrows */}
 //       <div className="flex items-center justify-between w-full max-w-[1380px] mx-auto mt-10">
 //         <div className="">
@@ -155,13 +153,6 @@
 // };
 
 // export default RideTheAIWave;
-
-
-
-
-
-
-
 
 import { useRef } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -232,16 +223,16 @@ const RideTheAIWave = () => {
       </h2>
 
       {/* Cards + Arrows wrapper */}
-      <div className="relativemt-20">
+      <div className="relative mt-20">
         <div className="w-full px-10 overflow-hidden">
           <div
             ref={scrollRef}
-            className="flex gap-2 overflow-x-auto scroll-smooth scrollbar-hide"
+            className="flex gap-3 overflow-x-auto scroll-smooth scrollbar-hide"
           >
             {courses.map((course, index) => (
               <div
                 key={index}
-                className="bg-[#ffffff] text-[#000000] w-[320px] h-[455px] rounded-[4px] shadow-lg p-6 flex-shrink-0"
+                className="bg-[#ffffff] text-[#000000] w-[320px] h-[455px] rounded-[4px] shadow-lg p-6 flex-shrink-0 transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
               >
                 <h3 className="font-impact text-[24px] uppercase">
                   {course.title}
@@ -254,7 +245,7 @@ const RideTheAIWave = () => {
                 <p className="text-[16px] font-Roboto Condensed text-[#1E1E1E] uppercase mb-4 line-clamp-3">
                   {course.description}
                 </p>
-                <button className=" w-[175px] h-[44px]  bg-[#000000] text-white font-roboto rounded-xl hover:bg-gray-900 transition text-[16px]">
+                <button className="w-[175px] h-[44px] bg-[#000000] text-white font-roboto rounded-xl hover:bg-gray-900 transition text-[16px]">
                   EXPLORE COURSES
                 </button>
               </div>

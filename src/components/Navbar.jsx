@@ -789,7 +789,7 @@ const Navbar = () => {
                 {trendingCourses.map((course, idx) => (
                   <Link
                     key={idx}
-                    to="/allcourses"
+                    to="/courses"
                     className="block px-4 py-2 font-roboto font-medium text-[16px] text-[#000000] hover:bg-[#f0f0f0]"
                   >
                     {course}
