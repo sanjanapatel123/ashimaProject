@@ -11,7 +11,12 @@ import { FaAngleRight } from "react-icons/fa";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { FaCalendarAlt } from "react-icons/fa";
-import Header from "./Header";
+import Header from "../Layout/Header";
+import ReviewCrad from "../Home/ReviewCards";
+import Footer from "../Layout/Footer";
+import FAQSection from "../Home/FAQSection";
+
+
 import {
   FaStar,
   FaArrowRight,
@@ -23,8 +28,7 @@ import {
   FaUser,
   FaHeart,
 } from "react-icons/fa";
-import FAQSection from "../Home/FAQSection";
-import Footer from "../Footer";
+
 
 const Live = () => {
   const recommendedCourses = [
@@ -89,7 +93,7 @@ const Live = () => {
 
   return (
     <>
-      <Header></Header>
+      <Header/>
       <div className="bg-[#ffffff] py-4">
         {/* Breadcrumb Navigation */}
 
@@ -172,8 +176,8 @@ const Live = () => {
                 </div>
 
                 <div>
-                  <button className="bg-[#09D0C6] w-[85px] h-[26px] text-[#000000] text-[12px] px-3 py-1 rounded-[12px] font-roboto font-semibold">
-                    Live
+                  <button className="bg-red-400 w-[85px] h-[26px] text-[#000000] text-[12px] px-3 py-1 rounded-[12px] font-roboto font-semibold">
+                    Video
                   </button>
                 </div>
               </div>
@@ -189,7 +193,7 @@ const Live = () => {
                   />
 
                   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex flex-col items-center z-10">
-                    <div className="">
+                    <div className=" -mt-4">
                       <FaYoutube className="text-[#ffffff] bg-[#CD201F] w-[60px] h-[27px] rounded" />
                     </div>
                     <span className="text-[#ffffff] font-semibold text-[22px] font-jost mt-2">
@@ -246,46 +250,40 @@ const Live = () => {
           </div>
         </div>
 
-        <div className="w-full sm:w-[1000px] h-auto mt-28 px-2 sm:px-40 grid gap-4">
+        <div className="w-full sm:w-[1000px] h-auto sm:mt-5 px-4 sm:px-40 grid gap-4">
           {/* Left Content Block */}
-          <div className="w-full sm:w-[900px] ml-1 sm:ml-20 h-auto mt-16 px-3 sm:px-32 grid gap-4">
+          <div className="w-full sm:w-[900px] ml-1 sm:ml-20 h-auto sm:mt-16 px-4 sm:px-12 grid gap-4">
             {/* Left Content Block */}
             <div className="md:col-span-3 bg-[#ffffff] py-6 px-4 sm:px-6 rounded shadow border">
-              <h2 className="text-[36px] font-jost font-semibold text-[#1e1e1e]">
+              <h2 className="text-[24px] sm:text-[36px] font-jost font-semibold text-[#1e1e1e]">
                 What you will learn
               </h2>
 
-              <ul className="mt-6 space-y-2 ">
+              <ul className="mt-6 space-y-2">
                 {[
                   {
                     title: "Master Applied Generative AI Concepts",
-                    desc:
-                      "Learn applied generative AI techniques like prompt engineering, RAG, agents, and fine-tuning, with a focus on applying them effectively to real-world business scenarios. Understand how to navigate constraints like cost, latency, and performance constraints in AI systems.",
+                    desc: "Learn applied generative AI techniques like prompt engineering, RAG, agents, and fine-tuning, with a focus on applying them effectively to real-world business scenarios. Understand how to navigate constraints like cost, latency, and performance constraints in AI systems.",
                   },
                   {
                     title: "Apply Concepts to Build an Agentic Search System",
-                    desc:
-                      "While learning applied AI concepts, we’ll put them into action by building a Perplexity-like AI-powered search system through detailed, hands-on tutorials that demonstrate their practical application (Low code options will be provided).",
+                    desc: "While learning applied AI concepts, we’ll put them into action by building a Perplexity-like AI-powered search system through detailed, hands-on tutorials that demonstrate their practical application (Low code options will be provided).",
                   },
                   {
                     title: "Tackle Business Use-Cases with AI",
-                    desc:
-                      "Participate in brainstorming sessions and team huddles to approach hypothetical business problems. Learn to identify the right AI solutions for specific use cases, leveraging low-code options where applicable.",
+                    desc: "Participate in brainstorming sessions and team huddles to approach hypothetical business problems. Learn to identify the right AI solutions for specific use cases, leveraging low-code options where applicable.",
                   },
                   {
                     title: "Understand Challenges and Effective Evaluation",
-                    desc:
-                      "Gain a deep understanding of key challenges in building AI systems, including handling hallucinations, adversarial attacks, security, privacy issues etc., and learn best practices to evaluate AI solutions comprehensively.",
+                    desc: "Gain a deep understanding of key challenges in building AI systems, including handling hallucinations, adversarial attacks, security, privacy issues etc., and learn best practices to evaluate AI solutions comprehensively.",
                   },
                   {
                     title: "Final Capstone Project",
-                    desc:
-                      "You’ll design and demo a solution for a hypothetical business problem, integrating insights from relevant research papers in my curated list, hand-picked for enterprise relevance. This project will also involve addressing challenges and evaluation methods.",
+                    desc: "You’ll design and demo a solution for a hypothetical business problem, integrating insights from relevant research papers in my curated list, hand-picked for enterprise relevance. This project will also involve addressing challenges and evaluation methods.",
                   },
                   {
                     title: "Access to the Problem-First AI Community",
-                    desc:
-                      "The course includes guest lectures from industry experts, AMA sessions, and our Chai & AI discussions, culminating in a final in-person meetup in the Bay Area. You'll have plenty of opportunities to network and become part of our community.",
+                    desc: "The course includes guest lectures from industry experts, AMA sessions, and our Chai & AI discussions, culminating in a final in-person meetup in the Bay Area. You'll have plenty of opportunities to network and become part of our community.",
                   },
                 ].map((item, i) => (
                   <li key={i} className="flex items-start">
@@ -307,9 +305,58 @@ const Live = () => {
             </div>
           </div>
         </div>
+        <div className="w-full sm:w-[850px] ml-4 sm:ml-20 mt-16">
+          <h3 className="text-[28px] sm:text-[36px] font-jost text-[#1e1e1e] mb-6 w-full sm:w-[362px] h-auto font-semibold text-center sm:text-left whitespace-nowrap">
+            Know You Are Instructor
+          </h3>
 
-        <div className="w-full sm:w-[850px] ml-16 sm:ml-20 mt-16">
-          <h3 className="text-[36px] font-jost text-[#1e1e1e] mb-6 w-[362px] h-[40px] font-semibold">
+          <div className="flex flex-col sm:flex-row gap-8 sm:gap-10">
+            <div className="shadow-2xl border-black rounded-[4px] p-4 flex flex-col items-start gap-6 sm:w-[400px] w-full h-auto uppercase">
+              <img
+                src={liveimg2}
+                className="w-[65px] h-[65px] rounded-full bg-[#ff757A] text-[#ffffff] text-sm font-bold mt-1"
+                alt="Instructor"
+              />
+
+              <div className="w-full">
+                <h6 className="text-[#1e1e1e] font-semibold">Shraddha</h6>
+                <p className="text-[14px] font-roboto text-[#1e1e1e] font-bold">
+                  MicroSoft
+                </p>
+                <p className="text-[14px] font-roboto text-[#1e1e1e]">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt ipsa, ullam dolorum tempore cum animi iusto ab quis,
+                  saepe eaque id veniam beatae, architecto excepturi. Minus
+                  placeat quos perspiciatis illum.
+                </p>
+              </div>
+            </div>
+
+            <div className="shadow-2xl border-black rounded-[4px] p-4 flex flex-col items-start gap-6 sm:w-[400px] w-full h-auto uppercase">
+              <img
+                src={liveimg2}
+                className="w-[65px] h-[65px] rounded-full bg-[#ff757A] text-[#ffffff] text-sm font-bold mt-1"
+                alt="Instructor"
+              />
+
+              <div className="w-full">
+                <h6 className="text-[#1e1e1e] font-semibold">Shraddha</h6>
+                <p className="text-[14px] font-roboto text-[#1e1e1e] font-bold">
+                  MicroSoft
+                </p>
+                <p className="text-[14px] font-roboto text-[#1e1e1e]">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt ipsa, ullam dolorum tempore cum animi iusto ab quis,
+                  saepe eaque id veniam beatae, architecto excepturi. Minus
+                  placeat quos perspiciatis illum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className=" sm:w-[850px] ml-16 sm:ml-20 mt-12">
+          <h3 className="sm:text-[36px] font-jost text-[#1e1e1e] mb-6 w-full sm:w-[362px] h-auto font-semibold text-center sm:text-left whitespace-nowrap">
             Who is this course for
           </h3>
 
@@ -352,7 +399,7 @@ const Live = () => {
                   defaultChecked
                 />
                 <div>
-                  <p className="font-roboto test-[18px] font-bold text-[#1e1e1e]">
+                  <p className="font-roboto text-[20px] font-bold text-[#1e1e1e]">
                     Master Applied Generative AI Concepts
                   </p>
                   <p className="text-[16px] font-robotp font-normal text-[#1E1E1ECC]">
@@ -372,7 +419,7 @@ const Live = () => {
                   className="mt-1 mr-3 w-[20px] h-[20px] accent-[#047670]"
                 />
                 <div>
-                  <p className="font-roboto test-[18px] font-bold text-[#1e1e1e]">
+                  <p className="font-roboto text-[20px] font-bold text-[#1e1e1e]">
                     Understand Challenges and Effective Evaluation
                   </p>
                   <p className="text-[16px] font-robotp font-normal text-[#1E1E1ECC]">
@@ -463,8 +510,8 @@ const Live = () => {
               </span>
             </h4>
 
-            <div className="grid gap-3 mt-3 text-[#1e1e1e] font-roboto font-normal ml-0 text-[12px]">
-              <div className="flex flex-col sm:flex-row sm:items-center font-normal text-[12px]">
+            <div className="grid gap-3 mt-3 text-[#1e1e1e] font-roboto font-normal ml-0 text-[16px]">
+              <div className="flex flex-col sm:flex-row sm:items-center font-normal ">
                 <div className="flex items-center">
                   <FaVideo className="mr-2" /> 16 hours on-demand video
                 </div>
@@ -487,7 +534,7 @@ const Live = () => {
             <h4 className="font-bold mt-10 text-[36px] text-start sm:text-left">
               REQUIREMENTS
             </h4>
-            <p className="text-[#1e1e1e] font-normal font-roboto text-[12px] text-start sm:text-left">
+            <p className="text-[#1e1e1e] font-normal font-roboto text-[16px] text-start sm:text-left">
               While we provide low-code options, this course assumes you have
               some coding experience. It's not
               <br className="hidden sm:block" />
@@ -564,83 +611,7 @@ const Live = () => {
           </div>
         </div>
         <FAQSection />
-        <div className="w-full px-4 sm:px-6 lg:px-8 py-8">
-          {/* Heading */}
-          <h2 className="text-[36px] font-roboto mb-6 ml-0 sm:ml-36">
-            FEATURED REVIEWS:
-          </h2>
-
-          {/* Scrollable Card Section */}
-          <div className="w-full overflow-x-auto mt-10 ml-0 sm:ml-36">
-            <div className="min-w-[1024px] flex gap-10 px-6 py-2 rounded-[8px]">
-              {/* Card 1 */}
-              <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-                <div className="flex  mb-4">
-                  <img
-                    src={reviewimage}
-                    alt="Neha Sharma"
-                    className="w-[91px] h-[91px] rounded-full "
-                  />
-                  <h3 className="font-['Roboto_Condensed'] font-bold text-[25px] leading-[24px] tracking-[0.02em] uppercase">
-                    NEHA SHARMA
-                  </h3>
-                </div>
-                <p className="font-['Roboto_Condensed'] font-medium text-[16px] leading-[22px] tracking-[0.02em] uppercase mb-4">
-                  LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED
-                  DO EUSMOD TEMPOR
-                </p>
-                <div className="text-[14px] font-['Roboto_Condensed'] flex items-center gap-2">
-                  RATING 4.8
-                  <span className="text-[#FBBC09] flex">★ ★ ★ ★ ☆</span>
-                </div>
-              </div>
-
-              {/* Card 2 */}
-              <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-                <div className="flex items-center  mb-4">
-                  <img
-                    src={reviewimage}
-                    alt="Neha Sharma"
-                    className="w-[91px] h-[91px] rounded-full "
-                  />
-                  <h3 className="font-['Roboto_Condensed'] font-bold text-[25px] leading-[24px] tracking-[0.02em] uppercase">
-                    NEHA SHARMA
-                  </h3>
-                </div>
-                <p className="font-['Roboto_Condensed'] font-medium text-[16px] leading-[22px] tracking-[0.02em] uppercase mb-4">
-                  LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED
-                  DO EUSMOD TEMPOR
-                </p>
-                <div className="text-[14px] font-['Roboto_Condensed'] flex items-center gap-2">
-                  RATING 4.8
-                  <span className="text-[#FBBC09] flex">★ ★ ★ ★ ☆</span>
-                </div>
-              </div>
-
-              {/* Card 3 */}
-              <div className="bg-[#047670] text-[#ffffff] p-4 rounded-md shadow-md text-start w-[340px] h-[284px]">
-                <div className="flex items-center  mb-4">
-                  <img
-                    src={reviewimage}
-                    alt="Neha Sharma"
-                    className="w-[91px] h-[91px] rounded-full "
-                  />
-                  <h3 className="font-['Roboto_Condensed'] font-bold text-[25px] leading-[24px] tracking-[0.02em] uppercase">
-                    NEHA SHARMA
-                  </h3>
-                </div>
-                <p className="font-['Roboto_Condensed'] font-medium text-[16px] leading-[22px] tracking-[0.02em] uppercase mb-4">
-                  LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED
-                  DO EUSMOD TEMPOR
-                </p>
-                <div className="text-[14px] font-['Roboto_Condensed'] flex items-center gap-2">
-                  RATING 4.8
-                  <span className="text-[#FBBC09] flex">★ ★ ★ ★ ☆</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ReviewCrad />
       </div>
       <Footer></Footer>
     </>

@@ -118,7 +118,10 @@ const Header = () => {
           >
             Login
           </Link>
-          <Link className="p-[10px] w-[90px] h-[50px] text-center text-[#ffffff] text-[18px] bg-[#047670] rounded-[12px] font-medium font-roboto">
+          <Link
+            to="/signup"
+            className="p-[10px] w-[90px] h-[50px] text-center text-[#ffffff] text-[18px] bg-[#047670] rounded-[12px] font-medium font-roboto"
+          >
             Sign Up
           </Link>
         </div>
@@ -181,7 +184,6 @@ const Header = () => {
       {/* Mobile Dropdown Menu */}
       <div className="md:hidden">
         {" "}
-        {/* This is mobile-only content */}
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <motion.div
@@ -218,7 +220,10 @@ const Header = () => {
               >
                 Login
               </Link>
-              <Link className="w-full block text-center font-medium px-4 py-2 border text-[#ffffff] rounded-lg border-[#ffffff] bg-[#047670]">
+              <Link
+                to="/signup"
+                className="w-full block text-center font-medium px-4 py-2 border text-[#ffffff] rounded-lg border-[#ffffff] bg-[#047670]"
+              >
                 Sign Up
               </Link>
             </div>

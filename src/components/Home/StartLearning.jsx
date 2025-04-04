@@ -27,13 +27,7 @@ const StartLearning = () => {
       </div>
 
       {/* Image - Placed Below the Content with Reduced Size */}
-      {/* <div className="flex justify-center mt-10 sm:mt-20">
-        <img
-          src={startLearning}
-          alt="Start Learning"
-          className="w-[#634] h-[#634] sm:w-3/4 max-w-3xl"
-        />
-      </div> */}
+  
       <div className="flex justify-center mt-10 sm:mt-20">
         <img
           src={startLearning}

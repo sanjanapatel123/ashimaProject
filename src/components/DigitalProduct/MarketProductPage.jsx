@@ -10,9 +10,9 @@ import marketproduct8 from "../../assets/marketproduct8.png";
 import digitalproduct1 from "../../assets/digitalproduct1.png";
 import StartLearning from "../Home/StartLearning";
 import reviewimage from "../../assets/reviewimage.jpg";
-import Header from "../Courses/Header";
+import Header from "../Layout/Header";
 import { useState } from "react";
-import Footer from "../Footer";
+import Footer from "../Layout/Footer";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import REviewCarrds from "../Home/ReviewCards";
 

@@ -1,9 +1,3 @@
-
-
-
-
-
-
 import React from "react";
 import { FaLinkedin, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -13,11 +7,11 @@ const Signup = () => {
     <div className="flex items-center justify-center min-h-screen bg-[#FAF9F7] px-4 sm:px-6 py-8">
       <div className="w-full max-w-lg bg-[#FFFFFF] rounded-lg shadow border border-[#1E1E1E]/10 p-5 sm:p-8">
         <h3 className="text-center text-[36px] sm:text-[28px] md:text-[30px] font-impact text-[#047670] mb-6 font-normal uppercase">
-          CREATE AN ACCOUNT
+          sign up as instructor
         </h3>
 
         {/* Social Signup Buttons */}
-  
+
         <div className="space-y-3 mb-6">
           <button className="flex items-center justify-center w-full border border-[#1E1E1E]/10 text-[#000000] font-medium text-[18px] sm:text-[20px] py-2 rounded hover:bg-gray-100 transition">
             <FaLinkedin className="mr-2 text-[#047670]" />

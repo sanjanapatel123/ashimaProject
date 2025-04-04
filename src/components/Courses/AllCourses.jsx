@@ -1,18 +1,19 @@
 import React, { useState, useRef } from "react";
-import arrow from "../../assets/coursesarrow.png";
-import courses1 from "../../assets/courses1.png";
 import courses2 from "../../assets/courses2.png";
+import courses1 from "../../assets/courses1.png";
 import courses3 from "../../assets/courses3.png";
 import courses4 from "../../assets/courses4.png";
 import trending1 from "../../assets/trending1.png";
-import COURSES from "../../assets/COURSE.png";
 import { CiFilter } from "react-icons/ci";
-import { HiDotsVertical } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import ReviewCarrds from "../../components/Home/ReviewCards";
-import Footer from "../Footer";
-// import React, { useRef } from "react";
 import { MoreVertical } from "lucide-react"; // optional icon package
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import Header from "../Layout/Header";
+import Footer from "../Layout/Footer";
+import ReviewCarrds from "../Home/ReviewCards";
+
+
+
 
 import {
   Container,
@@ -25,8 +26,7 @@ import {
   Pagination,
   Nav,
 } from "react-bootstrap";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import Header from "./Header";
+
 
 const categories = [
   "AI & ML",
@@ -232,7 +232,7 @@ function AllCourses() {
 
   return (
     <>
-      <Header />
+      <Header/>
       <Container fluid className="bg-[#ffffff]">
         {/* Top Navigation */}
         <Row className="bg-[#ffffff] uppercase">
