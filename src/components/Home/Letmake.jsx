@@ -82,7 +82,7 @@ const MakeLearningBetter = () => {
               <img
                 src={card.image}
                 alt={card.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />
 
               {/* Dark Overlay */}

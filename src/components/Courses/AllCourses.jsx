@@ -1,18 +1,19 @@
 import React, { useState, useRef } from "react";
-import arrow from "../../assets/coursesarrow.png";
-import courses1 from "../../assets/courses1.png";
 import courses2 from "../../assets/courses2.png";
+import courses1 from "../../assets/courses1.png";
 import courses3 from "../../assets/courses3.png";
 import courses4 from "../../assets/courses4.png";
 import trending1 from "../../assets/trending1.png";
-import COURSES from "../../assets/COURSE.png";
 import { CiFilter } from "react-icons/ci";
-import { HiDotsVertical } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import ReviewCarrds from "../../components/Home/ReviewCards";
-import Footer from "../Footer";
-// import React, { useRef } from "react";
 import { MoreVertical } from "lucide-react"; // optional icon package
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import Header from "../Layout/Header";
+import Footer from "../Layout/Footer";
+import ReviewCarrds from "../Home/ReviewCards";
+
+
+
 
 import {
   Container,
@@ -25,8 +26,7 @@ import {
   Pagination,
   Nav,
 } from "react-bootstrap";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import Header from "./Header";
+
 
 const categories = [
   "AI & ML",
@@ -64,7 +64,8 @@ function AllCourses() {
   const courses = [
     {
       title: "AI AND ML FOR BEGINNERS",
-      p: "Learn to program using the Ai & Ml. Master Ai & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
+      p:
+        "Learn to program using the Ai & Ml. Master Ai & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
       price: "$19.99",
       rating: 4.8,
       reviews: 87,
@@ -74,7 +75,8 @@ function AllCourses() {
     },
     {
       title: "AI AND ML FOR BEGINNERS",
-      p: "Learn to program using the Ai & Ml. Master Ai & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
+      p:
+        "Learn to program using the Ai & Ml. Master Ai & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
       price: "$19.99",
       rating: 4.8,
       reviews: 87,
@@ -85,7 +87,8 @@ function AllCourses() {
     {
       title: "AI AND ML FOR BEGINNERS",
       price: "$19.99",
-      p: "Learn to program using the Ai & Ml. Master Ai & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
+      p:
+        "Learn to program using the Ai & Ml. Master Ai & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
       rating: 4.8,
       reviews: 87,
       mode: "HYBRID",
@@ -95,14 +98,14 @@ function AllCourses() {
     {
       title: "AI AND ML FOR BEGINNERS",
       price: "$19.99",
-      p: "Learn to program using the Ai & Ml. Master Ai & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
+      p:
+        "Learn to program using the Ai & Ml. Master Ai & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
       rating: 4.8,
       reviews: 87,
       mode: "LIVE",
       instructor: "Kapil Sharma",
       image: courses4,
     },
-  
   ];
 
   const coursess = [
@@ -161,7 +164,7 @@ function AllCourses() {
       image: courses1,
       title: "AI AND ML FOR BEGINNERS",
       description:
-        "Learn to program using the AI & ML. Master AI & ML by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
+        "Learn to program using the AI & ML.Master AI & ML by building <br/> 100 projects in 100 days.Learn data science, automation,<br/> build websites, games and apps!",
       author: "KAPIL SHARMA",
       updated: "August 2025",
       hours: "10 TOTAL HOURS",
@@ -176,7 +179,7 @@ function AllCourses() {
       id: 2,
       title: "Deep Learning with Python",
       description:
-        "Master deep learning and neural networks with hands-on projects and real-world datasets.",
+        "Learn to program using the AI & ML.Master AI & ML by building <br/> 100 projects in 100 days.Learn data science, automation,<br/> build websites, games and apps!",
       instructor: "Sarah Johnson",
       updated: "1 March 2025",
       hours: "20 Total Hours",
@@ -193,7 +196,7 @@ function AllCourses() {
       id: 3,
       title: "Deep Learning with Python",
       description:
-        "Master deep learning and neural networks with hands-on projects and real-world datasets.",
+        "Learn to program using the AI & ML.Master AI & ML by building <br/> 100 projects in 100 days.Learn data science, automation,<br/> build websites, games and apps!",
       instructor: "Sarah Johnson",
       updated: "next batch start 1 March 2025",
       hours: "20 Total Hours",
@@ -210,7 +213,7 @@ function AllCourses() {
       id: 4,
       title: "Deep Learning with Python",
       description:
-        "Master deep learning and neural networks with hands-on projects and real-world datasets.",
+        "Learn to program using the AI & ML.Master AI & ML by building <br/> 100 projects in 100 days.Learn data science, automation,<br/> build websites, games and apps!",
       instructor: "Sarah Johnson",
       updated: "next batch start 1 March 2025",
       hours: "20 Total Hours",
@@ -229,7 +232,7 @@ function AllCourses() {
 
   return (
     <>
-    <Header/>
+      <Header/>
       <Container fluid className="bg-[#ffffff]">
         {/* Top Navigation */}
         <Row className="bg-[#ffffff] uppercase">
@@ -434,19 +437,17 @@ function AllCourses() {
                   key={course.id}
                   to={`/${course.badge.toLowerCase()}`} // dynamic route based on badge
                   className="block"
-                  // className="flex flex-col md:flex-row gap-4 border-b pb-4 mb-6"
                 >
-                  {" "}
                   <div className="flex flex-col md:flex-row gap-4 border-b pb-4 mb-6 hover:bg-gray-50 transition">
-                    {/* ...rest of your card content... */}
+                    {/* Course image */}
                     <img
                       src={course.image}
                       alt="Course"
-                      // className="w-full md:w-[365px] h-auto md:h-[214px] object-cover rounded-[4px]"
                       className="w-full md:w-[365px] h-auto md:h-[214px] object-cover rounded-[4px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
                     />
 
                     <div className="flex-1">
+                      {/* Course Title and Price */}
                       <div className="flex flex-col sm:flex-row justify-between items-start text-[#1e1e1e] gap-2">
                         <h2 className="text-[24px] md:text-[30px] font-[700] uppercase leading-[24px] tracking-[2%] font-roboto">
                           {course.title}
@@ -456,25 +457,32 @@ function AllCourses() {
                         </span>
                       </div>
 
-                      <p className="text-[14px] leading-[16px] tracking-[2%] text-black mt-1 font-roboto font-[400]">
-                        {course.description}
-                      </p>
+                      {/* Description with Line Breaks */}
+                      <div
+                        className="text-[15px] leading-[17px] tracking-[2%] text-black mt-1 font-roboto font-[400]"
+                        dangerouslySetInnerHTML={{ __html: course.description }}
+                      />
 
-                      <div className="">
-                        <span className="font-[700] font-roboto text-[12px] leading-[14px] tracking-[2%] uppercase text-black">
+                      {/* Author, Updated info, and more */}
+                      <div className="mt-2">
+                        <h4 className="font-[700] font-roboto text-[16px] leading-[14px] tracking-[2%] uppercase text-teal-700">
                           BY {course.author}
-                        </span>
+                        </h4>
 
-                        <p className="font-roboto font-[500] text-[12px] leading-[10px] tracking-[2%] mt-2 uppercase text-black">
+                        <h6 className="font-[600] font-roboto text-[16px] leading-[14px] tracking-[2%] text-black uppercase mb-0">
+                          microsoft
+                        </h6>
+
+                        <h7 className="font-roboto font-[500] text-[13px] leading-[12px] tracking-[2%] uppercase text-black">
                           {course.updated} • {course.hours} • {course.lectures}
-                        </p>
+                        </h7>
 
-                        <div className="flex flex-wrap items-center gap-2 mt-2">
-                          <span className="font-roboto font-[500] text-[#1e1e1e] text-[10px] leading-[12px] tracking-[2%]">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="font-roboto font-[500] text-[#1e1e1e] text-[12px] leading-[12px] tracking-[2%]">
                             RATING {course.rating}
                           </span>
                           <div className="flex text-yellow-400">⭐⭐⭐⭐⭐</div>
-                          <span className="text-[#047670] font-[500] text-[10px] leading-[15px] tracking-[2%]">
+                          <span className="text-[#047670] font-[500] text-[12px] leading-[15px] tracking-[2%]">
                             ({course.reviews})
                           </span>
                           <span
@@ -612,21 +620,26 @@ function AllCourses() {
                       {course.title}
                     </h6>
 
-                    <p className="text-[#1E1E1E] text-roboto font-bold uppercase text-[12px] mb-1">
+                    <p className="text-teal-700 text-roboto font-bold uppercase text-[14px] mb-0">
                       BY {course.instructor}
                     </p>
 
-                    <p className="font-roboto text-[10px] uppercase flex items-center gap-1 mb-2">
-                      RATING {course.rating}{" "}
+                    <p className="mb-1 text-roboto font-[600] uppercase text-[14px]">
+                      Microsoft
+                    </p>
+
+                    <p className="font-roboto text-[12px] uppercase flex items-center gap-1 mb-1 font-[400]">
+                      RATING {course.rating}
                       <span className="text-yellow-400">⭐⭐⭐⭐⭐</span>
                     </p>
 
-                    <h5 className="fw-bold font-roboto text-[18px] text-[#1E1E1E] mb-2">
-                      {course.price}
-                    </h5>
+                    <div className="flex justify-between items-center">
+                      <h5 className="fw-bold font-roboto text-[18px] text-[#1E1E1E] mb-2">
+                        {course.price}
+                      </h5>
 
-                    <span
-                      className={`text-white text-[10px] px-4 py-1 rounded-full font-roboto uppercase font-semibold inline-block w-[80px] text-center
+                      <span
+                        className={`text-white text-[10px] px-4 py-2 rounded-full font-roboto uppercase font-semibold inline-block w-[80px] text-center
                   ${
                     course.mode === "VIDEO"
                       ? "bg-[#ff757a]"
@@ -636,9 +649,10 @@ function AllCourses() {
                       ? "bg-[#1e1e1e]"
                       : "bg-gray-400"
                   }`}
-                    >
-                      {course.mode}
-                    </span>
+                      >
+                        {course.mode}
+                      </span>
+                    </div>
                   </Card.Body>
                 </Card>
               </Link>
@@ -684,7 +698,7 @@ function AllCourses() {
                     <p className="font-normal font-roboto text-[14px] text-[#000000] uppercase">
                       {featuredCourses[currentIndex].description}
                     </p>
-                    <p className="font-bold font-roboto text-[10px] uppercase text-[#1E1E1E]">
+                    <p className="font-bold font-roboto text-[13px] uppercase text-[#1E1E1E]">
                       <strong>
                         BY {featuredCourses[currentIndex].instructor}
                       </strong>{" "}
@@ -695,7 +709,7 @@ function AllCourses() {
                       {featuredCourses[currentIndex].level} |{" "}
                       {featuredCourses[currentIndex].lectures}
                     </p>
-                    <p className="font-semibold font-roboto text-[10px] uppercase text-[#1E1E1E]">
+                    <p className="font-semibold font-roboto text-[13px] uppercase text-[#1E1E1E]">
                       Rating: ⭐ {featuredCourses[currentIndex].rating} (
                       {featuredCourses[currentIndex].reviews} reviews)
                       <Button className="ms-2 font-roboto font-semibold  bg-[#FF757A] text-[10px] text-[#1E1E1E] uppercase">
@@ -720,7 +734,7 @@ function AllCourses() {
             </h2>
           </Col>
           <Row className="mt-3">
-            <div className="col-md-2 col-sm-12">
+            <div className="col-md-2 col-sm-12 text-nowrap">
               <button type="button" class="btn btn-outline-dark w-100">
                 AI & ML
               </button>

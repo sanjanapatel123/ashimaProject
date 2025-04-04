@@ -11,8 +11,12 @@ import { FaAngleRight } from "react-icons/fa";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { FaCalendarAlt } from "react-icons/fa";
-import Header from "./Header";
+import Header from "../Layout/Header";
 import ReviewCrad from "../Home/ReviewCards";
+import Footer from "../Layout/Footer";
+import FAQSection from "../Home/FAQSection";
+
+
 import {
   FaStar,
   FaArrowRight,
@@ -24,8 +28,7 @@ import {
   FaUser,
   FaHeart,
 } from "react-icons/fa";
-import FAQSection from "../Home/FAQSection";
-import Footer from "../Footer";
+
 
 const Live = () => {
   const recommendedCourses = [
@@ -90,7 +93,7 @@ const Live = () => {
 
   return (
     <>
-      <Header></Header>
+      <Header/>
       <div className="bg-[#ffffff] py-4">
         {/* Breadcrumb Navigation */}
 

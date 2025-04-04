@@ -6,7 +6,7 @@ import digitalproduct1 from "../../assets/digitalproduct1.png";
 import digitalproduct4 from "../../assets/digitalproduct4.png";
 import { Link } from "react-router-dom";
 import StartLearning from "../Home/StartLearning";
-import Footer from "../Footer";
+import Footer from "../Layout/Footer";
 import Reviewcarrd from "../Home/ReviewCards";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
@@ -288,7 +288,7 @@ function DigitalProductsSection() {
         ))}
       </div> */}
 
-      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 px-4 md:px-10">
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-10 px-4 md:px-10">
         {products.map((item, index) => (
           <Link
             to="/marketProduct"
@@ -313,7 +313,7 @@ function DigitalProductsSection() {
                   {item.title}
                 </h3>
 
-                <p className="text-[13px] text-[#1E1E1E] w-[123px] h-[14px] font-jost">
+                <p className="text-[14px] text-nowrap text-[#1E1E1E] w-[123px] h-[14px] font-jost">
                   By {item.author}
                 </p>
 

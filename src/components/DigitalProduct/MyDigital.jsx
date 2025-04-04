@@ -1,7 +1,6 @@
 import React from "react";
 import Digital from "../DigitalProduct/Digital";
-import Header from "../Courses/Header";
-
+import Header from "../Layout/Header";
 const MyDigital = () => {
   return (
     <div>

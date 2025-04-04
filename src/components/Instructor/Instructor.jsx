@@ -1,16 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { TfiLayoutSlider } from "react-icons/tfi";
-import FAQSection from "./Home/FAQSection";
-import Footer from "./Footer";
-import blogdetail1 from "../assets/blogdetail1.png"
-import blogdetail2 from "../assets/blogdetail2.png"
-import blogdetail3 from "../assets/blogdetail3.png";
-import blogdetail4 from "../assets/blogdetail4.png";
-import blogdetail5 from "../assets/blogdetail5.png";
-import blogdetail6 from "../assets/blogdetail6.png"
-import blogdetail7 from "../assets/blogdetail7.png";
-import Header from "./Courses/Header";
+import Footer from "../Layout/Footer";
+import blogdetail1 from "../../assets/blogdetail1.png";
+import blogdetail2 from "../../assets/blogdetail2.png"
+import blogdetail3 from "../../assets/blogdetail3.png";
+import blogdetail4 from "../../assets/blogdetail4.png";
+import blogdetail5 from "../../assets/blogdetail5.png";
+import blogdetail6 from "../../assets/blogdetail6.png"
+import blogdetail7 from "../../assets/blogdetail7.png";
+import Header from "../Layout/Header";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";

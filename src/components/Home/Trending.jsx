@@ -106,7 +106,7 @@ const TrendingWithCards = () => {
                   <button
                     key={label}
                     onClick={() => handleCourseClick(label)}
-                    className={`px-2 py-2 rounded-full text-[16px] font-Roboto Condensed fw-bold uppercase border transition-all
+                    className={`px-2 py-2 rounded-full text-[16px] font-Roboto Condensed fw-bold uppercase border-1 transition-all
                 ${
                   isSelected
                     ? "bg-[#047670] text-[#fff] border-[#002726]"
@@ -180,7 +180,7 @@ const TrendingWithCards = () => {
 
                     <button
                       style={{ borderColor: "2px solid black" }}
-                      className="mt-3 w-36 px-8 py-2 font-bold bg-[#ffffff] text-[#000000] rounded-3xl hover:bg-gray-200 transition text-sm"
+                      className="mt-3 w-36 px-8 py-2 font-bold bg-[#ffffff] text-[#000000] rounded-3xl hover:bg-gray-200 transition text-sm text-nowrap"
                     >
                       Learn More
                     </button>

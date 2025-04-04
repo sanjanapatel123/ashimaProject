@@ -10,9 +10,9 @@ import marketproduct8 from "../../assets/marketproduct8.png";
 import digitalproduct1 from "../../assets/digitalproduct1.png";
 import StartLearning from "../Home/StartLearning";
 import reviewimage from "../../assets/reviewimage.jpg";
-import Header from "../Courses/Header";
+import Header from "../Layout/Header";
 import { useState } from "react";
-import Footer from "../Footer";
+import Footer from "../Layout/Footer";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import REviewCarrds from "../Home/ReviewCards";
 
@@ -72,6 +72,13 @@ const MarketProduct = () => {
       <Header />
       <div className=" pt-9 flex flex-col lg:flex-row bg-[#047670] lg:h-[652px] px-4 lg:pt-14">
         {/* Left Image Section */}
+        <button
+          onClick={() => window.history.back()}
+          className="absolute top-28 left-4 text-white text-2xl bg-[#047670] rounded-full p-2"
+        >
+          ←
+        </button>
+
         <div className="flex w-full lg:w-1/2 items-center justify-center lg:justify-start p-6 lg:pl-20 ">
           <img
             src={digitalproduct1}

@@ -4,13 +4,16 @@ import liveimg2 from "../../assets/liveimg2.png";
 import liveimg3 from "../../assets/liveimg3.png";
 import liveimg4 from "../../assets/liveimg4.png";
 import liveimg5 from "../../assets/liveimg5.png";
-import reviewimage from "../../assets/reviewimage.jpg";
+
 import { FaYoutube } from "react-icons/fa";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 import ReviewCard from "../Home/ReviewCards";
+
+import Footer from "../Layout/Footer";
+import FAQSection from "../Home/FAQSection";
 
 import {
   FaStar,
@@ -23,9 +26,9 @@ import {
   FaUser,
   FaHeart,
 } from "react-icons/fa";
-import FAQSection from "../Home/FAQSection";
-import Header from "./Header";
-import Footer from "../Footer";
+
+
+
 
 const Live = () => {
   const recommendedCourses = [
@@ -90,7 +93,7 @@ const Live = () => {
 
   return (
     <>
-      <Header></Header>
+     <Header/>
       <div>
         <div className="lg:h-[500px] bg-[#047670] sm:px-10 md:px-20 py-9 sm:py-16 pt-28 lg:pt-28">
           <div className="flex flex-col lg:flex-row gap-6 h-full">
