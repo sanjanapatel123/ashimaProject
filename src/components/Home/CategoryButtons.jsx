@@ -272,7 +272,7 @@ const RideTheAIWave = () => {
             <div
               key={i}
               className={`w-3 h-3 rounded-full ${
-                i === 0 ? "bg-white" : "bg-gray-500"
+                i === 0 ? "bg-[#ffffff]" : "bg-gray-500"
               }`}
             ></div>
           ))}

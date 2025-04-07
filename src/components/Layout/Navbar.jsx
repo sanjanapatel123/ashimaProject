@@ -57,12 +57,12 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <a
-            href="#"
+          <Link
+            to="/Business"
             className="font-roboto font-medium text-[18px] text-[#000000]"
           >
             Business
-          </a>
+          </Link>
           <Link
             to="/digital"
             className="font-roboto font-medium text-[18px] text-[#000000]"
