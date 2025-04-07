@@ -1,28 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Footer from "../Layout/Footer";
 import blogdetail1 from "../../assets/blogdetail1.png";
-import blogdetail2 from "../../assets/blogdetail2.png"
+import blogdetail2 from "../../assets/blogdetail2.png";
 import blogdetail3 from "../../assets/blogdetail3.png";
 import blogdetail4 from "../../assets/blogdetail4.png";
 import blogdetail5 from "../../assets/blogdetail5.png";
-import blogdetail6 from "../../assets/blogdetail6.png"
+import blogdetail6 from "../../assets/blogdetail6.png";
 import blogdetail7 from "../../assets/blogdetail7.png";
-import Header from "../Layout/Header";
+import Header from "../../Layout/Header";
+import Footer from "../../Layout/Footer";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 
-
-
-
 const AITeacherLanding = () => {
   const [openIndex, setOpenIndex] = useState(null);
-  
-    const toggleFAQ = (index) => {
-      setOpenIndex(openIndex === index ? null : index);
-    };
-  
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   const faqs = [
     {

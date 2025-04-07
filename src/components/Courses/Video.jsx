@@ -11,11 +11,10 @@ import { FaAngleRight } from "react-icons/fa";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { FaCalendarAlt } from "react-icons/fa";
-import Header from "../Layout/Header";
+import Header from "../../Layout/Header";
+import Footer from "../../Layout/Footer";
 import ReviewCrad from "../Home/ReviewCards";
-import Footer from "../Layout/Footer";
 import FAQSection from "../Home/FAQSection";
-
 
 import {
   FaStar,
@@ -28,7 +27,6 @@ import {
   FaUser,
   FaHeart,
 } from "react-icons/fa";
-
 
 const Live = () => {
   const recommendedCourses = [
@@ -93,7 +91,7 @@ const Live = () => {
 
   return (
     <>
-      <Header/>
+      <Header />
       <div className="bg-[#ffffff] py-4">
         {/* Breadcrumb Navigation */}
 
@@ -263,27 +261,33 @@ const Live = () => {
                 {[
                   {
                     title: "Master Applied Generative AI Concepts",
-                    desc: "Learn applied generative AI techniques like prompt engineering, RAG, agents, and fine-tuning, with a focus on applying them effectively to real-world business scenarios. Understand how to navigate constraints like cost, latency, and performance constraints in AI systems.",
+                    desc:
+                      "Learn applied generative AI techniques like prompt engineering, RAG, agents, and fine-tuning, with a focus on applying them effectively to real-world business scenarios. Understand how to navigate constraints like cost, latency, and performance constraints in AI systems.",
                   },
                   {
                     title: "Apply Concepts to Build an Agentic Search System",
-                    desc: "While learning applied AI concepts, we’ll put them into action by building a Perplexity-like AI-powered search system through detailed, hands-on tutorials that demonstrate their practical application (Low code options will be provided).",
+                    desc:
+                      "While learning applied AI concepts, we’ll put them into action by building a Perplexity-like AI-powered search system through detailed, hands-on tutorials that demonstrate their practical application (Low code options will be provided).",
                   },
                   {
                     title: "Tackle Business Use-Cases with AI",
-                    desc: "Participate in brainstorming sessions and team huddles to approach hypothetical business problems. Learn to identify the right AI solutions for specific use cases, leveraging low-code options where applicable.",
+                    desc:
+                      "Participate in brainstorming sessions and team huddles to approach hypothetical business problems. Learn to identify the right AI solutions for specific use cases, leveraging low-code options where applicable.",
                   },
                   {
                     title: "Understand Challenges and Effective Evaluation",
-                    desc: "Gain a deep understanding of key challenges in building AI systems, including handling hallucinations, adversarial attacks, security, privacy issues etc., and learn best practices to evaluate AI solutions comprehensively.",
+                    desc:
+                      "Gain a deep understanding of key challenges in building AI systems, including handling hallucinations, adversarial attacks, security, privacy issues etc., and learn best practices to evaluate AI solutions comprehensively.",
                   },
                   {
                     title: "Final Capstone Project",
-                    desc: "You’ll design and demo a solution for a hypothetical business problem, integrating insights from relevant research papers in my curated list, hand-picked for enterprise relevance. This project will also involve addressing challenges and evaluation methods.",
+                    desc:
+                      "You’ll design and demo a solution for a hypothetical business problem, integrating insights from relevant research papers in my curated list, hand-picked for enterprise relevance. This project will also involve addressing challenges and evaluation methods.",
                   },
                   {
                     title: "Access to the Problem-First AI Community",
-                    desc: "The course includes guest lectures from industry experts, AMA sessions, and our Chai & AI discussions, culminating in a final in-person meetup in the Bay Area. You'll have plenty of opportunities to network and become part of our community.",
+                    desc:
+                      "The course includes guest lectures from industry experts, AMA sessions, and our Chai & AI discussions, culminating in a final in-person meetup in the Bay Area. You'll have plenty of opportunities to network and become part of our community.",
                   },
                 ].map((item, i) => (
                   <li key={i} className="flex items-start">

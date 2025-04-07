@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./Auth/ScrollToTop";
 import Courses from "./components/Courses/AllCourses"; // Capitalized component name
-import Login from "./components/Login";
-import Signup from "./components/Signup";
-import BlogDeatils from "./components/Blogs/BlogsDetails"
+import Login from "./Auth/Login";
+import Signup from "./Auth/Signup";
+import BlogDeatils from "./components/Blogs/BlogsDetails";
 import Instructor from "./components/Instructor/Instructor";
 import "./App.css";
 import MarketProduct from "./components/DigitalProduct/MarketProductPage";
@@ -14,21 +14,43 @@ import Blog from "./components/Blogs/Blog";
 import MyDigital from "./components/DigitalProduct/MyDigital";
 import InstructorSignup from "./components/Instructor/InstructorSignUp";
 import Home from "./components/Home/Home";
-
+import ProtectedRoute from "./Auth/ProtectedRoute";
+import AdminDashboard from "./components/Dashboard/AdminDashboard";
+import StudentDashboard from "./components/Dashboard/StudentDashboard ";
+import InstructorDashboard from "./components/Dashboard/InstructorDashboard";
 
 const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/courses" element={<Courses />} /> {/* Fixed route */}
+        <Route path="/login" element={<Login />} />
         <Route
-          path="/"
+          path="/admin-dashboard"
           element={
-           <Home/>
+            <ProtectedRoute allowedRole="admin">
+              <AdminDashboard />
+            </ProtectedRoute>
           }
         />
-        <Route path="/courses" element={<Courses />} />  {/* Fixed route */}
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/student-dashboard"
+          element={
+            <ProtectedRoute allowedRole="student">
+              <StudentDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/instructor-dashboard"
+          element={
+            <ProtectedRoute allowedRole="instructor">
+              <InstructorDashboard />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/signup" element={<Signup />} />
         <Route path="/digital" element={<MyDigital />} />
         <Route path="/marketProduct" element={<MarketProduct />} />
@@ -36,15 +58,9 @@ const App = () => {
         <Route path="/hybrid" element={<Hybrid />} />
         <Route path="/video" element={<Video />} />
         <Route path="/blog" element={<Blog />} />
-        <Route
-          path="/blogsDetail"
-          element={<BlogDeatils />}
-        />
+        <Route path="/blogsDetail" element={<BlogDeatils />} />
         <Route path="/instructor" element={<Instructor />} />
-        <Route
-          path="/instructorSignup"
-          element={<InstructorSignup />}
-        />
+        <Route path="/instructorSignup" element={<InstructorSignup />} />
       </Routes>
     </BrowserRouter>
   );

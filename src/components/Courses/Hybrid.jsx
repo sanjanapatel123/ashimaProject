@@ -10,9 +10,9 @@ import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { FaCalendarAlt } from "react-icons/fa";
 import ReviewCard from "../Home/ReviewCards";
-import Footer from "../Layout/Footer";
 import FAQSection from "../Home/FAQSection";
-
+import Header from "../../Layout/Header";
+import Footer from '../../Layout/Footer';
 
 import {
   FaStar,

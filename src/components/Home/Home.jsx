@@ -1,6 +1,5 @@
 import React from 'react'
-
-import Navbar from '../Layout/Navbar';
+import Navbar from '../../Layout/Navbar';
 import Hero from "../Home/Hero";
 import Explore from "../Home/Explore"
 import CompaniesSection from "../Home/CompaniesSection"
@@ -13,8 +12,8 @@ import Letmake from "../Home/Letmake";
 import FAQSection from "../Home/FAQSection";
 import ReviewCards from "../Home/ReviewCards";
 import StartLearning from "../Home/StartLearning";
-import Footer from '../Layout/Footer';
-
+// import Header from "../../Layout/Header";
+import Footer from '../../Layout/Footer';
 
 
 const Home = () => {

@@ -4,8 +4,8 @@ import blog2 from "../../assets/blog2.png";
 import blog3 from "../../assets/blog3.png";
 import blog4 from "../../assets/blog4.png";
 import blog5 from "../../assets/blog5.png";
-import Header from "../Layout/Header";
-import Footer from "../Layout/Footer";
+import Header from "../../Layout/Header";
+import Footer from "../../Layout/Footer";
 import { Link } from "react-router-dom";
 const Blog = () => {
   const trendingCourses = [
