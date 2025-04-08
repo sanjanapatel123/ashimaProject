@@ -18,6 +18,10 @@ import ProtectedRoute from "./Auth/ProtectedRoute";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
 import StudentDashboard from "./components/Dashboard/StudentDashboard ";
 import InstructorDashboard from "./components/Dashboard/InstructorDashboard";
+import DigitalProducts from "./components/InstructorPanel/DigitalProducts";
+import NewCourse from "./components/InstructorPanel/NewCourse";
+import WebDevelopment from "./components/InstructorPanel/WebDevelopment";
+import UXDesign from "./components/InstructorPanel/UXDesign";
 
 const App = () => {
   return (
@@ -31,6 +35,16 @@ const App = () => {
         {/* <Route path="/projects"></Route> */}
         <Route path="/student-dashboard" element={<StudentDashboard />} />
         <Route path="/instructor-dashboard" element={<InstructorDashboard />} />
+        <Route
+          path="/digital"
+          element={<DigitalProducts></DigitalProducts>}
+        ></Route>
+        <Route
+          path="/web-dev"
+          element={<WebDevelopment></WebDevelopment>}
+        ></Route>
+        <Route path="/ui-ux" element={<UXDesign></UXDesign>}></Route>
+        <Route path="/newCourse" element={<NewCourse></NewCourse>}></Route>
         <Route path="/signup" element={<Signup />} />
         <Route path="/digital" element={<MyDigital />} />
         <Route path="/marketProduct" element={<MarketProduct />} />

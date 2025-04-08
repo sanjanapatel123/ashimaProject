@@ -1,5 +1,3 @@
-import Sidebar from "../../Layout/Sidebar";
-import Navbar from "../../Layout/SoftwareNavbar";
 import DashboardLayout from "../../Layout/DashboardLayout";
 
 const InstructorDashboard = () => {
