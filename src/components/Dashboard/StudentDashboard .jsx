@@ -1,15 +1,12 @@
 import Sidebar from "../../Layout/Sidebar";
 import Navbar from "../../Layout/SoftwareNavbar";
+import DashboardLayout from "../../Layout/DashboardLayout";
 
 const StudentDashboard = () => {
   return (
-    <div className="flex">
-      <Sidebar />
-      <div className="flex-1">
-        <Navbar />
-        <div className="p-4">Welcome to Student Dashboard</div>
-      </div>
-    </div>
+    <DashboardLayout>
+      <h2 className="text-xl font-bold">Welcome to student Dashboard</h2>
+    </DashboardLayout>
   );
 };
 

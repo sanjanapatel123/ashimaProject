@@ -27,30 +27,10 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} /> {/* Fixed route */}
         <Route path="/login" element={<Login />} />
-        <Route
-          path="/admin-dashboard"
-          element={
-            <ProtectedRoute allowedRole="admin">
-              <AdminDashboard />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/student-dashboard"
-          element={
-            <ProtectedRoute allowedRole="student">
-              <StudentDashboard />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/instructor-dashboard"
-          element={
-            <ProtectedRoute allowedRole="instructor">
-              <InstructorDashboard />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        {/* <Route path="/projects"></Route> */}
+        <Route path="/student-dashboard" element={<StudentDashboard />} />
+        <Route path="/instructor-dashboard" element={<InstructorDashboard />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/digital" element={<MyDigital />} />
         <Route path="/marketProduct" element={<MarketProduct />} />
