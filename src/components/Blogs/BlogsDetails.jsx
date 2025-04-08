@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Header from "../Layout/Header";
-import Footer from "../Layout/Footer";
+import Header from "../../Layout/Header";
+import Footer from '../../Layout/Footer';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaAngleRight } from "react-icons/fa";
 

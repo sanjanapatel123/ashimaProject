@@ -8,8 +8,8 @@ import { CiFilter } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { MoreVertical } from "lucide-react"; // optional icon package
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import Header from "../Layout/Header";
-import Footer from "../Layout/Footer";
+import Header from "../../Layout/Header";
+import Footer from '../../Layout/Footer';
 import ReviewCarrds from "../Home/ReviewCards";
 
 

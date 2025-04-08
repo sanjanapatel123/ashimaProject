@@ -4,8 +4,8 @@ import blog2 from "../../assets/blog2.png";
 import blog3 from "../../assets/blog3.png";
 import blog4 from "../../assets/blog4.png";
 import blog5 from "../../assets/blog5.png";
-import Header from "../Layout/Header";
-import Footer from "../Layout/Footer";
+import Header from "../../Layout/Header";
+import Footer from "../../Layout/Footer";
 import { Link } from "react-router-dom";
 const Blog = () => {
   const trendingCourses = [
@@ -108,47 +108,47 @@ const Blog = () => {
             Learn by Doing
           </p>
           <div className="mt-4 space-y-4">
-            <button className="flex items-center justify-center w-full py-2 border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-100">
+            <button className="flex items-center justify-center w-full h-[47px] mb-4 border-[1px] border-[#1E1E1E]/10 text-[16px] bg-[#ffffff] text-[#000000] rounded-[4px] gap-2">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
                 alt="LinkedIn"
-                className="w-5 h-5 mr-2"
+                className="w-[24px] h-[24px] mr-2"
               />
               SIGN UP WITH LINKEDIN
             </button>
-            <button className="flex items-center justify-center w-full py-2 border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-100">
+
+            <button className="flex items-center justify-center w-full h-[47px] mb-4 border-[1px] border-[#1E1E1E]/10 text-[16px] bg-[#ffffff] text-[#000000] rounded-[4px] gap-2">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Google_%22G%22_Logo.svg"
+                src="https://developers.google.com/identity/images/g-logo.png"
                 alt="Google"
-                className="w-5 h-5 mr-2"
+                className="w-[24px] h-[24px]"
               />
-              SIGN UP WITH GOOGLE
+              SIGNUP WITH GOOGLE
             </button>
           </div>
-
-          <div className="flex items-center my-4">
-            <hr className="flex-grow border-gray-300" />
+          <div className="flex items-center my-2">
+            <hr className="flex-grow border-[#1E1E1E]/70" />
             <span className="mx-2 text-gray-500 text-sm">Or Use Email</span>
-            <hr className="flex-grow border-gray-300" />
+            <hr className="flex-grow border-[#1E1E1E]/70" />
           </div>
 
-          <div className="space-y-3">
-            <label className="text-[16px] sm:text-[18px] font-roboto font-normal text-[#1E1E1E]">
+          <div className="space-y-2">
+            <label className="text-[18px]  font-roboto font-normal text-[#1E1E1E]">
               EMAIL
             </label>
             <input
               type="email"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-[#1E1E1E]/70 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your email"
             />
 
-            <label className="text-[16px] sm:text-[18px] font-roboto font-normal text-[#1E1E1E]">
-              PASSWORD
+            <label className="text-[18px] uppercase  font-roboto font-normal text-[#1E1E1E]">
+              enter your program
             </label>
             <input
               type="password"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your password"
+              className="w-full px-3 py-2 border border-[#1E1E1E]/70 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter your program"
             />
           </div>
 
@@ -158,11 +158,11 @@ const Blog = () => {
 
           <p className="text-[12px] font-roboto font-normal text-center text-[#047670] mt-3">
             By continuing, you agree to AI Skills{" "}
-            <a href="#" className="text-blue-600">
+            <a href="#" className="text-[#047670]">
               Terms
             </a>
             and
-            <a href="#" className="text-blue-600">
+            <a href="#" className="text-[#047670]">
               Privacy Policy
             </a>
             .
@@ -170,7 +170,7 @@ const Blog = () => {
         </div>
       </section>
       {/* Blog Categories */}
-      <section className="bg-white py-8 px-10">
+      <section className="bg-[#ffffff] py-8 px-10">
         <h2 className="text-[50px] font-impact font-normal text-[#000000] mb-12">
           <span className="text-[#000000">TRENDING </span>
           <span className="text-[#047670]">NEWSLETTER</span>
@@ -224,7 +224,7 @@ const Blog = () => {
                 <h3 className="text-[20px] font-impact font-normal text-[#000000] ">
                   {post.title}
                 </h3>
-                <p className="text-[12px] text-[#1E1E1E1]/80 font-normal font-jost">
+                <p className="text-[12px] text-[#1E1E1E]/80 font-normal font-jost">
                   {post.description}
                 </p>
 
