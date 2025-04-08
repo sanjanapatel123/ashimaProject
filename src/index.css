@@ -15,14 +15,14 @@ body {
 
 a {
   text-decoration: none !important;
-  
 }
 
 a:hover {
   text-decoration: none !important;
 }
-ol, ul {
-    padding-left: 0rem !important;
+ol,
+ul {
+  padding-left: 0rem !important;
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
@@ -30,4 +30,10 @@ ol, ul {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+    margin-left: 0 !important;
+  }
 }

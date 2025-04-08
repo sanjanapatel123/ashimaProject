@@ -1,16 +1,10 @@
-import React from "react";
-import Sidebar from "../../Layout/Sidebar";
-import Navbar from "../../Layout/SoftwareNavbar";
+import DashboardLayout from "../../Layout/DashboardLayout";
 
 const AdminDashboard = () => {
   return (
-    <div className="flex">
-      <Sidebar />
-      <div className="flex-1">
-        <Navbar />
-        <div className="p-4">Welcome to Admin Dashboard</div>
-      </div>
-    </div>
+    <DashboardLayout>
+      <h2 className="text-xl font-bold">Welcome to Admin Dashboard</h2>
+    </DashboardLayout>
   );
 };
 
