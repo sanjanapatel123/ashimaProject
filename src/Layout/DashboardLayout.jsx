@@ -12,8 +12,9 @@ const DashboardLayout = ({ children }) => {
           isCollapsed ? "pl-16" : "pl-64"
         }`}
       >
-        <Navbar />
-        <div className="p-4">{children}</div>
+        <Navbar isCollapsed={isCollapsed} />
+
+        <div className="p-4 mt-5">{children}</div>
       </div>
     </div>
   );

@@ -101,13 +101,13 @@ const Live = () => {
             <div className="w-full sm:w-11/12 lg:w-2/3 bg-[#047670] sm:px-6 md:px-12 py-4 mx-auto">
               <div className="w-full flex flex-col justify-between h-full">
                 <div>
-                  <p className="font-jost text-white text-[22px] tracking-[0.5%] leading-[25px] flex items-center flex-wrap gap-x-2 ">
+                  <p className="font-jost uppercase text-[#ffffff] text-[22px] tracking-[0.5%] leading-[25px] flex items-center flex-wrap gap-x-2 ">
                     AI & ML{" "}
-                    <span className="mx-1 text-white">
+                    <span className="mx-1 text-[#ffffff]">
                       <FaAngleRight />
                     </span>
                     prompt engineering{" "}
-                    <span className="mx-1 text-white">
+                    <span className="mx-1 text-[#ffffff]">
                       <FaAngleRight />
                     </span>{" "}
                     abcd
@@ -123,7 +123,7 @@ const Live = () => {
 
                   <div className="flex items-center font-roboto font-bold text-[14px] text-[#ffffff] mb-2">
                     <span className="text-[#fBBC09] flex items-center">
-                      <span className="text-white">4.8</span>
+                      <span className="text-[#ffffff]">4.8</span>
                       <FaStar className="mx-1" />
                       <FaStar />
                       <FaStar />
@@ -222,13 +222,13 @@ const Live = () => {
                       Cancel Anytime.
                     </p>
                   </div>
-                  <div className="flex items-center my-4">
+                  <div className="flex items-center">
                     <hr className="flex-grow border-t border-[#000000]" />
                     <span className="mx-2 text-[#000000] font-medium">Or</span>
                     <hr className="flex-grow border-t border-[#000000]" />
                   </div>
 
-                  <div className="mt-4 ">
+                  <div className="mt-2">
                     <p className="text-[28px]  text-[#000000] font-roboto font-bold">
                       $79.44
                     </p>
@@ -336,7 +336,7 @@ const Live = () => {
               </div>
             </div>
 
-            <div className="shadow-2xl border-black rounded-[4px] p-4 flex flex-col items-start gap-6 sm:w-[400px] w-full h-auto uppercase">
+            <div className="shadow-2xl border-[#000000] rounded-[4px] p-4 flex flex-col items-start gap-6 sm:w-[400px] w-full h-auto uppercase">
               <img
                 src={liveimg2}
                 className="w-[65px] h-[65px] rounded-full bg-[#ff757A] text-[#ffffff] text-sm font-bold mt-1"
@@ -447,10 +447,10 @@ const Live = () => {
                 </h2>
 
                 <div className="flex flex-col sm:flex-row sm:justify-between">
-                  <p className="text-[12px] text-[#1e1e1e] mb-2 sm:mb-6">
+                  <p className="text-[16px] text-[#1e1e1e] mb-2 sm:mb-6">
                     8 sections • 73 lectures • 16h 8m total length
                   </p>
-                  <p className="text-[16px] text-[#047670] font-roboto cursor-pointer mb-2 sm:mb-6">
+                  <p className="text-[18px] text-[#047670] font-roboto cursor-pointer mb-2 sm:mb-6">
                     EXPAND ALL SECTIONS
                   </p>
                 </div>
@@ -487,7 +487,7 @@ const Live = () => {
 
                       {/* Optional: double border only after INTRODUCTION */}
                       {i === 0 && (
-                        <div className="border-t-[3px] border-double border-[#047670]"></div>
+                        <div className="border-double border-[#047670]"></div>
                       )}
                     </div>
                   ))}

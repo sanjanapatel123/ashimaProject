@@ -2,14 +2,20 @@ import { useState } from "react";
 import { FaMoon, FaBell, FaUser, FaCog, FaSignOutAlt } from "react-icons/fa";
 import { Container } from "react-bootstrap";
 
-const SoftwareNavbar = () => {
+const SoftwareNavbar = ({ isCollapsed }) => {
   const user = JSON.parse(localStorage.getItem("user"));
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [notifOpen, setNotifOpen] = useState(false);
 
   return (
-    <Container fluid>
-      <div className="bg-white shadow-sm px-6 py-3 flex items-center justify-between border-b">
+    <>
+      <div
+        className={`bg-white shadow-sm px-6 py-3 flex items-center justify-between border-b fixed top-0 z-40 transition-all duration-300 ${
+          isCollapsed
+            ? "left-16 w-[calc(100%-4rem)]"
+            : "left-64 w-[calc(100%-16rem)]"
+        }`}
+      >
         {/* Search */}
         <div className="flex items-center w-1/3">
           <input
@@ -18,11 +24,6 @@ const SoftwareNavbar = () => {
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
-
-        {/* Welcome message */}
-        {/* <div className="text-lg font-semibold text-gray-800 hidden md:block">
-        Welcome back, {user?.name || "User"}!
-      </div> */}
 
         {/* Right Side Icons */}
         <div className="flex items-center space-x-4 relative">
@@ -90,7 +91,7 @@ const SoftwareNavbar = () => {
           </div>
         </div>
       </div>
-    </Container>
+    </>
   );
 };
 

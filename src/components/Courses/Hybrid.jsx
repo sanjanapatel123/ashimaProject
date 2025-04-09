@@ -28,7 +28,7 @@ import {
 
 
 
-const Live = () => {
+const Hybrid = () => {
   const recommendedCourses = [
     {
       id: 1,
@@ -91,7 +91,7 @@ const Live = () => {
 
   return (
     <>
-   <Header/>
+      <Header />
       <div className="">
         {/* Breadcrumb Navigation */}
 
@@ -101,13 +101,13 @@ const Live = () => {
             <div className="w-full sm:w-11/12 lg:w-2/3 bg-[#047670] sm:px-6 md:px-12 py-4 mx-auto">
               <div className="w-full flex flex-col justify-between h-full">
                 <div>
-                  <p className="font-jost text-white text-[22px] tracking-[0.5%] leading-[25px] flex items-center flex-wrap gap-x-2 ">
+                  <p className="font-jost text-[#ffffff] uppercase text-[22px] tracking-[0.5%] leading-[25px] flex items-center flex-wrap gap-x-2 ">
                     AI & ML{" "}
-                    <span className="mx-1 text-white">
+                    <span className="mx-1 text-[#ffffff]">
                       <FaAngleRight />
                     </span>
                     prompt engineering{" "}
-                    <span className="mx-1 text-white">
+                    <span className="mx-1 text-[#ffffff]">
                       <FaAngleRight />
                     </span>{" "}
                     abcd
@@ -123,7 +123,7 @@ const Live = () => {
 
                   <div className="flex items-center font-roboto font-bold text-[14px] text-[#ffffff] mb-2">
                     <span className="text-[#fBBC09] flex items-center">
-                      <span className="text-white">4.8</span>
+                      <span className="text-[#ffffff]">4.8</span>
                       <FaStar className="mx-1" />
                       <FaStar />
                       <FaStar />
@@ -174,7 +174,7 @@ const Live = () => {
                 </div>
 
                 <div>
-                  <button className="bg-[#000] w-[85px] h-[26px] text-[#fff] text-[12px] px-3 py-1 rounded-[12px] font-roboto font-semibold">
+                  <button className="bg-[#000000] w-[85px] h-[26px] text-[#ffffff] text-[12px] px-3 py-1 rounded-[12px] font-roboto font-semibold">
                     Hybrid
                   </button>
                 </div>
@@ -303,7 +303,7 @@ const Live = () => {
           </h3>
 
           <div className="flex flex-col sm:flex-row gap-8 sm:gap-10">
-            <div className="shadow-2xl border-black rounded-[4px] p-4 flex flex-col items-start gap-6 sm:w-[400px] w-full h-auto uppercase">
+            <div className="shadow-2xl border-[1E1E1E1]/50 rounded-[4px] p-4 flex flex-col items-start gap-6 sm:w-[400px] w-full h-auto uppercase">
               <img
                 src={liveimg2}
                 className="w-[65px] h-[65px] rounded-full bg-[#ff757A] text-[#ffffff] text-sm font-bold mt-1"
@@ -311,7 +311,7 @@ const Live = () => {
               />
 
               <div className="w-full">
-                <h6 className="text-[#1e1e1e] font-semibold">Shraddha</h6>
+                <h6 className="text-[#1e1e1e] font-semibold">KAPIL SHARMA</h6>
                 <p className="text-[14px] font-roboto text-[#1e1e1e] font-bold">
                   MicroSoft
                 </p>
@@ -324,7 +324,7 @@ const Live = () => {
               </div>
             </div>
 
-            <div className="shadow-2xl border-black rounded-[4px] p-4 flex flex-col items-start gap-6 sm:w-[400px] w-full h-auto uppercase">
+            <div className="shadow-2xl border-[#1E1EE1]/50 rounded-[4px] p-4 flex flex-col items-start gap-6 sm:w-[400px] w-full h-auto uppercase">
               <img
                 src={liveimg2}
                 className="w-[65px] h-[65px] rounded-full bg-[#ff757A] text-[#ffffff] text-sm font-bold mt-1"
@@ -435,10 +435,10 @@ const Live = () => {
                 </h2>
 
                 <div className="flex flex-col sm:flex-row sm:justify-between">
-                  <p className="text-[12px] text-[#1e1e1e] mb-2 sm:mb-6">
+                  <p className="text-[16px] text-[#1e1e1e] mb-2 sm:mb-6">
                     8 sections • 73 lectures • 16h 8m total length
                   </p>
-                  <p className="text-[16px] text-[#047670] font-roboto cursor-pointer mb-2 sm:mb-6">
+                  <p className="text-[18px] text-[#047670] font-roboto cursor-pointer mb-2 sm:mb-6">
                     EXPAND ALL SECTIONS
                   </p>
                 </div>
@@ -475,7 +475,7 @@ const Live = () => {
 
                       {/* Optional: double border only after INTRODUCTION */}
                       {i === 0 && (
-                        <div className="border-t-[3px] border-double border-[#047670]"></div>
+                        <div className="border-double border-[#047670]"></div>
                       )}
                     </div>
                   ))}
@@ -610,4 +610,4 @@ const Live = () => {
   );
 };
 
-export default Live;
+export default Hybrid;

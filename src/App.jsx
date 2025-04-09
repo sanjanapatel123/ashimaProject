@@ -22,6 +22,9 @@ import DigitalProducts from "./components/InstructorPanel/DigitalProducts";
 import NewCourse from "./components/InstructorPanel/NewCourse";
 import WebDevelopment from "./components/InstructorPanel/WebDevelopment";
 import UXDesign from "./components/InstructorPanel/UXDesign";
+import Business from "./components/BusinessProduct/Business";
+import AIPowered from "./components/BusinessProduct/AI-Powered";
+import LaunchPage from "./components/BusinessProduct/LaunchPage";
 
 const App = () => {
   return (
@@ -55,6 +58,9 @@ const App = () => {
         <Route path="/blogsDetail" element={<BlogDeatils />} />
         <Route path="/instructor" element={<Instructor />} />
         <Route path="/instructorSignup" element={<InstructorSignup />} />
+        <Route path="/business" element={<Business />} />
+        <Route path="/aipowered" element={<AIPowered />} />
+        <Route path="/launchpage" element={<LaunchPage />} />
       </Routes>
     </BrowserRouter>
   );

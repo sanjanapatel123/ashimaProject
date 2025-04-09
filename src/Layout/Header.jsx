@@ -80,9 +80,9 @@ const Header = () => {
             <Link to="/digital" className="text-[18px] text-[#000000]">
               Digital Products
             </Link>
-            <a href="#" className="text-[18px] text-[#000000]">
+            <Link to="/business" className="text-[18px] text-[#000000]">
               Business
-            </a>
+            </Link>
             <Link to="/blog" className="text-[18px] text-[#000000]">
               Newsletter
             </Link>
@@ -166,9 +166,9 @@ const Header = () => {
             >
               Digital Products
             </Link>
-            <a href="#" className="block px-4 py-2 text-[18px] text-[#000000]">
+            <Link to="/business" className="block px-4 py-2 text-[18px] text-[#000000]">
               Business
-            </a>
+            </Link>
             <Link
               to="/blog"
               onClick={() => setIsMobileMenuOpen(false)}

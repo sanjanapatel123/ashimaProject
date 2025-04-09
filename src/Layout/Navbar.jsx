@@ -44,12 +44,12 @@ const Navbar = () => {
             </button>
 
             {coursesDropdownOpen && (
-              <div className="absolute left-0 top-11 w-[260px] bg-white shadow-lg rounded-md z-50 max-h-[300px] overflow-y-auto">
+              <div className="absolute left-0 top-11 w-[260px] bg-[#ffffff] shadow-lg rounded-md z-50 max-h-[300px] overflow-y-auto">
                 {trendingCourses.map((course, idx) => (
                   <Link
                     key={idx}
                     to="/courses"
-                    className="block px-4 py-2 text-[16px] text-black hover:bg-[#f0f0f0]"
+                    className="block px-4 py-2 text-[16px] text-[#000000] hover:bg-[#f0f0f0]"
                     onClick={() => setCoursesDropdownOpen(false)}
                   >
                     {course}
@@ -62,9 +62,9 @@ const Navbar = () => {
           <Link to="/digital" className="text-[18px] text-[#000000]">
             Digital Products
           </Link>
-          <a href="#" className="text-[18px] text-[#000000]">
+          <Link to="/business" className="text-[18px] text-[#000000]">
             Business
-          </a>
+          </Link>
           <Link to="/blog" className="text-[18px] text-[#000000]">
             Newsletter
           </Link>
@@ -79,7 +79,7 @@ const Navbar = () => {
             Login
           </Link>
           <Link
-            to={"/login"}
+            to={"/Launchpage"}
             className="px-5 py-2 text-white bg-teal-700 rounded-lg"
           >
             Launch Now
@@ -149,9 +149,9 @@ const Navbar = () => {
             >
               Digital Products
             </Link>
-            <a href="#" className="block px-4 py-2 text-[18px] text-[#000000]">
+            <Link to="/business" className="block px-4 py-2 text-[18px] text-[#000000]">
               Business
-            </a>
+            </Link>
             <Link
               to="/blog"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -170,9 +170,9 @@ const Navbar = () => {
                 Login
               </Link>
               <Link
-                to="/login"
+                to="/Launchpage"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full block text-center px-4 py-2 text-white bg-[#047670] rounded-lg"
+                className="w-full block text-center px-4 py-2 text-[#ffffff] bg-[#047670] rounded-lg"
               >
                 Launch Now
               </Link>

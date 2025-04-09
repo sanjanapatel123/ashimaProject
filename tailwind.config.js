@@ -8,6 +8,7 @@ export default {
         roboto: ["Roboto Condensed", "sans-serif"],
         impact: ["Impact", "sans-serif"],
         jost: ["Jost", "sans-serif"],
+        archivo: ['"Archivo Narrow"', "sans-serif"],
       },
     },
   },

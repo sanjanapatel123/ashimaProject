@@ -95,16 +95,16 @@ const Live = () => {
             <div className="w-full sm:w-11/12 lg:w-2/3 bg-[#047670] sm:px-6 md:px-12 py-4 mx-auto">
               <div className="w-full flex flex-col justify-between h-full">
                 <div>
-                  <p className="font-jost text-white text-[22px] tracking-[0.5%] leading-[25px] flex items-center flex-wrap gap-x-2 ">
+                  <p className="font-jost text-[#ffffff] text-[22px] tracking-[0.5%] leading-[25px] flex items-center flex-wrap gap-x-2 uppercase ">
                     AI & ML{" "}
-                    <span className="mx-1 text-white">
+                    <span className="mx-1 text-[#ffffff]">
                       <FaAngleRight />
                     </span>
                     prompt engineering{" "}
-                    <span className="mx-1 text-white">
+                    <span className="mx-1 text-[#ffffff]">
                       <FaAngleRight />
                     </span>{" "}
-                    abcd
+                    ABCD
                   </p>
                   <h2 className="text-[32px] sm:text-[40px] md:text-[48px] font-normal font-impact mb-2 mt-4 text-[#ffffff] uppercase">
                     AI AND ML FOR BEGINNERS
@@ -117,7 +117,7 @@ const Live = () => {
 
                   <div className="flex items-center font-roboto font-bold text-[14px] text-[#ffffff] mb-2">
                     <span className="text-[#fBBC09] flex items-center">
-                      <span className="text-white">4.8</span>
+                      <span className="text-[#ffffff]">4.8</span>
                       <FaStar className="mx-1" />
                       <FaStar />
                       <FaStar />
@@ -223,7 +223,7 @@ const Live = () => {
                     <input
                       type="email"
                       placeholder="Your Email"
-                      className="flex-1 border text-[#047670] placeholder:text-[#047670] border-gray-300 px-3 py-2 text-[16px] font-bold font-roboto rounded-l focus:outline-none"
+                      className="flex-1 border text-[#047670] placeholder:text-[#047670] border-[#1E1E1E]/70 px-3 py-2 text-[16px] font-bold font-roboto rounded-l focus:outline-none"
                     />
                     <button className="bg-[#047670] w-[40px] h-[40px] text-[#ffffff] rounded-r flex items-center justify-center">
                       <FaArrowRight />
@@ -248,33 +248,27 @@ const Live = () => {
                 {[
                   {
                     title: "Master Applied Generative AI Concepts",
-                    desc:
-                      "Learn applied generative AI techniques like prompt engineering, RAG, agents, and fine-tuning, with a focus on applying them effectively to real-world business scenarios. Understand how to navigate constraints like cost, latency, and performance constraints in AI systems.",
+                    desc: "Learn applied generative AI techniques like prompt engineering, RAG, agents, and fine-tuning, with a focus on applying them effectively to real-world business scenarios. Understand how to navigate constraints like cost, latency, and performance constraints in AI systems.",
                   },
                   {
                     title: "Apply Concepts to Build an Agentic Search System",
-                    desc:
-                      "While learning applied AI concepts, we’ll put them into action by building a Perplexity-like AI-powered search system through detailed, hands-on tutorials that demonstrate their practical application (Low code options will be provided).",
+                    desc: "While learning applied AI concepts, we’ll put them into action by building a Perplexity-like AI-powered search system through detailed, hands-on tutorials that demonstrate their practical application (Low code options will be provided).",
                   },
                   {
                     title: "Tackle Business Use-Cases with AI",
-                    desc:
-                      "Participate in brainstorming sessions and team huddles to approach hypothetical business problems. Learn to identify the right AI solutions for specific use cases, leveraging low-code options where applicable.",
+                    desc: "Participate in brainstorming sessions and team huddles to approach hypothetical business problems. Learn to identify the right AI solutions for specific use cases, leveraging low-code options where applicable.",
                   },
                   {
                     title: "Understand Challenges and Effective Evaluation",
-                    desc:
-                      "Gain a deep understanding of key challenges in building AI systems, including handling hallucinations, adversarial attacks, security, privacy issues etc., and learn best practices to evaluate AI solutions comprehensively.",
+                    desc: "Gain a deep understanding of key challenges in building AI systems, including handling hallucinations, adversarial attacks, security, privacy issues etc., and learn best practices to evaluate AI solutions comprehensively.",
                   },
                   {
                     title: "Final Capstone Project",
-                    desc:
-                      "You’ll design and demo a solution for a hypothetical business problem, integrating insights from relevant research papers in my curated list, hand-picked for enterprise relevance. This project will also involve addressing challenges and evaluation methods.",
+                    desc: "You’ll design and demo a solution for a hypothetical business problem, integrating insights from relevant research papers in my curated list, hand-picked for enterprise relevance. This project will also involve addressing challenges and evaluation methods.",
                   },
                   {
                     title: "Access to the Problem-First AI Community",
-                    desc:
-                      "The course includes guest lectures from industry experts, AMA sessions, and our Chai & AI discussions, culminating in a final in-person meetup in the Bay Area. You'll have plenty of opportunities to network and become part of our community.",
+                    desc: "The course includes guest lectures from industry experts, AMA sessions, and our Chai & AI discussions, culminating in a final in-person meetup in the Bay Area. You'll have plenty of opportunities to network and become part of our community.",
                   },
                 ].map((item, i) => (
                   <li key={i} className="flex items-start">
@@ -435,16 +429,16 @@ const Live = () => {
                 </h2>
 
                 <div className="flex flex-col sm:flex-row sm:justify-between">
-                  <p className="text-[12px] text-[#1e1e1e] mb-2 sm:mb-6">
+                  <p className="text-[16px] text-[#1e1e1e] mb-2 sm:mb-6">
                     8 sections • 73 lectures • 16h 8m total length
                   </p>
-                  <p className="text-[16px] text-[#047670] font-roboto cursor-pointer mb-2 sm:mb-6">
+                  <p className="text-[18px] text-[#047670] font-roboto cursor-pointer mb-2 sm:mb-6">
                     EXPAND ALL SECTIONS
                   </p>
                 </div>
 
                 {/* Intro + Topics List with inner borders */}
-                <div className="border-t border-double border-[#047670]/40 mt-5">
+                <div className="border-double border-[#047670]/40 mt-5">
                   {sections.map((item, i) => (
                     <div key={i}>
                       <div
@@ -475,7 +469,7 @@ const Live = () => {
 
                       {/* Optional: double border only after INTRODUCTION */}
                       {i === 0 && (
-                        <div className="border-t-[3px] border-double border-[#047670]"></div>
+                        <div className="border-double border-[#047670]"></div>
                       )}
                     </div>
                   ))}
@@ -582,13 +576,13 @@ const Live = () => {
 
                       {/* Bottom: HIGH RATED, Hours, Updated */}
                       <div className="mt-2">
-                        <span className="bg-[#FF757A] text-[#1e1e1e] font-semibold font-roboto uppercase px-2 py-0.5 rounded-[4px] mr-2 text-[10px]">
+                        <span className="bg-[#FF757A] text-[#1E1E1E] font-semibold font-roboto uppercase px-2 py-0.5 rounded-[4px] mr-2 text-[10px]">
                           HIGH RATED
                         </span>
                         <span className="text-[#047670] font-semibold uppercase font-roboto text-[16px] mr-3">
                           {course.hours}
                         </span>
-                        <span className="text-[#1e1e1e] font-semibold uppercase font-roboto text-[14px]">
+                        <span className="text-[#1E1E1E] font-semibold uppercase font-roboto text-[14px]">
                           {course.updated}
                         </span>
                       </div>
