@@ -1,5 +1,3 @@
-import Sidebar from "../../Layout/Sidebar";
-import Navbar from "../../Layout/SoftwareNavbar";
 import DashboardLayout from "../../Layout/DashboardLayout";
 import Instructordash1 from "../../assets/Instructordash1.png";
 import Instructordash2 from "../../assets/Instructordash2.png";

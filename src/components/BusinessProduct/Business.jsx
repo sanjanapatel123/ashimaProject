@@ -536,7 +536,7 @@ const courses = [
         </div>
       </div>
 
-      <div className="bg-[#ffffff] text-[#000000] px-6 lg:px-20 py-16">
+      <div className="bg-[#ffffff] text-[#000000]  py-16">
         {/* Heading */}
         <h2 className="text-[50px] text-[#000000] text-center font-impact font-normal leading-tight tracking-tight uppercase">
           Look At Our Few{" "}
