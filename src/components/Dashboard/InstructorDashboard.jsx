@@ -6,9 +6,30 @@ import Instructordash2 from "../../assets/Instructordash2.png";
 import Instructordash3 from "../../assets/Instructordash3.png";
 import Instructordash4 from "../../assets/Instructordash4.png";
 import Instructordash5 from "../../assets/Instructordash5.png";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  Area,
+  AreaChart,
+} from "recharts";
 
 
 const InstructorDashboard = () => {
+  const data = [
+    { month: "Jan", revenue: 4500 },
+    { month: "Feb", revenue: 5500 },
+    { month: "Mar", revenue: 6700 },
+    { month: "Apr", revenue: 6900 },
+    { month: "May", revenue: 8100 },
+    { month: "Jun", revenue: 8900 },
+  ];
+
+
   return (
     <DashboardLayout>
       <div className="bg-[#F9FAFB] min-h-screen p-6 font-sans">
@@ -121,13 +142,35 @@ const InstructorDashboard = () => {
           </div>
 
           {/* Revenue Graph Placeholder */}
-          <div className="bg-[#ffffff] p-4 rounded shadow">
-            <h3 className="text-[16px] font-normal font-jost mb-4">
+         
+
+          <div className="bg-[#ffffff] p-6 rounded shadow">
+            <h3 className="text-[16px] font-jost font-normal mb-4">
               Revenue Overview
             </h3>
-            <div className="h-48 bg-gradient-to-t from-[#E0E7FF] to-white rounded flex items-end justify-center">
-              <p className="text-sm text-[#6B7280]">[Chart Placeholder]</p>
-            </div>
+            <ResponsiveContainer width="100%" height={300}>
+              <AreaChart data={data}>
+                <defs>
+                  <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#6366F1" stopOpacity={0.3} />
+                    <stop offset="100%" stopColor="#6366F1" stopOpacity={0} />
+                  </linearGradient>
+                </defs>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="month" />
+                <YAxis />
+                <Tooltip />
+                <Area
+                  type="monotone"
+                  dataKey="revenue"
+                  stroke="#6366F1"
+                  fillOpacity={1}
+                  fill="url(#colorRevenue)"
+                  strokeWidth={2}
+                  dot={{ r: 4, fill: "#6366F1" }}
+                />
+              </AreaChart>
+            </ResponsiveContainer>
           </div>
         </div>
 
@@ -202,9 +245,9 @@ const InstructorDashboard = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           {/* Course Reviews */}
-          <div className="bg-white p-4 rounded shadow">
+          <div className="bg-[#ffffff] p-4 rounded shadow">
             <h3 className="text-[16px] font-normal font-jost mb-4">
-              Recent Course Reviews
+              Digital Products
             </h3>
 
             {/* Review 1 */}
@@ -215,53 +258,27 @@ const InstructorDashboard = () => {
                 className="w-[40px] h-[40px] rounded-[20px] object-cover"
               />
               <div>
-                <p className="text-[18px] font-normal  text-[#464646] mb-1">
-                  Sarah Johnson
+                <p className="text-[18px] font-normal  text-[#464646]">
+                  premium glow up akedemi metodu (% 50 Ozel indrim
                 </p>
-                <div className="flex items-center mb-1">
-                  {Array(5)
-                    .fill()
-                    .map((_, i) => (
-                      <span
-                        key={i}
-                        className="text-yellow-400 text-sm w-[17px] h-[16px]"
-                      >
-                        ★
-                      </span>
-                    ))}
-                </div>
-                <p className="text-sm text-[#6B7280]">
-                  Great course content and delivery! Very helpful.
-                </p>
+
+                <p className="text-sm text-[#6B7280]">e Book</p>
               </div>
             </div>
 
             {/* Review 2 */}
-            <div className="flex gap-3 items-start">
+            <div className="flex gap-3 mb-4 items-start">
               <img
                 src={Instructordash5}
                 alt="user"
-                className="w-10 h-10 rounded-full object-cover"
+                className="w-[40px] h-[40px] rounded-[20px] object-cover"
               />
               <div>
-                <p className="text-[18px] font-normal  text-[#464646] mb-1">
-                  Sarah Johnson
+                <p className="text-[18px] font-normal  text-[#464646]">
+                  premium glow up akedemi metodu (% 50 Ozel indrim
                 </p>
-                <div className="flex items-center mb-1">
-                  {Array(5)
-                    .fill()
-                    .map((_, i) => (
-                      <span
-                        key={i}
-                        className="text-yellow-400 text-sm w-[17px] h-[16px]"
-                      >
-                        ★
-                      </span>
-                    ))}
-                </div>
-                <p className="text-sm text-[#6B7280]">
-                  Great course content and delivery! Very helpful.
-                </p>
+
+                <p className="text-sm text-[#6B7280]">e Book</p>
               </div>
             </div>
           </div>
@@ -269,17 +286,23 @@ const InstructorDashboard = () => {
         </div>
 
         {/* Community Discussions */}
-        <div className="bg-white p-4 rounded shadow">
-          <h3 className="text-lg font-semibold mb-4">Community Discussions</h3>
+        <div className="bg-[#ffffff] p-4 rounded shadow">
+          <h3 className="text-[16px] font-normal text-[#5555A65] font-jost  mb-4">
+            Community Discussions
+          </h3>
           <div className="mb-3">
-            <p className="font-medium">Teaching Tips & Tricks</p>
+            <p className="font-normal text-[#4F4F4F] font-jost text-[25px]">
+              Teaching Tips & Tricks
+            </p>
             <p className="text-sm text-[#6B7280]">
               15 new posts - 3 unread messages
             </p>
           </div>
           <div>
-            <p className="font-medium">Course Creation Support</p>
-            <p className="text-sm text-[#6B7280]">
+            <p className="font-jost font-normal text-[15px] text-[#4E4E4E]">
+              Course Creation Support
+            </p>
+            <p className="text-[13px] font-jost font-normal text-[#A3A7B0]">
               8 new posts - 1 unread message
             </p>
           </div>

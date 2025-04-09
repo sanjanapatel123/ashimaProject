@@ -1,33 +1,33 @@
-import React from 'react'
+import React from "react";
 import business1 from "../../assets/business1.png";
-import Header from '../../Layout/Header';
+import Header from "../../Layout/Header";
 import Aipowered1 from "../../assets/Aipowered1.png";
 import Aipowered2 from "../../assets/Aipowered2.png";
 import Aipowered3 from "../../assets/Aipowered3.png";
-import FAQSection from '../Home/FAQSection';
-import Footer from '../../Layout/Footer';
+import FAQSection from "../Home/FAQSection";
+import Footer from "../../Layout/Footer";
 import ReviewCard from "../Home/ReviewCards";
 import Startlearning from "../Home/StartLearning";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const AIPowered = () => {
-    const features = [
-      {
-        img: Aipowered1,
-        title: "Upload Your Material",
-        desc: "Upload any document, textbook, or notes and let our AI analyze the content.",
-      },
-      {
-        img: Aipowered2,
-        title: "AI Creates Your Deck",
-        desc: "Our AI generates flashcards and quizzes based on the key concepts in your document.",
-      },
-      {
-        img: Aipowered3,
-        title: "Review & Master",
-        desc: "Study the flashcards, take quizzes, and track your progress as you master the material.",
-      },
-    ];
+  const features = [
+    {
+      img: Aipowered1,
+      title: "Upload Your Material",
+      desc: "Upload any document, textbook, or notes and let our AI analyze the content.",
+    },
+    {
+      img: Aipowered2,
+      title: "AI Creates Your Deck",
+      desc: "Our AI generates flashcards and quizzes based on the key concepts in your document.",
+    },
+    {
+      img: Aipowered3,
+      title: "Review & Master",
+      desc: "Study the flashcards, take quizzes, and track your progress as you master the material.",
+    },
+  ];
   return (
     <>
       <Header />
@@ -43,11 +43,10 @@ const AIPowered = () => {
               document and instantly generate AI-powered flashcards and quizzes
               to accelerate your learning.
             </p>
-            <Link to="/Launchpage">
-              <button className="mt-6 text-[22px] bg-[#ffffff] text-[#047670] font-bold px-6 py-3 rounded-md shadow-md hover:bg-gray-100 transition w-[325px] h-[57px] duration-300 font-roboto">
-                upload your document
-              </button>
-            </Link>
+
+            <button className="mt-6 text-[22px] bg-[#ffffff] text-[#047670] font-bold px-6 py-3 rounded-md shadow-md hover:bg-gray-100 transition w-[325px] h-[57px] duration-300 font-roboto">
+              upload your document
+            </button>
           </div>
 
           {/* Image Section */}
@@ -114,6 +113,6 @@ const AIPowered = () => {
       <Footer />
     </>
   );
-}
+};
 
-export default AIPowered
+export default AIPowered;
