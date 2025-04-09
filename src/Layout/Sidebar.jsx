@@ -346,14 +346,19 @@ const RoleBasedSidebar = ({
             label: "Dashboard",
             path: "/instructor-dashboard",
           },
+          // {
+          //   icon: <FaBookOpen />,
+          //   label: "My Courses",
+          //   dropdown: true,
+          //   children: [
+          //     { label: "Web Development", path: "/web-dev" },
+          //     { label: "UI/UX Design", path: "/ui-ux" },
+          //   ],
+          // },
           {
-            icon: <FaBookOpen />,
+            icon: <FaBox />,
             label: "My Courses",
-            dropdown: true,
-            children: [
-              { label: "Web Development", path: "/web-dev" },
-              { label: "UI/UX Design", path: "/ui-ux" },
-            ],
+            path: "/mycourse",
           },
           {
             icon: <FaBox />,
@@ -475,25 +480,27 @@ const RoleBasedSidebar = ({
               )}
 
               {/* Dropdown Children */}
-              {item.dropdown && activeDropdown === item.label && !isCollapsed && (
-                <ul className="ml-8 mb-2">
-                  {item.children.map((child, cidx) => (
-                    <li key={cidx}>
-                      <NavLink
-                        to={child.path}
-                        onClick={() => setActiveRoute(child.path)}
-                        className={`block px-4 py-2 mt-1 rounded transition-all ${
-                          activeRoute === child.path
-                            ? "bg-teal-700 text-white font-semibold"
-                            : "text-black hover:bg-teal-100"
-                        }`}
-                      >
-                        {child.label}
-                      </NavLink>
-                    </li>
-                  ))}
-                </ul>
-              )}
+              {item.dropdown &&
+                activeDropdown === item.label &&
+                !isCollapsed && (
+                  <ul className="ml-8 mb-2">
+                    {item.children.map((child, cidx) => (
+                      <li key={cidx}>
+                        <NavLink
+                          to={child.path}
+                          onClick={() => setActiveRoute(child.path)}
+                          className={`block px-4 py-2 mt-1 rounded transition-all ${
+                            activeRoute === child.path
+                              ? "bg-teal-700 text-white font-semibold"
+                              : "text-black hover:bg-teal-100"
+                          }`}
+                        >
+                          {child.label}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                )}
             </li>
           );
         })}

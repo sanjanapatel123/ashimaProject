@@ -30,7 +30,7 @@ const InstructorDashboard = () => {
 
   return (
     <DashboardLayout>
-      <div className="bg-[#F9FAFB] min-h-screen p-6 font-sans">
+      <div className="bg-[#F9FAFB] min-h-screen p-6">
         <h1 className="text-[22px] font-medium font-jost text-[#333946] mb-6">
           Instructor Dashboard
         </h1>
@@ -41,15 +41,13 @@ const InstructorDashboard = () => {
             <img
               src={Instructordash1}
               alt="Total Students"
-              className="w-[49px] h-[52px]"
+              className="w-[49px] h-[52px] rounded-[8px]"
             />
             <div className="flex flex-col justify-center">
-              <p className="text-[#9DA1AA] text-[13px] font-[Jost] font-normal leading-[18px]">
+              <p className="text-[#9DA1AA] text-[15px] font-[Jost] font-normal ">
                 Total Students
               </p>
-              <h2 className="text-[22px] font-semibold text-[#363C49] leading-[26px]">
-                1,234
-              </h2>
+              <h2 className="text-[22px] font-medium text-[#363C49]">1,234</h2>
             </div>
           </div>
 
@@ -57,13 +55,13 @@ const InstructorDashboard = () => {
             <img
               src={Instructordash2}
               alt="Total Students"
-              className="w-[49px] h-[52px]"
+              className="w-[49px] h-[52px] rounded-[8px]"
             />
             <div className="flex flex-col justify-center">
-              <p className="text-[#9DA1AA] text-[13px] font-[Jost] font-normal leading-[18px]">
+              <p className="text-[#9DA1AA] text-[15px] font-[Jost] font-normal leading-[18px]">
                 Active Courses
               </p>
-              <h2 className="text-[22px] font-semibold text-[#363C49] leading-[26px]">
+              <h2 className="text-[22px] font-medium text-[#363C49] leading-[26px]">
                 12
               </h2>
             </div>
@@ -73,13 +71,13 @@ const InstructorDashboard = () => {
             <img
               src={Instructordash3}
               alt="Total Students"
-              className="w-[49px] h-[52px]"
+              className="w-[49px] h-[52px] rounded-[8px]"
             />
             <div className="flex flex-col justify-center">
-              <p className="text-[#9DA1AA] text-[13px] font-[Jost] font-normal leading-[18px]">
+              <p className="text-[#9DA1AA] text-[15px] font-[Jost] font-normal leading-[18px]">
                 Average Rating
               </p>
-              <h2 className="text-[22px] font-semibold text-[#363C49] leading-[26px]">
+              <h2 className="text-[22px] font-medium text-[#363C49] leading-[26px]">
                 4.8
               </h2>
             </div>
@@ -89,22 +87,22 @@ const InstructorDashboard = () => {
             <img
               src={Instructordash3}
               alt="Total Students"
-              className="w-[49px] h-[52px]"
+              className="w-[49px] h-[52px] rounded-[8px]"
             />
             <div className="flex flex-col justify-center">
-              <p className="text-[#9DA1AA] text-[13px] font-[Jost] font-normal leading-[18px]">
+              <p className="text-[#9DA1AA] text-[15px] font-[Jost] font-normal leading-[18px]">
                 Total Revenue
               </p>
-              <h2 className="text-[22px] font-semibold text-[#363C49] leading-[26px]">
+              <h2 className="text-[22px] font-medium text-[#363C49] leading-[26px]">
                 $8,945
               </h2>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
           {/* Live Classes */}
-          <div className="bg-[#ffffff] p-4 rounded shadow">
+          <div className="bg-[#ffffff] p-4 rounded shadow w-[554px] h-[300px]">
             <h3 className="text-[17px] text-[#545964] font-jost font-normal mb-4">
               Upcoming Live Classes
             </h3>
@@ -140,7 +138,6 @@ const InstructorDashboard = () => {
           </div>
 
           {/* Revenue Graph Placeholder */}
-         
 
           <div className="bg-[#ffffff] p-6 rounded shadow">
             <h3 className="text-[16px] font-jost font-normal mb-4">
@@ -173,116 +170,118 @@ const InstructorDashboard = () => {
         </div>
 
         {/* Course Reviews and Products */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          {/* Course Reviews */}
-          <div className="bg-white p-4 rounded shadow">
-            <h3 className="text-[16px] font-normal font-jost mb-4">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+          <div className="bg-[#ffffff] p-4 rounded shadow">
+            <h3 className="text-[18px] font-normal text-[#525762] font-jost mb-4">
               Recent Course Reviews
             </h3>
 
             {/* Review 1 */}
-            <div className="flex gap-3 mb-4 items-start">
+            <div className="flex gap-3 mb-4 items-center">
               <img
                 src={Instructordash5}
                 alt="user"
-                className="w-[40px] h-[40px] rounded-[20px] object-cover"
+                className="w-[48px] h-[48px] rounded-[20px] object-cover"
               />
               <div>
-                <p className="text-[18px] font-normal  text-[#464646] mb-1">
-                  Sarah Johnson
-                </p>
-                <div className="flex items-center mb-1">
-                  {Array(5)
-                    .fill()
-                    .map((_, i) => (
-                      <span
-                        key={i}
-                        className="text-yellow-400 text-sm w-[17px] h-[16px]"
-                      >
-                        ★
-                      </span>
-                    ))}
+                <div className="flex gap-2 items-center">
+                  <p className="text-[18px] font-normal text-[#464646] mb-0">
+                    Sarah Johnson
+                  </p>
+                  <div className="flex items-center">
+                    {Array(5)
+                      .fill()
+                      .map((_, i) => (
+                        <span
+                          key={i}
+                          className="text-yellow-400 text-2xl leading-none"
+                        >
+                          ★
+                        </span>
+                      ))}
+                  </div>
                 </div>
-                <p className="text-sm text-[#6B7280]">
+                <p className="text-sm text-[#6B7280] mt-1">
                   Great course content and delivery! Very helpful.
                 </p>
               </div>
             </div>
 
             {/* Review 2 */}
-            <div className="flex gap-3 items-start">
+            <div className="flex gap-3 items-center">
               <img
                 src={Instructordash5}
                 alt="user"
-                className="w-10 h-10 rounded-full object-cover"
+                className="w-[48px] h-[48px] rounded-[20px] object-cover"
               />
               <div>
-                <p className="text-[18px] font-normal  text-[#464646] mb-1">
-                  Sarah Johnson
-                </p>
-                <div className="flex items-center mb-1">
-                  {Array(5)
-                    .fill()
-                    .map((_, i) => (
-                      <span
-                        key={i}
-                        className="text-yellow-400 text-sm w-[17px] h-[16px]"
-                      >
-                        ★
-                      </span>
-                    ))}
+                <div className="flex gap-2 items-center">
+                  <p className="text-[18px] font-normal text-[#464646] mb-0">
+                    Sarah Johnson
+                  </p>
+                  <div className="flex items-center">
+                    {Array(5)
+                      .fill()
+                      .map((_, i) => (
+                        <span
+                          key={i}
+                          className="text-yellow-400 text-2xl leading-none"
+                        >
+                          ★
+                        </span>
+                      ))}
+                  </div>
                 </div>
-                <p className="text-sm text-[#6B7280]">
+                <p className="text-sm text-[#6B7280] mt-1">
                   Great course content and delivery! Very helpful.
                 </p>
               </div>
             </div>
           </div>
-          {/* Digital Products */}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          {/* Course Reviews */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
           <div className="bg-[#ffffff] p-4 rounded shadow">
-            <h3 className="text-[16px] font-normal font-jost mb-4">
+            <h3 className="text-[18px] font-normal text-[#525762] font-jost mb-4">
               Digital Products
             </h3>
 
             {/* Review 1 */}
-            <div className="flex gap-3 mb-4 items-start">
+            <div className="flex gap-3 mb-4 items-center">
               <img
                 src={Instructordash5}
                 alt="user"
-                className="w-[40px] h-[40px] rounded-[20px] object-cover"
+                className="w-[48px] h-[48px] rounded-[20px] object-cover"
               />
               <div>
-                <p className="text-[18px] font-normal  text-[#464646]">
-                  premium glow up akedemi metodu (% 50 Ozel indrim
-                </p>
-
-                <p className="text-sm text-[#6B7280]">e Book</p>
+                <div className="flex gap-2 items-center">
+                  <p className="text-[18px] font-normal text-[#464646] mb-0">
+                    premium glow up akedemi metodu (% 50 Ozel indrim
+                  </p>
+                </div>
+                <p className="text-sm text-[#6B7280] mt-1">e Book</p>
               </div>
             </div>
 
             {/* Review 2 */}
-            <div className="flex gap-3 mb-4 items-start">
+            <div className="flex gap-3 items-center">
               <img
                 src={Instructordash5}
                 alt="user"
-                className="w-[40px] h-[40px] rounded-[20px] object-cover"
+                className="w-[48px] h-[48px] rounded-[20px] object-cover"
               />
               <div>
-                <p className="text-[18px] font-normal  text-[#464646]">
-                  premium glow up akedemi metodu (% 50 Ozel indrim
-                </p>
-
-                <p className="text-sm text-[#6B7280]">e Book</p>
+                <div className="flex gap-2 items-center">
+                  <p className="text-[18px] font-normal text-[#464646] mb-0">
+                    premium glow up akedemi metodu (% 50 Ozel indrim
+                  </p>
+                </div>
+                <p className="text-sm text-[#6B7280] mt-1">e Book</p>
               </div>
             </div>
           </div>
-          {/* Digital Products */}
         </div>
-
         {/* Community Discussions */}
         <div className="bg-[#ffffff] p-4 rounded shadow">
           <h3 className="text-[16px] font-normal text-[#5555A65] font-jost  mb-4">
