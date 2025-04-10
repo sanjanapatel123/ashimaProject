@@ -1,5 +1,8 @@
 import React from "react";
 import DashboardLayout from "../../Layout/DashboardLayout";
+import EarningsChart from "./EarningsChart"; // Import Chart Component
+
+
 
 const EarningsOverview = () => {
   return (
@@ -41,7 +44,7 @@ const EarningsOverview = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow">
+            <div className="bg-white rounded-lg ">
               <div className="grid grid-cols-3 gap-6 p-6 mb-8">
                 {/* Total Earnings */}
                 <div className="bg-white p-6 rounded-lg shadow">
@@ -85,8 +88,9 @@ const EarningsOverview = () => {
                     <option>Last year</option>
                   </select>
                 </div>
-                <div className="h-64 bg-gray-50">
-                  {/* Earnings Chart Placeholder */}
+
+                <div className="h-64">
+                  <EarningsChart /> {/* Chart Inserted Here */}
                 </div>
               </div>
 
@@ -139,3 +143,7 @@ const EarningsOverview = () => {
 };
 
 export default EarningsOverview;
+
+
+
+

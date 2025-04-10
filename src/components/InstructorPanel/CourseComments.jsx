@@ -42,10 +42,10 @@ const CourseComments = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow">
+            <div className="bg-white rounded-lg">
               <div className="grid gap-4 p-6">
                 {/* Web Development Comment */}
-                <div className="bg-white p-4 rounded-lg shadow">
+                <div className="bg-white p-4 rounded-lg">
                   <div className="flex justify-between items-start mb-3">
                     <div>
                       <h3 className="font-medium text-gray-900">
@@ -75,7 +75,7 @@ const CourseComments = () => {
                 </div>
 
                 {/* Python Basics Comment */}
-                <div className="bg-white p-4 rounded-lg shadow">
+                <div className="bg-white p-4 rounded-lg ">
                   <div className="flex justify-between items-start mb-3">
                     <div>
                       <h3 className="font-medium text-gray-900">
@@ -105,7 +105,7 @@ const CourseComments = () => {
                 </div>
 
                 {/* UI/UX Design Comment */}
-                <div className="bg-white p-4 rounded-lg shadow">
+                <div className="bg-white p-4 rounded-lg">
                   <div className="flex justify-between items-start mb-3">
                     <div>
                       <h3 className="font-medium text-gray-900">
