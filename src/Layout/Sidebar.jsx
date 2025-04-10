@@ -332,12 +332,33 @@ const RoleBasedSidebar = ({
         return [
           { icon: <FaHome />, label: "Dashboard", path: "/student-dashboard" },
           { icon: <FaBook />, label: "My Courses", path: "/student-courses" },
+          // {
+          //   icon: <FaClipboardCheck />,
+          //   label: "Assignments",
+          //   path: "/assignments",
+          // },
+          // { icon: <FaUsers />, label: "Classmates", path: "/classmates" },
+          { icon: <FaUsers />, label: "Certificate", path: "/certificate" },
           {
             icon: <FaClipboardCheck />,
             label: "Assignments",
-            path: "/assignments",
+            path: "/assignment",
           },
-          { icon: <FaUsers />, label: "Classmates", path: "/classmates" },
+          {
+            icon: <FaClipboardCheck />,
+            label: "Descussion",
+            path: "/descussiontrending",
+          },
+          {
+            icon: <FaClipboardCheck />,
+            label: "Review",
+            path: "/reviewrating",
+          },
+          {
+            icon: <FaClipboardCheck />,
+            label: "Q&A",
+            path: "/qasection",
+          },
         ];
       case "instructor":
         return [
@@ -388,7 +409,7 @@ const RoleBasedSidebar = ({
 
   return (
     <div
-      className={`fixed z-50 transition-all duration-300 bg-white border-r shadow-md h-screen overflow-y-auto ${
+      className={`fixed z-50 transition-all duration-300 bg-white border-r  h-screen overflow-y-auto ${
         isCollapsed ? "w-16" : "w-64"
       }`}
     >
