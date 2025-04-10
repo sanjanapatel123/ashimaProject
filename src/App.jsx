@@ -27,6 +27,7 @@ import AIPowered from "./components/BusinessProduct/AI-Powered";
 import LaunchPage from "./components/BusinessProduct/LaunchPage";
 import MyCourses from "./components/InstructorPanel/MyCourses";
 import CreateNewPage from "./components/InstructorPanel/CreateNewPage";
+import CourseDetails from "./components/InstructorPanel/CourseDetails";
 
 const App = () => {
   return (
@@ -50,8 +51,12 @@ const App = () => {
         ></Route>
         <Route path="/ui-ux" element={<UXDesign></UXDesign>}></Route>
         <Route path="/newCourse" element={<NewCourse></NewCourse>}></Route>
-        <Route path="/createnewpage" element={<CreateNewPage></CreateNewPage>}></Route>
+        <Route
+          path="/createnewpage"
+          element={<CreateNewPage></CreateNewPage>}
+        ></Route>
         <Route path="/mycourse" element={<MyCourses></MyCourses>}></Route>
+        <Route path="/courses/:id" element={<CourseDetails />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/digital" element={<MyDigital />} />
         <Route path="/marketProduct" element={<MarketProduct />} />
