@@ -271,6 +271,10 @@ import {
   FaBars,
   FaBook,
   FaChalkboardTeacher,
+
+  FaQuestionCircle,
+  FaStar,
+  FaClipboardList,
   FaClipboardCheck,
 } from "react-icons/fa";
 
@@ -337,28 +341,26 @@ const RoleBasedSidebar = ({
           //   label: "Assignments",
           //   path: "/assignments",
           // },
-          { icon: <FaUsers />, label: "Classmates", path: "/classmates" },
+          // { icon: <FaUsers />, label: "Classmates", path: "/classmates" },
           { icon: <FaUsers />, label: "Certificate", path: "/certificate" },
-          {
-            icon: <FaClipboardCheck />,
-            label: "Assignments",
-            path: "/assignment",
-          },
-          {
-            icon: <FaClipboardCheck />,
-            label: "Descussion",
-            path: "/descussiontrending",
-          },
-          {
-            icon: <FaClipboardCheck />,
-            label: "Review",
-            path: "/reviewrating",
-          },
-          {
-            icon: <FaClipboardCheck />,
-            label: "Q&A",
-            path: "/qasection",
-          },
+          
+           {
+      icon: <FaClipboardCheck />,
+      label: 'Assignments',
+      path: '/assignment',
+    },
+    {
+      icon: <FaStar />,
+      label: 'Review',
+      path: '/reviewrating',
+    },
+    {
+      icon: <FaQuestionCircle />,
+      label: 'Q&A',
+      path: '/qasection',
+    },
+
+          { icon: <FaCog />, label: "Setting", path: "/student-settings" },
         ];
       case "instructor":
         return [
