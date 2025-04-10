@@ -370,7 +370,7 @@ const RoleBasedSidebar = ({
           { icon: <FaComments />, label: "Earnings", path: "/earning" },
           { icon: <FaComments />, label: "Calender", path: "/calender" },
           { icon: <FaComments />, label: "Profile", path: "/profile" },
-          { icon: <FaCog />, label: "Settings", path:"/setting" },
+          { icon: <FaCog />, label: "Settings", path: "/setting" },
 
           // { icon: <FaPlus />, label: "Create New Course", path: "/newCourse" },
           //           // { icon: <FaComments />, label: "Messages" },
