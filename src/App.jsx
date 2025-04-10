@@ -27,6 +27,12 @@ import AIPowered from "./components/BusinessProduct/AI-Powered";
 import LaunchPage from "./components/BusinessProduct/LaunchPage";
 import MyCourses from "./components/InstructorPanel/MyCourses";
 import CreateNewPage from "./components/InstructorPanel/CreateNewPage";
+import Conversation from "./components/InstructorPanel/Conversation";
+import CourseComments from "./components/InstructorPanel/CourseComments";
+import Earning from "./components/InstructorPanel/Earning";
+import Calender from "./components/InstructorPanel/Calender";
+import Profile from "./components/InstructorPanel/Profile";
+import Setting from "./components/InstructorPanel/Setting";
 
 const App = () => {
   return (
@@ -41,7 +47,7 @@ const App = () => {
         <Route path="/student-dashboard" element={<StudentDashboard />} />
         <Route path="/instructor-dashboard" element={<InstructorDashboard />} />
         <Route
-          path="/digital"
+          path="/digitalproduct"
           element={<DigitalProducts></DigitalProducts>}
         ></Route>
         <Route
@@ -50,8 +56,23 @@ const App = () => {
         ></Route>
         <Route path="/ui-ux" element={<UXDesign></UXDesign>}></Route>
         <Route path="/newCourse" element={<NewCourse></NewCourse>}></Route>
-        <Route path="/createnewpage" element={<CreateNewPage></CreateNewPage>}></Route>
+        <Route
+          path="/createnewpage"
+          element={<CreateNewPage></CreateNewPage>}
+        ></Route>
         <Route path="/mycourse" element={<MyCourses></MyCourses>}></Route>
+        <Route
+          path="/conversation"
+          element={<Conversation></Conversation>}
+        ></Route>
+        <Route
+          path="/coursecomments"
+          element={<CourseComments></CourseComments>}
+        ></Route>
+        <Route path="/earning" element={<Earning></Earning>}></Route>
+        <Route path="/calender" element={<Calender></Calender>}></Route>
+        <Route path="/profile" element={<Profile></Profile>}></Route>
+        <Route path="/setting" element={<Setting></Setting>}></Route>
         <Route path="/signup" element={<Signup />} />
         <Route path="/digital" element={<MyDigital />} />
         <Route path="/marketProduct" element={<MarketProduct />} />
