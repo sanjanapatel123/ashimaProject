@@ -33,6 +33,14 @@ import Earning from "./components/InstructorPanel/Earning";
 import Calender from "./components/InstructorPanel/Calender";
 import Profile from "./components/InstructorPanel/Profile";
 import Setting from "./components/InstructorPanel/Setting";
+import CertificatesPage from "./components/StudentPanal/Certificate";
+import Assignments from "./components/StudentPanal/Assignments";
+import Descussiontrending from "./components/StudentPanal/Discussiontrending";
+import DescussionNew from "./components/StudentPanal/DiscussionNew";
+import Dis_unanswered from "./components/StudentPanal/DiscussionUnanswered";
+import DiscussionMostLike from "./components/StudentPanal/DiscussionMostLike";
+import QA from "./components/StudentPanal/QA";
+import ReviewsRating from "./components/StudentPanal/ReviewRating";
 
 const App = () => {
   return (
@@ -69,6 +77,35 @@ const App = () => {
           path="/coursecomments"
           element={<CourseComments></CourseComments>}
         ></Route>
+        <Route
+          path="/certificate"
+          element={<CertificatesPage></CertificatesPage>}
+        ></Route>
+        <Route
+          path="/descussiontrending"
+          element={<Descussiontrending></Descussiontrending>}
+        ></Route>
+        <Route
+          path="/descussionnew"
+          element={<DescussionNew></DescussionNew>}
+        ></Route>
+        <Route
+          path="/descussionunanswered"
+          element={<Dis_unanswered></Dis_unanswered>}
+        ></Route>
+        <Route
+          path="/descussionmostlike"
+          element={<DiscussionMostLike></DiscussionMostLike>}
+        ></Route>
+        <Route
+          path="/reviewrating"
+          element={<ReviewsRating></ReviewsRating>}
+        ></Route>
+        <Route
+          path="/qasection"
+          element={<QA></QA>}
+        ></Route>
+        <Route path="/assignment" element={<Assignments></Assignments>}></Route>
         <Route path="/earning" element={<Earning></Earning>}></Route>
         <Route path="/calender" element={<Calender></Calender>}></Route>
         <Route path="/profile" element={<Profile></Profile>}></Route>
