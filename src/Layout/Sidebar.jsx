@@ -363,9 +363,16 @@ const RoleBasedSidebar = ({
           {
             icon: <FaBox />,
             label: "Digital Products",
-            path: "/digital",
+            path: "/digitalproduct",
           },
-          { icon: <FaPlus />, label: "Create New Course", path: "/newCourse" },
+          { icon: <FaComments />, label: "Messages", path: "/conversation" },
+          { icon: <FaComments />, label: "Comments", path: "/coursecomments" },
+          { icon: <FaComments />, label: "Earnings", path: "/earning" },
+          { icon: <FaComments />, label: "Calender", path: "/calender" },
+          { icon: <FaComments />, label: "Profile", path: "/profile" },
+          { icon: <FaCog />, label: "Settings", path:"/setting" },
+
+          // { icon: <FaPlus />, label: "Create New Course", path: "/newCourse" },
           //           // { icon: <FaComments />, label: "Messages" },
           //           // { icon: <FaChartLine />, label: "Analytics" },
           //           // { icon: <FaCog />, label: "Settings" },
