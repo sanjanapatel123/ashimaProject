@@ -1,9 +1,4 @@
 
-
-
-
-
-
 import React from "react";
 import { FaEye, FaEdit, FaBan, FaTrash } from "react-icons/fa";
 import DashboardLayout from "../../Layout/DashboardLayout";
