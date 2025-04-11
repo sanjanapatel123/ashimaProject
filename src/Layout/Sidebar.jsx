@@ -342,10 +342,14 @@ const RoleBasedSidebar = ({
             path: "/community-discussion",
           },
           {
-            icon: <FaHome />,
-            label: "Admin Roles",
-
-            path: "/admin-role",
+            icon: <FaBookOpen />,
+            label: "Assessments & Certificates",
+            dropdown: true,
+            children: [
+              { label: "View Assessements", path: "/viewTranscation" },
+              { label: "Templates", path: "/RefundProcess" },
+              { label: "Certificate Management", path: "/PaymentAnalytics" },
+            ],
           },
 
           {
@@ -357,6 +361,12 @@ const RoleBasedSidebar = ({
               { label: "Refund Process", path: "/RefundProcess" },
               { label: "View Analytics", path: "/PaymentAnalytics" },
             ],
+          },
+          {
+            icon: <FaHome />,
+            label: "Admin Roles",
+
+            path: "/admin-role",
           },
           // {
           //   icon: <FaBookOpen />,
