@@ -271,10 +271,11 @@ import {
   FaBars,
   FaBook,
   FaChalkboardTeacher,
-
+FaMoneyBill, FaCalendarAlt, 
   FaQuestionCircle,
   FaStar,
-  FaClipboardList,
+  FaUserCircle,
+ 
   FaClipboardCheck,
 } from "react-icons/fa";
 
@@ -390,9 +391,14 @@ const RoleBasedSidebar = ({
           },
           { icon: <FaComments />, label: "Messages", path: "/conversation" },
           { icon: <FaComments />, label: "Comments", path: "/coursecomments" },
-          { icon: <FaComments />, label: "Earnings", path: "/earning" },
-          { icon: <FaComments />, label: "Calender", path: "/calender" },
-          { icon: <FaComments />, label: "Profile", path: "/profile" },
+          // { icon: <FaComments />, label: "Earnings", path: "/earning" },
+          // { icon: <FaComments />, label: "Calender", path: "/calender" },
+          // { icon: <FaComments />, label: "Profile", path: "/profile" },
+          // { icon: <FaCog />, label: "Settings", path: "/setting" },
+
+          { icon: <FaMoneyBill />, label: "Earnings", path: "/earning" },
+          { icon: <FaCalendarAlt />, label: "Calendar", path: "/calender" },
+          { icon: <FaUserCircle />, label: "Profile", path: "/profile" },
           { icon: <FaCog />, label: "Settings", path: "/setting" },
 
           // { icon: <FaPlus />, label: "Create New Course", path: "/newCourse" },
