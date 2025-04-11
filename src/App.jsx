@@ -27,12 +27,14 @@ import AIPowered from "./components/BusinessProduct/AI-Powered";
 import LaunchPage from "./components/BusinessProduct/LaunchPage";
 import MyCourses from "./components/InstructorPanel/MyCourses";
 import CreateNewPage from "./components/InstructorPanel/CreateNewPage";
+import CourseDetails from "./components/InstructorPanel/CourseDetails";
 import Conversation from "./components/InstructorPanel/Conversation";
 import CourseComments from "./components/InstructorPanel/CourseComments";
 import Earning from "./components/InstructorPanel/Earning";
 import Calender from "./components/InstructorPanel/Calender";
 import Profile from "./components/InstructorPanel/Profile";
 import Setting from "./components/InstructorPanel/Setting";
+import ProductDetails from "./components/InstructorPanel/ProductDetails";
 import CertificatesPage from "./components/StudentPanal/Certificate";
 import Assignments from "./components/StudentPanal/Assignments";
 import Descussiontrending from "./components/StudentPanal/Discussiontrending";
@@ -43,6 +45,9 @@ import QA from "./components/StudentPanal/QA";
 import ReviewsRating from "./components/StudentPanal/ReviewRating";
 import Mc_Dashboard from "./components/StudentPanal/MyCourses";
 import Student_Setting from "./components/StudentPanal/Student_setting";
+import ManageStudent from "./components/AdminPanal/ManageStudent";
+import ManageInstructors from "./components/AdminPanal/ManageInstructors";
+import ManageCourses from "./components/AdminPanal/ManageCourses";
 
 const App = () => {
   return (
@@ -61,6 +66,10 @@ const App = () => {
           element={<DigitalProducts></DigitalProducts>}
         ></Route>
         <Route
+          path="/product/:id"
+          element={<ProductDetails></ProductDetails>}
+        ></Route>
+        <Route
           path="/web-dev"
           element={<WebDevelopment></WebDevelopment>}
         ></Route>
@@ -71,6 +80,7 @@ const App = () => {
           element={<CreateNewPage></CreateNewPage>}
         ></Route>
         <Route path="/mycourse" element={<MyCourses></MyCourses>}></Route>
+        <Route path="/courses/:id" element={<CourseDetails />} />
         <Route
           path="/conversation"
           element={<Conversation></Conversation>}
@@ -110,6 +120,18 @@ const App = () => {
         <Route
           path="/student-settings"
           element={<Student_Setting></Student_Setting>}
+        ></Route>
+        <Route
+          path="/manage-student"
+          element={<ManageStudent></ManageStudent>}
+        ></Route>
+        <Route
+          path="/manage-instructors"
+          element={<ManageInstructors></ManageInstructors>}
+        ></Route>
+        <Route
+          path="/manage-courses"
+          element={<ManageCourses></ManageCourses>}
         ></Route>
         <Route path="/qasection" element={<QA></QA>}></Route>
         <Route path="/assignment" element={<Assignments></Assignments>}></Route>

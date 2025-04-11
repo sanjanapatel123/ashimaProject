@@ -40,7 +40,7 @@ const ProfileLayout = () => {
             </div>
 
             {/* Main Card */}
-            <div className="bg-white rounded-lg p-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg  grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Left Side - Profile Card */}
               <div className="col-span-1">
                 <div className="bg-white rounded-lg shadow p-6 text-center">

@@ -271,7 +271,7 @@ import {
   FaBars,
   FaBook,
   FaChalkboardTeacher,
-FaMoneyBill, FaCalendarAlt, 
+  FaMoneyBill, FaCalendarAlt, 
   FaQuestionCircle,
   FaStar,
   FaUserCircle,
@@ -315,23 +315,38 @@ const RoleBasedSidebar = ({
         return [
           { icon: <FaHome />, label: "Dashboard", path: "/admin-dashboard" },
           {
-            icon: <FaBookOpen />,
-            label: "My Courses",
-            dropdown: true,
-            children: [
-              { label: "Web Development", path: "/web-dev" },
-              { label: "UI/UX Design", path: "/ui-ux" },
-            ],
+            icon: <FaHome />,
+            label: "Manage Student",
+            path: "/manage-student",
           },
-          { icon: <FaBox />, label: "Digital Products", path: "/products" },
           {
-            icon: <FaPlus />,
-            label: "Create New Course",
-            path: "/create-course",
+            icon: <FaHome />,
+            label: "Manage Instructor",
+            path: "/manage-instructors",
           },
-          { icon: <FaComments />, label: "Messages", path: "/messages" },
-          { icon: <FaChartLine />, label: "Analytics", path: "/analytics" },
-          { icon: <FaCog />, label: "Settings", path: "/settings" },
+          {
+            icon: <FaHome />,
+            label: "Manage Courses",
+            path: "/manage-courses",
+          },
+          // {
+          //   icon: <FaBookOpen />,
+          //   label: "My Courses",
+          //   dropdown: true,
+          //   children: [
+          //     { label: "Web Development", path: "/web-dev" },
+          //     { label: "UI/UX Design", path: "/ui-ux" },
+          //   ],
+          // },
+          // { icon: <FaBox />, label: "Digital Products", path: "/products" },
+          // {
+          //   icon: <FaPlus />,
+          //   label: "Create New Course",
+          //   path: "/create-course",
+          // },
+          // { icon: <FaComments />, label: "Messages", path: "/messages" },
+          // { icon: <FaChartLine />, label: "Analytics", path: "/analytics" },
+          // { icon: <FaCog />, label: "Settings", path: "/settings" },
         ];
       case "student":
         return [

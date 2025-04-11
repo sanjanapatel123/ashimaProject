@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { FaHeart, FaComment, FaShare, FaRegBookmark } from "react-icons/fa";
 import DashboardLayout from "../../Layout/DashboardLayout";
+import { useNavigate } from "react-router-dom";
 
 const Dis_unanswered = () => {
   const [activeTab, setActiveTab] = useState("Unanswered");
+  const navigate = useNavigate();
 
   const tabs = ["Trending", "New", "Unanswered", "Most Liked"];
 
@@ -28,6 +30,28 @@ const Dis_unanswered = () => {
     },
   ];
 
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+    // Navigate to the corresponding route based on the tab
+    switch (tab) {
+      case "Trending":
+        navigate("/descussiontrending");
+        break;
+      case "New":
+        navigate("/descussionnew");
+        break;
+      case "Unanswered":
+        navigate("/descussionunanswered");
+        break;
+      case "Most Liked":
+        navigate("/descussionmostlike");
+        break;
+      default:
+        navigate("/descussiontrending");
+        break;
+    }
+  };
+
   return (
     <DashboardLayout>
       <div className="bg-gray-100 min-h-screen w-full py-6">
@@ -39,7 +63,7 @@ const Dis_unanswered = () => {
               {tabs.map((tab) => (
                 <button
                   key={tab}
-                  onClick={() => setActiveTab(tab)}
+                  onClick={() => handleTabClick(tab)}
                   className={`text-sm font-medium ${
                     activeTab === tab
                       ? "border border-gray-300 bg-gray-200 text-gray-900 px-4 py-1 rounded"
