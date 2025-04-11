@@ -48,6 +48,7 @@ import Student_Setting from "./components/StudentPanal/Student_setting";
 import ManageStudent from "./components/AdminPanal/ManageStudent";
 import ManageInstructors from "./components/AdminPanal/ManageInstructors";
 import ManageCourses from "./components/AdminPanal/ManageCourses";
+import StudentDetails from "./components/AdminPanal/StudentDetails";
 
 const App = () => {
   return (
@@ -133,6 +134,7 @@ const App = () => {
           path="/manage-courses"
           element={<ManageCourses></ManageCourses>}
         ></Route>
+        <Route path="/student-details/:id" element={<StudentDetails />} />
         <Route path="/qasection" element={<QA></QA>}></Route>
         <Route path="/assignment" element={<Assignments></Assignments>}></Route>
         <Route path="/earning" element={<Earning></Earning>}></Route>

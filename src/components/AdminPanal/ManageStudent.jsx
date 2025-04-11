@@ -1,18 +1,17 @@
 import { useState } from "react";
 import { FaEye, FaEdit, FaBan, FaTrash } from "react-icons/fa";
 import DashboardLayout from "../../Layout/DashboardLayout";
-import AddStudentModal from "./AddStudent"
-
+import AddStudentModal from "./AddStudent";
+import { Link } from "react-router-dom";
 
 const ManageStudents = () => {
-const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <DashboardLayout>
       <div className="p-6 bg-gray-50 min-h-screen">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold">Manage Students</h2>
-        
 
           <button
             className="bg-[#047670] text-white px-4 py-2 rounded"
@@ -70,11 +69,14 @@ const [isModalOpen, setIsModalOpen] = useState(false);
                     <input type="checkbox" />
                   </td>
                   <td className="p-2">
-                    <div>
-                      <strong>John Doe</strong>
-                      <div className="text-xs text-gray-500">ID: #12345</div>
-                    </div>
+                    <Link to={`/student-details/12345`}>
+                      <strong className="cursor-pointer hover:underline text-[#047670]">
+                        John Doe
+                      </strong>
+                    </Link>
+                    <div className="text-xs text-gray-500">ID: #12345</div>
                   </td>
+
                   <td className="p-2">john.doe@example.com</td>
                   <td className="p-2">+1 234 567 890</td>
                   <td className="p-2">
