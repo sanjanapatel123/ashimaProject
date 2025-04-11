@@ -43,6 +43,8 @@ import Dis_unanswered from "./components/StudentPanal/DiscussionUnanswered";
 import DiscussionMostLike from "./components/StudentPanal/DiscussionMostLike";
 import QA from "./components/StudentPanal/QA";
 import ReviewsRating from "./components/StudentPanal/ReviewRating";
+import Mc_Dashboard from "./components/StudentPanal/MyCourses";
+import Student_Setting from "./components/StudentPanal/Student_setting";
 
 const App = () => {
   return (
@@ -107,6 +109,14 @@ const App = () => {
         <Route
           path="/reviewrating"
           element={<ReviewsRating></ReviewsRating>}
+        ></Route>
+        <Route
+          path="/student-courses"
+          element={<Mc_Dashboard></Mc_Dashboard>}
+        ></Route>
+        <Route
+          path="/student-settings"
+          element={<Student_Setting></Student_Setting>}
         ></Route>
         <Route path="/qasection" element={<QA></QA>}></Route>
         <Route path="/assignment" element={<Assignments></Assignments>}></Route>
