@@ -20,8 +20,7 @@ import StudentDashboard from "./components/Dashboard/StudentDashboard ";
 import InstructorDashboard from "./components/Dashboard/InstructorDashboard";
 import DigitalProducts from "./components/InstructorPanel/DigitalProducts";
 import NewCourse from "./components/InstructorPanel/NewCourse";
-import WebDevelopment from "./components/InstructorPanel/WebDevelopment";
-import UXDesign from "./components/InstructorPanel/UXDesign";
+import PaymentAnalytics from "./components/AdminPanal/PaymentAnalytics";
 import Business from "./components/BusinessProduct/Business";
 import AIPowered from "./components/BusinessProduct/AI-Powered";
 import LaunchPage from "./components/BusinessProduct/LaunchPage";
@@ -48,6 +47,8 @@ import Student_Setting from "./components/StudentPanal/Student_setting";
 import ManageStudent from "./components/AdminPanal/ManageStudent";
 import ManageInstructors from "./components/AdminPanal/ManageInstructors";
 import ManageCourses from "./components/AdminPanal/ManageCourses";
+import RefundProcess from "./components/AdminPanal/RefundProcess";
+import ViewTransaction from "./components/AdminPanal/ViewTransaction";
 
 const App = () => {
   return (
@@ -70,10 +71,17 @@ const App = () => {
           element={<ProductDetails></ProductDetails>}
         ></Route>
         <Route
-          path="/web-dev"
-          element={<WebDevelopment></WebDevelopment>}
+          path="/PaymentAnalytics"
+          element={<PaymentAnalytics></PaymentAnalytics>}
         ></Route>
-        <Route path="/ui-ux" element={<UXDesign></UXDesign>}></Route>
+        <Route
+          path="/viewTranscation"
+          element={<ViewTransaction></ViewTransaction>}
+        ></Route>
+        <Route
+          path="/RefundProcess"
+          element={<RefundProcess></RefundProcess>}
+        ></Route>
         <Route path="/newCourse" element={<NewCourse></NewCourse>}></Route>
         <Route
           path="/createnewpage"
