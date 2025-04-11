@@ -271,11 +271,11 @@ import {
   FaBars,
   FaBook,
   FaChalkboardTeacher,
-  FaMoneyBill, FaCalendarAlt, 
+  FaMoneyBill,
+  FaCalendarAlt,
   FaQuestionCircle,
   FaStar,
   FaUserCircle,
- 
   FaClipboardCheck,
 } from "react-icons/fa";
 
@@ -329,6 +329,35 @@ const RoleBasedSidebar = ({
             label: "Manage Courses",
             path: "/manage-courses",
           },
+
+          {
+            icon: <FaHome />,
+            label: "Blogs & Aricles",
+            path: "/blog-articles",
+          },
+          {
+            icon: <FaHome />,
+            label: "Community Discussions",
+
+            path: "/community-discussion",
+          },
+          {
+            icon: <FaHome />,
+            label: "Admin Roles",
+
+            path: "/admin-role",
+          },
+
+          {
+            icon: <FaBookOpen />,
+            label: "Manage Transcations",
+            dropdown: true,
+            children: [
+              { label: "View Transaction", path: "/viewTranscation" },
+              { label: "Refund Process", path: "/RefundProcess" },
+              { label: "View Analytics", path: "/PaymentAnalytics" },
+            ],
+          },
           // {
           //   icon: <FaBookOpen />,
           //   label: "My Courses",
@@ -359,22 +388,22 @@ const RoleBasedSidebar = ({
           // },
           // { icon: <FaUsers />, label: "Classmates", path: "/classmates" },
           { icon: <FaUsers />, label: "Certificate", path: "/certificate" },
-          
-           {
-      icon: <FaClipboardCheck />,
-      label: 'Assignments',
-      path: '/assignment',
-    },
-    {
-      icon: <FaStar />,
-      label: 'Review',
-      path: '/reviewrating',
-    },
-    {
-      icon: <FaQuestionCircle />,
-      label: 'Q&A',
-      path: '/qasection',
-    },
+
+          {
+            icon: <FaClipboardCheck />,
+            label: "Assignments",
+            path: "/assignment",
+          },
+          {
+            icon: <FaStar />,
+            label: "Review",
+            path: "/reviewrating",
+          },
+          {
+            icon: <FaQuestionCircle />,
+            label: "Q&A",
+            path: "/qasection",
+          },
 
           { icon: <FaCog />, label: "Setting", path: "/student-settings" },
         ];
@@ -531,27 +560,25 @@ const RoleBasedSidebar = ({
               )}
 
               {/* Dropdown Children */}
-              {item.dropdown &&
-                activeDropdown === item.label &&
-                !isCollapsed && (
-                  <ul className="ml-8 mb-2">
-                    {item.children.map((child, cidx) => (
-                      <li key={cidx}>
-                        <NavLink
-                          to={child.path}
-                          onClick={() => setActiveRoute(child.path)}
-                          className={`block px-4 py-2 mt-1 rounded transition-all ${
-                            activeRoute === child.path
-                              ? "bg-teal-700 text-white font-semibold"
-                              : "text-black hover:bg-teal-100"
-                          }`}
-                        >
-                          {child.label}
-                        </NavLink>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+              {item.dropdown && activeDropdown === item.label && !isCollapsed && (
+                <ul className="ml-8 mb-2">
+                  {item.children.map((child, cidx) => (
+                    <li key={cidx}>
+                      <NavLink
+                        to={child.path}
+                        onClick={() => setActiveRoute(child.path)}
+                        className={`block px-4 py-2 mt-1 rounded transition-all ${
+                          activeRoute === child.path
+                            ? "bg-teal-700 text-white font-semibold"
+                            : "text-black hover:bg-teal-100"
+                        }`}
+                      >
+                        {child.label}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           );
         })}

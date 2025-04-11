@@ -20,8 +20,7 @@ import StudentDashboard from "./components/Dashboard/StudentDashboard ";
 import InstructorDashboard from "./components/Dashboard/InstructorDashboard";
 import DigitalProducts from "./components/InstructorPanel/DigitalProducts";
 import NewCourse from "./components/InstructorPanel/NewCourse";
-import WebDevelopment from "./components/InstructorPanel/WebDevelopment";
-import UXDesign from "./components/InstructorPanel/UXDesign";
+import PaymentAnalytics from "./components/AdminPanal/PaymentAnalytics";
 import Business from "./components/BusinessProduct/Business";
 import AIPowered from "./components/BusinessProduct/AI-Powered";
 import LaunchPage from "./components/BusinessProduct/LaunchPage";
@@ -49,6 +48,11 @@ import ManageStudent from "./components/AdminPanal/ManageStudent";
 import ManageInstructors from "./components/AdminPanal/ManageInstructors";
 import ManageCourses from "./components/AdminPanal/ManageCourses";
 import StudentDetails from "./components/AdminPanal/StudentDetails";
+import RefundProcess from "./components/AdminPanal/RefundProcess";
+import ViewTransaction from "./components/AdminPanal/ViewTransaction";
+import Blogs_article from "./components/AdminPanal/BlogsArticles";
+import ManageComm_Discu from "./components/AdminPanal/Community";
+import AdminRolesManagement from "./components/AdminPanal/AdminRole";
 
 const App = () => {
   return (
@@ -71,10 +75,17 @@ const App = () => {
           element={<ProductDetails></ProductDetails>}
         ></Route>
         <Route
-          path="/web-dev"
-          element={<WebDevelopment></WebDevelopment>}
+          path="/PaymentAnalytics"
+          element={<PaymentAnalytics></PaymentAnalytics>}
         ></Route>
-        <Route path="/ui-ux" element={<UXDesign></UXDesign>}></Route>
+        <Route
+          path="/viewTranscation"
+          element={<ViewTransaction></ViewTransaction>}
+        ></Route>
+        <Route
+          path="/RefundProcess"
+          element={<RefundProcess></RefundProcess>}
+        ></Route>
         <Route path="/newCourse" element={<NewCourse></NewCourse>}></Route>
         <Route
           path="/createnewpage"
@@ -134,6 +145,15 @@ const App = () => {
           path="/manage-courses"
           element={<ManageCourses></ManageCourses>}
         ></Route>
+        <Route
+          path="/blog-articles"
+          element={<Blogs_article></Blogs_article>}
+        ></Route>
+        <Route
+          path="/community-discussion"
+          element={<ManageComm_Discu></ManageComm_Discu>}
+        ></Route>
+        <Route path="/admin-role" element={<AdminRolesManagement></AdminRolesManagement>}></Route>
         <Route path="/student-details/:id" element={<StudentDetails />} />
         <Route path="/qasection" element={<QA></QA>}></Route>
         <Route path="/assignment" element={<Assignments></Assignments>}></Route>
