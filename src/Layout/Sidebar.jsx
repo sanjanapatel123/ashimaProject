@@ -262,7 +262,7 @@ import {
   FaBox,
   FaPlus,
   FaComments,
-  FaChartLine,
+  FaNewspaper,
   FaCog,
   FaUsers,
   FaSignOutAlt,
@@ -277,6 +277,12 @@ import {
   FaStar,
   FaUserCircle,
   FaClipboardCheck,
+  FaChartLine,
+  FaUserGraduate,
+  FaFlag,
+  FaMoneyBillWave,
+  FaClipboardList,
+  FaUserCog,
 } from "react-icons/fa";
 
 const RoleBasedSidebar = ({
@@ -313,43 +319,114 @@ const RoleBasedSidebar = ({
     switch (role) {
       case "admin":
         return [
-          { icon: <FaHome />, label: "Dashboard", path: "/admin-dashboard" },
+          // { icon: <FaHome />, label: "Dashboard", path: "/admin-dashboard" },
+          // {
+          //   icon: <FaHome />,
+          //   label: "Manage Student",
+          //   path: "/manage-student",
+          // },
+          // {
+          //   icon: <FaHome />,
+          //   label: "Manage Instructor",
+          //   path: "/manage-instructors",
+          // },
+          // {
+          //   icon: <FaHome />,
+          //   label: "Manage Courses",
+          //   path: "/manage-courses",
+          // },
+
+          // {
+          //   icon: <FaHome />,
+          //   label: "Blogs & Aricles",
+          //   path: "/blog-articles",
+          // },
+          // {
+          //   icon: <FaHome />,
+          //   label: "Community Discussions",
+
+          //   path: "/community-discussion",
+          // },
+          // {
+          //   icon: <FaBookOpen />,
+          //   label: "Assessments & Certificates",
+          //   dropdown: true,
+          //   children: [
+          //     { label: "View Assessements", path: "/ViewAssessments" },
+          //     { label: "Templates", path: "/CertificateTemplate" },
+          //     {
+          //       label: "Certificate Management",
+          //       path: "/CertificateManagemnet",
+          //     },
+
           {
-            icon: <FaHome />,
-            label: "Manage Student",
+            icon: <FaChartLine />,
+            label: "Dashboard",
+            path: "/admin-dashboard",
+          },
+
+          {
+            icon: <FaUserGraduate />,
+            label: "Manage Students",
             path: "/manage-student",
           },
+
           {
-            icon: <FaHome />,
-            label: "Manage Instructor",
+            icon: <FaChalkboardTeacher />,
+            label: "Manage Instructors",
             path: "/manage-instructors",
           },
+
           {
-            icon: <FaHome />,
+            icon: <FaBook />,
             label: "Manage Courses",
             path: "/manage-courses",
           },
 
+          // {
+          //   icon: <FaMoneyBillWave />,
+          //   label: "Revenue / Transactions",
+          //   path: "/revenue-transactions",
+          // },
+
           {
-            icon: <FaHome />,
-            label: "Blogs & Aricles",
+            icon: <FaClipboardList />,
+            label: "Assessments & Certificates",
+            dropdown: true,
+            children: [
+              { label: "View Assessments", path: "/ViewAssessments" },
+              { label: "Templates", path: "/CertificateTemplate" },
+              {
+                label: "Certificate Management",
+                path: "/CertificateManagemnet",
+              },
+            ],
+          },
+
+          {
+            icon: <FaNewspaper />,
+            label: "Blogs / Articles",
             path: "/blog-articles",
           },
-          {
-            icon: <FaHome />,
-            label: "Community Discussions",
 
+          {
+            icon: <FaComments />,
+            label: "Community / Discussions",
             path: "/community-discussion",
           },
-          {
-            icon: <FaHome />,
-            label: "Admin Roles",
 
-            path: "/admin-role",
+          { icon: <FaUserCog />, label: "Admin Roles", path: "/admin-role" },
+
+          { icon: <FaCog />, label: "Settings", path: "/settings" },
+
+          {
+            icon: <FaFlag />,
+            label: "Reported Issues",
+            path: "/reported-issues",
           },
 
           {
-            icon: <FaBookOpen />,
+            icon: <FaMoneyBillWave />,
             label: "Manage Transcations",
             dropdown: true,
             children: [
@@ -358,6 +435,12 @@ const RoleBasedSidebar = ({
               { label: "View Analytics", path: "/PaymentAnalytics" },
             ],
           },
+          // {
+          //   icon: <FaHome />,
+          //   label: "Admin Roles",
+
+          //   path: "/admin-role",
+          // },
           // {
           //   icon: <FaBookOpen />,
           //   label: "My Courses",
@@ -560,25 +643,27 @@ const RoleBasedSidebar = ({
               )}
 
               {/* Dropdown Children */}
-              {item.dropdown && activeDropdown === item.label && !isCollapsed && (
-                <ul className="ml-8 mb-2">
-                  {item.children.map((child, cidx) => (
-                    <li key={cidx}>
-                      <NavLink
-                        to={child.path}
-                        onClick={() => setActiveRoute(child.path)}
-                        className={`block px-4 py-2 mt-1 rounded transition-all ${
-                          activeRoute === child.path
-                            ? "bg-teal-700 text-white font-semibold"
-                            : "text-black hover:bg-teal-100"
-                        }`}
-                      >
-                        {child.label}
-                      </NavLink>
-                    </li>
-                  ))}
-                </ul>
-              )}
+              {item.dropdown &&
+                activeDropdown === item.label &&
+                !isCollapsed && (
+                  <ul className="ml-8 mb-2">
+                    {item.children.map((child, cidx) => (
+                      <li key={cidx}>
+                        <NavLink
+                          to={child.path}
+                          onClick={() => setActiveRoute(child.path)}
+                          className={`block px-4 py-2 mt-1 rounded transition-all ${
+                            activeRoute === child.path
+                              ? "bg-teal-700 text-white font-semibold"
+                              : "text-black hover:bg-teal-100"
+                          }`}
+                        >
+                          {child.label}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                )}
             </li>
           );
         })}
