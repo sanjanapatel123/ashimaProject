@@ -37,7 +37,7 @@ const Blogs_article = () => {
         </div>
 
         {/* Filters */}
-        <div className="bg-white rounded-lg p-4 shadow mb-4 flex flex-col md:flex-row gap-3 items-center justify-between">
+        <div className="bg-white rounded-lg p-4 mb-4 flex flex-col md:flex-row gap-3 items-center justify-between">
           <div className="flex flex-1 gap-2 items-center w-full">
             <div className="relative w-full md:w-[360px]">
               <input

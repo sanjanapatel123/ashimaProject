@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { FaEye, FaEdit, FaBan, FaTrash } from "react-icons/fa";
 import DashboardLayout from "../../Layout/DashboardLayout";
-import AddInstructorModal from "./AddInstructor";
+import AddInstructorModal from "./AddInstructorModal";
+import { Link } from "react-router-dom";
 
 const ManageInstructors = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <DashboardLayout>
@@ -47,7 +48,7 @@ const ManageInstructors = () => {
           </div>
 
           <div className="overflow-x-auto">
-            <table className="w-full text-sm text-left">
+            <table className="w-full text-sm text-center text-nowrap">
               <thead className="bg-gray-50">
                 <tr className="text-gray-500">
                   <th className="p-2">
@@ -63,33 +64,61 @@ const ManageInstructors = () => {
               </thead>
 
               <tbody>
-                <tr className="border-b">
-                  <td className="p-2">
-                    <input type="checkbox" />
-                  </td>
-                  <td className="p-2">
-                    <div>
-                      <strong>Dr. Michael Brown</strong>
-                      <div className="text-xs text-gray-500">
-                        Web Development
-                      </div>
-                    </div>
-                  </td>
-                  <td className="p-2">michael.brown@example.com</td>
-                  <td className="p-2">+1 234 567 8901</td>
-                  <td className="p-2">12</td>
-                  <td className="p-2">
-                    <span className="bg-green-100 text-green-600 text-xs px-2 py-1 rounded">
-                      Active
-                    </span>
-                  </td>
-                  <td className="p-2 flex gap-2 text-gray-600 text-base">
-                    <FaEye />
-                    <FaEdit />
-                    <FaBan />
-                    <FaTrash />
-                  </td>
-                </tr>
+                {[
+                  {
+                    id: 1,
+                    name: "Dr. Michael Brown",
+                    specialization: "Web Development",
+                    email: "michael.brown@example.com",
+                    mobile: "+1 234 567 8901",
+                    courses: 12,
+                    status: "Active",
+                  },
+                  {
+                    id: 2,
+                    name: "John Smith",
+                    specialization: "UI/UX Expert",
+                    email: "john.smith@example.com",
+                    mobile: "+1 987 654 3210",
+                    courses: 8,
+                    status: "Active",
+                  },
+                ].map((instructor) => (
+                  <tr className="border-b" key={instructor.id}>
+                    <td className="p-2">
+                      <input type="checkbox" />
+                    </td>
+                    <td className="p-2">
+                      <Link
+                        to={`/instructor/${instructor.id}`}
+                        className="text-teal-700 hover:underline"
+                      >
+                        <strong>{instructor.name}</strong>
+                        <div className="text-xs text-gray-500">
+                          {instructor.specialization}
+                        </div>
+                      </Link>
+                    </td>
+                    <td className="p-2">{instructor.email}</td>
+                    <td className="p-2">{instructor.mobile}</td>
+                    <td className="p-2">{instructor.courses}</td>
+                    <td className="p-2">
+                      <span className="bg-green-100 text-green-600 text-xs px-2 py-1 rounded">
+                        {instructor.status}
+                      </span>
+                    </td>
+                    <td className="p-2 mt-2 flex gap-2 text-gray-600 text-base">
+                      <Link
+                        to={`/instructor/${instructor.id}`}
+                        className="text-gray-600"
+                      >
+                        <FaEye />
+                      </Link>
+                      <FaEdit />
+                      <FaTrash />
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
