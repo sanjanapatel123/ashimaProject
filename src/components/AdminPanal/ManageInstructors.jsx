@@ -12,10 +12,7 @@ const ManageInstructors = () => {
       <div className="p-6 bg-gray-50 min-h-screen">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold">Manage Instructors</h2>
-          {/* <button className="bg-[#047670] text-white px-4 py-2 rounded">
-            Add Instructor
-          </button> */}
-
+        
           <button
             className="bg-[#047670] text-white px-4 py-2 rounded"
             onClick={() => setIsModalOpen(true)}

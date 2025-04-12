@@ -55,6 +55,9 @@ import ManageComm_Discu from "./components/AdminPanal/Community";
 import AdminRolesManagement from "./components/AdminPanal/AdminRole";
 import InstructorDetails from "./components/AdminPanal/InstructorDetails";
 import CoursesDetails from "./components/AdminPanal/CoursesDetails";
+import ViewAssessments from "./components/AdminPanal/ViewAssessments";
+import CertificateTemplates from "./components/AdminPanal/CertificateTemplate";
+import CertificateManagement from "./components/AdminPanal/CertificateManagement";
 
 const App = () => {
   return (
@@ -160,6 +163,18 @@ const App = () => {
         <Route
           path="/admin-role"
           element={<AdminRolesManagement></AdminRolesManagement>}
+        ></Route>
+        <Route
+          path="/ViewAssessments"
+          element={<ViewAssessments></ViewAssessments>}
+        ></Route>
+        <Route
+          path="/CertificateTemplate"
+          element={<CertificateTemplates></CertificateTemplates>}
+        ></Route>
+        <Route
+          path="/CertificateManagemnet"
+          element={<CertificateManagement></CertificateManagement>}
         ></Route>
         <Route path="/student-details/:id" element={<StudentDetails />} />
         <Route path="/qasection" element={<QA></QA>}></Route>
