@@ -12,7 +12,7 @@ const AddInstructorModal = ({ isOpen, onClose }) => {
           onClick={onClose}
           className="absolute right-4 top-4 text-xl text-gray-500"
         >
-          ×
+          
         </button>
 
         <h2 className="text-xl font-semibold mb-4">Add New Instructor</h2>
