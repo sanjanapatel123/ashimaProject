@@ -256,6 +256,8 @@
 
 import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { MdOutlineDashboardCustomize } from "react-icons/md";
+
 import {
   FaHome,
   FaBookOpen,
@@ -271,6 +273,7 @@ import {
   FaBars,
   FaBook,
   FaChalkboardTeacher,
+   FaRegEye, FaCertificate,
   FaMoneyBill,
   FaCalendarAlt,
   FaQuestionCircle,
@@ -283,6 +286,7 @@ import {
   FaMoneyBillWave,
   FaClipboardList,
   FaUserCog,
+
 } from "react-icons/fa";
 
 const RoleBasedSidebar = ({
@@ -389,16 +393,39 @@ const RoleBasedSidebar = ({
           //   path: "/revenue-transactions",
           // },
 
+          // {
+          //   icon: <FaClipboardList />,
+          //   label: "Assessments & Certificates",
+          //   dropdown: true,
+          //   children: [
+          //     { label: "View Assessments", path: "/ViewAssessments" },
+          //     { label: "Templates", path: "/CertificateTemplate" },
+          //     {
+          //       label: "Certificate Management",
+          //       path: "/CertificateManagemnet",
+          //     },
+          //   ],
+          // },
+
           {
             icon: <FaClipboardList />,
             label: "Assessments & Certificates",
             dropdown: true,
             children: [
-              { label: "View Assessments", path: "/ViewAssessments" },
-              { label: "Templates", path: "/CertificateTemplate" },
+              {
+                label: "View Assessments",
+                path: "/ViewAssessments",
+                icon: <FaRegEye />,
+              },
+              {
+                label: "Templates",
+                path: "/CertificateTemplate",
+                icon: <MdOutlineDashboardCustomize />,
+              },
               {
                 label: "Certificate Management",
                 path: "/CertificateManagemnet",
+                icon: <FaCertificate />,
               },
             ],
           },
@@ -416,6 +443,14 @@ const RoleBasedSidebar = ({
           },
 
           { icon: <FaUserCog />, label: "Admin Roles", path: "/admin-role" },
+
+          { icon: <FaCog />, label: "Settings", path: "/settings" },
+
+          {
+            icon: <FaFlag />,
+            label: "Reported Issues",
+            path: "/ReporteIssues",
+          },
 
           {
             icon: <FaMoneyBillWave />,

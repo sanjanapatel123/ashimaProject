@@ -1,6 +1,7 @@
 import React from "react";
-import { FaSearch, FaEye, FaEdit, FaTrash } from "react-icons/fa";
+import { FaSearch, FaEye,  FaKey, FaEdit, FaTrash } from "react-icons/fa";
 import DashboardLayout from "../../Layout/DashboardLayout";
+import { Link } from "react-router-dom";
 
 const AdminRolesManagement = () => {
   const adminData = [
@@ -15,6 +16,7 @@ const AdminRolesManagement = () => {
   ];
 
   return (
+    
     <DashboardLayout>
       <div className="p-6 bg-gray-100 min-h-screen">
         <div className="flex justify-between items-center mb-6">
@@ -93,9 +95,19 @@ const AdminRolesManagement = () => {
                       {item.status}
                     </span>
                   </td>
-                  <td className="px-4 py-3 flex gap-3 items-center">
+                  {/* <td className="px-4 py-3 flex gap-3 items-center">
                     <FaEye className="text-blue-600 cursor-pointer" />
                     <FaEdit className="text-green-600 cursor-pointer" />
+                    <FaTrash className="text-red-600 cursor-pointer" />
+                  </td> */}
+
+                  <td className="px-4 py-3 flex gap-3 items-center">
+                    <FaEye className="text-gray-600 cursor-pointer" />
+                    <FaEdit className="text-blue-600 cursor-pointer" />
+                    {/* <FaKey className="text-green-600 cursor-pointer" /> */}
+                    <Link to="/RolePermission">
+                      <FaKey className="text-green-600 cursor-pointer" />
+                    </Link>
                     <FaTrash className="text-red-600 cursor-pointer" />
                   </td>
                 </tr>

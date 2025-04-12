@@ -1,8 +1,12 @@
 import React from "react";
 import { FaDownload, FaArrowLeft } from "react-icons/fa";
 import DashboardLayout from "../../Layout/DashboardLayout";
+import { useState } from "react";
+import AddTemplateModal from "./AddTemplate";
+
 
 const CertificateTemplates = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <DashboardLayout>
       <div className="p-6 bg-gray-50 min-h-screen">
@@ -10,9 +14,20 @@ const CertificateTemplates = () => {
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold">Certificate Templates</h2>
 
-          <button className="bg-[#047670] text-white px-4 py-2 rounded">
+          {/* <button className="bg-[#047670] text-white px-4 py-2 rounded">
+            + Add New Template
+          </button> */}
+          <button
+            className="bg-[#047670] text-white px-4 py-2 rounded"
+            onClick={() => setIsModalOpen(true)}
+          >
             + Add New Template
           </button>
+
+          <AddTemplateModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+          />
         </div>
 
         {/* Search & Filter */}

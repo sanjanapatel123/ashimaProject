@@ -172,7 +172,7 @@ const ManageCourses = () => {
             <div>Showing 1 to 10 of 50 entries</div>
             <div className="flex gap-2">
               <button className="border px-2 py-1 rounded">Previous</button>
-              <button className="bg-black text-white px-2 py-1 rounded">
+              <button className="bg-[#047670] text-white px-2 py-1 rounded">
                 1
               </button>
               <button className="border px-2 py-1 rounded">2</button>

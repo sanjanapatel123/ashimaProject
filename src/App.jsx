@@ -63,6 +63,9 @@ import DiscussionDetails from "./components/AdminPanal/DiscussionDetails";
 import ManageTransaction from "./components/AdminPanal/ManageTransaction";
 import RefundDetails from "./components/AdminPanal/RefundDetails";
 import AdminSettings from "./components/AdminPanal/AdminSettings";
+import RolePermission from "./components/AdminPanal/RolePermission";
+
+import ViewReportedIssues from "./components/AdminPanal/ReportedIssues";
 
 const App = () => {
   return (
@@ -188,6 +191,15 @@ const App = () => {
           element={<AdminSettings></AdminSettings>}
         ></Route>
         <Route path="/refund-details/:id" element={<RefundDetails />} />
+
+        <Route  path="/RolePermission"
+          element={<RolePermission></RolePermission>}></Route>
+         
+      
+        <Route
+          path="/ReporteIssues"
+          element={<ViewReportedIssues></ViewReportedIssues>}
+        ></Route>
         <Route path="/student-details/:id" element={<StudentDetails />} />
         <Route path="/qasection" element={<QA></QA>}></Route>
         <Route path="/assignment" element={<Assignments></Assignments>}></Route>

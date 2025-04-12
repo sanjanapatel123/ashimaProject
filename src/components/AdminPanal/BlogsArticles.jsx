@@ -2,8 +2,13 @@
 import React from "react";
 import { FaSearch, FaDownload, FaEye, FaEdit, FaTrash } from "react-icons/fa";
 import DashboardLayout from "../../Layout/DashboardLayout";
+import  { useState } from "react";
+import AddArticleModal from "./AddArticle";
+
+
 
 const Blogs_article = () => {
+   const [isModalOpen, setIsModalOpen] = useState(false);
   const blogData = [
     {
       id: "#BL001",
@@ -30,9 +35,20 @@ const Blogs_article = () => {
             <button className="bg-gray-50 px-4 py-2 rounded-lg text-sm flex items-center gap-2 border">
               <FaDownload /> Export
             </button>
-            <button className="bg-[#047670] text-white px-4 py-2 rounded-lg text-sm">
+            {/* <button className="bg-[#047670] text-white px-4 py-2 rounded-lg text-sm">
+              + Add New Article
+            </button> */}
+            <button
+              className="bg-[#047670] text-white px-4 py-2 rounded-lg text-sm"
+              onClick={() => setIsModalOpen(true)}
+            >
               + Add New Article
             </button>
+
+            <AddArticleModal
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)}
+            />
           </div>
         </div>
 
