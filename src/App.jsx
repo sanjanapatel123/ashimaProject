@@ -53,9 +53,14 @@ import ViewTransaction from "./components/AdminPanal/ViewTransaction";
 import Blogs_article from "./components/AdminPanal/BlogsArticles";
 import ManageComm_Discu from "./components/AdminPanal/Community";
 import AdminRolesManagement from "./components/AdminPanal/AdminRole";
+import InstructorDetails from "./components/AdminPanal/InstructorDetails";
+import CoursesDetails from "./components/AdminPanal/CoursesDetails";
 import ViewAssessments from "./components/AdminPanal/ViewAssessments";
 import CertificateTemplates from "./components/AdminPanal/CertificateTemplate";
 import CertificateManagement from "./components/AdminPanal/CertificateManagement";
+import RolePermission from "./components/AdminPanal/RolePermission";
+
+import ViewReportedIssues from "./components/AdminPanal/ReportedIssues";
 
 const App = () => {
   return (
@@ -144,10 +149,12 @@ const App = () => {
           path="/manage-instructors"
           element={<ManageInstructors></ManageInstructors>}
         ></Route>
+        <Route path="/instructor/:id" element={<InstructorDetails />} />
         <Route
           path="/manage-courses"
           element={<ManageCourses></ManageCourses>}
         ></Route>
+        <Route path="/course/:id" element={<CoursesDetails />} />
         <Route
           path="/blog-articles"
           element={<Blogs_article></Blogs_article>}
@@ -171,6 +178,14 @@ const App = () => {
         <Route
           path="/CertificateManagemnet"
           element={<CertificateManagement></CertificateManagement>}
+        ></Route>
+        <Route
+          path="/RolePermission"
+          element={<RolePermission></RolePermission>}
+        ></Route>
+        <Route
+          path="/ReporteIssues"
+          element={<ViewReportedIssues></ViewReportedIssues>}
         ></Route>
         <Route path="/student-details/:id" element={<StudentDetails />} />
         <Route path="/qasection" element={<QA></QA>}></Route>

@@ -33,32 +33,32 @@ const CompaniesSection = () => {
         </div>
 
         {/* Right Scrolling Logos (Left ➡️ Right) */}
-      
-      <div className="w-full md:w-[55%] overflow-hidden relative">
-  <motion.div
-    className="flex w-max gap-6"
-    animate={{ x: ["0%", "-50%"] }} // scrolls from right to left
-    transition={{
-      duration: 30,
-      repeat: Infinity,
-      ease: "linear",
-    }}
-  >
-    {[...companies, ...companies].map((logo, index) => (
-      <div
-        key={index}
-        className="bg-[#ffffff] rounded-lg p-3 flex items-center justify-center w-[90px] h-[70px]"
-      >
-        <img
-          src={logo}
-          alt={`Company ${index + 1}`}
-          className="h-auto w-[70px] object-contain"
-        />
-      </div>
-    ))}
-  </motion.div>
-</div>
 
+        <div className="w-full md:w-[55%] overflow-hidden relative">
+        
+          <motion.div
+            className="flex w-max gap-6"
+            animate={{ x: ["-50%", "0%"] }} // left to right scroll
+            transition={{
+              duration: 30,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          >
+            {[...companies, ...companies].map((logo, index) => (
+              <div
+                key={index}
+                className="bg-[#ffffff] rounded-lg p-3 flex items-center justify-center w-[90px] h-[70px]"
+              >
+                <img
+                  src={logo}
+                  alt={`Company ${index + 1}`}
+                  className="h-auto w-[70px] object-contain"
+                />
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </div>
   );

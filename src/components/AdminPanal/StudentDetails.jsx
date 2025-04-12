@@ -1,12 +1,23 @@
 import React from "react";
 import DashboardLayout from "../../Layout/DashboardLayout";
+import { useNavigate } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 
 const StudentDetails = () => {
+  const navigate = useNavigate();
   return (
     <DashboardLayout>
       <div className="p-6 bg-gray-50 min-h-screen">
-        <h2 className="text-2xl font-semibold mb-6">Student Details</h2>
-
+        <div className="flex justify-between items-center mb-3">
+          <h3 className="fw-bold">Student Details</h3>
+          <button
+            className="d-flex p-2 rounded align-items-center font-semibold
+                       text-white bg-teal-700"
+            onClick={() => navigate(-1)}
+          >
+            <FaArrowLeft className="me-1" /> Back
+          </button>
+        </div>
         <div className="bg-white p-6 rounded shadow flex gap-6">
           {/* Left Side Image & Basic */}
           <div className="flex flex-col items-center gap-2">

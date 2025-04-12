@@ -48,7 +48,7 @@ const ManageStudents = () => {
           </div>
 
           <div className="overflow-x-auto">
-            <table className="w-full text-sm text-left">
+            <table className="w-full text-sm text-center text-nowrap">
               <thead className="bg-gray-50">
                 <tr className="text-gray-500">
                   <th className="p-2">
@@ -70,7 +70,7 @@ const ManageStudents = () => {
                   </td>
                   <td className="p-2">
                     <Link to={`/student-details/12345`}>
-                      <strong className="cursor-pointer hover:underline text-[#047670]">
+                      <strong className="cursor-pointer text-[#047670]">
                         John Doe
                       </strong>
                     </Link>
@@ -89,10 +89,14 @@ const ManageStudents = () => {
                       Active
                     </span>
                   </td>
-                  <td className="p-2 flex gap-2 text-gray-600 text-base">
-                    <FaEye />
+                  <td className="p-2 flex gap-2 mt-2 text-gray-600 text-base items-center justify-center">
+                    <Link
+                      to={`/student-details/12345`}
+                      className="text-gray-600"
+                    >
+                      <FaEye />
+                    </Link>
                     <FaEdit />
-                    <FaBan />
                     <FaTrash />
                   </td>
                 </tr>

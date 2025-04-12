@@ -6,7 +6,7 @@ const AddStudentModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0  bg-opacity-30 flex justify-center items-center z-50">
+    <div className="fixed inset-0 bg-gray-900 bg-opacity-30 flex justify-center items-center z-50">
       <div className="bg-white w-full max-w-lg rounded p-6 relative">
         <button
           onClick={onClose}
