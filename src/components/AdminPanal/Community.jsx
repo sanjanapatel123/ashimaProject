@@ -1,7 +1,7 @@
-
 import React from "react";
 import { FaSearch, FaDownload, FaEye, FaTrash, FaBan } from "react-icons/fa";
 import DashboardLayout from "../../Layout/DashboardLayout";
+import { Link } from "react-router-dom";
 
 const ManageComm_Discu = () => {
   const discussionData = [
@@ -34,7 +34,7 @@ const ManageComm_Discu = () => {
         </div>
 
         {/* Filters */}
-        <div className="bg-white rounded-lg p-4 shadow mb-4 flex flex-col md:flex-row gap-3 items-center justify-between">
+        <div className="bg-white rounded-lg p-4 mb-4 flex flex-col md:flex-row gap-3 items-center justify-between">
           <div className="flex flex-1 gap-2 items-center w-full flex-wrap">
             <div className="relative w-full md:w-[260px]">
               <input
@@ -66,8 +66,8 @@ const ManageComm_Discu = () => {
         </div>
 
         {/* Table */}
-        <div className="overflow-x-auto bg-white rounded-lg shadow">
-          <table className="w-full text-sm text-left">
+        <div className="overflow-x-auto bg-white rounded-lg">
+          <table className="w-full text-sm text-center text-nowrap">
             <thead className="bg-gray-50">
               <tr>
                 {[
@@ -80,7 +80,7 @@ const ManageComm_Discu = () => {
                   "Status",
                   "Actions",
                 ].map((head) => (
-                  <th key={head} className="px-4 py-3">
+                  <th key={head} className="px-2 py-2">
                     {head}
                   </th>
                 ))}
@@ -89,20 +89,24 @@ const ManageComm_Discu = () => {
             <tbody>
               {discussionData.map((item, idx) => (
                 <tr key={idx} className="border-b">
-                  <td className="px-4 py-3">{item.id}</td>
-                  <td className="px-4 py-3">{item.topic}</td>
-                  <td className="px-4 py-3">{item.createdBy}</td>
-                  <td className="px-4 py-3">{item.communityType}</td>
-                  <td className="px-4 py-3">{item.totalComments}</td>
-                  <td className="px-4 py-3">{item.createdDate}</td>
-                  <td className="px-4 py-3">
+                  <td className="px-2 py-2">{item.id}</td>
+                  <td className="px-2 py-2">{item.topic}</td>
+                  <td className="px-2 py-2">{item.createdBy}</td>
+                  <td className="px-2 py-2">{item.communityType}</td>
+                  <td className="px-2 py-2">{item.totalComments}</td>
+                  <td className="px-2 py-2">{item.createdDate}</td>
+                  <td className="px-2 py-2">
                     <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-600">
                       {item.status}
                     </span>
                   </td>
-                  <td className="px-4 py-3 flex gap-3 items-center">
-                    <FaEye className="text-blue-600 cursor-pointer" />
-                    <FaBan className="text-yellow-500 cursor-pointer" />
+                  <td className="px-2 py-2 flex gap-3 items-center">
+                    <Link
+                      to={`/discussion-details/${item.id.replace("#", "")}`}
+                    >
+                      <FaEye className="text-blue-600 cursor-pointer" />
+                    </Link>
+                    {/* <FaBan className="text-yellow-500 cursor-pointer" /> */}
                     <FaTrash className="text-red-600 cursor-pointer" />
                   </td>
                 </tr>

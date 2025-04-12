@@ -58,6 +58,11 @@ import CoursesDetails from "./components/AdminPanal/CoursesDetails";
 import ViewAssessments from "./components/AdminPanal/ViewAssessments";
 import CertificateTemplates from "./components/AdminPanal/CertificateTemplate";
 import CertificateManagement from "./components/AdminPanal/CertificateManagement";
+import AssessmentDetails from "./components/AdminPanal/AssessmentDetails";
+import DiscussionDetails from "./components/AdminPanal/DiscussionDetails";
+import ManageTransaction from "./components/AdminPanal/ManageTransaction";
+import RefundDetails from "./components/AdminPanal/RefundDetails";
+import AdminSettings from "./components/AdminPanal/AdminSettings";
 
 const App = () => {
   return (
@@ -85,7 +90,7 @@ const App = () => {
         ></Route>
         <Route
           path="/viewTranscation"
-          element={<ViewTransaction></ViewTransaction>}
+          element={<ManageTransaction></ManageTransaction>}
         ></Route>
         <Route
           path="/RefundProcess"
@@ -160,6 +165,7 @@ const App = () => {
           path="/community-discussion"
           element={<ManageComm_Discu></ManageComm_Discu>}
         ></Route>
+        <Route path="/discussion-details/:id" element={<DiscussionDetails />} />
         <Route
           path="/admin-role"
           element={<AdminRolesManagement></AdminRolesManagement>}
@@ -168,6 +174,7 @@ const App = () => {
           path="/ViewAssessments"
           element={<ViewAssessments></ViewAssessments>}
         ></Route>
+        <Route path="/assessment-details/:id" element={<AssessmentDetails />} />
         <Route
           path="/CertificateTemplate"
           element={<CertificateTemplates></CertificateTemplates>}
@@ -176,6 +183,11 @@ const App = () => {
           path="/CertificateManagemnet"
           element={<CertificateManagement></CertificateManagement>}
         ></Route>
+        <Route
+          path="/adminSettings"
+          element={<AdminSettings></AdminSettings>}
+        ></Route>
+        <Route path="/refund-details/:id" element={<RefundDetails />} />
         <Route path="/student-details/:id" element={<StudentDetails />} />
         <Route path="/qasection" element={<QA></QA>}></Route>
         <Route path="/assignment" element={<Assignments></Assignments>}></Route>

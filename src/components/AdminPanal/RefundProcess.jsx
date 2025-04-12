@@ -1,6 +1,7 @@
 import React from "react";
 import { FaSearch, FaDownload, FaEye, FaTimes } from "react-icons/fa";
 import DashboardLayout from "../../Layout/DashboardLayout";
+import { Link } from "react-router-dom";
 
 const RefundProcess = () => {
   const refundData = [
@@ -66,7 +67,7 @@ const RefundProcess = () => {
 
         {/* Table */}
         <div className="overflow-x-auto bg-white rounded-lg shadow">
-          <table className="w-full text-sm text-left">
+          <table className="w-full text-sm text-center text-nowrap">
             <thead className="bg-gray-50">
               <tr>
                 {[
@@ -80,7 +81,7 @@ const RefundProcess = () => {
                   "Status",
                   "Actions",
                 ].map((head) => (
-                  <th key={head} className="px-4 py-3">
+                  <th key={head} className="px-2 py-2">
                     {head}
                   </th>
                 ))}
@@ -89,14 +90,14 @@ const RefundProcess = () => {
             <tbody>
               {refundData.map((item, idx) => (
                 <tr key={idx} className="border-b">
-                  <td className="px-4 py-3">{item.id}</td>
-                  <td className="px-4 py-3">{item.student}</td>
-                  <td className="px-4 py-3">{item.course}</td>
-                  <td className="px-4 py-3">{item.payment}</td>
-                  <td className="px-4 py-3">{item.refund}</td>
-                  <td className="px-4 py-3">{item.reason}</td>
-                  <td className="px-4 py-3">{item.date}</td>
-                  <td className="px-4 py-3">
+                  <td className="px-2 py-2">{item.id}</td>
+                  <td className="px-2 py-2">{item.student}</td>
+                  <td className="px-2 py-2">{item.course}</td>
+                  <td className="px-2 py-2">{item.payment}</td>
+                  <td className="px-2 py-2">{item.refund}</td>
+                  <td className="px-2 py-2">{item.reason}</td>
+                  <td className="px-2 py-2">{item.date}</td>
+                  <td className="px-2 py-2">
                     <span
                       className={`px-2 py-1 rounded-full text-xs font-medium ${
                         item.status === "Pending"
@@ -107,8 +108,10 @@ const RefundProcess = () => {
                       {item.status}
                     </span>
                   </td>
-                  <td className="px-4 py-3 flex gap-2 items-center">
-                    <FaEye className="text-gray-600 cursor-pointer" />
+                  <td className="px-2 py-2 flex gap-2 items-center">
+                    <Link to={`/refund-details/${item.id.replace("#", "")}`}>
+                      <FaEye className="text-gray-600 cursor-pointer" />
+                    </Link>
                     <FaTimes className="text-gray-600 cursor-pointer" />
                   </td>
                 </tr>

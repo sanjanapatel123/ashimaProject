@@ -1,6 +1,7 @@
 import React from "react";
 import { FaEye, FaTrash } from "react-icons/fa";
 import DashboardLayout from "../../Layout/DashboardLayout";
+import { Link } from "react-router-dom";
 
 const ViewAssessments = () => {
   return (
@@ -41,7 +42,7 @@ const ViewAssessments = () => {
 
           {/* Table */}
           <div className="overflow-x-auto">
-            <table className="w-full text-sm text-left">
+            <table className="w-full text-sm text-center text-nowrap">
               <thead className="bg-gray-50">
                 <tr className="text-gray-500">
                   <th className="p-3">Assessment ID</th>
@@ -55,22 +56,55 @@ const ViewAssessments = () => {
               </thead>
 
               <tbody>
-                <tr className="border-b">
-                  <td className="p-3">#ASM001</td>
-                  <td className="p-3">John Doe</td>
-                  <td className="p-3">Web Development Basics</td>
-                  <td className="p-3">85/100</td>
-                  <td className="p-3">2024-01-20 14:30</td>
-                  <td className="p-3">
-                    <span className="bg-green-100 text-green-600 text-xs px-2 py-1 rounded">
-                      Passed
-                    </span>
-                  </td>
-                  <td className="p-3 flex gap-2 text-gray-600 text-base">
-                    <FaEye />
-                    <FaTrash />
-                  </td>
-                </tr>
+                {[
+                  {
+                    id: "#ASM001",
+                    student: "John Doe",
+                    course: "Web Development Basics",
+                    score: "85/100",
+                    date: "2024-01-20 14:30",
+                    status: "Passed",
+                  },
+                  {
+                    id: "#ASM002",
+                    student: "Amit Sharma",
+                    course: "React Mastery",
+                    score: "78/100",
+                    date: "2024-02-10 12:15",
+                    status: "Passed",
+                  },
+                  {
+                    id: "#ASM003",
+                    student: "Priya Verma",
+                    course: "Python Essentials",
+                    score: "65/100",
+                    date: "2024-03-05 16:00",
+                    status: "Passed",
+                  },
+                ].map((item) => (
+                  <tr key={item.id} className="border-b">
+                    <td className="p-3">{item.id}</td>
+                    <td className="p-3">{item.student}</td>
+                    <td className="p-3">{item.course}</td>
+                    <td className="p-3">{item.score}</td>
+                    <td className="p-3">{item.date}</td>
+                    <td className="p-3">
+                      <span className="bg-green-100 text-green-600 text-xs px-2 py-1 rounded">
+                        {item.status}
+                      </span>
+                    </td>
+                    <td className="p-3 flex gap-2 text-gray-600 text-base">
+                      <Link
+                        to={`/assessment-details/${item.id.replace("#", "")}`}
+                        className="text-gray-600"
+                      >
+                        <FaEye className="cursor-pointer" />
+                      </Link>
+
+                      <FaTrash />
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

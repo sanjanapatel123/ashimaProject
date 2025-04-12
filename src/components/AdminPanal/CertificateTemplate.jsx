@@ -8,12 +8,7 @@ const CertificateTemplates = () => {
       <div className="p-6 bg-gray-50 min-h-screen">
         {/* Top Heading Section */}
         <div className="flex justify-between items-center mb-6">
-          <div className="flex items-center gap-2">
-            <button className="border px-2 py-1 rounded flex items-center gap-1 text-sm">
-              <FaArrowLeft /> Back
-            </button>
-            <h2 className="text-2xl font-semibold">Certificate Templates</h2>
-          </div>
+          <h2 className="text-2xl font-semibold">Certificate Templates</h2>
 
           <button className="bg-[#047670] text-white px-4 py-2 rounded">
             + Add New Template
