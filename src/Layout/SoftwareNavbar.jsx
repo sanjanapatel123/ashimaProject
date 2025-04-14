@@ -97,12 +97,10 @@
 
 // export default SoftwareNavbar;
 
-
-
-
 import { useState } from "react";
 import { FaMoon, FaBell, FaUser, FaCog, FaSignOutAlt } from "react-icons/fa";
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const SoftwareNavbar = ({ isCollapsed }) => {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -182,12 +180,12 @@ const SoftwareNavbar = ({ isCollapsed }) => {
                 >
                   <FaCog className="mr-2" /> Settings
                 </a>
-                <a
-                  href="#logout"
+                <Link
+                  to={"/login"}
                   className="flex items-center px-4 py-2 text-black text-black-600 hover:bg-teal-700"
                 >
                   <FaSignOutAlt className="mr-2" /> Logout
-                </a>
+                </Link>
               </div>
             )}
           </div>

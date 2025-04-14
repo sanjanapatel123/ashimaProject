@@ -273,7 +273,8 @@ import {
   FaBars,
   FaBook,
   FaChalkboardTeacher,
-   FaRegEye, FaCertificate,
+  FaRegEye,
+  FaCertificate,
   FaMoneyBill,
   FaCalendarAlt,
   FaQuestionCircle,
@@ -286,7 +287,6 @@ import {
   FaMoneyBillWave,
   FaClipboardList,
   FaUserCog,
-
 } from "react-icons/fa";
 
 const RoleBasedSidebar = ({
@@ -323,46 +323,6 @@ const RoleBasedSidebar = ({
     switch (role) {
       case "admin":
         return [
-          // { icon: <FaHome />, label: "Dashboard", path: "/admin-dashboard" },
-          // {
-          //   icon: <FaHome />,
-          //   label: "Manage Student",
-          //   path: "/manage-student",
-          // },
-          // {
-          //   icon: <FaHome />,
-          //   label: "Manage Instructor",
-          //   path: "/manage-instructors",
-          // },
-          // {
-          //   icon: <FaHome />,
-          //   label: "Manage Courses",
-          //   path: "/manage-courses",
-          // },
-
-          // {
-          //   icon: <FaHome />,
-          //   label: "Blogs & Aricles",
-          //   path: "/blog-articles",
-          // },
-          // {
-          //   icon: <FaHome />,
-          //   label: "Community Discussions",
-
-          //   path: "/community-discussion",
-          // },
-          // {
-          //   icon: <FaBookOpen />,
-          //   label: "Assessments & Certificates",
-          //   dropdown: true,
-          //   children: [
-          //     { label: "View Assessements", path: "/ViewAssessments" },
-          //     { label: "Templates", path: "/CertificateTemplate" },
-          //     {
-          //       label: "Certificate Management",
-          //       path: "/CertificateManagemnet",
-          //     },
-
           {
             icon: <FaChartLine />,
             label: "Dashboard",
@@ -386,26 +346,6 @@ const RoleBasedSidebar = ({
             label: "Manage Courses",
             path: "/manage-courses",
           },
-
-          // {
-          //   icon: <FaMoneyBillWave />,
-          //   label: "Revenue / Transactions",
-          //   path: "/revenue-transactions",
-          // },
-
-          // {
-          //   icon: <FaClipboardList />,
-          //   label: "Assessments & Certificates",
-          //   dropdown: true,
-          //   children: [
-          //     { label: "View Assessments", path: "/ViewAssessments" },
-          //     { label: "Templates", path: "/CertificateTemplate" },
-          //     {
-          //       label: "Certificate Management",
-          //       path: "/CertificateManagemnet",
-          //     },
-          //   ],
-          // },
 
           {
             icon: <FaClipboardList />,
@@ -444,13 +384,7 @@ const RoleBasedSidebar = ({
 
           { icon: <FaUserCog />, label: "Admin Roles", path: "/admin-role" },
 
-          { icon: <FaCog />, label: "Settings", path: "/settings" },
-
-          {
-            icon: <FaFlag />,
-            label: "Reported Issues",
-            path: "/ReporteIssues",
-          },
+          // { icon: <FaCog />, label: "Settings", path: "/settings" },
 
           {
             icon: <FaMoneyBillWave />,
@@ -468,33 +402,8 @@ const RoleBasedSidebar = ({
           {
             icon: <FaFlag />,
             label: "Reported Issues",
-            path: "/reported-issues",
+            path: "/ReporteIssues",
           },
-
-          // {
-          //   icon: <FaHome />,
-          //   label: "Admin Roles",
-
-          //   path: "/admin-role",
-          // },
-          // {
-          //   icon: <FaBookOpen />,
-          //   label: "My Courses",
-          //   dropdown: true,
-          //   children: [
-          //     { label: "Web Development", path: "/web-dev" },
-          //     { label: "UI/UX Design", path: "/ui-ux" },
-          //   ],
-          // },
-          // { icon: <FaBox />, label: "Digital Products", path: "/products" },
-          // {
-          //   icon: <FaPlus />,
-          //   label: "Create New Course",
-          //   path: "/create-course",
-          // },
-          // { icon: <FaComments />, label: "Messages", path: "/messages" },
-          // { icon: <FaChartLine />, label: "Analytics", path: "/analytics" },
-          // { icon: <FaCog />, label: "Settings", path: "/settings" },
         ];
       case "student":
         return [

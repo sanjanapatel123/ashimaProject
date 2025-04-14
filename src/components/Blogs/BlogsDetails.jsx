@@ -518,7 +518,7 @@ function BlogsDetails() {
                 <div className="col-md-5 bg-[#047670] text-[#ffffff] rounded-2  ">
                   <div className=" flex gap-2 mt-5">
                     <img src="https://i.ibb.co/fGKZGkXR/Ellipse-6.png" />
-                    <h4 className="font-[Roboto Condensed] text-[25px] font-bold mt-4">
+                    <h4 className="font-roboto text-[25px] font-bold mt-4">
                       NEHA SHARMA
                     </h4>
                   </div>
