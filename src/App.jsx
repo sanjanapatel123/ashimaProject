@@ -66,6 +66,7 @@ import AdminSettings from "./components/AdminPanal/AdminSettings";
 import RolePermission from "./components/AdminPanal/RolePermission";
 
 import ViewReportedIssues from "./components/AdminPanal/ReportedIssues";
+import ForgotPassword from "./Auth/ForgotPassword";
 
 const App = () => {
   return (
@@ -75,6 +76,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} /> {/* Fixed route */}
         <Route path="/login" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         {/* <Route path="/projects"></Route> */}
         <Route path="/student-dashboard" element={<StudentDashboard />} />
@@ -191,11 +193,10 @@ const App = () => {
           element={<AdminSettings></AdminSettings>}
         ></Route>
         <Route path="/refund-details/:id" element={<RefundDetails />} />
-
-        <Route  path="/RolePermission"
-          element={<RolePermission></RolePermission>}></Route>
-         
-      
+        <Route
+          path="/RolePermission"
+          element={<RolePermission></RolePermission>}
+        ></Route>
         <Route
           path="/ReporteIssues"
           element={<ViewReportedIssues></ViewReportedIssues>}
