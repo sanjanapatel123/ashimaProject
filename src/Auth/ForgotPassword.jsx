@@ -41,7 +41,7 @@ const ForgotPassword = () => {
           onChange={(e) => setEmail(e.target.value)}
           className="border w-full px-3 py-2 rounded mb-4 outline-none focus:ring-2 focus:ring-[#047670]"
         />
-
+     
         <button
           onClick={handleForgotPassword}
           className="bg-[#047670] text-white w-full py-2 rounded hover:bg-[#035b57] transition"
