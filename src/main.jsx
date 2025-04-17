@@ -14,7 +14,7 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux"; 
-import { store } from "../src/components/Redux/store.js";     
+import { store } from "./components/Redux/store.js";     
 import "./index.css";
 import "remixicon/fonts/remixicon.css";
 import App from "./App.jsx";

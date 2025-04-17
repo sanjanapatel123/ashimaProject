@@ -1,8 +1,41 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import { FaLinkedin, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2"; // Import Swal
+import BASE_URL from "../../config";
 
 const Signup = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+
+    try {
+      const response = await axios.post(`${BASE_URL}/user/signUp`, {
+        email,
+        password,
+      });
+
+      // Display success message if the response is successful
+      if (response.status === 200) {
+        Swal.fire({
+          icon: "success",
+          title: "Sign Up Successful!",
+          text: "You have successfully created an account.",
+        });
+      }
+    } catch (error) {
+      // Display error message if the request fails
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong, please try again.",
+      });
+    }
+  };
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-[#FAF9F7] px-4 sm:px-6 py-8">
       <div className="w-full max-w-lg bg-[#FFFFFF] rounded-lg shadow border border-[#1E1E1E]/10 p-5 sm:p-8">
@@ -17,7 +50,6 @@ const Signup = () => {
         </h3>
 
         {/* Social Signup Buttons */}
-
         <div className="space-y-3 mb-6">
           <button className="flex items-center justify-center w-full border border-[#1E1E1E]/10 text-[#000000] font-medium text-[18px] sm:text-[20px] py-2 rounded hover:bg-gray-100 transition">
             <FaLinkedin className="mr-2 text-[#047670]" />
@@ -39,43 +71,43 @@ const Signup = () => {
           <hr className="flex-grow border-t border-[#1E1E1E]/70" />
         </div>
 
-        {/* Email Input */}
-        <div className="mb-4">
-          <label
-            htmlFor="email"
-            className="block text-[14px] font-semibold mb-1"
-          >
-            EMAIL
-          </label>
-          <input
-            type="email"
-            id="email"
-            className="w-full px-3 py-2 border border-[#1E1E1E]/10 rounded text-[14px] focus:outline-none focus:ring-2 focus:ring-[#047670]"
-          />
-        </div>
+        <form onSubmit={handleSubmit}>
+          {/* Email Input */}
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-[14px] font-semibold mb-1">
+              EMAIL
+            </label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)} // Set email value to state
+              className="w-full px-3 py-2 border border-[#1E1E1E]/10 rounded text-[14px] focus:outline-none focus:ring-2 focus:ring-[#047670]"
+            />
+          </div>
 
-        {/* Password Input */}
-        <div className="mb-4">
-          <label
-            htmlFor="password"
-            className="block text-[14px] font-semibold mb-1"
-          >
-            PASSWORD
-          </label>
-          <input
-            type="password"
-            id="password"
-            className="w-full px-3 py-2 border border-[#1E1E1E]/10 rounded text-[14px] focus:outline-none focus:ring-2 focus:ring-[#047670]"
-          />
-        </div>
+          {/* Password Input */}
+          <div className="mb-4">
+            <label htmlFor="password" className="block text-[14px] font-semibold mb-1">
+              PASSWORD
+            </label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)} // Set password value to state
+              className="w-full px-3 py-2 border border-[#1E1E1E]/10 rounded text-[14px] focus:outline-none focus:ring-2 focus:ring-[#047670]"
+            />
+          </div>
 
-        {/* Signup Button */}
-        <button
-          className="w-full bg-gray-300 text-[#1E1E1E]/50 py-2 rounded text-[16px] font-medium cursor-not-allowed"
-          disabled
-        >
-          SIGN UP
-        </button>
+          {/* Signup Button */}
+          <button
+            className="w-full bg-gray-300 text-[#1E1E1E]/50 py-2 rounded text-[16px] font-medium"
+            type="submit"
+          >
+            SIGN UP
+          </button>
+        </form>
 
         {/* Bottom Info */}
         <p className="text-center mt-4 text-[11px] text-[#02756A] px-2">
