@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import BASE_URL from '../../../../config';
+import BASE_URL from '../../../../../config';
+
 
 const createStudent = createAsyncThunk('createStudent', async (studentData, thunkAPI) => {
   try {
