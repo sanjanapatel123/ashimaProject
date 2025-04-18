@@ -4,6 +4,8 @@ import BASE_URL from '../../../../../config';
 const createStudent = createAsyncThunk('createStudent', async (studentData, thunkAPI) => {
   try {
     const token = localStorage.getItem('token');
+    // console.log("token", token);
+    console.log("studentData", studentData);
     const res = await fetch(`${BASE_URL}/student/createStudent`, {
       method: 'POST',
       headers: {

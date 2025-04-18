@@ -23,7 +23,9 @@ const Login = () => {
         password,
       });
 
-      console.log("Login Response:", response); // Debugging response
+      // console.log("Login Response:", response.data.data.token); 
+      localStorage.setItem("token", response.data.data.token);
+      // Debugging response
 
       // Check the status from the API response and display accordingly
       if (response.data.status === "true") {
