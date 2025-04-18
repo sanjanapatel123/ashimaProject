@@ -1,12 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaEye, FaEdit, FaBan, FaTrash } from "react-icons/fa";
 import DashboardLayout from "../../Layout/DashboardLayout";
 import AddStudentModal from "./AddStudent";
 import { Link } from "react-router-dom";
+import { getStudents } from "../Redux/slices/adminSlices/getstudentSlice";
+import { useSelector , useDispatch } from "react-redux";
+import { updateStudent } from "../Redux/slices/adminSlices/updateStudentSlice";
+import { useNavigate } from "react-router-dom";
+
 
 const ManageStudents = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+    const students = useSelector((state) => state.getAllStudents.students.data);
+    console.log("students", students);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+  useEffect (() => {
+     dispatch(getStudents());
 
+  }, []);
+  const handleupdateStudent = (student) => {
+     localStorage.setItem("student", JSON.stringify(student));
+     setIsModalOpen(true);
+     
+  }
+  const handleViewStudent = (studentId) =>{
+    console.log ("studentId", studentId);
+    localStorage.setItem("studentId",studentId);
+    navigate("/student-details");
+   
+  }
+  // useDispatch(getStudents());
   return (
     <DashboardLayout>
       <div className="p-6 bg-gray-50 min-h-screen">
@@ -64,42 +88,50 @@ const ManageStudents = () => {
               </thead>
 
               <tbody>
-                <tr className="border-b">
+                {students?.map((student) => (
+                  <tr className="border-b">
                   <td className="p-2">
                     <input type="checkbox" />
                   </td>
                   <td className="p-2">
                     <Link to={`/student-details/12345`}>
                       <strong className="cursor-pointer text-[#047670]">
-                        John Doe
+                        {student.full_name}
                       </strong>
                     </Link>
-                    <div className="text-xs text-gray-500">ID: #12345</div>
+                    {/* <div className="text-xs text-gray-500">ID: #12345</div> */}
                   </td>
 
-                  <td className="p-2">john.doe@example.com</td>
-                  <td className="p-2">+1 234 567 890</td>
+                  <td className="p-2"> {student?.email}</td>
+                  <td className="p-2">{student?.mobile_number}</td>
                   <td className="p-2">
                     <span className="bg-gray-200 text-xs px-2 py-1 rounded">
-                      3 Courses
+                      {student?.course_id}
                     </span>
                   </td>
                   <td className="p-2">
                     <span className="bg-green-100 text-green-600 text-xs px-2 py-1 rounded">
-                      Active
+                      {student?.active}
                     </span>
                   </td>
                   <td className="p-2 flex gap-2 mt-2 text-gray-600 text-base items-center justify-center">
-                    <Link
+                    {/* <Link
                       to={`/student-details/12345`}
                       className="text-gray-600"
                     >
-                      <FaEye />
-                    </Link>
+                      
+                    </Link> */}
+                    <button  onClick={()=>{handleupdateStudent(student)}}>   
+                    <FaEye onClick={()=>{handleViewStudent(student.id)}} />
+                    </button>
+                    <button  onClick={()=>{handleupdateStudent(student)}}>   
                     <FaEdit />
+                    </button>
                     <FaTrash />
                   </td>
                 </tr>
+                ))}
+                
               </tbody>
             </table>
           </div>

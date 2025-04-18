@@ -1,10 +1,20 @@
-import React from "react";
+import React,{useEffect} from "react";
 import DashboardLayout from "../../Layout/DashboardLayout";
-import { useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
+import { useDispatch,useSelector } from "react-redux";
+import { getStudentById } from "../Redux/slices/adminSlices/getStudentById";
 
 const StudentDetails = () => {
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getStudentById(localStorage.getItem("studentId")));
+  },[dispatch])
+  const  student  = useSelector((state) => state.getStudentById.student?.data);
+
+  // console.log("student",student);
+
+
+
   return (
     <DashboardLayout>
       <div className="p-6 bg-gray-50 min-h-screen">
@@ -26,10 +36,12 @@ const StudentDetails = () => {
               alt="student"
               className="rounded-full w-[120px] h-[120px]"
             />
-            <h3 className="font-semibold">Sarah Johnson</h3>
-            <p className="text-xs text-gray-500">Student ID: ST0204001</p>
+            <h3 className="font-semibold"> {student?.full_name}</h3>
+            <p className="text-xs text-gray-500">
+              #{student?.id}
+            </p>
             <span className="bg-green-100 text-green-600 text-xs px-2 py-1 rounded">
-              Active
+              {student?.active}
             </span>
           </div>
 
@@ -38,12 +50,12 @@ const StudentDetails = () => {
             <p>
               <strong>Email Address</strong>
               <br />
-              sarah.johnson@example.com
+               {student?.email}
             </p>
             <p>
               <strong>Mobile Number</strong>
               <br />
-              +1 234 567 8900
+              {student?.mobile_number}
             </p>
             <p>
               <strong>Enrollment Date</strong>

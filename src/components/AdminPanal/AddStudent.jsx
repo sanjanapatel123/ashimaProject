@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import BASE_URL from "../../../config";
-import Swal from "sweetalert2";
 import Select from "react-select";
 import { createStudent } from "../Redux/slices/adminSlices/addStudentSlice";
 import { useDispatch } from "react-redux";
-
 const AddStudentModal = ({ isOpen, onClose }) => {
   const [selectedCourses, setSelectedCourses] = useState([]);
   const [full_name, setFullName] = useState("");
@@ -13,12 +9,15 @@ const AddStudentModal = ({ isOpen, onClose }) => {
   const [mobile_number, setMobileNumber] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [active, setIsActive] = useState(false);
+  const [active, setIsActive] = useState("inactive");
   const [passwordError, setPasswordError] = useState("");
+  
 
   if (!isOpen) return null;
 
   const dispatch = useDispatch();
+  const student = JSON.parse(localStorage.getItem("student"));
+  console.log(student)
 
 
   const handleSubmit = async (e) => {
@@ -118,8 +117,8 @@ const AddStudentModal = ({ isOpen, onClose }) => {
             <div className="flex items-center gap-2 mt-2">
               <input
                 type="checkbox"
-                checked={active}
-                onChange={() => setIsActive(!active)}
+                checked={active==="active"}
+                onChange={() => {active==="active"?setIsActive("inactive"):setIsActive("active")}}
               />
               <span>Active</span>
             </div>
