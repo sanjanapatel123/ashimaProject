@@ -1,125 +1,142 @@
-import axios from "axios";
 import React, { useState } from "react";
 import { FaLinkedin, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Swal from "sweetalert2"; // Import Swal
-import BASE_URL from "../../config";
+import Select from "react-select";
+
+const courseOptions = [
+  { value: "Web Development", label: "Web Development" },
+  { value: "Mobile App Development", label: "Mobile App Development" },
+  { value: "Data Science", label: "Data Science" },
+  { value: "UI/UX Design", label: "UI/UX Design" },
+  { value: "Machine Learning", label: "Machine Learning" },
+];
 
 const Signup = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [role, setRole] = useState("");
+  const [studentCourses, setStudentCourses] = useState([]);
+  const [instructorCourses, setInstructorCourses] = useState([]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent the default form submission behavior
-
-    try {
-      const response = await axios.post(`${BASE_URL}/user/signUp`, {
-        email,
-        password,
-      });
-
-      // Display success message if the response is successful
-      if (response.status === 200) {
-        Swal.fire({
-          icon: "success",
-          title: "Sign Up Successful!",
-          text: "You have successfully created an account.",
-        });
-      }
-    } catch (error) {
-      // Display error message if the request fails
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Something went wrong, please try again.",
-      });
-    }
+  const handleRoleChange = (e) => {
+    setRole(e.target.value);
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-[#FAF9F7] px-4 sm:px-6 py-8">
-      <div className="w-full max-w-lg bg-[#FFFFFF] rounded-lg shadow border border-[#1E1E1E]/10 p-5 sm:p-8">
+      <div className="w-full max-w-4xl bg-white rounded-lg shadow border border-[#1E1E1E]/10 p-5 sm:p-8">
         <button
           onClick={() => window.history.back()}
           className="text-[#047670] text-2xl mr-3"
         >
           ←
         </button>
-        <h3 className="text-center text-[36px] sm:text-[28px] md:text-[30px] font-impact text-[#047670] mb-6 font-normal uppercase">
+        <h3 className="text-center text-[32px] sm:text-[28px] font-impact text-[#047670] mb-6 font-normal uppercase">
           CREATE AN ACCOUNT
         </h3>
 
-        {/* Social Signup Buttons */}
-        <div className="space-y-3 mb-6">
-          <button className="flex items-center justify-center w-full border border-[#1E1E1E]/10 text-[#000000] font-medium text-[18px] sm:text-[20px] py-2 rounded hover:bg-gray-100 transition">
-            <FaLinkedin className="mr-2 text-[#047670]" />
-            SIGN UP WITH LINKEDIN
-          </button>
-
-          <button className="flex items-center justify-center w-full border border-[#1E1E1E]/10 text-[#000000] font-medium text-[18px] sm:text-[20px] py-2 rounded hover:bg-gray-100 transition">
-            <FaGoogle className="mr-2 text-[#DB4437]" />
-            SIGN UP WITH GOOGLE
-          </button>
-        </div>
-
-        {/* Divider */}
-        <div className="flex items-center text-[#000000] text-[20px] mb-6">
-          <hr className="flex-grow border-t border-[#1E1E1E]/70" />
-          <span className="mx-3 text-[14px] text-[#1E1E1E]/70">
-            Or Use Email
-          </span>
-          <hr className="flex-grow border-t border-[#1E1E1E]/70" />
-        </div>
-
-        <form onSubmit={handleSubmit}>
-          {/* Email Input */}
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-[14px] font-semibold mb-1">
-              EMAIL
-            </label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)} // Set email value to state
-              className="w-full px-3 py-2 border border-[#1E1E1E]/10 rounded text-[14px] focus:outline-none focus:ring-2 focus:ring-[#047670]"
-            />
-          </div>
-
-          {/* Password Input */}
-          <div className="mb-4">
-            <label htmlFor="password" className="block text-[14px] font-semibold mb-1">
-              PASSWORD
-            </label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)} // Set password value to state
-              className="w-full px-3 py-2 border border-[#1E1E1E]/10 rounded text-[14px] focus:outline-none focus:ring-2 focus:ring-[#047670]"
-            />
-          </div>
-
-          {/* Signup Button */}
-          <button
-            className="w-full bg-gray-300 text-[#1E1E1E]/50 py-2 rounded text-[16px] font-medium"
-            type="submit"
+        {/* Role Selector */}
+        <div className="mb-6">
+          <label htmlFor="role" className="block text-[14px] font-semibold mb-1">
+            Select Role
+          </label>
+          <select
+            id="role"
+            onChange={handleRoleChange}
+            value={role}
+            className="w-full px-3 py-2 border border-[#1E1E1E]/10 rounded text-[14px] focus:outline-none focus:ring-2 focus:ring-[#047670]"
           >
-            SIGN UP
-          </button>
-        </form>
+            <option value="">Select Role</option>
+            <option value="student">Student</option>
+            <option value="instructor">Instructor</option>
+          </select>
+        </div>
 
-        {/* Bottom Info */}
+        {/* Dynamic Forms */}
+        {role === "student" && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <input type="text" placeholder="Full Name" className="border px-3 py-2 rounded w-full" />
+            <input type="email" placeholder="Email Address" className="border px-3 py-2 rounded w-full" />
+            <input type="text" placeholder="Mobile Number" className="border px-3 py-2 rounded w-full" />
+            <input type="password" placeholder="Password" className="border px-3 py-2 rounded w-full" />
+            <input type="password" placeholder="Confirm Password" className="border px-3 py-2 rounded w-full" />
+            <div className="col-span-2">
+              <label className="block mb-1 text-sm font-medium text-gray-700">Select Courses</label>
+              <Select
+                isMulti
+                options={courseOptions}
+                value={studentCourses}
+                onChange={setStudentCourses}
+                className="w-full"
+              />
+            </div>
+            <div className="flex items-center gap-2 mt-2 col-span-2">
+              <input type="checkbox" />
+              <span>Active</span>
+            </div>
+          </div>
+        )}
+
+        {role === "instructor" && (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              <input type="text" placeholder="Full Name" className="border px-3 py-2 rounded w-full" />
+              <input type="email" placeholder="Email Address" className="border px-3 py-2 rounded w-full" />
+              <input type="text" placeholder="Mobile Number" className="border px-3 py-2 rounded w-full" />
+              <input type="password" placeholder="Password" className="border px-3 py-2 rounded w-full" />
+              <input type="password" placeholder="Confirm Password" className="border px-3 py-2 rounded w-full" />
+              <input type="text" placeholder="Area of Expertise" className="border px-3 py-2 rounded w-full" />
+              <input type="text" placeholder="Account Number" className="border px-3 py-2 rounded w-full" />
+              <input type="text" placeholder="IFSC Code" className="border px-3 py-2 rounded w-full" />
+            </div>
+
+            <div className="mb-4">
+              <p className="mb-1 font-medium text-gray-600">Profile Image</p>
+              <div className="border border-dashed border-gray-400 p-6 rounded text-center">
+                <div className="text-3xl text-gray-400 mb-2">📤</div>
+                <p className="font-semibold mb-1">Upload a file or drag and drop</p>
+                <p className="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+              </div>
+            </div>
+
+            <div className="mb-6">
+              <p className="mb-1 font-medium text-gray-600">Course Category</p>
+              <Select
+                isMulti
+                options={courseOptions}
+                value={instructorCourses}
+                onChange={setInstructorCourses}
+                className="w-full"
+              />
+            </div>
+
+            <div className="flex items-center gap-2 mb-4">
+              <input type="checkbox" />
+              <span>Active</span>
+            </div>
+          </>
+        )}
+
+        {/* Social Signup Buttons */}
+        {role && (
+          <div className="space-y-3 mb-6">
+            <button className="flex items-center justify-center w-full border border-[#1E1E1E]/10 text-[#000000] font-medium text-[18px] py-2 rounded hover:bg-gray-100 transition">
+              <FaLinkedin className="mr-2 text-[#047670]" />
+              SIGN UP AS {role.toUpperCase()} WITH LINKEDIN
+            </button>
+
+            <button className="flex items-center justify-center w-full border border-[#1E1E1E]/10 text-[#000000] font-medium text-[18px] py-2 rounded hover:bg-gray-100 transition">
+              <FaGoogle className="mr-2 text-[#DB4437]" />
+              SIGN UP AS {role.toUpperCase()} WITH GOOGLE
+            </button>
+          </div>
+        )}
+
+        {/* Terms and Navigation */}
         <p className="text-center mt-4 text-[11px] text-[#02756A] px-2">
           By Continuing, You Agree To Ai Skills Terms And Privacy Policy.
         </p>
-
         <div className="text-center mt-4 text-[12px] text-[#000000]">
           Already Have An Account?{" "}
-          <Link
-            to="/login"
-            className="text-[#02756A] hover:underline font-semibold"
-          >
+          <Link to="/login" className="text-[#02756A] hover:underline font-semibold">
             Log In
           </Link>
         </div>
